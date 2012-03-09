@@ -1,0 +1,87 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+   <PATCH nodename="C:\dev\vvvv\switchboy_git\switchboy\gui\MightyMapper (2D GUI) help.v4p" filename="C:\dev\vvvv\switchboy_git\switchboy\gui\MightyMapper (2D GUI) help.v4p" systemname="MightyMapper (2D GUI) help">
+   <BOUNDS height="6000" left="8100" top="4875" type="Window" width="9000">
+   </BOUNDS>
+   <NODE componentmode="InAWindow" filename="EmulateMultitouch.v4p" id="0" nodename="C:\dev\vvvv\switchboy_git\switchboy\gui\EmulateMultitouch.v4p" systemname="EmulateMultitouch" path="C:\dev\vvvv\switchboy_git\switchboy\gui\">
+   <BOUNDS height="100" left="3480" top="1020" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="ID" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="isNew" visible="1">
+   </PIN>
+   <PIN pinname="Scroll" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="EnableTouch" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" filename="MightyMapper.v4p" id="1" nodename="C:\dev\vvvv\switchboy_git\switchboy\gui\MightyMapper.v4p" systemname="MightyMapper" path="C:\dev\vvvv\switchboy_git\switchboy\gui\">
+   <BOUNDS height="100" left="3045" top="3135" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="ID" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="IsNew" visible="1">
+   </PIN>
+   <PIN pinname="MouseWheel" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="ID" srcnodeid="0" srcpinname="ID">
+   </LINK>
+   <LINK dstnodeid="1" dstpinname="XY" srcnodeid="0" srcpinname="XY">
+   </LINK>
+   <LINK dstnodeid="1" dstpinname="IsNew" srcnodeid="0" srcpinname="isNew">
+   </LINK>
+   <LINK dstnodeid="1" dstpinname="MouseWheel" srcnodeid="0" srcpinname="Scroll">
+   </LINK>
+   <NODE componentmode="Hidden" id="2" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="100" left="3525" top="4185" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="3" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <BOUNDS height="100" left="3225" top="5085" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="3225" top="5085" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="4860" left="17310" top="6795" type="Window" width="6120">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="2" dstpinname="Layer 1" srcnodeid="1" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="2" dstpinname="Layer 2" srcnodeid="0" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Layers" srcnodeid="2" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InAWindow" id="4" nodename="Renderer (TTY)" systemname="Renderer (TTY)">
+   <BOUNDS height="100" left="6255" top="2595" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="6255" top="2595" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="4860" left="18390" top="1110" type="Window" width="6120">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="2160" top="1365" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   </PATCH>

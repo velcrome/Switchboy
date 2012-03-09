@@ -5,3 +5,7 @@ Thumbs.db
 *~
 *.xml
 .Cache
+/plugins/Dictionary/StringDictionary/bin
+/plugins/Dictionary/ValueDictionary/bin
+/plugins/TransformMeshBeamerCombination/bin
+/plugins/ValueIterate/bin
