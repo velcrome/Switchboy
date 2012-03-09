@@ -1,0 +1,215 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
+   <PATCH nodename="D:\dev\vvvv\switchcube\engine\tools\SetRes (EX 9) help.v4p">
+   <BOUNDS height="6270" left="300" top="435" type="Window" width="8865">
+   </BOUNDS>
+   <NODE componentmode="InAWindow" id="12" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <BOUNDS height="0" left="825" top="2955" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="3720" left="9285" top="480" type="Window" width="4275">
+   </BOUNDS>
+   <BOUNDS height="1800" left="825" top="2955" type="Box" width="2400">
+   </BOUNDS>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1680 x 1050|">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Fullscreen" visible="1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Fullscreen Refresh Rate" slicecount="1" values="60">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="11" nodename="Quad (DX9)" systemname="Quad (DX9)">
+   <BOUNDS height="0" left="825" top="1215" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="12" dstpinname="Layers" srcnodeid="11" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" id="10" nodename="Transform (Transform 2d)" systemname="Transform (Transform 2d)">
+   <BOUNDS height="0" left="1005" top="810" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Rotate" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="11" dstpinname="Transform" srcnodeid="10" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="Hidden" id="9" nodename="LFO (Animation)" systemname="LFO (Animation)">
+   <BOUNDS height="0" left="1815" top="435" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="50">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Rotate" srcnodeid="9" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="8" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1215" top="2085" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="1215" top="2085" type="Box" width="480">
+   </BOUNDS>
+   <BOUNDS height="160" left="16140" top="8100" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Fullscreen">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="7" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="4995" top="8865" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="19065" top="12090" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="59445" left="4995" top="8865" type="Box" width="10965">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|&lt;!DOCTYPE PATCH  SYSTEM &quot;C:\Dokumente und Einstellungen\Markus Berger\Desktop\vvvv_40beta20\bin\40beta20.dtd&quot; &gt;&cr;&lf;   &lt;PATCH nodename=&quot;C:\Dokumente und Einstellungen\Markus Berger\Desktop\setres\SetRes (VVVV) help_090111.v4p&quot;&gt;&cr;&lf;   &lt;BOUNDS height=&quot;9000&quot; left=&quot;1290&quot; top=&quot;1215&quot; type=&quot;Window&quot; width=&quot;18960&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;NODE componentmode=&quot;InABox&quot; id=&quot;15&quot; nodename=&quot;IOBox (String)&quot;&gt;&cr;&lf;   &lt;BOUNDS height=&quot;0&quot; left=&quot;4230&quot; top=&quot;405&quot; type=&quot;Node&quot; width=&quot;0&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;BOUNDS height=&quot;160&quot; left=&quot;4245&quot; top=&quot;9540&quot; type=&quot;Window&quot; width=&quot;215&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;BOUNDS height=&quot;405&quot; left=&quot;4230&quot; top=&quot;405&quot; type=&quot;Box&quot; width=&quot;13080&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;PIN pinname=&quot;Rows&quot; slicecount=&quot;1&quot; values=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Show Grid&quot; slicecount=&quot;1&quot; values=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;SliceCount Mode&quot; slicecount=&quot;1&quot; values=&quot;Input&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Input String&quot; slicecount=&quot;1&quot; values=&quot;||&amp;lt;PATCH&amp;gt;&amp;lt;NODE id=&amp;quot;7&amp;quot;&amp;gt;&amp;lt;PIN pinname=&amp;quot;Fullscreen Dimensions&amp;quot; slicecount=&amp;quot;1&amp;quot; values=&amp;quot;||||1920 x 1080||||&amp;quot;&amp;gt;&amp;lt;/PIN&amp;gt;&amp;lt;/NODE&amp;gt;&amp;lt;/PATCH&amp;gt;||&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Output String&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;/NODE&gt;&cr;&lf;   &lt;NODE id=&quot;14&quot; nodename=&quot;PatchAlias (VVVV)&quot;&gt;&cr;&lf;   &lt;BOUNDS height=&quot;0&quot; left=&quot;5625&quot; top=&quot;4365&quot; type=&quot;Node&quot; width=&quot;0&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;PIN pinname=&quot;Patch&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Parent Level&quot; slicecount=&quot;1&quot; values=&quot;0&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;/NODE&gt;&cr;&lf;   &lt;NODE id=&quot;12&quot; nodename=&quot;SetPatch (VVVV)&quot;&gt;&cr;&lf;   &lt;PIN pinname=&quot;Patch&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;XML Input&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;BOUNDS height=&quot;560&quot; left=&quot;6500&quot; top=&quot;6000&quot; type=&quot;Node&quot; width=&quot;500&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;BOUNDS height=&quot;560&quot; left=&quot;5500&quot; top=&quot;6000&quot; type=&quot;Box&quot; width=&quot;1015&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;PIN pinname=&quot;Fullscreen Dimensions&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Force Update&quot; visible=&quot;1&quot; slicecount=&quot;1&quot; values=&quot;0&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;/NODE&gt;&cr;&lf;   &lt;LINK dstnodeid=&quot;12&quot; dstpinname=&quot;Patch&quot; linkstyle=&quot;VHV&quot; srcnodeid=&quot;14&quot; srcpinname=&quot;Patch&quot;&gt;&cr;&lf;   &lt;LINKPOINT x=&quot;5700&quot; y=&quot;4965&quot;&gt;&cr;&lf;   &lt;/LINKPOINT&gt;&cr;&lf;   &lt;LINKPOINT x=&quot;5925&quot; y=&quot;4965&quot;&gt;&cr;&lf;   &lt;/LINKPOINT&gt;&cr;&lf;   &lt;/LINK&gt;&cr;&lf;   &lt;NODE id=&quot;9&quot; nodename=&quot;GetPatch (VVVV)&quot;&gt;&cr;&lf;   &lt;BOUNDS height=&quot;270&quot; left=&quot;5025&quot; top=&quot;6255&quot; type=&quot;Node&quot; width=&quot;810&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;PIN pinname=&quot;Patch&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Patch Description&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;/NODE&gt;&cr;&lf;   &lt;NODE componentmode=&quot;InAWindow&quot; id=&quot;7&quot; nodename=&quot;Renderer (EX9)&quot;&gt;&cr;&lf;   &lt;BOUNDS height=&quot;0&quot; left=&quot;11940&quot; top=&quot;7515&quot; type=&quot;Node&quot; width=&quot;0&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;BOUNDS height=&quot;4860&quot; left=&quot;35175&quot; top=&quot;3390&quot; type=&quot;Window&quot; width=&quot;6120&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;BOUNDS height=&quot;1800&quot; left=&quot;11940&quot; top=&quot;7515&quot; type=&quot;Box&quot; width=&quot;2400&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;PIN pinname=&quot;Fullscreen Dimensions&quot; slicecount=&quot;1&quot; values=&quot;||1920 x 1080||&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Layers&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Fullscreen&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;ID&quot; pintype=&quot;Output&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Fullscreen Antialiasing Quality Level&quot; slicecount=&quot;1&quot; values=&quot;4&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;/NODE&gt;&cr;&lf;   &lt;NODE componentmode=&quot;Hidden&quot; id=&quot;6&quot; nodename=&quot;Quad (DX9)&quot;&gt;&cr;&lf;   &lt;BOUNDS height=&quot;0&quot; left=&quot;12525&quot; top=&quot;6360&quot; type=&quot;Node&quot; width=&quot;0&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;PIN pinname=&quot;Layer&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Transform&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Fullscreen Dimensions&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;/NODE&gt;&cr;&lf;   &lt;LINK dstnodeid=&quot;7&quot; dstpinname=&quot;Layers&quot; srcnodeid=&quot;6&quot; srcpinname=&quot;Layer&quot;&gt;&cr;&lf;   &lt;/LINK&gt;&cr;&lf;   &lt;NODE componentmode=&quot;Hidden&quot; id=&quot;5&quot; nodename=&quot;Transform (Transform 2d)&quot;&gt;&cr;&lf;   &lt;BOUNDS height=&quot;0&quot; left=&quot;13125&quot; top=&quot;5370&quot; type=&quot;Node&quot; width=&quot;0&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;PIN pinname=&quot;Transform Out&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Rotate&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;/NODE&gt;&cr;&lf;   &lt;LINK dstnodeid=&quot;6&quot; dstpinname=&quot;Transform&quot; srcnodeid=&quot;5&quot; srcpinname=&quot;Transform Out&quot;&gt;&cr;&lf;   &lt;/LINK&gt;&cr;&lf;   &lt;NODE componentmode=&quot;Hidden&quot; id=&quot;4&quot; nodename=&quot;LFO (Animation)&quot;&gt;&cr;&lf;   &lt;BOUNDS height=&quot;0&quot; left=&quot;13425&quot; top=&quot;4575&quot; type=&quot;Node&quot; width=&quot;0&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;PIN pinname=&quot;Output&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Period&quot; slicecount=&quot;1&quot; values=&quot;50&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;/NODE&gt;&cr;&lf;   &lt;LINK dstnodeid=&quot;5&quot; dstpinname=&quot;Rotate&quot; srcnodeid=&quot;4&quot; srcpinname=&quot;Output&quot;&gt;&cr;&lf;   &lt;/LINK&gt;&cr;&lf;   &lt;NODE componentmode=&quot;InABox&quot; id=&quot;3&quot; nodename=&quot;IOBox (Value Advanced)&quot;&gt;&cr;&lf;   &lt;BOUNDS height=&quot;0&quot; left=&quot;14265&quot; top=&quot;6465&quot; type=&quot;Node&quot; width=&quot;0&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;BOUNDS height=&quot;480&quot; left=&quot;14265&quot; top=&quot;6465&quot; type=&quot;Box&quot; width=&quot;480&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;BOUNDS height=&quot;160&quot; left=&quot;16140&quot; top=&quot;8100&quot; type=&quot;Window&quot; width=&quot;215&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;PIN pinname=&quot;Show Value&quot; slicecount=&quot;1&quot; values=&quot;0&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Show Slider&quot; slicecount=&quot;1&quot; values=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Minimum&quot; slicecount=&quot;1&quot; values=&quot;0&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Maximum&quot; slicecount=&quot;1&quot; values=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Slider Behavior&quot; slicecount=&quot;1&quot; values=&quot;Toggle&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Y Output Value&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;X Input Value&quot; slicecount=&quot;1&quot; values=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;Y Input Value&quot; slicecount=&quot;1&quot; values=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;/NODE&gt;&cr;&lf;   &lt;NODE componentmode=&quot;InABox&quot; id=&quot;1&quot; nodename=&quot;IOBox (String)&quot;&gt;&cr;&lf;   &lt;BOUNDS height=&quot;0&quot; left=&quot;4995&quot; top=&quot;8865&quot; type=&quot;Node&quot; width=&quot;0&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;BOUNDS height=&quot;160&quot; left=&quot;19065&quot; top=&quot;12090&quot; type=&quot;Window&quot; width=&quot;215&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;BOUNDS height=&quot;59445&quot; left=&quot;4995&quot; top=&quot;8865&quot; type=&quot;Box&quot; width=&quot;10965&quot;&gt;&cr;&lf;   &lt;/BOUNDS&gt;&cr;&lf;   &lt;PIN pinname=&quot;Input String&quot; visible=&quot;1&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;PIN pinname=&quot;SliceOffset&quot; slicecount=&quot;1&quot; values=&quot;0&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;/NODE&gt;&cr;&lf;   &lt;LINK dstnodeid=&quot;7&quot; dstpinname=&quot;Fullscreen&quot; srcnodeid=&quot;3&quot; srcpinname=&quot;Y Output Value&quot;&gt;&cr;&lf;   &lt;/LINK&gt;&cr;&lf;   &lt;LINK dstnodeid=&quot;9&quot; dstpinname=&quot;Patch&quot; srcnodeid=&quot;14&quot; srcpinname=&quot;Patch&quot;&gt;&cr;&lf;   &lt;/LINK&gt;&cr;&lf;   &lt;LINK dstnodeid=&quot;1&quot; dstpinname=&quot;Input String&quot; srcnodeid=&quot;9&quot; srcpinname=&quot;Patch Description&quot;&gt;&cr;&lf;   &lt;/LINK&gt;&cr;&lf;   &lt;LINK srcnodeid=&quot;15&quot; srcpinname=&quot;Output String&quot; dstnodeid=&quot;12&quot; dstpinname=&quot;XML Input&quot;&gt;&cr;&lf;   &lt;/LINK&gt;&cr;&lf;   &lt;/PATCH&gt;|">
+   </PIN>
+   <PIN pinname="SliceOffset" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="12" dstpinname="Fullscreen" srcnodeid="8" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="6" nodename="SetRes (EX 9).v4p" systemname="SetRes (EX 9)" filename="SetRes (EX 9).v4p">
+   <BOUNDS height="100" left="2070" top="5280" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS left="2070" top="5280" type="Box">
+   </BOUNDS>
+   <PIN pinname="Node ID" visible="1">
+   </PIN>
+   <PIN pinname="X Resolution" visible="1">
+   </PIN>
+   <PIN pinname="Y Resolution" visible="1">
+   </PIN>
+   <PIN pinname="Refresh Rate" visible="1">
+   </PIN>
+   <BOUNDS height="11415" left="3435" top="2235" type="Window" width="15360">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="6" dstpinname="Node ID" srcnodeid="12" srcpinname="ID">
+   </LINK>
+   <NODE componentmode="InABox" id="5" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="2850" top="4425" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="2850" top="4425" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="8835" top="3645" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1024">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|X Resolution|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="4" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="4170" top="4425" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="4170" top="4425" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="10230" top="3450" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="768">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Y Resolution|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="6" dstpinname="X Resolution" srcnodeid="5" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="6" dstpinname="Y Resolution" srcnodeid="4" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="3" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1035" top="3450" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1035" top="3450" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="9135" top="3945" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1890" top="3450" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1890" top="3450" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="10530" top="3750" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Fullscreen Refresh Rate">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Y Input Value" srcnodeid="12" srcpinname="Actual Backbuffer Width">
+   </LINK>
+   <LINK dstnodeid="2" dstpinname="Y Input Value" srcnodeid="12" srcpinname="Actual Backbuffer Height">
+   </LINK>
+   <NODE componentmode="InABox" id="1" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="5565" top="4395" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="5565" top="4395" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="7620" top="5835" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="60">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Refresh Rate|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="6" dstpinname="Refresh Rate" srcnodeid="1" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="6600" top="4380" type="Node" width="1530">
+   </BOUNDS>
+   <BOUNDS height="270" left="6600" top="4380" type="Box" width="1530">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;--- Change Values|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   </PATCH>

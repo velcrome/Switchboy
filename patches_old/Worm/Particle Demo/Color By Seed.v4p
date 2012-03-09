@@ -1,0 +1,61 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
+   <PATCH nodename="C:\dev\vvvv\grassi\Particle Demo\Color By Seed.v4p" filename="C:\dev\vvvv\grassi\Particle Demo\Color By Seed.v4p" systemname="Color By Seed">
+   <BOUNDS height="8070" left="17805" top="7800" type="Window" width="9000">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="7" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="2475" top="615" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="2475" top="615" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="plugins\ParticleDemo\ParticleDemo.csproj" id="5" nodename="GetSeed (MyParticle)" systemname="GetSeed (MyParticle)">
+   <BOUNDS height="100" left="3285" top="1185" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="PositionXYZ" visible="1">
+   </PIN>
+   <BOUNDS left="3285" top="1185" type="Box">
+   </BOUNDS>
+   <PIN pinname="VelocityXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Last VelocityXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Seed" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="Input" srcnodeid="7" srcpinname="Output Node">
+   </LINK>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="17">
+   <BOUNDS type="Node" left="2400" top="3768" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2400" top="3768" width="2250" height="480">
+   </BOUNDS>
+   <PIN pinname="Color Input" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="3456" top="1524" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Hue" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Lightness" slicecount="1" values="0.5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Seed" dstnodeid="18" dstpinname="Hue">
+   <LINKPOINT x="3516" y="1608">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="17" dstpinname="Color Input">
+   </LINK>
+   </PATCH>

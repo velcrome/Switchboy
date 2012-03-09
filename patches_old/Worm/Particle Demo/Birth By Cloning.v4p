@@ -1,0 +1,223 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
+   <PATCH nodename="C:\dev\vvvv\grassi\jugendstil\Particle Demo\Birth By Cloning.v4p" filename="C:\dev\vvvv\grassi\Particle Demo\Birth By Cloning.v4p" systemname="Birth By Cloning">
+   <BOUNDS height="11580" left="4470" top="3480" type="Window" width="12000">
+   </BOUNDS>
+   <NODE componentmode="Hidden" filename="plugins\ParticleDemo\ParticleDemo.csproj" hiddenwhenlocked="0" id="10" managers="" nodename="Create (MyParticle)" systemname="Create (MyParticle)">
+   <BOUNDS height="100" left="1512" top="5964" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="1512" top="5964" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="5010" left="0" top="0" type="Window" width="6240">
+   </BOUNDS>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Seed" visible="1">
+   </PIN>
+   <PIN pinname="Age" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="13" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="3813" top="951" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="3813" top="951" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="14" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="1236" top="8913" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1236" top="8913" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="plugins\ParticleDemo\ParticleDemo.csproj" id="17" nodename="SetPosition (MyParticle)" systemname="SetPosition (MyParticle)">
+   <BOUNDS height="100" left="1101" top="6588" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="PositionXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="17" dstpinname="Input" srcnodeid="10" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="29" nodename="Random (Value)" systemname="Random (Value)">
+   <BOUNDS height="100" left="2064" top="1944" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Scale" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="30" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="1332" top="1812" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="480" left="1332" top="1812" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Create">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Count" srcnodeid="30" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="31" nodename="GetSlice (Node)" systemname="GetSlice (Node)">
+   <BOUNDS height="100" left="3012" top="3468" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="31" dstpinname="Input Node" srcnodeid="13" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="Hidden" filename="plugins\ParticleDemo\ParticleDemo.csproj" id="32" nodename="GetPosition (Particle)" systemname="GetPosition (Particle)">
+   <BOUNDS height="100" left="4116" top="4836" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="PositionXYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="32" dstpinname="Input" srcnodeid="31" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="17" dstpinname="PositionXYZ" srcnodeid="32" srcpinname="PositionXYZ">
+   </LINK>
+   <NODE componentmode="Hidden" id="33" nodename="Count (Node)" systemname="Count (Node)">
+   <BOUNDS height="100" left="4068" top="2184" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="33" dstpinname="Input" srcnodeid="13" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="Hidden" id="34" nodename="Multiply (Value)" systemname="Multiply (Value)">
+   <BOUNDS height="100" left="3660" top="2796" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="34" dstpinname="Input 1" srcnodeid="29" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="34" dstpinname="Input 2" srcnodeid="33" srcpinname="Count">
+   </LINK>
+   <LINK dstnodeid="31" dstpinname="Index" srcnodeid="34" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" filename="plugins\ParticleDemo\ParticleDemo.csproj" id="35" nodename="GetAge (MyParticle)" systemname="GetAge (MyParticle)">
+   <BOUNDS height="100" left="2052" top="4080" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Age" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="35" dstpinname="Input" srcnodeid="31" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Age" srcnodeid="35" srcpinname="Age">
+   </LINK>
+   <NODE componentmode="Hidden" filename="plugins\ParticleDemo\ParticleDemo.csproj" id="36" nodename="GetSeed (MyParticle)" systemname="GetSeed (MyParticle)">
+   <BOUNDS height="100" left="852" top="4032" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Seed" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="36" dstpinname="Input" srcnodeid="31" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="Hidden" id="37" nodename="Multiply (Value)" systemname="Multiply (Value)">
+   <BOUNDS height="276" left="1632" top="5220" type="Node" width="576">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1.32">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="37" dstpinname="Input 1" srcnodeid="36" srcpinname="Seed">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Seed" srcnodeid="37" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" filename="plugins\ParticleDemo\ParticleDemo.csproj" id="38" nodename="GetScaling (Particle)" systemname="GetScaling (Particle)">
+   <BOUNDS height="100" left="5952" top="4572" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="ScalingXYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="38" dstpinname="Input" srcnodeid="31" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="Hidden" filename="plugins\ParticleDemo\ParticleDemo.csproj" id="39" nodename="SetScaling (MyParticle)" systemname="SetScaling (MyParticle)">
+   <BOUNDS height="100" left="1428" top="7236" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="ScalingXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="39" dstpinname="ScalingXYZ" srcnodeid="38" srcpinname="ScalingXYZ">
+   </LINK>
+   <LINK dstnodeid="39" dstpinname="Input" srcnodeid="17" srcpinname="Output">
+   </LINK>
+   <NODE systemname="GetColor (MyParticle)" filename="plugins\ParticleDemo\ParticleDemo.csproj" nodename="GetColor (MyParticle)" componentmode="Hidden" id="40">
+   <BOUNDS type="Node" left="7692" top="4500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="Output Node" dstnodeid="40" dstpinname="Input">
+   </LINK>
+   <NODE systemname="SetColor (MyParticle)" filename="plugins\ParticleDemo\ParticleDemo.csproj" nodename="SetColor (MyParticle)" componentmode="Hidden" id="41">
+   <BOUNDS type="Node" left="1356" top="7932" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Particle ID" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="41" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="40" srcpinname="Color" dstnodeid="41" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Particle ID" dstnodeid="14" dstpinname="Input Node">
+   </LINK>
+   </PATCH>

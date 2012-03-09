@@ -1,0 +1,110 @@
+//------------------------------------------------------------------
+// TRANSFORM TEXTURE INPUT  
+//------------------------------------------------------------------
+
+texture TexTransform <string uiname="Transform Texture";>;
+sampler SampTransform = sampler_state    //sampler for doing the texture-lookup
+
+{
+    Texture   = (TexTransform);          //apply a texture to the sampler
+    MipFilter = none;                    //sampler states
+    MinFilter = none;
+    MagFilter = none;
+};
+
+//------------------------------------------------------------------
+// GET ANGLE MATRIX  
+//------------------------------------------------------------------
+
+#define minTwoPi -6.283185307179586476925286766559
+#define TwoPi 6.283185307179586476925286766559
+
+float4x4 Vrotate(float rotX, 
+		 float rotY, 
+		 float rotZ)
+  {
+   rotX *= TwoPi;
+   rotY *= TwoPi;
+   rotZ *= TwoPi;
+   float sx = sin(rotX);
+   float cx = cos(rotX);
+   float sy = sin(rotY);
+   float cy = cos(rotY);
+   float sz = sin(rotZ);
+   float cz = cos(rotZ);
+
+   return float4x4( cz*cy+sz*sx*sy, sz*cx, cz*-sy+sz*sx*cy, 0,
+                   -sz*cy+cz*sx*sy, cz*cx, sz*sy+cz*sx*cy , 0,
+                    cx * sy       ,-sx   , cx * cy        , 0,
+                    0             , 0    , 0              , 1);
+  }
+
+//------------------------------------------------------------------
+// APPLY TRANSFORM TEXTURE TO POSITION   
+//------------------------------------------------------------------
+
+//Transform Data from Transform texture
+float4 TRow1 = tex2Dlod(SampTransform, float4(TexCd.x, 0.1667, 0, 0));
+float4 TRow2 = tex2Dlod(SampTransform, float4(TexCd.x, 0.5000, 0, 0));
+float4 TRow3 = tex2Dlod(SampTransform, float4(TexCd.x, 0.8333, 0, 0));
+
+//ApplyCenter
+PosO.xyz -= float3(TRow3.g, TRow3.b, TRow3.a);
+
+//Apply scale
+PosO.xyz *= float3(TRow1.a, TRow2.r, TRow2.g);
+
+//Apply rotation
+PosO = mul(PosO, Vrotate(TRow2.b, TRow2.a, TRow3.r));
+
+//Apply translate
+PosO.xyz += TRow1.rgb;
+
+
+//------------------------------------------------------------------
+// APPLY TRANSFORM TEXTURE TO POSITION AND NORMAL   
+//------------------------------------------------------------------
+
+//Transform Data from Transform texture
+float4 TRow1 = tex2Dlod(SampTransform, float4(TexCd.x, 0.1667, 0, 0));
+float4 TRow2 = tex2Dlod(SampTransform, float4(TexCd.x, 0.5000, 0, 0));
+float4 TRow3 = tex2Dlod(SampTransform, float4(TexCd.x, 0.8333, 0, 0));
+
+//ApplyCenter
+PosO.xyz -= float3(TRow3.g, TRow3.b, TRow3.a);
+
+//Apply scale
+PosO.xyz *= float3(TRow1.a, TRow2.r, TRow2.g);
+
+//Apply rotation
+PosO = mul(PosO, Vrotate(TRow2.b, TRow2.a, TRow3.r));
+NormO = mul(NormO, Vrotate(TRow2.b, TRow2.a, TRow3.r));
+
+//Apply translate
+PosO.xyz += TRow1.rgb;
+
+
+//------------------------------------------------------------------
+// APPLY TRANSFORM TEXTURE TO POSITION ,NORMAL, TANGENT, BINORMAL   
+//------------------------------------------------------------------
+
+//Transform Data from Transform texture
+float4 TRow1 = tex2Dlod(SampTransform, float4(TexCd.x, 0.1667, 0, 0));
+float4 TRow2 = tex2Dlod(SampTransform, float4(TexCd.x, 0.5000, 0, 0));
+float4 TRow3 = tex2Dlod(SampTransform, float4(TexCd.x, 0.8333, 0, 0));
+
+//ApplyCenter
+PosO.xyz -= float3(TRow3.g, TRow3.b, TRow3.a);
+
+//Apply scale
+PosO.xyz *= float3(TRow1.a, TRow2.r, TRow2.g);
+
+//Apply rotation
+PosO = mul(PosO, Vrotate(TRow2.b, TRow2.a, TRow3.r));
+NormO = mul(NormO, Vrotate(TRow2.b, TRow2.a, TRow3.r));
+TangO = mul(TangO, Vrotate(TRow2.b, TRow2.a, TRow3.r));
+BinormO = mul(BinormO, Vrotate(TRow2.b, TRow2.a, TRow3.r));
+
+//Apply translate
+PosO.xyz += TRow1.rgb;
+

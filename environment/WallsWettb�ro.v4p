@@ -1,0 +1,87 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+   <PATCH nodename="C:\dev\vvvv\switchboy_git\switchboy\environment\WallsWettbüro.v4p" filename="C:\switchboy3\environment\WallsWettbüro.v4p" systemname="WallsWettbüro">
+   <BOUNDS height="13680" left="0" top="0" type="Window" width="13410">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="14" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="3513" top="11652" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="3513" top="11652" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="WallTransform">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="6465" top="8601" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1380" left="6465" top="8601" type="Box" width="2415">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="WallBelongsTo">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="18" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="11190" top="8760" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="330" left="11190" top="8760" type="Box" width="2835">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" visible="1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="WallTextureFilename">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="36" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="12429" top="6060" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="437" left="12429" top="6060" type="Box" width="2112">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="vignette\blank.png">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="63" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="12693" top="4872" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="437" left="12693" top="4872" type="Box" width="2112">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="vignette\dot.bmp">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="18" dstpinname="Input String" srcnodeid="36" srcpinname="Output String">
+   </LINK>
+   <NODE componentmode="Hidden" id="96" nodename="Transform (Transform 3d)" systemname="Transform (Transform 3d)">
+   <BOUNDS height="100" left="2604" top="9072" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="TranslateY" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="CenterY" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" values="2.65">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" values="1.490625">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="14" dstpinname="Input Node" srcnodeid="96" srcpinname="Transform Out">
+   </LINK>
+   </PATCH>

@@ -1,0 +1,7 @@
+$ cat .gitignore
+
+Thumbs.db
+.DS_Store
+*~
+*.xml
+.Cache

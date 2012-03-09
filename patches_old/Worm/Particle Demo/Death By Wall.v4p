@@ -1,0 +1,203 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.2.dtd" >
+   <PATCH nodename="D:\personal\gregsn\Desktop\Particle Demo\Death By Wall.v4p" filename="D:\personal\gregsn\Desktop\Death By Wall.v4p" systemname="Death By Wall">
+   <BOUNDS height="8895" left="6720" top="6465" type="Window" width="7920">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="9" nodename="GetSlice (Node)" systemname="GetSlice (Node)">
+   <BOUNDS height="100" left="2610" top="5805" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="8" nodename="Select (Value)" systemname="Select (Value)">
+   <BOUNDS height="100" left="3075" top="5265" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Former Slice" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="my addons\plugins\ParticleEffect1\ParticleEffect1.csproj" id="7" nodename="GetPosition (Particle)" systemname="GetPosition (Particle)">
+   <BOUNDS height="100" left="3075" top="1590" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="PositionXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Last PositionXYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="5" nodename="GT (Value)" systemname="GT (Value)">
+   <BOUNDS height="100" left="4455" top="4020" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="8" dstpinname="Select" srcnodeid="5" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="9" dstpinname="Index" srcnodeid="8" srcpinname="Former Slice">
+   </LINK>
+   <NODE componentmode="InABox" id="4" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="6435" top="2310" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="6435" top="2310" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Min Z|" encoded="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="-0.5">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="Input 2" srcnodeid="4" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="13" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="2250" top="300" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="2250" top="300" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="7" dstpinname="Input" srcnodeid="13" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="InABox" id="14" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="2610" top="6660" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="2610" top="6660" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="14" dstpinname="Input Node" srcnodeid="9" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="Hidden" filename="my addons\plugins\ParticleEffect1\ParticleEffect1.csproj" id="15" nodename="GetScaling (Particle)" systemname="GetScaling (Particle)">
+   <BOUNDS height="100" left="4965" top="1365" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="ScalingXYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="15" dstpinname="Input" srcnodeid="13" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="Hidden" id="16" nodename="Subtract (Value)" systemname="Subtract (Value)">
+   <BOUNDS height="100" left="4350" top="3435" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="17" nodename="Vector (3d Split)" systemname="Vector (3d Split)">
+   <BOUNDS height="100" left="4950" top="2085" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="17" dstpinname="XYZ" srcnodeid="15" srcpinname="ScalingXYZ">
+   </LINK>
+   <LINK dstnodeid="5" dstpinname="Input 1" srcnodeid="16" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="18" nodename="Divide (Value)" systemname="Divide (Value)">
+   <BOUNDS height="100" left="5025" top="2880" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="18" dstpinname="Input" srcnodeid="17" srcpinname="Z">
+   </LINK>
+   <LINK dstnodeid="16" dstpinname="Input 2" srcnodeid="18" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="27" nodename="Vector (3d Split)" systemname="Vector (3d Split)">
+   <BOUNDS height="100" left="3060" top="2265" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="27" dstpinname="XYZ" srcnodeid="7" srcpinname="PositionXYZ">
+   </LINK>
+   <LINK dstnodeid="16" dstpinname="Input 1" srcnodeid="27" srcpinname="Z">
+   </LINK>
+   <LINK dstnodeid="9" dstpinname="Input Node" srcnodeid="13" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="Hidden" id="28" nodename="NOT (Boolean)" systemname="NOT (Boolean)">
+   <BOUNDS height="100" left="5730" top="4785" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="28" dstpinname="Input" srcnodeid="5" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="29" nodename="Select (Value)" systemname="Select (Value)">
+   <BOUNDS height="100" left="5175" top="5250" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Former Slice" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="29" dstpinname="Select" srcnodeid="28" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="31" nodename="GetSlice (Node)" systemname="GetSlice (Node)">
+   <BOUNDS height="100" left="4350" top="5790" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="30" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="4350" top="6645" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="4350" top="6645" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Dying Particles|" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="30" dstpinname="Input Node" srcnodeid="31" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="31" dstpinname="Input Node" srcnodeid="13" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="31" dstpinname="Index" srcnodeid="29" srcpinname="Former Slice">
+   </LINK>
+   </PATCH>

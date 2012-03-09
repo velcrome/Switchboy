@@ -1,0 +1,509 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
+   <PATCH nodename="C:\dev\vvvv\kaleidoscope\test.v4p">
+   <BOUNDS height="9405" left="7155" top="1320" type="Window" width="9000">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="29" nodename=":PLUGINS:\ColladaLoader.dll|VVVV.Nodes.PluginColladaMesh">
+   <BOUNDS height="0" left="990" top="6405" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="990" top="6405" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="11205" top="7245" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="COLLADA Model" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Transforms" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="28" nodename=":EFFECTS:\PhongDirectional.fx">
+   <BOUNDS height="0" left="900" top="7560" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="6000" left="900" top="7560" type="Box" width="6000">
+   </BOUNDS>
+   <BOUNDS height="12000" left="11115" top="8400" type="Window" width="12000">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Light Direction XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Texture Transform" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   <PIN pinname="Ambient Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="28" dstpinname="Mesh" srcnodeid="29" srcpinname="Mesh">
+   </LINK>
+   <NODE componentmode="InAWindow" id="27" nodename="Renderer (EX9)">
+   <BOUNDS height="0" left="1125" top="9015" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="1800" left="1125" top="9015" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="5895" left="16215" top="5850" type="Window" width="6120">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="View Transform" visible="1">
+   </PIN>
+   <PIN pinname="Projection Transform" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.08389,0.08389,0.08389,1.00000|">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1440 x 900|">
+   </PIN>
+   <PIN pinname="Clear" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Aspect Ratio Transform" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="27" dstpinname="Layers" srcnodeid="28" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" id="26" nodename=":MODULES:\vvvv group\EX9\Light (EX9 Direction).v4p" path="C:\apps\code\vvvv_40beta21\modules\vvvv group\EX9\">
+   <BOUNDS height="0" left="6945" top="1065" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="3600" left="6945" top="1065" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="6000" left="12240" top="6030" type="Window" width="9000">
+   </BOUNDS>
+   <PIN pinname="Light Direction Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Yaw" slicecount="1" values="-0.180000000000003">
+   </PIN>
+   <PIN pinname="Distance" slicecount="1" values="7.04">
+   </PIN>
+   <PIN pinname="Pitch" slicecount="1" values="0.330000000000001">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="28" dstpinname="Light Direction XYZ" srcnodeid="26" srcpinname="Light Direction Out">
+   </LINK>
+   <NODE componentmode="Hidden" id="25" nodename=":MODULES:\vvvv group\Transform\Camera (Transform Softimage).v4p" path="C:\apps\code\vvvv_40beta21\modules\vvvv group\Transform\">
+   <BOUNDS height="0" left="2175" top="8595" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="3600" left="2175" top="8595" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="6000" left="12720" top="9060" type="Window" width="9000">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="27" dstpinname="View Transform" srcnodeid="25" srcpinname="View">
+   </LINK>
+   <LINK dstnodeid="27" dstpinname="Projection Transform" srcnodeid="25" srcpinname="Projection">
+   </LINK>
+   <NODE componentmode="Hidden" id="-13" nodename="Keyboard (System Global)">
+   <BOUNDS height="0" left="2805" top="8265" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="25" dstpinname="Keyboard" srcnodeid="-13" srcpinname="Keyboard Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="24" nodename=":PLUGINS:\ColladaLoader.dll|VVVV.Nodes.PluginColladaLoader">
+   <BOUNDS height="0" left="645" top="5310" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="645" top="5310" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="10860" top="6150" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Filename" slicecount="1" values="model3.DAE">
+   </PIN>
+   <PIN pinname="COLLADA Model" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="29" dstpinname="COLLADA Model" srcnodeid="24" srcpinname="COLLADA Model">
+   </LINK>
+   <LINK dstnodeid="28" dstpinname="Transform" srcnodeid="29" srcpinname="Transforms">
+   </LINK>
+   <NODE componentmode="InAWindow" id="23" nodename="Renderer (EX9)">
+   <BOUNDS height="0" left="4575" top="6015" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="1800" left="4575" top="6015" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="4860" left="17385" top="2940" type="Window" width="6120">
+   </BOUNDS>
+   <PIN pinname="EX9 Out" visible="1">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="22" nodename="DX9Texture (EX9.Texture)">
+   <BOUNDS height="0" left="3945" top="7035" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Source" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="22" dstpinname="Source" srcnodeid="23" srcpinname="EX9 Out">
+   </LINK>
+   <LINK dstnodeid="28" dstpinname="Texture" srcnodeid="22" srcpinname="Texture Out">
+   </LINK>
+   <NODE componentmode="Hidden" id="21" nodename="Group (EX9)">
+   <BOUNDS height="270" left="4440" top="5595" type="Node" width="6540">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Layer 2" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="23" dstpinname="Layers" srcnodeid="21" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" id="20" nodename="Translate (Transform)">
+   <BOUNDS height="0" left="5295" top="4035" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="19" nodename="LFO (Animation)">
+   <BOUNDS height="0" left="5535" top="2265" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="18" nodename=":EFFECTS:\PhongDirectional.fx">
+   <BOUNDS height="0" left="4215" top="5025" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="6000" left="4215" top="5025" type="Box" width="6000">
+   </BOUNDS>
+   <BOUNDS height="12000" left="13200" top="5880" type="Window" width="12000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Ambient Color" slicecount="1" values="|0.35803,0.71053,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Light Direction XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="21" dstpinname="Layer 1" srcnodeid="18" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" id="17" nodename="Sphere (EX9.Geometry)">
+   <BOUNDS height="0" left="3990" top="4095" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="18" dstpinname="Mesh" srcnodeid="17" srcpinname="Mesh">
+   </LINK>
+   <NODE componentmode="Hidden" id="16" nodename="UniformScale (Transform)">
+   <BOUNDS height="0" left="4905" top="4530" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="16" dstpinname="Transform In" srcnodeid="20" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="18" dstpinname="Transform" srcnodeid="16" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="Hidden" id="15" nodename="WaveShaper (Value)">
+   <BOUNDS height="0" left="5550" top="3135" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Shape" slicecount="1" values="Sine">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="15" dstpinname="Input" srcnodeid="19" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="20" dstpinname="X" srcnodeid="15" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="16" dstpinname="XYZ" srcnodeid="15" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="14" nodename="Translate (Transform)">
+   <BOUNDS height="0" left="8565" top="3750" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" visible="1" values="-0.382769032936088">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" visible="1" values="0.0686422677822341">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="13" nodename="LFO (Animation)">
+   <BOUNDS height="0" left="8805" top="1980" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="12" nodename=":EFFECTS:\PhongDirectional.fx">
+   <BOUNDS height="0" left="7485" top="4740" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="6000" left="7485" top="4740" type="Box" width="6000">
+   </BOUNDS>
+   <BOUNDS height="12000" left="13500" top="6180" type="Window" width="12000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Ambient Color" slicecount="1" values="|0.18585,0.00000,0.45505,1.00000|">
+   </PIN>
+   <PIN pinname="Light Direction XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="11" nodename="UniformScale (Transform)">
+   <BOUNDS height="0" left="8175" top="4245" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" slicecount="1" visible="1" values="1.09591625103705">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="11" dstpinname="Transform In" srcnodeid="14" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="Transform" srcnodeid="11" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="Hidden" id="10" nodename="WaveShaper (Value)">
+   <BOUNDS height="0" left="8820" top="2850" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Shape" slicecount="1" values="Sine">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Input" srcnodeid="13" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="21" dstpinname="Layer 3" srcnodeid="12" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="14" dstpinname="X" srcnodeid="10" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="9" nodename="Teapot (EX9.Geometry)">
+   <BOUNDS height="0" left="7245" top="3795" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="12" dstpinname="Mesh" srcnodeid="9" srcpinname="Mesh">
+   </LINK>
+   <NODE componentmode="Hidden" id="8" nodename="AspectRatio (Transform)">
+   <BOUNDS height="0" left="4185" top="9090" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="27" dstpinname="Aspect Ratio Transform" srcnodeid="8" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="8" dstpinname="Aspect Width" srcnodeid="27" srcpinname="Actual Backbuffer Width">
+   </LINK>
+   <LINK dstnodeid="8" dstpinname="Aspect Height" srcnodeid="27" srcpinname="Actual Backbuffer Height">
+   </LINK>
+   <NODE componentmode="Hidden" id="7" nodename="Translate (Transform)">
+   <BOUNDS height="0" left="11175" top="3780" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" visible="1" values="0.917230967063913">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" visible="1" values="-0.361357732217766">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="6" nodename="LFO (Animation)">
+   <BOUNDS height="0" left="11415" top="2010" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="5" nodename=":EFFECTS:\PhongDirectional.fx">
+   <BOUNDS height="0" left="10095" top="4770" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="6000" left="10095" top="4770" type="Box" width="6000">
+   </BOUNDS>
+   <BOUNDS height="12000" left="13800" top="6480" type="Window" width="12000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Ambient Color" slicecount="1" values="|0.51415,0.21570,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Light Direction XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="4" nodename="UniformScale (Transform)">
+   <BOUNDS height="0" left="10785" top="4275" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" slicecount="1" visible="1" values="0.865916251037049">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="4" dstpinname="Transform In" srcnodeid="7" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="5" dstpinname="Transform" srcnodeid="4" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="Hidden" id="3" nodename="WaveShaper (Value)">
+   <BOUNDS height="0" left="11430" top="2880" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Shape" slicecount="1" values="Sine">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Input" srcnodeid="6" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="7" dstpinname="X" srcnodeid="3" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="21" dstpinname="Layer 5" srcnodeid="5" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" id="2" nodename="Torus (EX9.Geometry)">
+   <BOUNDS height="0" left="10455" top="2880" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="Mesh" srcnodeid="2" srcpinname="Mesh">
+   </LINK>
+   <NODE componentmode="Hidden" id="1" nodename="Rotate (Transform)">
+   <BOUNDS height="0" left="12090" top="3390" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="7" dstpinname="Transform In" srcnodeid="1" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="1" dstpinname="X" srcnodeid="6" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="0" nodename="Translate (Transform)">
+   <BOUNDS height="0" left="3105" top="6465" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="-1.88">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" values="0.11">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" values="0.58">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="28" dstpinname="Texture Transform" srcnodeid="0" srcpinname="Transform Out">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="32">
+   <BOUNDS type="Node" left="1890" top="1845" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1890" top="1845" width="930" height="1470">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9840" top="4770" width="215" height="160">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="3" values="0.17,0.49,1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="Select (Value)" componentmode="Hidden" id="33">
+   <BOUNDS type="Node" left="2790" top="3630" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="33" dstpinname="Input">
+   </LINK>
+   <NODE componentmode="InABox" id="34" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="3405" top="1875" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="1470" left="3405" top="1875" type="Box" width="930">
+   </BOUNDS>
+   <BOUNDS height="160" left="10140" top="5070" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="3" values="12,6,1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Y Output Value" dstnodeid="33" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Output" dstnodeid="28" dstpinname="Alpha">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Light Direction Out" dstnodeid="18" dstpinname="Light Direction XYZ">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Light Direction Out" dstnodeid="12" dstpinname="Light Direction XYZ">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Light Direction Out" dstnodeid="5" dstpinname="Light Direction XYZ">
+   </LINK>
+   </PATCH>

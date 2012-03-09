@@ -1,0 +1,1701 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+   <PATCH nodename="c:\Switchboy3\engine\ChannelContentDoubleFull.v4p" filename="C:\dev\vvvv\switchboy3\engine\ChannelContentDoubleFull.v4p" locked="0" systemname="ChannelContentDoubleFull">
+   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="3" managers="boygroup" nodename="Group (EX9 Priority)" systemname="Group (EX9 Priority)">
+   <BOUNDS height="270" left="3855" top="11430" type="Node" width="13065">
+   </BOUNDS>
+   <PIN pinname="Layer Template Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Layer 1" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 3" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 4" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Priority 1" visible="1">
+   </PIN>
+   <PIN pinname="Priority 4" slicecount="1" visible="1" values="67">
+   </PIN>
+   <PIN pinname="Priority 2" visible="1">
+   </PIN>
+   <PIN pinname="Priority 3" slicecount="1" visible="1" values="66">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="33" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="12960" top="11925" type="Node" width="870">
+   </BOUNDS>
+   <BOUNDS height="3990" left="12960" top="11925" type="Box" width="3525">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|0..31 MASK - ganz unten, ALWAYS&cr;&lf;&cr;&lf;32-63 MASKED - über Mask, GreaterEqual&cr;&lf;&cr;&lf;64-95 NORMAL - zwischen MASKED und OVERLAY, LessEqual&cr;&lf;&cr;&lf;96 - 127 OVERLAY - ganz oben, ALWAYS&cr;&lf;&cr;&lf;----&cr;&lf;&cr;&lf;Blendmodi:&cr;&lf;Add +8&cr;&lf;Blend +0&cr;&lf;Multiply +16&cr;&lf;Both Alphablendes +24&cr;&lf;&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="47" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="7995" top="11115" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="7995" top="11115" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Priority 2" hiddenwhenlocked="1" srcnodeid="47" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="48" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="4740" top="11115" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="4740" top="11115" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Priority 1" hiddenwhenlocked="1" srcnodeid="48" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" filename="tools\LayerMode.v4p" id="93" managers="boygroup" nodename="LayerMode.v4p" systemname="LayerMode" path="c:\Switchboy3\engine\tools\">
+   <BOUNDS height="270" left="3870" top="8775" type="Node" width="1635">
+   </BOUNDS>
+   <BOUNDS height="3600" left="3870" top="8775" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="10680" left="3750" top="3405" type="Window" width="18600">
+   </BOUNDS>
+   <PIN pinname="RenderState" visible="1">
+   </PIN>
+   <PIN pinname="GroupPriority" visible="1">
+   </PIN>
+   <PIN pinname="ChannelID" visible="1">
+   </PIN>
+   <PIN pinname="BlendMode" visible="1">
+   </PIN>
+   <PIN pinname="LayerMode" visible="1">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="48" dstpinname="Y Input Value" hiddenwhenlocked="0" srcnodeid="93" srcpinname="GroupPriority">
+   </LINK>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="94" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="5040" top="8490" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="5040" top="8490" type="Box" width="450">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="93" dstpinname="ChannelID" hiddenwhenlocked="0" srcnodeid="94" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" filename="tools\LayerMode.v4p" id="96" managers="boygroup" nodename="LayerMode.v4p" systemname="LayerMode" path="c:\Switchboy3\engine\tools\">
+   <BOUNDS height="270" left="7125" top="8775" type="Node" width="1635">
+   </BOUNDS>
+   <BOUNDS height="3600" left="7125" top="8775" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="10680" left="1005" top="1635" type="Window" width="18600">
+   </BOUNDS>
+   <PIN pinname="RenderState" visible="1">
+   </PIN>
+   <PIN pinname="GroupPriority" visible="1">
+   </PIN>
+   <PIN pinname="ChannelID" visible="1">
+   </PIN>
+   <PIN pinname="LayerMode" visible="1">
+   </PIN>
+   <PIN pinname="BlendMode" slicecount="1" values="blend">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="95" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="8280" top="8490" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="8280" top="8490" type="Box" width="450">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="96" dstpinname="ChannelID" srcnodeid="95" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="47" dstpinname="Y Input Value" hiddenwhenlocked="0" srcnodeid="96" srcpinname="GroupPriority">
+   </LINK>
+   <NODE componentmode="InABox" id="107" managers="" nodename="IOBox (Value Advanced)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="375" top="5415" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="375" top="5415" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="WallTransform">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="110" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="360" top="13215" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="360" top="13215" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="110" dstpinname="Input Node" srcnodeid="3" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InAWindow" filename="channels\Channel1.v4p" id="113" managers="boygroup" nodename="channels\Channel1.v4p" systemname="Channel1" path="c:\Switchboy3\engine\channels\">
+   <BOUNDS height="270" left="7650" top="9840" type="Node" width="2190">
+   </BOUNDS>
+   <PIN pinname="RenderState" visible="1">
+   </PIN>
+   <PIN pinname="Layer" slicecount="1" visible="1" values="||">
+   </PIN>
+   <BOUNDS left="7650" top="9840" type="Box">
+   </BOUNDS>
+   <PIN pinname="Transform" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="DMXTable" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="BackgroundColor" visible="1">
+   </PIN>
+   <PIN pinname="Interval" visible="1">
+   </PIN>
+   <PIN pinname="Values" visible="1">
+   </PIN>
+   <PIN pinname="Patch" visible="1">
+   </PIN>
+   <PIN pinname="Controller Names" visible="1">
+   </PIN>
+   <PIN pinname="ViewerPositionXYZ" slicecount="3" visible="1" values="0,0,0">
+   </PIN>
+   <PIN encoded="0" pinname="OSCString" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="OSCAdresses" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Globals" visible="1">
+   </PIN>
+   <PIN pinname="GlobalStrings" visible="1">
+   </PIN>
+   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="113" dstpinname="RenderState" linkstyle="VHV" srcnodeid="96" srcpinname="RenderState">
+   <LINKPOINT x="7930" y="9443">
+   </LINKPOINT>
+   <LINKPOINT x="7685" y="9443">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="115" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="19635" top="3420" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="945" left="19635" top="3420" type="Box" width="555">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Reset">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="116" managers="boygroup" nodename="Vector (4d Split)" systemname="Vector (4d Split)">
+   <BOUNDS height="100" left="18900" top="4560" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="XYZW" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   <PIN pinname="W" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="113" dstpinname="Reset" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="116" srcpinname="Y">
+   <LINKPOINT x="19090" y="7320">
+   </LINKPOINT>
+   <LINKPOINT x="9575" y="7320">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="117" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="19770" top="690" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="19770" top="690" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="DMXTable">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="113" dstpinname="DMXTable" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="117" srcpinname="Y Output Value">
+   <LINKPOINT x="20505" y="5370">
+   </LINKPOINT>
+   <LINKPOINT x="9135" y="5370">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InAWindow" filename="channels\Channel0.v4p" id="112" managers="boygroup" nodename="channels\Channel0.v4p" systemname="Channel0" path="c:\Switchboy3\engine\channels\">
+   <BOUNDS height="270" left="4395" top="9840" type="Node" width="2190">
+   </BOUNDS>
+   <PIN pinname="RenderState" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS left="4395" top="9840" type="Box">
+   </BOUNDS>
+   <PIN pinname="Transform" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="DMXTable" visible="1">
+   </PIN>
+   <PIN pinname="Values" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Patch" visible="1">
+   </PIN>
+   <PIN pinname="Interval" visible="1">
+   </PIN>
+   <PIN pinname="BackgroundColor" visible="1">
+   </PIN>
+   <PIN pinname="Controller Names" visible="1">
+   </PIN>
+   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
+   </BOUNDS>
+   <PIN pinname="ViewerPositionXYZ" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="OSCString" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="OSCAdresses" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Globals" visible="1">
+   </PIN>
+   <PIN pinname="GlobalStrings" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="112" dstpinname="Reset" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="116" srcpinname="X">
+   <LINKPOINT x="18895" y="7320">
+   </LINKPOINT>
+   <LINKPOINT x="6320" y="7320">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="DMXTable" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="117" srcpinname="Y Output Value">
+   <LINKPOINT x="20505" y="5370">
+   </LINKPOINT>
+   <LINKPOINT x="5790" y="5370">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="118" managers="boygroup" nodename="Switch (Node Input)" systemname="Switch (Node Input)">
+   <BOUNDS height="100" left="3855" top="10260" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="118" dstpinname="Input 2" srcnodeid="112" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Layer 1" linkstyle="VHV" srcnodeid="118" srcpinname="Output">
+   <LINKPOINT x="3725" y="10880">
+   </LINKPOINT>
+   <LINKPOINT x="4030" y="11050">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="118" dstpinname="Switch" srcnodeid="93" srcpinname="Enable">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="120" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="270" left="4290" top="6570" type="Node" width="9795">
+   </BOUNDS>
+   <PIN pinname="Layer Template Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer 3" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 4" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="GUI">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" slicecount="1" visible="-1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="122" nodename="Scale (Transform)" systemname="Scale (Transform)">
+   <BOUNDS height="100" left="4005" top="2865" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="0.25">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" visible="1" values="0.63">
+   </PIN>
+   <PIN pinname="Transform In" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="123" nodename="Translate (Transform)" systemname="Translate (Transform)">
+   <BOUNDS height="100" left="3855" top="3765" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="-3">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="123" dstpinname="Transform In" hiddenwhenlocked="1" srcnodeid="122" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="125" nodename="Translate (Transform)" systemname="Translate (Transform)">
+   <BOUNDS height="100" left="7095" top="3765" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="125" dstpinname="Transform In" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="122" srcpinname="Transform Out">
+   <LINKPOINT x="4445" y="3435">
+   </LINKPOINT>
+   <LINKPOINT x="6715" y="3435">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="126" managers="boygroup" nodename="Switch (Node Input)" systemname="Switch (Node Input)">
+   <BOUNDS height="100" left="7110" top="10260" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="126" dstpinname="Input 2" srcnodeid="113" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Layer 2" linkstyle="VHV" srcnodeid="126" srcpinname="Output">
+   <LINKPOINT x="6610" y="10855">
+   </LINKPOINT>
+   <LINKPOINT x="6530" y="11075">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="126" dstpinname="Switch" srcnodeid="96" srcpinname="Enable">
+   </LINK>
+   <NODE componentmode="InABox" id="133" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="100" left="17970" top="3735" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="480" left="17970" top="3735" type="Box" width="345">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.70832,0.70832,0.70832,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="134" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="100" left="17340" top="3735" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="480" left="17340" top="3735" type="Box" width="345">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.18116,0.18116,0.18116,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="138" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="1605" top="3285" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1605" top="3285" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="-0.599">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="125" dstpinname="Y" hiddenwhenlocked="0" linkstyle="VHV" srcnodeid="138" srcpinname="Y Output Value">
+   <LINKPOINT x="5675" y="3658">
+   </LINKPOINT>
+   <LINKPOINT x="4150" y="3603">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="123" dstpinname="Y" hiddenwhenlocked="0" linkstyle="VHV" srcnodeid="138" srcpinname="Y Output Value">
+   <LINKPOINT x="5330" y="3658">
+   </LINKPOINT>
+   <LINKPOINT x="1435" y="3603">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="139" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="5835" top="5055" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="270" left="5835" top="5055" type="Box" width="450">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="140" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBox (Color)">
+   <BOUNDS height="100" left="19650" top="9165" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="480" left="19650" top="9165" type="Box" width="2250">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="BackgroundColor">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   <PIN pinname="Color Input" slicecount="1" values="|0.00000,0.11359,0.41469,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="..\gui\ChannelPreview.v4p" hiddenwhenlocked="1" id="141" nodename="..\gui\ChannelPreview.v4p" stayontop="0" systemname="ChannelPreview" path="c:\Switchboy3\gui\">
+   <BOUNDS height="100" left="2820" top="10635" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="3600" left="2820" top="10635" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="8550" left="2310" top="3450" type="Window" width="9000">
+   </BOUNDS>
+   <PIN pinname="Layer" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="ViewTransform" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="ProjectionTransform" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="BackgroundColor" visible="1">
+   </PIN>
+   <PIN pinname="Environment" visible="1">
+   </PIN>
+   <PIN pinname="PreviewSizeXY" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   <PIN pinname="Mouse Wheel" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform AsValue" visible="1">
+   </PIN>
+   <PIN pinname="WallTransform" visible="1">
+   </PIN>
+   <PIN pinname="Init" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="141" dstpinname="Layer" hiddenwhenlocked="1" srcnodeid="118" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" filename="..\gui\ChannelPreview.v4p" hiddenwhenlocked="1" id="142" nodename="..\gui\ChannelPreview.v4p" systemname="ChannelPreview" path="c:\Switchboy3\gui\">
+   <BOUNDS height="100" left="6030" top="10635" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="3600" left="6030" top="10635" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="6000" left="5985" top="3555" type="Window" width="9000">
+   </BOUNDS>
+   <PIN pinname="Layer" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="ViewTransform" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="ProjectionTransform" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="BackgroundColor" visible="1">
+   </PIN>
+   <PIN pinname="Environment" visible="1">
+   </PIN>
+   <PIN pinname="PreviewSizeXY" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   <PIN pinname="Mouse Wheel" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform AsValue" visible="1">
+   </PIN>
+   <PIN pinname="WallTransform" visible="1">
+   </PIN>
+   <PIN pinname="Init">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="142" dstpinname="Layer" hiddenwhenlocked="1" srcnodeid="126" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="113" dstpinname="BackgroundColor" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="140" srcpinname="Color Output">
+   <LINKPOINT x="19645" y="9728">
+   </LINKPOINT>
+   <LINKPOINT x="8510" y="9728">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="146" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="9345" top="5010" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="270" left="9345" top="5010" type="Box" width="450">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="142" dstpinname="BackgroundColor" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="140" srcpinname="Color Output">
+   <LINKPOINT x="19495" y="10125">
+   </LINKPOINT>
+   <LINKPOINT x="7610" y="10125">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="141" dstpinname="BackgroundColor" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="140" srcpinname="Color Output">
+   <LINKPOINT x="19495" y="10125">
+   </LINKPOINT>
+   <LINKPOINT x="4400" y="10125">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="RenderState" linkstyle="VHV" srcnodeid="93" srcpinname="RenderState">
+   <LINKPOINT x="4675" y="9443">
+   </LINKPOINT>
+   <LINKPOINT x="4430" y="9443">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="152" nodename="IOBox (Value Advanced)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="4275" top="14970" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="4275" top="14970" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="LayerGUI">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="163" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="1635" top="9540" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1635" top="9540" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="CameraViewTransform">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="164" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="2520" top="9540" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="2520" top="9540" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="CameraProjectionTransform">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="141" dstpinname="ProjectionTransform" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="164" srcpinname="Output Node">
+   <LINKPOINT x="2470" y="10193">
+   </LINKPOINT>
+   <LINKPOINT x="3395" y="10193">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="142" dstpinname="ProjectionTransform" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="164" srcpinname="Output Node">
+   <LINKPOINT x="2470" y="10193">
+   </LINKPOINT>
+   <LINKPOINT x="6620" y="10193">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="141" dstpinname="ViewTransform" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="163" srcpinname="Output Node">
+   <LINKPOINT x="1585" y="10193">
+   </LINKPOINT>
+   <LINKPOINT x="3245" y="10193">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="142" dstpinname="ViewTransform" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="163" srcpinname="Output Node">
+   <LINKPOINT x="1585" y="10193">
+   </LINKPOINT>
+   <LINKPOINT x="6455" y="10193">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="116" dstpinname="XYZW" srcnodeid="115" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="152" dstpinname="Input Node" hiddenwhenlocked="1" srcnodeid="120" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InABox" id="167" managers="" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="21990" top="4485" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="21990" top="4485" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Environment">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="%VVVV%\effects\GouraudDirectional.fx" id="168" managers="" nodename="GouraudDirectional (EX9.Effect)" systemname="GouraudDirectional (EX9.Effect)">
+   <BOUNDS height="100" left="17340" top="9675" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Mesh" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Ambient Color" visible="1">
+   </PIN>
+   <PIN pinname="Diffuse Color" slicecount="1" visible="1" values="|0.18116,0.18116,0.18116,1.00000|">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Alpha" slicecount="1" values="0.69">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="168" dstpinname="Mesh" linkstyle="Bezier" srcnodeid="167" srcpinname="Output Node">
+   <LINKPOINT x="21975" y="7118">
+   </LINKPOINT>
+   <LINKPOINT x="17550" y="7268">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="142" dstpinname="Environment" linkstyle="VHV" srcnodeid="168" srcpinname="Layer">
+   <LINKPOINT x="17185" y="10275">
+   </LINKPOINT>
+   <LINKPOINT x="7265" y="10275">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="141" dstpinname="Environment" linkstyle="VHV" srcnodeid="168" srcpinname="Layer">
+   <LINKPOINT x="17185" y="10275">
+   </LINKPOINT>
+   <LINKPOINT x="4055" y="10275">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="168" dstpinname="Ambient Color" hiddenwhenlocked="1" srcnodeid="133" srcpinname="Color Output">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" hiddenwhenlocked="1" id="169" nodename="Cons (Spreads)" systemname="Cons (Spreads)">
+   <BOUNDS height="270" left="5865" top="6945" type="Node" width="9870">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 3" slicecount="36" visible="1" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Input 4" slicecount="36" visible="1" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="170" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="5070" top="15555" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="5070" top="15555" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="BindIt!">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="170" dstpinname="Y Input Value" hiddenwhenlocked="1" srcnodeid="169" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="173" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="4230" top="45" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="4230" top="45" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="BindControl">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="174" managers="boygroup" nodename="Stallone (Spreads)" systemname="Stallone (Spreads)">
+   <BOUNDS height="270" left="4950" top="810" type="Node" width="9780">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="Output Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input Sort" slicecount="1" values="Pin">
+   </PIN>
+   <PIN pinname="Output Sort" slicecount="1" values="Pin">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   <PIN pinname="Output 3" visible="1">
+   </PIN>
+   <PIN pinname="Output 4" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="175" nodename="R (Value)" systemname="R (Value)">
+   <BOUNDS height="100" left="2490" top="2070" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" slicecount="1" values="Multitouch">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="..\gui\SplitMultitouch.v4p" hiddenwhenlocked="1" id="176" nodename="..\gui\SplitMultitouch.v4p" systemname="SplitMultitouch" path="c:\Switchboy3\gui\">
+   <BOUNDS height="100" left="2505" top="2670" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="MultitouchData" visible="1">
+   </PIN>
+   <PIN pinname="ID" visible="1">
+   </PIN>
+   <PIN pinname="isNew" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Scroll" visible="1">
+   </PIN>
+   <PIN pinname="EditMode" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="176" dstpinname="MultitouchData" linkstyle="PolyLine" srcnodeid="175" srcpinname="Input Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="177" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
+   <BOUNDS height="100" left="3030" top="3765" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="177" dstpinname="Y" linkstyle="PolyLine" srcnodeid="176" srcpinname="Y">
+   </LINK>
+   <LINK dstnodeid="177" dstpinname="X" linkstyle="PolyLine" srcnodeid="176" srcpinname="X">
+   </LINK>
+   <NODE componentmode="Hidden" id="179" managers="" nodename="Fill (EX9.RenderState)" systemname="Fill (EX9.RenderState)">
+   <BOUNDS height="100" left="17130" top="8400" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Render State Out" visible="1">
+   </PIN>
+   <PIN pinname="Fill Mode" slicecount="1" values="WireFrame">
+   </PIN>
+   <PIN pinname="Render State In" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="180" managers="" nodename="Cull (EX9.RenderState)" systemname="Cull (EX9.RenderState)">
+   <BOUNDS height="100" left="17130" top="7710" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Render State Out" visible="1">
+   </PIN>
+   <PIN pinname="Culling" slicecount="1" values="None">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="179" dstpinname="Render State In" srcnodeid="180" srcpinname="Render State Out">
+   </LINK>
+   <NODE componentmode="Hidden" filename="tools\QuickBind.v4p" id="181" managers="boygroup" nodename="tools\QuickBind.v4p" systemname="QuickBind" path="c:\Switchboy3\engine\tools\">
+   <BOUNDS height="270" left="3900" top="5625" type="Node" width="2145">
+   </BOUNDS>
+   <BOUNDS height="3600" left="3900" top="5625" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="10035" left="1275" top="1980" type="Window" width="13320">
+   </BOUNDS>
+   <PIN pinname="BindControl" visible="1">
+   </PIN>
+   <PIN pinname="DMXPacket" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   <PIN pinname="IsBinded" visible="1">
+   </PIN>
+   <PIN pinname="IsLive" visible="1">
+   </PIN>
+   <PIN pinname="isClient" visible="1">
+   </PIN>
+   <PIN pinname="LayerMode" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Interval" visible="1">
+   </PIN>
+   <PIN pinname="Transform AsValue" visible="1">
+   </PIN>
+   <PIN pinname="MapValues" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="181" dstpinname="BindControl" srcnodeid="174" srcpinname="Output 1">
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="Values" hiddenwhenlocked="1" srcnodeid="181" srcpinname="Value">
+   </LINK>
+   <NODE componentmode="Hidden" debug="0" filename="tools\QuickBind.v4p" id="182" managers="boygroup" nodename="tools\QuickBind.v4p" systemname="QuickBind" path="c:\Switchboy3\engine\tools\">
+   <BOUNDS height="270" left="7125" top="5625" type="Node" width="2190">
+   </BOUNDS>
+   <BOUNDS height="3600" left="7125" top="5625" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
+   </BOUNDS>
+   <PIN pinname="BindControl" visible="1">
+   </PIN>
+   <PIN pinname="DMXPacket" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   <PIN pinname="IsBinded" visible="1">
+   </PIN>
+   <PIN pinname="IsLive" visible="1">
+   </PIN>
+   <PIN pinname="isClient" visible="1">
+   </PIN>
+   <PIN pinname="Interval" visible="1">
+   </PIN>
+   <PIN pinname="LayerMode" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform AsValue" visible="1">
+   </PIN>
+   <PIN pinname="MapValues" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="182" dstpinname="BindControl" srcnodeid="174" srcpinname="Output 2">
+   </LINK>
+   <LINK dstnodeid="113" dstpinname="Values" hiddenwhenlocked="1" srcnodeid="182" srcpinname="Value">
+   </LINK>
+   <LINK dstnodeid="182" dstpinname="DMXPacket" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="117" srcpinname="Y Output Value">
+   <LINKPOINT x="20505" y="3263">
+   </LINKPOINT>
+   <LINKPOINT x="8250" y="3263">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="181" dstpinname="DMXPacket" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="117" srcpinname="Y Output Value">
+   <LINKPOINT x="20505" y="3263">
+   </LINKPOINT>
+   <LINKPOINT x="4995" y="3263">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="185" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="18810" top="1125" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="480" left="18810" top="1125" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="isClient">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="182" dstpinname="isClient" linkstyle="VHV" srcnodeid="185" srcpinname="Y Output Value">
+   <LINKPOINT x="18880" y="3050">
+   </LINKPOINT>
+   <LINKPOINT x="8540" y="4150">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="181" dstpinname="isClient" linkstyle="VHV" srcnodeid="185" srcpinname="Y Output Value">
+   <LINKPOINT x="18880" y="3050">
+   </LINKPOINT>
+   <LINKPOINT x="5315" y="4150">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="186" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="285" top="9315" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="480" left="285" top="9315" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="PreviewSizeXY">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="141" dstpinname="PreviewSizeXY" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="186" srcpinname="Y Output Value">
+   <LINKPOINT x="1080" y="10200">
+   </LINKPOINT>
+   <LINKPOINT x="4230" y="10200">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="142" dstpinname="PreviewSizeXY" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="186" srcpinname="Y Output Value">
+   <LINKPOINT x="1080" y="10200">
+   </LINKPOINT>
+   <LINKPOINT x="7440" y="10200">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" debug="0" filename="..\gui\ChannelGUI2.v4p" id="119" nodename="..\gui\ChannelGUI2.v4p" systemname="ChannelGUI2" path="c:\Switchboy3\gui\">
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Active" visible="1">
+   </PIN>
+   <PIN pinname="Default" visible="1">
+   </PIN>
+   <PIN pinname="ControllerNames" visible="1">
+   </PIN>
+   <PIN pinname="PreviewTexture" visible="1">
+   </PIN>
+   <PIN pinname="DMXPacket" visible="1">
+   </PIN>
+   <PIN pinname="ID" visible="1">
+   </PIN>
+   <PIN pinname="isNew" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="Scroll" visible="1">
+   </PIN>
+   <PIN pinname="EditMode" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   <PIN pinname="isBinded" visible="1">
+   </PIN>
+   <BOUNDS height="270" left="3615" top="4560" type="Node" width="2985">
+   </BOUNDS>
+   <PIN pinname="LayerMode" visible="1">
+   </PIN>
+   <PIN pinname="Values" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS left="3615" top="4560" type="Box">
+   </BOUNDS>
+   <PIN pinname="MouseX" visible="1">
+   </PIN>
+   <PIN pinname="MouseY" visible="1">
+   </PIN>
+   <PIN pinname="MouseWheel" visible="1">
+   </PIN>
+   <PIN pinname="LeftMouse" visible="1">
+   </PIN>
+   <PIN pinname="RightMouse" visible="1">
+   </PIN>
+   <PIN pinname="CurrentPatch" visible="1">
+   </PIN>
+   <PIN pinname="Live" visible="1">
+   </PIN>
+   <PIN pinname="Interval" visible="1">
+   </PIN>
+   <BOUNDS height="15930" left="3015" top="165" type="Window" width="15645">
+   </BOUNDS>
+   <PIN pinname="BindControl" visible="1">
+   </PIN>
+   <PIN pinname="BindIt!" visible="1">
+   </PIN>
+   <PIN pinname="BindID" visible="1">
+   </PIN>
+   <PIN pinname="PreviewPositionXY" visible="1">
+   </PIN>
+   <PIN pinname="PreviewHit" visible="1">
+   </PIN>
+   <PIN pinname="Update" visible="1">
+   </PIN>
+   <PIN pinname="Path" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="181" dstpinname="IsLive" linkstyle="VHV" srcnodeid="119" srcpinname="Live">
+   <LINKPOINT x="6225" y="5228">
+   </LINKPOINT>
+   <LINKPOINT x="6000" y="5228">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="isBinded" hiddenwhenlocked="1" srcnodeid="181" srcpinname="IsBinded">
+   </LINK>
+   <LINK dstnodeid="181" dstpinname="Value" hiddenwhenlocked="0" linkstyle="VHV" srcnodeid="119" srcpinname="Values">
+   <LINKPOINT x="5565" y="5213">
+   </LINKPOINT>
+   <LINKPOINT x="4485" y="5213">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="Value" hiddenwhenlocked="1" srcnodeid="181" srcpinname="Value">
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="EditMode" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="176" srcpinname="EditMode">
+   <LINKPOINT x="3870" y="3743">
+   </LINKPOINT>
+   <LINKPOINT x="5475" y="3743">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="Scroll" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="176" srcpinname="Scroll">
+   <LINKPOINT x="3615" y="3743">
+   </LINKPOINT>
+   <LINKPOINT x="5205" y="3743">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="XY" linkstyle="VHV" srcnodeid="177" srcpinname="XY">
+   <LINKPOINT x="3070" y="4283">
+   </LINKPOINT>
+   <LINKPOINT x="4610" y="4283">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="isNew" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="176" srcpinname="isNew">
+   <LINKPOINT x="2820" y="3735">
+   </LINKPOINT>
+   <LINKPOINT x="4815" y="3735">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="ID" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="176" srcpinname="ID">
+   <LINKPOINT x="2565" y="3735">
+   </LINKPOINT>
+   <LINKPOINT x="4335" y="3735">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="DMXPacket" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="117" srcpinname="Y Output Value">
+   <LINKPOINT x="20505" y="2730">
+   </LINKPOINT>
+   <LINKPOINT x="5865" y="2730">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="169" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="119" srcpinname="BindIt!">
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="PreviewTexture" hiddenwhenlocked="1" srcnodeid="141" srcpinname="Texture">
+   <LINKPOINT x="2780" y="11185">
+   </LINKPOINT>
+   <LINKPOINT x="3280" y="4790">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="ControllerNames" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="112" srcpinname="Controller Names">
+   <LINKPOINT x="6720" y="10290">
+   </LINKPOINT>
+   <LINKPOINT x="6720" y="4395">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="139" dstpinname="Y Input Value" srcnodeid="119" srcpinname="Live">
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="Patch" linkstyle="VHV" srcnodeid="119" srcpinname="CurrentPatch">
+   <LINKPOINT x="5805" y="7140">
+   </LINKPOINT>
+   <LINKPOINT x="6555" y="7335">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="Default" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="134" srcpinname="Color Output">
+   <LINKPOINT x="17340" y="4373">
+   </LINKPOINT>
+   <LINKPOINT x="6270" y="4373">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="Active" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="133" srcpinname="Color Output">
+   <LINKPOINT x="17970" y="4373">
+   </LINKPOINT>
+   <LINKPOINT x="6600" y="4373">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="Transform" srcnodeid="123" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="120" dstpinname="Layer 1" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="119" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" id="187" managers="" nodename="ZWriteEnable (EX9.RenderState)" systemname="ZWriteEnable (EX9.RenderState)">
+   <BOUNDS height="100" left="16995" top="8955" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Render State In" visible="1">
+   </PIN>
+   <PIN pinname="Render State Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="187" dstpinname="Render State In" srcnodeid="179" srcpinname="Render State Out">
+   </LINK>
+   <LINK dstnodeid="168" dstpinname="Render State" srcnodeid="187" srcpinname="Render State Out">
+   </LINK>
+   <NODE componentmode="Hidden" filename="..\gui\ChannelGUI2.v4p" id="124" nodename="..\gui\ChannelGUI2.v4p" systemname="ChannelGUI2" path="c:\Switchboy3\gui\">
+   <PIN pinname="isBinded" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   <PIN pinname="EditMode" visible="1">
+   </PIN>
+   <PIN pinname="Scroll" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="isNew" visible="1">
+   </PIN>
+   <PIN pinname="ID" visible="1">
+   </PIN>
+   <PIN pinname="DMXPacket" visible="1">
+   </PIN>
+   <PIN pinname="ControllerNames" visible="1">
+   </PIN>
+   <PIN pinname="PreviewTexture" visible="1">
+   </PIN>
+   <PIN pinname="Default" visible="1">
+   </PIN>
+   <PIN pinname="Active" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <BOUNDS height="270" left="6855" top="4560" type="Node" width="2985">
+   </BOUNDS>
+   <PIN pinname="LayerMode" visible="1">
+   </PIN>
+   <PIN pinname="Values" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS left="6855" top="4560" type="Box">
+   </BOUNDS>
+   <PIN pinname="MouseX" visible="1">
+   </PIN>
+   <PIN pinname="MouseY" visible="1">
+   </PIN>
+   <PIN pinname="MouseWheel" visible="1">
+   </PIN>
+   <PIN pinname="LeftMouse" visible="1">
+   </PIN>
+   <PIN pinname="RightMouse" visible="1">
+   </PIN>
+   <PIN pinname="Interval" visible="1">
+   </PIN>
+   <PIN pinname="CurrentPatch" visible="1">
+   </PIN>
+   <PIN pinname="Live" visible="1">
+   </PIN>
+   <PIN pinname="BindControl" visible="1">
+   </PIN>
+   <PIN pinname="BindIt!" visible="1">
+   </PIN>
+   <PIN pinname="BindID" visible="1">
+   </PIN>
+   <PIN pinname="PreviewPositionXY" visible="1">
+   </PIN>
+   <PIN pinname="PreviewHit" visible="1">
+   </PIN>
+   <PIN pinname="Update" visible="1">
+   </PIN>
+   <PIN pinname="Path" visible="1">
+   </PIN>
+   <BOUNDS height="15930" left="195" top="3090" type="Window" width="15645">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="124" dstpinname="Transform" srcnodeid="125" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="120" dstpinname="Layer 2" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="124" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="Active" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="133" srcpinname="Color Output">
+   <LINKPOINT x="17970" y="4373">
+   </LINKPOINT>
+   <LINKPOINT x="9840" y="4373">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="Default" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="134" srcpinname="Color Output">
+   <LINKPOINT x="17340" y="4373">
+   </LINKPOINT>
+   <LINKPOINT x="9510" y="4373">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="PreviewTexture" hiddenwhenlocked="1" srcnodeid="142" srcpinname="Texture">
+   <LINKPOINT x="6015" y="11115">
+   </LINKPOINT>
+   <LINKPOINT x="6795" y="4200">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="113" dstpinname="Patch" linkstyle="VHV" srcnodeid="124" srcpinname="CurrentPatch">
+   <LINKPOINT x="9810" y="5745">
+   </LINKPOINT>
+   <LINKPOINT x="9990" y="5745">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="146" dstpinname="Y Input Value" srcnodeid="124" srcpinname="Live">
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="ControllerNames" linkstyle="PolyLine" srcnodeid="113" srcpinname="Controller Names">
+   <LINKPOINT x="10005" y="10230">
+   </LINKPOINT>
+   <LINKPOINT x="10005" y="4215">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="169" dstpinname="Input 2" hiddenwhenlocked="1" srcnodeid="124" srcpinname="BindIt!">
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="DMXPacket" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="117" srcpinname="Y Output Value">
+   <LINKPOINT x="20505" y="2730">
+   </LINKPOINT>
+   <LINKPOINT x="9105" y="2730">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="ID" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="176" srcpinname="ID">
+   <LINKPOINT x="2565" y="3735">
+   </LINKPOINT>
+   <LINKPOINT x="7590" y="3735">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="isNew" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="176" srcpinname="isNew">
+   <LINKPOINT x="2820" y="3735">
+   </LINKPOINT>
+   <LINKPOINT x="8070" y="3735">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="XY" linkstyle="VHV" srcnodeid="177" srcpinname="XY">
+   <LINKPOINT x="3070" y="4283">
+   </LINKPOINT>
+   <LINKPOINT x="7850" y="4283">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="Scroll" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="176" srcpinname="Scroll">
+   <LINKPOINT x="3615" y="3735">
+   </LINKPOINT>
+   <LINKPOINT x="8445" y="3735">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="EditMode" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="176" srcpinname="EditMode">
+   <LINKPOINT x="3870" y="3735">
+   </LINKPOINT>
+   <LINKPOINT x="8715" y="3735">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="Value" hiddenwhenlocked="1" srcnodeid="182" srcpinname="Value">
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="isBinded" hiddenwhenlocked="1" srcnodeid="182" srcpinname="IsBinded">
+   </LINK>
+   <LINK dstnodeid="182" dstpinname="Value" hiddenwhenlocked="0" linkstyle="VHV" srcnodeid="124" srcpinname="Values">
+   <LINKPOINT x="8805" y="5213">
+   </LINKPOINT>
+   <LINKPOINT x="7710" y="5213">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="182" dstpinname="IsLive" linkstyle="VHV" srcnodeid="124" srcpinname="Live">
+   <LINKPOINT x="9465" y="5228">
+   </LINKPOINT>
+   <LINKPOINT x="9225" y="5228">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="141" dstpinname="XY" srcnodeid="119" srcpinname="PreviewPositionXY">
+   </LINK>
+   <LINK dstnodeid="142" dstpinname="XY" srcnodeid="124" srcpinname="PreviewPositionXY">
+   </LINK>
+   <LINK dstnodeid="141" dstpinname="Left Button" srcnodeid="119" srcpinname="PreviewHit">
+   <LINKPOINT x="3780" y="4965">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="142" dstpinname="Left Button" srcnodeid="124" srcpinname="PreviewHit">
+   <LINKPOINT x="6990" y="4980">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="141" dstpinname="Mouse Wheel" hiddenwhenlocked="1" srcnodeid="176" srcpinname="Scroll">
+   </LINK>
+   <LINK dstnodeid="142" dstpinname="Mouse Wheel" hiddenwhenlocked="1" srcnodeid="176" srcpinname="Scroll">
+   </LINK>
+   <LINK dstnodeid="182" dstpinname="Interval" linkstyle="VHV" srcnodeid="124" srcpinname="Interval">
+   <LINKPOINT x="8505" y="5228">
+   </LINKPOINT>
+   <LINKPOINT x="8745" y="5228">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="113" dstpinname="Interval" srcnodeid="182" srcpinname="Interval">
+   </LINK>
+   <LINK dstnodeid="182" dstpinname="LayerMode" linkstyle="VHV" srcnodeid="124" srcpinname="LayerMode">
+   <LINKPOINT x="7815" y="5220">
+   </LINKPOINT>
+   <LINKPOINT x="7185" y="5220">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="96" dstpinname="LayerMode" srcnodeid="182" srcpinname="LayerMode">
+   </LINK>
+   <LINK dstnodeid="181" dstpinname="LayerMode" linkstyle="VHV" srcnodeid="119" srcpinname="LayerMode">
+   <LINKPOINT x="4575" y="5220">
+   </LINKPOINT>
+   <LINKPOINT x="3960" y="5220">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="93" dstpinname="LayerMode" srcnodeid="181" srcpinname="LayerMode">
+   </LINK>
+   <LINK dstnodeid="181" dstpinname="Color" linkstyle="VHV" srcnodeid="119" srcpinname="Color">
+   <LINKPOINT x="4950" y="5228">
+   </LINKPOINT>
+   <LINKPOINT x="5220" y="5228">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="141" dstpinname="Color" linkstyle="Bezier" srcnodeid="181" srcpinname="Color">
+   <LINKPOINT x="5580" y="8265">
+   </LINKPOINT>
+   <LINKPOINT x="4425" y="8265">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="182" dstpinname="Color" linkstyle="VHV" srcnodeid="124" srcpinname="Color">
+   <LINKPOINT x="8205" y="5228">
+   </LINKPOINT>
+   <LINKPOINT x="8475" y="5228">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="113" dstpinname="Color" srcnodeid="182" srcpinname="Color">
+   </LINK>
+   <LINK dstnodeid="142" dstpinname="Color" linkstyle="Bezier" srcnodeid="182" srcpinname="Color">
+   <LINKPOINT x="8850" y="8265">
+   </LINKPOINT>
+   <LINKPOINT x="7635" y="8265">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="BackgroundColor" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="140" srcpinname="Color Output">
+   <LINKPOINT x="19645" y="9728">
+   </LINKPOINT>
+   <LINKPOINT x="5255" y="9728">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="Color" srcnodeid="181" srcpinname="Color">
+   </LINK>
+   <LINK dstnodeid="113" dstpinname="Transform" srcnodeid="182" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="Transform" srcnodeid="181" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="181" dstpinname="Interval" linkstyle="VHV" srcnodeid="119" srcpinname="Interval">
+   <LINKPOINT x="5265" y="5228">
+   </LINKPOINT>
+   <LINKPOINT x="5475" y="5228">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="Interval" srcnodeid="181" srcpinname="Interval">
+   </LINK>
+   <LINK dstnodeid="182" dstpinname="Transform AsValue" srcnodeid="142" srcpinname="Transform AsValue">
+   <LINKPOINT x="7890" y="11145">
+   </LINKPOINT>
+   <LINKPOINT x="7935" y="5325">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="181" dstpinname="Transform AsValue" srcnodeid="141" srcpinname="Transform AsValue">
+   <LINKPOINT x="4980" y="11100">
+   </LINKPOINT>
+   <LINKPOINT x="4650" y="5310">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="141" dstpinname="WallTransform" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="107" srcpinname="Output Node">
+   <LINKPOINT x="365" y="7328">
+   </LINKPOINT>
+   <LINKPOINT x="4780" y="8933">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="142" dstpinname="WallTransform" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="107" srcpinname="Output Node">
+   <LINKPOINT x="365" y="7328">
+   </LINKPOINT>
+   <LINKPOINT x="7990" y="8933">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="191" nodename="Cons (String)" systemname="Cons (String)">
+   <BOUNDS height="100" left="7530" top="13575" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS left="7530" top="13575" type="Box">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="191" dstpinname="Input 1" srcnodeid="112" srcpinname="OSCString">
+   </LINK>
+   <LINK dstnodeid="191" dstpinname="Input 2" srcnodeid="113" srcpinname="OSCString">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="193" nodename="Cons (String)" systemname="Cons (String)">
+   <BOUNDS height="100" left="8865" top="13575" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS left="8865" top="13575" type="Box">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="193" dstpinname="Input 1" srcnodeid="112" srcpinname="OSCAdresses">
+   </LINK>
+   <LINK dstnodeid="193" dstpinname="Input 2" srcnodeid="113" srcpinname="OSCAdresses">
+   </LINK>
+   <NODE componentmode="InABox" id="198" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="6810" top="14745" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="6810" top="14745" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="OSCString">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="198" dstpinname="Input String" srcnodeid="191" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="199" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="8115" top="14730" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="8115" top="14730" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="OSCAdresses">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="199" dstpinname="Input String" srcnodeid="193" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="200" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="1440" top="8490" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1440" top="8490" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1810" visible="1" values="0,2,0,0.21,0.12,0.04,0,0,0,-4.49984312057495,-0.0578434392809868,-0.309539556503296,4.49984359741211,3.07999992370605,4.99584293365479,104,8,-1,2.97995796927353E-007,0,4.99953937530518,0,0,2.48000001907349,0,0,-0.499999940395355,0,2.98023223876953E-008,0,-4.49399948120117,1.48800003528595,2.19023013114929,1,4.47080373764038,0,0,0,0,2.48000001907349,0,0,0,0,0.5,0,-1.95859789848328,1.48800003528595,4.98999977111816,1,4.47080373764038,0,0,0,0,2.48000001907349,0,0,0,0,0.5,0,1.95859789848328,1.48800003528595,4.98999977111816,1,2.97995796927353E-007,0,-4.99953937530518,0,0,2.48000001907349,0,0,0.499999940395355,0,2.98023223876953E-008,0,4.49399948120117,1.48800003528595,2.19023013114929,1,2.97995796927353E-007,0,-4.99953937530518,0,0,2.48000001907349,0,0,0.499999940395355,0,2.98023223876953E-008,0,4.49399948120117,1.48800003528595,-2.19022965431213,1,-4.47080373764038,0,3.90850061648962E-007,0,0,2.48000001907349,0,0,-4.37113882867379E-008,0,-0.5,0,1.95859742164612,1.48800003528595,-4.98999977111816,1,-4.47080373764038,0,3.90850061648962E-007,0,0,2.48000001907349,0,0,-4.37113882867379E-008,0,-0.5,0,-1.95859837532043,1.48800003528595,-4.98999977111816,1,2.97995796927353E-007,0,4.99953937530518,0,0,2.48000001907349,0,0,-0.499999940395355,0,2.98023223876953E-008,0,-4.49399948120117,1.48800003528595,-2.19022965431213,1,-0.11671344190836,0,-0.0232157539576292,0,0,3.07999992370605,0,0,0.0975451841950417,0,-0.490392595529556,0,-4.25252676010132,1.53999996185303,4.98423480987549,1,-0.0989448726177216,0,-0.0661128535866737,0,0,3.07999992370605,0,0,0.277785092592239,0,-0.415734738111496,0,-4.360671043396,1.53999996185303,4.93943977355957,1,-0.0661128386855125,0,-0.0989448875188828,0,0,3.07999992370605,0,0,0.415734797716141,0,-0.277785032987595,0,-4.44344043731689,1.53999996185303,4.85667037963867,1,-0.0232157409191132,0,-0.11671344190836,0,0,3.07999992370605,0,0,0.490392595529556,0,-0.0975451245903969,0,-4.48823547363281,1.53999996185303,4.74852609634399,1,-0.11671344190836,0,-0.0232157539576292,0,0,3.07999992370605,0,0,0.0975451841950417,0,-0.490392595529556,0,-4.25252676010132,1.53999996185303,4.98423480987549,1,-0.0989448726177216,0,-0.0661128535866737,0,0,3.07999992370605,0,0,0.277785092592239,0,-0.415734738111496,0,-4.360671043396,1.53999996185303,4.93943977355957,1,-0.0661128386855125,0,-0.0989448875188828,0,0,3.07999992370605,0,0,0.415734797716141,0,-0.277785032987595,0,-4.44344043731689,1.53999996185303,4.85667037963867,1,-0.0232157409191132,0,-0.11671344190836,0,0,3.07999992370605,0,0,0.490392595529556,0,-0.0975451245903969,0,-4.48823547363281,1.53999996185303,4.74852609634399,1,-0.0232157409191132,0,0.116713456809521,0,0,3.07999992370605,0,0,-0.490392655134201,0,-0.0975451245903969,0,4.48823595046997,1.53999996185303,4.74852657318115,1,-0.0661128461360931,0,0.0989448949694633,0,0,3.07999992370605,0,0,-0.415734857320786,0,-0.277785062789917,0,4.44344091415405,1.53999996185303,4.85667085647583,1,-0.0989448875188828,0,0.0661128610372543,0,0,3.07999992370605,0,0,-0.277785122394562,0,-0.415734797716141,0,4.36067152023315,1.53999996185303,4.93944025039673,1,-0.116713456809521,0,0.0232157614082098,0,0,3.07999992370605,0,0,-0.097545213997364,0,-0.490392655134201,0,4.25252723693848,1.53999996185303,4.98423528671265,1,-0.0232157409191132,0,0.116713456809521,0,0,3.07999992370605,0,0,-0.490392655134201,0,-0.0975451245903969,0,4.48823595046997,1.53999996185303,4.74852657318115,1,-0.0661128461360931,0,0.0989448949694633,0,0,3.07999992370605,0,0,-0.415734857320786,0,-0.277785062789917,0,4.44344091415405,1.53999996185303,4.85667085647583,1,-0.0989448875188828,0,0.0661128610372543,0,0,3.07999992370605,0,0,-0.277785122394562,0,-0.415734797716141,0,4.36067152023315,1.53999996185303,4.93944025039673,1,-0.116713456809521,0,0.0232157614082098,0,0,3.07999992370605,0,0,-0.097545213997364,0,-0.490392655134201,0,4.25252723693848,1.53999996185303,4.98423528671265,1,0.11671344190836,0,0.0232157409191132,0,0,3.07999992370605,0,0,-0.0975451245903969,0,0.490392595529556,0,4.252525806427,1.53999996185303,-4.9842357635498,1,0.0989448875188828,0,0.0661128386855125,0,0,3.07999992370605,0,0,-0.277785032987595,0,0.415734797716141,0,4.36067008972168,1.53999996185303,-4.93944072723389,1,0.0661128535866737,0,0.0989448726177216,0,0,3.07999992370605,0,0,-0.415734738111496,0,0.277785092592239,0,4.44343948364258,1.53999996185303,-4.85667133331299,1,0.0232157539576292,0,0.11671344190836,0,0,3.07999992370605,0,0,-0.490392595529556,0,0.0975451841950417,0,4.4882345199585,1.53999996185303,-4.74852705001831,1,0.11671344190836,0,0.0232157409191132,0,0,3.07999992370605,0,0,-0.0975451245903969,0,0.490392595529556,0,4.252525806427,1.53999996185303,-4.9842357635498,1,0.0989448875188828,0,0.0661128386855125,0,0,3.07999992370605,0,0,-0.277785032987595,0,0.415734797716141,0,4.36067008972168,1.53999996185303,-4.93944072723389,1,0.0661128535866737,0,0.0989448726177216,0,0,3.07999992370605,0,0,-0.415734738111496,0,0.277785092592239,0,4.44343948364258,1.53999996185303,-4.85667133331299,1,0.0232157539576292,0,0.11671344190836,0,0,3.07999992370605,0,0,-0.490392595529556,0,0.0975451841950417,0,4.4882345199585,1.53999996185303,-4.74852705001831,1,0.0232157502323389,0,-0.116713456809521,0,0,3.07999992370605,0,0,0.490392655134201,0,0.0975451692938805,0,-4.48823547363281,1.53999996185303,-4.74852705001831,1,0.0661128535866737,0,-0.0989448875188828,0,0,3.07999992370605,0,0,0.415734827518463,0,0.277785092592239,0,-4.44344043731689,1.53999996185303,-4.85667133331299,1,0.0989448875188828,0,-0.0661128535866737,0,0,3.07999992370605,0,0,0.277785092592239,0,0.415734827518463,0,-4.360671043396,1.53999996185303,-4.93944072723389,1,0.116713456809521,0,-0.0232157502323389,0,0,3.07999992370605,0,0,0.0975451692938805,0,0.490392655134201,0,-4.25252676010132,1.53999996185303,-4.9842357635498,1,0.0232157502323389,0,-0.116713456809521,0,0,3.07999992370605,0,0,0.490392655134201,0,0.0975451692938805,0,-4.48823547363281,1.53999996185303,-4.74852705001831,1,0.0661128535866737,0,-0.0989448875188828,0,0,3.07999992370605,0,0,0.415734827518463,0,0.277785092592239,0,-4.44344043731689,1.53999996185303,-4.85667133331299,1,0.0989448875188828,0,-0.0661128535866737,0,0,3.07999992370605,0,0,0.277785092592239,0,0.415734827518463,0,-4.360671043396,1.53999996185303,-4.93944072723389,1,0.116713456809521,0,-0.0232157502323389,0,0,3.07999992370605,0,0,0.0975451692938805,0,0.490392655134201,0,-4.25252676010132,1.53999996185303,-4.9842357635498,1,-3.06721801734966E-007,0,-5.14593744277954,0,0.116713456809521,-0.0232157520949841,-6.9566650218178E-009,0,0.0975451543927193,0.490392684936523,-5.81414516531709E-009,0,-4.25252628326416,-0.0462355613708496,2.26819896697998,1,-3.06721801734966E-007,0,-5.14593744277954,0,0.0989448875188828,-0.0661128610372543,-5.8975753169932E-009,0,0.277785062789917,0.415734827518463,-1.65572817678594E-008,0,-4.36067056655884,-0.00144085288047791,2.26819896697998,1,-3.06721773313257E-007,0,-5.14593696594238,0,0.0661128535866737,-0.0989448949694633,-3.94063359721031E-009,0,0.415734797716141,0.277785122394562,-2.47797284913531E-008,0,-4.44343996047974,0.0813289433717728,2.26819896697998,1,-3.06721773313257E-007,0,-5.14593696594238,0,0.0232157483696938,-0.116713464260101,-1.38376665681506E-009,0,0.490392625331879,0.0975451767444611,-2.92296817860915E-008,0,-4.48823499679565,0.189472928643227,2.26819896697998,1,-3.06721801734966E-007,0,-5.14593744277954,0,0.116713456809521,0.0232157520949841,-6.9566650218178E-009,0,0.0975451543927193,-0.490392684936523,-5.81414516531709E-009,0,-4.25252628326416,3.02223587036133,2.26819896697998,1,-3.06721801734966E-007,0,-5.14593744277954,0,0.0989448875188828,0.0661128610372543,-5.8975753169932E-009,0,0.277785062789917,-0.415734827518463,-1.65572817678594E-008,0,-4.36067056655884,2.97744107246399,2.26819896697998,1,-3.06721773313257E-007,0,-5.14593696594238,0,0.0661128535866737,0.0989448949694633,-3.94063359721031E-009,0,0.415734797716141,-0.277785122394562,-2.47797284913531E-008,0,-4.44343996047974,2.89467120170593,2.26819896697998,1,-3.06721773313257E-007,0,-5.14593696594238,0,0.0232157483696938,0.116713464260101,-1.38376665681506E-009,0,0.490392625331879,-0.0975451767444611,-2.92296817860915E-008,0,-4.48823499679565,2.78652715682983,2.26819896697998,1,-4.63443803787231,0,0,0,0,-0.0232157520949841,-0.116713471710682,0,0,0.490392684936523,-0.0975451692938805,0,-2.02881669998169,-0.0462355613708496,4.74852657318115,1,-4.63443803787231,0,0,0,0,-0.0661128610372543,-0.0989448949694633,0,0,0.415734827518463,-0.277785092592239,0,-2.02881669998169,-0.00144085288047791,4.85667085647583,1,-4.63443756103516,0,0,0,0,-0.0989448949694633,-0.0661128610372543,0,0,0.277785122394562,-0.415734857320786,0,-2.02881669998169,0.0813289433717728,4.93944025039673,1,-4.63443756103516,0,0,0,0,-0.116713464260101,-0.0232157520949841,0,0,0.0975451767444611,-0.490392684936523,0,-2.02881669998169,0.189472928643227,4.98423528671265,1,-4.63443803787231,0,0,0,0,0.0232157520949841,-0.116713471710682,0,0,-0.490392684936523,-0.0975451692938805,0,-2.02881669998169,3.02223587036133,4.74852657318115,1,-4.63443803787231,0,0,0,0,0.0661128610372543,-0.0989448949694633,0,0,-0.415734827518463,-0.277785092592239,0,-2.02881669998169,2.97744107246399,4.85667085647583,1,-4.63443756103516,0,0,0,0,0.0989448949694633,-0.0661128610372543,0,0,-0.277785122394562,-0.415734857320786,0,-2.02881669998169,2.89467120170593,4.93944025039673,1,-4.63443756103516,0,0,0,0,0.116713464260101,-0.0232157520949841,0,0,-0.0975451767444611,-0.490392684936523,0,-2.02881669998169,2.78652715682983,4.98423528671265,1,-4.63443803787231,0,0,0,0,-0.0232157520949841,-0.116713471710682,0,0,0.490392684936523,-0.0975451692938805,0,2.02881669998169,-0.0462355613708496,4.74852657318115,1,-4.63443803787231,0,0,0,0,-0.0661128610372543,-0.0989448949694633,0,0,0.415734827518463,-0.277785092592239,0,2.02881669998169,-0.00144085288047791,4.85667085647583,1,-4.63443756103516,0,0,0,0,-0.0989448949694633,-0.0661128610372543,0,0,0.277785122394562,-0.415734857320786,0,2.02881669998169,0.0813289433717728,4.93944025039673,1,-4.63443756103516,0,0,0,0,-0.116713464260101,-0.0232157520949841,0,0,0.0975451767444611,-0.490392684936523,0,2.02881669998169,0.189472928643227,4.98423528671265,1,-4.63443803787231,0,0,0,0,0.0232157520949841,-0.116713471710682,0,0,-0.490392684936523,-0.0975451692938805,0,2.02881669998169,3.02223587036133,4.74852657318115,1,-4.63443803787231,0,0,0,0,0.0661128610372543,-0.0989448949694633,0,0,-0.415734827518463,-0.277785092592239,0,2.02881669998169,2.97744107246399,4.85667085647583,1,-4.63443756103516,0,0,0,0,0.0989448949694633,-0.0661128610372543,0,0,-0.277785122394562,-0.415734857320786,0,2.02881669998169,2.89467120170593,4.93944025039673,1,-4.63443756103516,0,0,0,0,0.116713464260101,-0.0232157520949841,0,0,-0.0975451767444611,-0.490392684936523,0,2.02881669998169,2.78652715682983,4.98423528671265,1,-3.06721801734966E-007,0,5.14593744277954,0,-0.116713456809521,-0.0232157520949841,-6.9566650218178E-009,0,-0.0975451543927193,0.490392684936523,-5.81414516531709E-009,0,4.25252628326416,-0.0462355613708496,2.26819896697998,1,-3.06721801734966E-007,0,5.14593744277954,0,-0.0989448875188828,-0.0661128610372543,-5.8975753169932E-009,0,-0.277785062789917,0.415734827518463,-1.65572817678594E-008,0,4.36067056655884,-0.00144085288047791,2.26819896697998,1,-3.06721773313257E-007,0,5.14593696594238,0,-0.0661128535866737,-0.0989448949694633,-3.94063359721031E-009,0,-0.415734797716141,0.277785122394562,-2.47797284913531E-008,0,4.44343996047974,0.0813289433717728,2.26819896697998,1,-3.06721773313257E-007,0,5.14593696594238,0,-0.0232157483696938,-0.116713464260101,-1.38376665681506E-009,0,-0.490392625331879,0.0975451767444611,-2.92296817860915E-008,0,4.48823499679565,0.189472928643227,2.26819896697998,1,-3.06721801734966E-007,0,5.14593744277954,0,-0.116713456809521,0.0232157520949841,-6.9566650218178E-009,0,-0.0975451543927193,-0.490392684936523,-5.81414516531709E-009,0,4.25252628326416,3.02223587036133,2.26819896697998,1,-3.06721801734966E-007,0,5.14593744277954,0,-0.0989448875188828,0.0661128610372543,-5.8975753169932E-009,0,-0.277785062789917,-0.415734827518463,-1.65572817678594E-008,0,4.36067056655884,2.97744107246399,2.26819896697998,1,-3.06721773313257E-007,0,5.14593696594238,0,-0.0661128535866737,0.0989448949694633,-3.94063359721031E-009,0,-0.415734797716141,-0.277785122394562,-2.47797284913531E-008,0,4.44343996047974,2.89467120170593,2.26819896697998,1,-3.06721773313257E-007,0,5.14593696594238,0,-0.0232157483696938,0.116713464260101,-1.38376665681506E-009,0,-0.490392625331879,-0.0975451767444611,-2.92296817860915E-008,0,4.48823499679565,2.78652715682983,2.26819896697998,1,-3.06721801734966E-007,0,5.14593744277954,0,-0.116713456809521,-0.0232157520949841,-6.9566650218178E-009,0,-0.0975451543927193,0.490392684936523,-5.81414516531709E-009,0,4.25252628326416,-0.0462355613708496,-2.26819849014282,1,-3.06721801734966E-007,0,5.14593744277954,0,-0.0989448875188828,-0.0661128610372543,-5.8975753169932E-009,0,-0.277785062789917,0.415734827518463,-1.65572817678594E-008,0,4.36067056655884,-0.00144085288047791,-2.26819849014282,1,-3.06721773313257E-007,0,5.14593696594238,0,-0.0661128535866737,-0.0989448949694633,-3.94063359721031E-009,0,-0.415734797716141,0.277785122394562,-2.47797284913531E-008,0,4.44343996047974,0.0813289433717728,-2.26819849014282,1,-3.06721773313257E-007,0,5.14593696594238,0,-0.0232157483696938,-0.116713464260101,-1.38376665681506E-009,0,-0.490392625331879,0.0975451767444611,-2.92296817860915E-008,0,4.48823499679565,0.189472928643227,-2.26819849014282,1,-3.06721801734966E-007,0,5.14593744277954,0,-0.116713456809521,0.0232157520949841,-6.9566650218178E-009,0,-0.0975451543927193,-0.490392684936523,-5.81414516531709E-009,0,4.25252628326416,3.02223587036133,-2.26819849014282,1,-3.06721801734966E-007,0,5.14593744277954,0,-0.0989448875188828,0.0661128610372543,-5.8975753169932E-009,0,-0.277785062789917,-0.415734827518463,-1.65572817678594E-008,0,4.36067056655884,2.97744107246399,-2.26819849014282,1,-3.06721773313257E-007,0,5.14593696594238,0,-0.0661128535866737,0.0989448949694633,-3.94063359721031E-009,0,-0.415734797716141,-0.277785122394562,-2.47797284913531E-008,0,4.44343996047974,2.89467120170593,-2.26819849014282,1,-3.06721773313257E-007,0,5.14593696594238,0,-0.0232157483696938,0.116713464260101,-1.38376665681506E-009,0,-0.490392625331879,-0.0975451767444611,-2.92296817860915E-008,0,4.48823499679565,2.78652715682983,-2.26819849014282,1,4.63443803787231,0,4.05155446969729E-007,0,-1.02034150017971E-008,-0.0232157520949841,0.116713471710682,0,-8.52766923742365E-009,0.490392684936523,0.0975451692938805,0,2.02881622314453,-0.0462355613708496,-4.74852657318115,1,4.63443803787231,0,4.05155446969729E-007,0,-8.65003713101942E-009,-0.0661128610372543,0.0989448949694633,0,-2.42847448816974E-008,0.415734827518463,0.277785092592239,0,2.02881622314453,-0.00144085288047791,-4.85667085647583,1,4.63443756103516,0,4.05155390126311E-007,0,-5.77976999593943E-009,-0.0989448949694633,0.0661128610372543,0,-3.63446943651979E-008,0.277785122394562,0.415734857320786,0,2.02881622314453,0.0813289433717728,-4.93944025039673,1,4.63443756103516,0,4.05155390126311E-007,0,-2.02958561068556E-009,-0.116713464260101,0.0232157520949841,0,-4.28714912459327E-008,0.0975451767444611,0.490392684936523,0,2.02881622314453,0.189472928643227,-4.98423528671265,1,4.63443803787231,0,4.05155446969729E-007,0,-1.02034150017971E-008,0.0232157520949841,0.116713471710682,0,-8.52766923742365E-009,-0.490392684936523,0.0975451692938805,0,2.02881622314453,3.02223587036133,-4.74852657318115,1,4.63443803787231,0,4.05155446969729E-007,0,-8.65003713101942E-009,0.0661128610372543,0.0989448949694633,0,-2.42847448816974E-008,-0.415734827518463,0.277785092592239,0,2.02881622314453,2.97744107246399,-4.85667085647583,1,4.63443756103516,0,4.05155390126311E-007,0,-5.77976999593943E-009,0.0989448949694633,0.0661128610372543,0,-3.63446943651979E-008,-0.277785122394562,0.415734857320786,0,2.02881622314453,2.89467120170593,-4.93944025039673,1,4.63443756103516,0,4.05155390126311E-007,0,-2.02958561068556E-009,0.116713464260101,0.0232157520949841,0,-4.28714912459327E-008,-0.0975451767444611,0.490392684936523,0,2.02881622314453,2.78652715682983,-4.98423528671265,1,4.63443803787231,0,4.05155446969729E-007,0,-1.02034150017971E-008,-0.0232157520949841,0.116713471710682,0,-8.52766923742365E-009,0.490392684936523,0.0975451692938805,0,-2.02881717681885,-0.0462355613708496,-4.74852657318115,1,4.63443803787231,0,4.05155446969729E-007,0,-8.65003713101942E-009,-0.0661128610372543,0.0989448949694633,0,-2.42847448816974E-008,0.415734827518463,0.277785092592239,0,-2.02881717681885,-0.00144085288047791,-4.85667085647583,1,4.63443756103516,0,4.05155390126311E-007,0,-5.77976999593943E-009,-0.0989448949694633,0.0661128610372543,0,-3.63446943651979E-008,0.277785122394562,0.415734857320786,0,-2.02881717681885,0.0813289433717728,-4.93944025039673,1,4.63443756103516,0,4.05155390126311E-007,0,-2.02958561068556E-009,-0.116713464260101,0.0232157520949841,0,-4.28714912459327E-008,0.0975451767444611,0.490392684936523,0,-2.02881717681885,0.189472928643227,-4.98423528671265,1,4.63443803787231,0,4.05155446969729E-007,0,-1.02034150017971E-008,0.0232157520949841,0.116713471710682,0,-8.52766923742365E-009,-0.490392684936523,0.0975451692938805,0,-2.02881717681885,3.02223587036133,-4.74852657318115,1,4.63443803787231,0,4.05155446969729E-007,0,-8.65003713101942E-009,0.0661128610372543,0.0989448949694633,0,-2.42847448816974E-008,-0.415734827518463,0.277785092592239,0,-2.02881717681885,2.97744107246399,-4.85667085647583,1,4.63443756103516,0,4.05155390126311E-007,0,-5.77976999593943E-009,0.0989448949694633,0.0661128610372543,0,-3.63446943651979E-008,-0.277785122394562,0.415734857320786,0,-2.02881717681885,2.89467120170593,-4.93944025039673,1,4.63443756103516,0,4.05155390126311E-007,0,-2.02958561068556E-009,0.116713464260101,0.0232157520949841,0,-4.28714912459327E-008,-0.0975451767444611,0.490392684936523,0,-2.02881717681885,2.78652715682983,-4.98423528671265,1,-3.06721801734966E-007,0,-5.14593744277954,0,0.116713456809521,-0.0232157520949841,-6.9566650218178E-009,0,0.0975451543927193,0.490392684936523,-5.81414516531709E-009,0,-4.25252628326416,-0.0462355613708496,-2.26819849014282,1,-3.06721801734966E-007,0,-5.14593744277954,0,0.0989448875188828,-0.0661128610372543,-5.8975753169932E-009,0,0.277785062789917,0.415734827518463,-1.65572817678594E-008,0,-4.36067056655884,-0.00144085288047791,-2.26819849014282,1,-3.06721773313257E-007,0,-5.14593696594238,0,0.0661128535866737,-0.0989448949694633,-3.94063359721031E-009,0,0.415734797716141,0.277785122394562,-2.47797284913531E-008,0,-4.44343996047974,0.0813289433717728,-2.26819849014282,1,-3.06721773313257E-007,0,-5.14593696594238,0,0.0232157483696938,-0.116713464260101,-1.38376665681506E-009,0,0.490392625331879,0.0975451767444611,-2.92296817860915E-008,0,-4.48823499679565,0.189472928643227,-2.26819849014282,1,-3.06721801734966E-007,0,-5.14593744277954,0,0.116713456809521,0.0232157520949841,-6.9566650218178E-009,0,0.0975451543927193,-0.490392684936523,-5.81414516531709E-009,0,-4.25252628326416,3.02223587036133,-2.26819849014282,1,-3.06721801734966E-007,0,-5.14593744277954,0,0.0989448875188828,0.0661128610372543,-5.8975753169932E-009,0,0.277785062789917,-0.415734827518463,-1.65572817678594E-008,0,-4.36067056655884,2.97744107246399,-2.26819849014282,1,-3.06721773313257E-007,0,-5.14593696594238,0,0.0661128535866737,0.0989448949694633,-3.94063359721031E-009,0,0.415734797716141,-0.277785122394562,-2.47797284913531E-008,0,-4.44343996047974,2.89467120170593,-2.26819849014282,1,-3.06721773313257E-007,0,-5.14593696594238,0,0.0232157483696938,0.116713464260101,-1.38376665681506E-009,0,0.490392625331879,-0.0975451767444611,-2.92296817860915E-008,0,-4.48823499679565,2.78652715682983,-2.26819849014282,1,-0.0627905502915382,-0.125085905194283,-0.990156888961792,0,-8.10250568861193E-008,-0.992114663124084,0.125333219766617,0,-0.998026669025421,0.00786981917917728,0.0622953809797764,0,2.92438244819641,2.81388902664185,-0.884570002555847,0.999999940395355,-1.00000011920929,8.74227978897579E-008,-1.77635726291672E-015,0,-8.58743050002886E-008,-0.982287406921387,0.187381237745285,0,1.63813886899788E-008,0.187381237745285,0.982287287712097,0,-1.5,2.75948119163513,-0.767040967941284,1,-0.999999940395355,8.74227694680485E-008,0,0,-8.74227694680485E-008,-0.999999940395355,0,0,0,0,0.999999940395355,0,1.50000011920929,2.99999952316284,-0.222609981894493,0.999999940395355,4.3981646768998E-008,0.248689904808998,0.968583226203918,0,-9.63988924240766E-008,-0.968583226203918,0.248689889907837,0,1,-1.04395518008005E-007,-7.70411290318407E-008,0,-2.99999976158142,2.63219094276428,-1.03412103652954,1,-9.1196334039978E-008,0.187381386756897,0.982287406921387,0,-1.08415854072064E-007,-0.982287645339966,0.187381386756897,0,1.00000011920929,-1.27285034068336E-007,-2.69635251015643E-007,0,3.00000071525574,2.74074292182922,-0.865271031856537,1,1,-1.03804183027023E-007,-8.58742765785792E-008,0,-8.58742765785792E-008,-0.982287287712097,0.187381327152252,0,-1.03804183027023E-007,-0.187381327152252,-0.982287287712097,0,-1.49999976158142,2.75948071479797,-0.767041265964508,1,1,-1.03804183027023E-007,-8.58742765785792E-008,0,-8.58742765785792E-008,-0.982287287712097,0.187381327152252,0,-1.03804183027023E-007,-0.187381327152252,-0.982287287712097,0,1.5,2.75948023796082,-0.767041623592377,1,2.30148344826375E-008,-0.248689889907837,-0.968583226203918,0,-7.5139425348425E-008,-0.968583226203918,0.248689889907837,0,-1,5.99263003664419E-008,-9.61550483680185E-008,0,-2.99999976158142,2.6321907043457,-1.0341215133667,1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Globals">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="113" dstpinname="Globals" linkstyle="VHV" srcnodeid="200" srcpinname="Y Output Value">
+   <LINKPOINT x="2170" y="9270">
+   </LINKPOINT>
+   <LINKPOINT x="9425" y="9270">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="Globals" linkstyle="VHV" srcnodeid="200" srcpinname="Y Output Value">
+   <LINKPOINT x="2170" y="9270">
+   </LINKPOINT>
+   <LINKPOINT x="6380" y="9270">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="201" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="30" top="8490" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="30" top="8490" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="GlobalStrings">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="112" dstpinname="GlobalStrings" linkstyle="VHV" srcnodeid="201" srcpinname="Output String">
+   <LINKPOINT x="90" y="9270">
+   </LINKPOINT>
+   <LINKPOINT x="5880" y="9270">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="113" dstpinname="GlobalStrings" linkstyle="VHV" srcnodeid="201" srcpinname="Output String">
+   <LINKPOINT x="90" y="9270">
+   </LINKPOINT>
+   <LINKPOINT x="9135" y="9270">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="208" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="3885" top="1740" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="3885" top="1740" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Transform In|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="122" dstpinname="Transform In" srcnodeid="208" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="InABox" id="209" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="9900" top="1650" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="480" left="9900" top="1650" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Update">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="119" dstpinname="Update" srcnodeid="209" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="Update" srcnodeid="209" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="210" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="13095" top="1470" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="13095" top="1470" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="..\">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Path">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="211" nodename="Add (String)" systemname="Add (String)">
+   <BOUNDS height="100" left="13095" top="2025" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Input 2" slicecount="1" values="Patches">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="211" dstpinname="Input 1" srcnodeid="210" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="Path" srcnodeid="211" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="Path" srcnodeid="211" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="212" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="1710" top="13200" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1710" top="13200" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Globals">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="213" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="15270" top="1800" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="15270" top="1800" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Init">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="142" dstpinname="Init" srcnodeid="213" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="141" dstpinname="Init" srcnodeid="213" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="214" nodename="OnOpen (VVVV)" systemname="OnOpen (VVVV)">
+   <BOUNDS height="100" left="15105" top="1275" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="213" dstpinname="Y Input Value" srcnodeid="214" srcpinname="Bang">
+   </LINK>
+   <NODE componentmode="InABox" id="217" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="14505" top="15" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="14505" top="15" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="36">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="218" nodename="Multiply (Value)" systemname="Multiply (Value)">
+   <BOUNDS height="100" left="14730" top="450" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="7">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="218" dstpinname="Input 1" srcnodeid="217" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="174" dstpinname="Spread Count" srcnodeid="218" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="219" managers="boygroup" nodename="Scroll (Spreads)" systemname="Scroll (Spreads)">
+   <BOUNDS height="100" left="5010" top="465" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" slicecount="1" values="1008">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="219" dstpinname="Input" srcnodeid="173" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="174" dstpinname="Input 1" srcnodeid="219" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="212" dstpinname="Y Input Value" srcnodeid="200" srcpinname="Y Output Value">
+   </LINK>
+   </PATCH>

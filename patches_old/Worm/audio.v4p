@@ -1,0 +1,113 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+   <PATCH nodename="C:\dev\vvvv\schmiede\wurstig\audio.v4p" filename="C:\dev\vvvv\schmiede\wurstig\audio.v4p" systemname="audio">
+   <BOUNDS height="10590" left="7920" top="4080" type="Window" width="17325">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="0" nodename="AudioIn (DShow9)" systemname="AudioIn (DShow9)">
+   <BOUNDS height="100" left="480" top="972" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Enabled">
+   </PIN>
+   <PIN pinname="Audio" visible="1">
+   </PIN>
+   <PIN pinname="Channel Mode" slicecount="1" values="Monaural">
+   </PIN>
+   <PIN pinname="Driver" slicecount="1" values="|Mikrofon (Realtek High Definiti|">
+   </PIN>
+   <PIN pinname="Sample Rate" slicecount="1" values="44100">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="1" nodename="FFT (DShow9)" systemname="FFT (DShow9)">
+   <BOUNDS height="100" left="480" top="1920" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Audio" visible="1">
+   </PIN>
+   <PIN pinname="FFT L" visible="1">
+   </PIN>
+   <PIN pinname="FFT R" visible="1">
+   </PIN>
+   <PIN pinname="Windowing" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Frequency Scaling" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="2" nodename="Add (Value Spectral)" systemname="Add (Value Spectral)">
+   <BOUNDS height="100" left="480" top="2616" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="3" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="2484" top="804" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="3036" left="2484" top="804" type="Box" width="8616">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="50">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="64">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Slider">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Connections" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="2" dstpinname="Input" srcnodeid="1" srcpinname="FFT R">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="4" nodename="Queue (Spreads)" systemname="Queue (Spreads)">
+   <BOUNDS height="100" left="480" top="3336" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Frame Count" slicecount="1" values="64">
+   </PIN>
+   <PIN pinname="Insert" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS left="480" top="3336" type="Box">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="4" dstpinname="Input" srcnodeid="2" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Y Input Value" srcnodeid="4" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="5" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="480" top="12" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="480" top="12" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="0" dstpinname="Enabled" srcnodeid="5" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="1" dstpinname="Audio" srcnodeid="0" srcpinname="Audio">
+   </LINK>
+   </PATCH>

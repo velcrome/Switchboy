@@ -1,0 +1,429 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta24.1.dtd" >
+   <PATCH nodename="C:\dev\vvvv\racer\tools\SplitAudioAnalysisDMX (Spreads).v4p">
+   <BOUNDS height="13770" left="6255" top="3630" type="Window" width="17235">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="27" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1260" top="4215" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="4440" top="10125" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="1260" top="4215" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Sound Volumes|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="26" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="2460" top="4215" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="6135" top="10080" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="2460" top="4215" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Beat Bang|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="25" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="3510" top="4215" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="8385" top="9105" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="3510" top="4215" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Beat Decay|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="24" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="4545" top="4215" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="9675" top="9165" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="4545" top="4215" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Energy">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="23" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="5505" top="4215" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="18120" top="13875" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="5505" top="4215" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Beat">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="22" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="6525" top="4215" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="19245" top="13905" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="6525" top="4215" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Phase">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="21" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="255" top="4215" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="11730" top="7935" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="255" top="4215" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="FFT">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="20" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="5610" top="900" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="2550" top="3660" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="5610" top="900" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Audio Analysis|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="19" nodename="GetSpread (Spreads)">
+   <BOUNDS height="0" left="990" top="2955" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Offset" slicecount="1" values="18">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="256">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="21" dstpinname="Y Input Value" srcnodeid="19" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="19" dstpinname="Input" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <NODE id="18" nodename="GetSpread (Spreads)">
+   <BOUNDS height="0" left="2010" top="2955" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="27" dstpinname="Y Input Value" srcnodeid="18" srcpinname="Output">
+   </LINK>
+   <NODE id="17" nodename="GetSpread (Spreads)">
+   <BOUNDS height="0" left="3195" top="2955" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Offset" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <NODE id="16" nodename="GetSpread (Spreads)">
+   <BOUNDS height="0" left="4230" top="2955" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Offset" slicecount="1" values="8">
+   </PIN>
+   </NODE>
+   <NODE id="15" nodename="GetSpread (Spreads)">
+   <BOUNDS height="0" left="5265" top="2955" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Offset" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="18" dstpinname="Input" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="26" dstpinname="Y Input Value" srcnodeid="17" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="25" dstpinname="Y Input Value" srcnodeid="16" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="24" dstpinname="Y Input Value" srcnodeid="15" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="15" dstpinname="Input" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="16" dstpinname="Input" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="17" dstpinname="Input" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <NODE id="14" nodename="GetSpread (Spreads)">
+   <BOUNDS height="0" left="6255" top="2955" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Offset" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="23" dstpinname="Y Input Value" srcnodeid="14" srcpinname="Output">
+   </LINK>
+   <NODE id="13" nodename="GetSpread (Spreads)">
+   <BOUNDS height="0" left="7245" top="2955" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Offset" slicecount="1" values="17">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="22" dstpinname="Y Input Value" srcnodeid="13" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="13" dstpinname="Input" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="14" dstpinname="Input" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <INFO author="tonfilm" description="module to split the values from the AudioAnalysis node" tags="audio, vj">
+   </INFO>
+   <NODE id="12" nodename="GetSpread (Spreads)">
+   <BOUNDS height="0" left="8940" top="2955" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Offset" slicecount="1" values="274">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="20">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="12" dstpinname="Input" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="11" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="8190" top="4215" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="19245" top="13905" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="8190" top="4215" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="LFOs">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="11" dstpinname="Y Input Value" srcnodeid="12" srcpinname="Output">
+   </LINK>
+   <NODE id="10" nodename="GetSpread (Spreads)">
+   <BOUNDS height="0" left="10425" top="2955" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Offset" slicecount="1" values="294">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="20">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Input" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="9" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="9690" top="4215" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="19245" top="13905" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="9690" top="4215" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="RandomLFO">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="9" dstpinname="Y Input Value" srcnodeid="10" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="8" nodename="IOBox (String)">
+   <BOUNDS height="690" left="9660" top="4800" type="Node" width="1725">
+   </BOUNDS>
+   <BOUNDS height="690" left="9660" top="4800" type="Box" width="1725">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|20 random values&cr;&lf;that are created when &cr;&lf;the LFOs change|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="7" nodename="IOBox (String)">
+   <BOUNDS height="900" left="8040" top="4845" type="Node" width="1275">
+   </BOUNDS>
+   <BOUNDS height="900" left="8040" top="4845" type="Box" width="1275">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|20 LFO values&cr;&lf;starting with 1s&cr;&lf;and ending with&cr;&lf;40s|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE id="6" nodename="GetSpread (Spreads)">
+   <BOUNDS height="0" left="12375" top="2955" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Offset" slicecount="1" values="314">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="5" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="11640" top="4215" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="19245" top="13905" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="11640" top="4215" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="RandomBeat">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="Y Input Value" srcnodeid="6" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="6" dstpinname="Input" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="4" nodename="IOBox (String)">
+   <BOUNDS height="480" left="11610" top="4800" type="Node" width="1815">
+   </BOUNDS>
+   <BOUNDS height="480" left="11610" top="4800" type="Box" width="1815">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|4 Random Values &cr;&lf;that change on the beat|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="3" nodename="IOBox (String)">
+   <BOUNDS height="270" left="7530" top="6000" type="Node" width="6420">
+   </BOUNDS>
+   <BOUNDS height="1350" left="7530" top="6000" type="Box" width="6345">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|these random and LFO values are created on the server so that the clients can run n&apos;sync&cr;&lf;&cr;&lf;they are created in &quot;AudioAnalysis (DShow9)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE id="2" nodename="GetSpread (Spreads)">
+   <BOUNDS height="0" left="13905" top="3015" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Offset" slicecount="1" values="318">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="1" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="13170" top="4275" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="19245" top="13905" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="13170" top="4275" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="normalizedBeat">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="2" dstpinname="Input" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="0" nodename="TogEdge (Animation)">
+   <BOUNDS height="0" left="13905" top="3555" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   <PIN pinname="Bang On Create" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="0" dstpinname="Input" srcnodeid="2" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="1" dstpinname="Y Input Value" srcnodeid="0" srcpinname="Up Edge">
+   </LINK>
+   <NODE componentmode="InABox" id="28" nodename="IOBox (String)">
+   <BOUNDS height="270" left="14970" top="225" type="Node" width="885">
+   </BOUNDS>
+   <BOUNDS height="3015" left="14970" top="225" type="Box" width="8460">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="39" visible="0" values="0,4,FFT,4,4,BeatBang,8,4,DecayOut,12,4,EnergyOut,16,1,|Universal BeatBang|,17,1,|Phase (-1)|,18,256,|FFT all|,274,10,|LFO according to Beat|,284,10,|LFO from 0.1 to 1 sec|,294,10,|RandomValues. change according to beat|,304,10,|RandomValues. change from 0.1 to 1 sec|,314,4,|RandomValues. change according to Beatbangs|,318,1,|NORMALIZED BEAT|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="13">
+   </PIN>
+   </NODE>
+   </PATCH>

@@ -1,0 +1,623 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+   <PATCH nodename="C:\Users\Andre\Documents\vvvvProjects\But The Machines\contributions\KorgNanoKontMIDIMapper\MIDI Mapping.v4p">
+   <BOUNDS height="7170" left="1050" top="555" type="Window" width="17460">
+   </BOUNDS>
+   <NODE componentmode="Hidden" filename="MIDI Mapping\KorgNanoKontrolSimulation.v4p" id="30" nodename="MIDI Mapping\KorgNanoKontrolSimulation.v4p" systemname="KorgNanoKontrolSimulation" path="C:\Users\Andre\Documents\vvvvProjects\But The Machines\contributions\KorgNanoKontMIDIMapper\MIDI Mapping\">
+   <BOUNDS height="100" left="4605" top="9840" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS left="4605" top="9840" type="Box">
+   </BOUNDS>
+   <PIN pinname="Simulation Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform Rotary" visible="1">
+   </PIN>
+   <BOUNDS height="13785" left="2310" top="630" type="Window" width="18015">
+   </BOUNDS>
+   <PIN pinname="Transform All" visible="1">
+   </PIN>
+   <PIN pinname="Rotary" slicecount="9" visible="1" values="0,0,0,0,0,0,0,0,0.503937007874016">
+   </PIN>
+   <PIN pinname="Slider" slicecount="9" visible="1" values="0.377952755905512,0,0,0.582677165354331,0.622047244094488,0,0,0,0">
+   </PIN>
+   <PIN pinname="Push" slicecount="18" visible="1" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Controlls" slicecount="6" visible="1" values="0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="MIDIData" visible="1">
+   </PIN>
+   <PIN pinname="Mapping" visible="1">
+   </PIN>
+   <PIN pinname="Scene Nr." visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="MIDI Mapping\MouseSim.v4p" id="29" nodename="MIDI Mapping\MouseSim.v4p" systemname="MouseSim" path="C:\Users\Andre\Documents\vvvvProjects\But The Machines\contributions\KorgNanoKontMIDIMapper\MIDI Mapping\">
+   <BOUNDS height="100" left="2970" top="7080" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS left="2970" top="7080" type="Box">
+   </BOUNDS>
+   <PIN pinname="Mouse" visible="1">
+   </PIN>
+   <PIN pinname="IntersectTransform" visible="1">
+   </PIN>
+   <PIN pinname="Mouse X Y Lclick Rclick" visible="1">
+   </PIN>
+   <PIN pinname="MouseLayer" visible="1">
+   </PIN>
+   <PIN pinname="MouseLeftPress" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="28" nodename="RENDERER (EX9)" systemname="Renderer (EX9)">
+   <BOUNDS height="0" left="990" top="14100" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="1800" left="990" top="14100" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="6450" left="1020" top="7740" type="Window" width="17505">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="27" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="0" left="1035" top="11085" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 3" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" hiddenwhenlocked="0" id="26" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
+   <BOUNDS height="0" left="9210" top="5925" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="14595" top="9150" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="255" left="9210" top="5925" type="Box" width="2955">
+   </BOUNDS>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Input Enum" slicecount="1" values="|nanoKONTROL 1 SLIDER/KNOB|">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="MidiInputPort">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="25" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="11250" top="11640" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="11250" top="11640" type="Box" width="660">
+   </BOUNDS>
+   <BOUNDS height="160" left="15585" top="9795" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="LastChangedController">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="24" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="7065" top="11790" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="7065" top="11790" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="13860" top="9435" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Selected">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="27" dstpinname="Layer 1" linkstyle="Bezier" srcnodeid="30" srcpinname="Simulation Layer">
+   <LINKPOINT x="4635" y="10590">
+   </LINKPOINT>
+   <LINKPOINT x="1065" y="10590">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" id="23" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="0" left="1050" top="12225" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Layer Template Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 4" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="23" dstpinname="Layer 1" srcnodeid="27" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="23" dstpinname="Layer 3" linkstyle="Bezier" srcnodeid="29" srcpinname="MouseLayer">
+   <LINKPOINT x="3000" y="9780">
+   </LINKPOINT>
+   <LINKPOINT x="1425" y="9780">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="28" dstpinname="Layers" srcnodeid="23" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InABox" id="22" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="8325" top="11805" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="8325" top="11805" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="7455" top="4890" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Selected And Click|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="21" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="5685" top="8475" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="5685" top="8475" type="Box" width="945">
+   </BOUNDS>
+   <BOUNDS height="160" left="14925" top="5715" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Scene">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="20" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="13260" top="5970" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="13260" top="5970" type="Box" width="480">
+   </BOUNDS>
+   <BOUNDS height="160" left="16365" top="10245" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Reset">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="19" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="15510" top="11700" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="15510" top="11700" type="Box" width="480">
+   </BOUNDS>
+   <BOUNDS height="160" left="16680" top="10500" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Reload File|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="18" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="6900" top="8415" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="270" left="6900" top="8415" type="Box" width="660">
+   </BOUNDS>
+   <BOUNDS height="160" left="14655" top="6210" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="AllMIDIdata">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="17" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="7575" top="5970" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="7575" top="5970" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="16350" top="2475" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="MIDI Mapping\KorgNanoKontrollMIDI.v4p" id="16" nodename="MIDI Mapping\KorgNanoKontrollMIDI.v4p" systemname="KorgNanoKontrollMIDI" path="C:\Users\Andre\Documents\vvvvProjects\But The Machines\contributions\KorgNanoKontMIDIMapper\MIDI Mapping\">
+   <BOUNDS height="100" left="7545" top="7245" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS left="7545" top="7245" type="Box">
+   </BOUNDS>
+   <PIN pinname="MidiInputPort" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Channel" visible="1">
+   </PIN>
+   <PIN pinname="AllMIDIdata" visible="1">
+   </PIN>
+   <PIN pinname="LastChangedController" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="16" dstpinname="MidiInputPort" srcnodeid="26" srcpinname="Output Enum">
+   </LINK>
+   <LINK dstnodeid="16" dstpinname="Enabled" srcnodeid="17" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="18" dstpinname="Y Input Value" srcnodeid="16" srcpinname="AllMIDIdata">
+   </LINK>
+   <LINK dstnodeid="25" dstpinname="Y Input Value" srcnodeid="16" srcpinname="LastChangedController">
+   </LINK>
+   <NODE componentmode="InAWindow" filename="MIDI Mapping\SceneSelection.v4p" id="15" nodename="MIDI Mapping\SceneSelection.v4p" systemname="SceneSelection" path="C:\Users\Andre\Documents\vvvvProjects\But The Machines\contributions\KorgNanoKontMIDIMapper\MIDI Mapping\">
+   <BOUNDS height="100" left="5205" top="7860" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS left="5205" top="7860" type="Box">
+   </BOUNDS>
+   <PIN pinname="SceneSelectionLayer" visible="1">
+   </PIN>
+   <PIN pinname="Scene" visible="1">
+   </PIN>
+   <PIN pinname="MouseClick" visible="1">
+   </PIN>
+   <PIN pinname="MouseTransform" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Midi Input Port" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="21" dstpinname="Y Input Value" srcnodeid="15" srcpinname="Scene">
+   </LINK>
+   <LINK dstnodeid="15" dstpinname="MouseTransform" srcnodeid="29" srcpinname="IntersectTransform">
+   </LINK>
+   <LINK dstnodeid="23" dstpinname="Layer 2" linkstyle="Bezier" srcnodeid="15" srcpinname="SceneSelectionLayer">
+   <LINKPOINT x="5235" y="10170">
+   </LINKPOINT>
+   <LINKPOINT x="1245" y="10170">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" filename="MIDI Mapping\SelectFromSimulation.v4p" id="14" nodename="MIDI Mapping\SelectFromSimulation.v4p" systemname="SelectFromSimulation" path="C:\Users\Andre\Documents\vvvvProjects\But The Machines\contributions\KorgNanoKontMIDIMapper\MIDI Mapping\">
+   <BOUNDS height="100" left="3300" top="10605" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS left="3300" top="10605" type="Box">
+   </BOUNDS>
+   <PIN pinname="Selection Layer" visible="1">
+   </PIN>
+   <PIN pinname="Simulation Transform" visible="1">
+   </PIN>
+   <PIN pinname="Left Mouse Press" visible="1">
+   </PIN>
+   <PIN pinname="Mouse Transform" visible="1">
+   </PIN>
+   <PIN pinname="Selected" visible="1">
+   </PIN>
+   <PIN pinname="Selected And Click" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="27" dstpinname="Layer 2" linkstyle="Bezier" srcnodeid="14" srcpinname="Selection Layer">
+   <LINKPOINT x="3330" y="10980">
+   </LINKPOINT>
+   <LINKPOINT x="1245" y="10980">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="14" dstpinname="Simulation Transform" srcnodeid="30" srcpinname="Transform All">
+   </LINK>
+   <LINK dstnodeid="14" dstpinname="Mouse Transform" srcnodeid="29" srcpinname="IntersectTransform">
+   </LINK>
+   <LINK dstnodeid="24" dstpinname="Y Input Value" srcnodeid="14" srcpinname="Selected">
+   </LINK>
+   <LINK dstnodeid="22" dstpinname="Y Input Value" srcnodeid="14" srcpinname="Selected And Click">
+   </LINK>
+   <LINK dstnodeid="15" dstpinname="MouseClick" srcnodeid="29" srcpinname="MouseLeftPress">
+   </LINK>
+   <LINK dstnodeid="14" dstpinname="Left Mouse Press" srcnodeid="29" srcpinname="MouseLeftPress">
+   </LINK>
+   <LINK dstnodeid="30" dstpinname="MIDIData" srcnodeid="18" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="30" dstpinname="Scene Nr." srcnodeid="21" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="13" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="6480" top="5985" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="6480" top="5985" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="14265" top="1335" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Channel">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="16" dstpinname="Channel" srcnodeid="13" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="12" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="13095" top="11640" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="13095" top="11640" type="Box" width="480">
+   </BOUNDS>
+   <BOUNDS height="160" left="17055" top="4905" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Empty Or File|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="11" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="10155" top="11685" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="10155" top="11685" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="14820" top="5985" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Scene">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="MIDI Mapping\MIDIWriterReader.v4p" id="10" nodename="MIDI Mapping\MIDIWriterReader.v4p" systemname="MIDIWriterReader" path="C:\Users\Andre\Documents\vvvvProjects\But The Machines\contributions\KorgNanoKontMIDIMapper\MIDI Mapping\">
+   <BOUNDS height="270" left="9075" top="13455" type="Node" width="6810">
+   </BOUNDS>
+   <BOUNDS left="9075" top="13455" type="Box">
+   </BOUNDS>
+   <PIN pinname="Selected" visible="1">
+   </PIN>
+   <PIN pinname="Selected And Click" visible="1">
+   </PIN>
+   <PIN pinname="Scene" visible="1">
+   </PIN>
+   <PIN pinname="LastChangedController" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Empty Or File" visible="1">
+   </PIN>
+   <PIN pinname="File Name" visible="1">
+   </PIN>
+   <PIN pinname="Reload File" visible="1">
+   </PIN>
+   <PIN pinname="Save File" visible="1">
+   </PIN>
+   <PIN pinname="MIDI Mapped" visible="1">
+   </PIN>
+   <BOUNDS height="8535" left="2700" top="7605" type="Window" width="15765">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Selected" srcnodeid="24" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Selected And Click" srcnodeid="22" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Scene" srcnodeid="11" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="11" dstpinname="Y Input Value" srcnodeid="21" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="LastChangedController" srcnodeid="25" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Reset" srcnodeid="20" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Empty Or File" srcnodeid="12" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Reload File" srcnodeid="19" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="9" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="14805" top="4470" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="810" left="14805" top="4470" type="Box" width="1050">
+   </BOUNDS>
+   <BOUNDS height="160" left="22305" top="10140" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Save File|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Save File" srcnodeid="9" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="8" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="8475" top="14580" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="8475" top="14580" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="12255" top="10500" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Mapped MIDI|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="8" dstpinname="Y Input Value" srcnodeid="10" srcpinname="MIDI Mapped">
+   </LINK>
+   <LINK dstnodeid="30" dstpinname="Mapping" srcnodeid="8" srcpinname="Y Output Value">
+   <LINKPOINT x="4920" y="14820">
+   </LINKPOINT>
+   <LINKPOINT x="2745" y="11610">
+   </LINKPOINT>
+   <LINKPOINT x="2880" y="9375">
+   </LINKPOINT>
+   <LINKPOINT x="3885" y="8625">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="7" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="690" left="7140" top="135" type="Node" width="990">
+   </BOUNDS>
+   <BOUNDS height="4080" left="7140" top="135" type="Box" width="9780">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|How does this work:&cr;&lf;&cr;&lf; - Before you satrt this patch, make sure the Korg Nano Kontrol is connected, and correct drivers are installed.&cr;&lf;If everything works, move a slider and see if TEST bang is changing.&cr;&lf;&cr;&lf;- Selected a Scene on the Kontrol, (since this is experimental, you can also click on that same Scene in the simulation) &cr;&lf;&cr;&lf;- Now we are ready to Map this scene!!&cr;&lf;&cr;&lf;Mapping:&cr;&lf;&cr;&lf;- Move a slider, or a button on the Korg Nano Kontrol&cr;&lf;- Click on the same same slider/button/rotary on the simulation&cr;&lf;- You have now mapped this slider/button/rotary&cr;&lf;- Test what you did by moving the same slider/button/rotary again, the simulation should mimic the real thing.&cr;&lf;- Repeat process for all 42 slider/button/rotary&cr;&lf;- Select another Scene and repeat everything, until you have mapped your 4 scenes.&cr;&lf;&cr;&lf;When Everything is READY,  we can BANG the SAVE button in the Patch.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="6" nodename="CHANGE (ANIMATION)" systemname="Change (Animation)">
+   <BOUNDS height="0" left="8265" top="8250" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   <PIN pinname="Bang On Create" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="6" dstpinname="Input" srcnodeid="16" srcpinname="AllMIDIdata">
+   </LINK>
+   <NODE componentmode="Hidden" id="5" nodename="OR (Boolean Spectral)" systemname="OR (Boolean Spectral)">
+   <BOUNDS height="0" left="8295" top="8655" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="Input" srcnodeid="6" srcpinname="OnChange">
+   </LINK>
+   <NODE componentmode="InABox" id="4" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1440" top="4575" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="600" left="1440" top="4575" type="Box" width="1575">
+   </BOUNDS>
+   <BOUNDS height="160" left="9480" top="3615" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="TEST">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="4" dstpinname="Y Input Value" srcnodeid="5" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="1395" top="3885" type="Node" width="3000">
+   </BOUNDS>
+   <BOUNDS height="525" left="1395" top="3885" type="Box" width="2640">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Visualize if there is ANY MIDI is recieved...|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="270" top="90" type="Node" width="6690">
+   </BOUNDS>
+   <BOUNDS height="3405" left="270" top="90" type="Box" width="5265">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|This Patch will generate a .txt file with all the keys/sliders/rotarys of the Korg Nano Kontrol.&cr;&lf;&cr;&lf;After you mapped the controller and saved the file you can simply use the other patch, Korg Nano Kontrol MIDI Output.v4p,  to use the Nano Kontrol to control your patches.&cr;&lf;&cr;&lf;This should save time for mapping any Kontroll, without beeeing worried about the MIDI settings. &cr;&lf;&cr;&lf;Note: Scene is not a MIDI button, and can&apos;t be mapped (Korg limitation NOT vvvv!!)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="1" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="14310" top="5775" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="405" left="14310" top="5775" type="Box" width="2385">
+   </BOUNDS>
+   <BOUNDS height="160" left="24285" top="13440" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="NanoKontrolMIDImap.txt">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|File Name|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="12225" top="12360" type="Node" width="3555">
+   </BOUNDS>
+   <BOUNDS height="750" left="12225" top="12360" type="Box" width="1470">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Keep this toggled if you DON&apos;t want a clean start|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="File Name" srcnodeid="1" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="15" dstpinname="Enabled" srcnodeid="17" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="15" dstpinname="Midi Input Port" srcnodeid="26" srcpinname="Output Enum">
+   </LINK>
+   </PATCH>

@@ -1,0 +1,5 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+   <PATCH nodename="C:\dev\vvvv\switchboy3\engine\projection\EditWalls.v4p" systemname="EditWalls" filename="C:\dev\vvvv\switchboy3\engine\projection\EditWalls.v4p">
+   <BOUNDS type="Window" left="11550" top="3195" width="9000" height="6000">
+   </BOUNDS>
+   </PATCH>
