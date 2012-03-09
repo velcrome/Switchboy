@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\gui\PostFXGUI.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\PostFXGUI.v4p" systemname="PostFXGUI">
    <BOUNDS height="15090" left="705" top="0" type="Window" width="12600">
    </BOUNDS>
@@ -408,10 +408,10 @@
    <PIN pinname="Input 1" slicecount="1" values="2">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Gui2d.dll" id="33" nodename="RadioButton (GUI)" systemname="RadioButton (GUI)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Gui2d.dll" id="33" nodename="RadioButton (GUI)" systemname="RADIOBUTTON (GUI)">
    <PIN pinname="Color" visible="1">
    </PIN>
-   <PIN pinname="Tarnsform In" visible="1">
+   <PIN pinname="Transform In" visible="1">
    </PIN>
    <PIN pinname="Mouse Left" visible="1">
    </PIN>
@@ -433,7 +433,7 @@
    </PIN>
    <PIN pinname="Size X" slicecount="1" values="0.96">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="3" values="1,0,0">
+   <PIN pinname="Internal Value" slicecount="3" values="0,0,0">
    </PIN>
    <PIN pinname="Mouse Over Color" visible="1">
    </PIN>
@@ -444,7 +444,7 @@
    <PIN pinname="Value Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="33" dstpinname="Tarnsform In" srcnodeid="60" srcpinname="Transform Out">
+   <LINK dstnodeid="33" dstpinname="Transform In" srcnodeid="60" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="33" dstpinname="Color" hiddenwhenlocked="1" linkstyle="Bezier" srcnodeid="45" srcpinname="Color Output">
    <LINKPOINT x="18345" y="3608">
@@ -540,7 +540,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="BindIt!">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="ChannelLoad.v4p" id="255" nodename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\ChannelLoad.v4p" systemname="ChannelLoad" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" filename="ChannelLoad.v4p" id="255" nodename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\ChannelLoad.v4p" systemname="ChannelLoad">
    <BOUNDS height="100" left="13695" top="10365" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="11145" left="-900" top="2265" type="Window" width="22320">
@@ -1158,7 +1158,7 @@
    </LINK>
    <LINK dstnodeid="310" dstpinname="Y Input Value" srcnodeid="312" srcpinname="Position Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="ChannelEdit2.v4p" id="229" nodename="ChannelEdit2.v4p" systemname="ChannelEdit2" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" filename="ChannelEdit2.v4p" id="229" nodename="ChannelEdit2.v4p" systemname="ChannelEdit2">
    <BOUNDS height="100" left="9630" top="10950" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Default" visible="1">

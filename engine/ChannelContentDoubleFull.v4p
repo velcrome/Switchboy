@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\engine\ChannelContentDoubleFull.v4p" filename="C:\dev\vvvv\switchboy3\engine\ChannelContentDoubleFull.v4p" locked="0" systemname="ChannelContentDoubleFull">
    <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
    </BOUNDS>
@@ -62,7 +62,7 @@
    </NODE>
    <LINK dstnodeid="3" dstpinname="Priority 1" hiddenwhenlocked="1" srcnodeid="48" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="tools\LayerMode.v4p" id="93" managers="boygroup" nodename="LayerMode.v4p" systemname="LayerMode" path="c:\Switchboy3\engine\tools\">
+   <NODE componentmode="Hidden" filename="tools\LayerMode.v4p" id="93" managers="boygroup" nodename="LayerMode.v4p" systemname="LayerMode">
    <BOUNDS height="270" left="3870" top="8775" type="Node" width="1635">
    </BOUNDS>
    <BOUNDS height="3600" left="3870" top="8775" type="Box" width="4800">
@@ -96,7 +96,7 @@
    </NODE>
    <LINK dstnodeid="93" dstpinname="ChannelID" hiddenwhenlocked="0" srcnodeid="94" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="tools\LayerMode.v4p" id="96" managers="boygroup" nodename="LayerMode.v4p" systemname="LayerMode" path="c:\Switchboy3\engine\tools\">
+   <NODE componentmode="Hidden" filename="tools\LayerMode.v4p" id="96" managers="boygroup" nodename="LayerMode.v4p" systemname="LayerMode">
    <BOUNDS height="270" left="7125" top="8775" type="Node" width="1635">
    </BOUNDS>
    <BOUNDS height="3600" left="7125" top="8775" type="Box" width="4800">
@@ -152,7 +152,7 @@
    </NODE>
    <LINK dstnodeid="110" dstpinname="Input Node" srcnodeid="3" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="InAWindow" filename="channels\Channel1.v4p" id="113" managers="boygroup" nodename="channels\Channel1.v4p" systemname="Channel1" path="c:\Switchboy3\engine\channels\">
+   <NODE componentmode="InAWindow" filename="channels\Channel1.v4p" id="113" managers="boygroup" nodename="channels\Channel1.v4p" systemname="Channel1">
    <BOUNDS height="270" left="7650" top="9840" type="Node" width="2190">
    </BOUNDS>
    <PIN pinname="RenderState" visible="1">
@@ -258,7 +258,7 @@
    <LINKPOINT x="9135" y="5370">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="InAWindow" filename="channels\Channel0.v4p" id="112" managers="boygroup" nodename="channels\Channel0.v4p" systemname="Channel0" path="c:\Switchboy3\engine\channels\">
+   <NODE componentmode="InAWindow" filename="channels\Channel0.v4p" id="112" managers="boygroup" nodename="channels\Channel0.v4p" systemname="Channel0">
    <BOUNDS height="270" left="4395" top="9840" type="Node" width="2190">
    </BOUNDS>
    <PIN pinname="RenderState" visible="1">
@@ -488,7 +488,7 @@
    <PIN pinname="Color Input" slicecount="1" values="|0.00000,0.11359,0.41469,1.00000|">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="..\gui\ChannelPreview.v4p" hiddenwhenlocked="1" id="141" nodename="..\gui\ChannelPreview.v4p" stayontop="0" systemname="ChannelPreview" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" filename="..\gui\ChannelPreview.v4p" hiddenwhenlocked="1" id="141" nodename="..\gui\ChannelPreview.v4p" stayontop="0" systemname="ChannelPreview">
    <BOUNDS height="100" left="2820" top="10635" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="2820" top="10635" type="Box" width="4800">
@@ -528,7 +528,7 @@
    </NODE>
    <LINK dstnodeid="141" dstpinname="Layer" hiddenwhenlocked="1" srcnodeid="118" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\gui\ChannelPreview.v4p" hiddenwhenlocked="1" id="142" nodename="..\gui\ChannelPreview.v4p" systemname="ChannelPreview" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" filename="..\gui\ChannelPreview.v4p" hiddenwhenlocked="1" id="142" nodename="..\gui\ChannelPreview.v4p" systemname="ChannelPreview">
    <BOUNDS height="100" left="6030" top="10635" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="6030" top="10635" type="Box" width="4800">
@@ -790,7 +790,7 @@
    <PIN pinname="Receive String" slicecount="1" values="Multitouch">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="..\gui\SplitMultitouch.v4p" hiddenwhenlocked="1" id="176" nodename="..\gui\SplitMultitouch.v4p" systemname="SplitMultitouch" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" filename="..\gui\SplitMultitouch.v4p" hiddenwhenlocked="1" id="176" nodename="..\gui\SplitMultitouch.v4p" systemname="SplitMultitouch">
    <BOUNDS height="100" left="2505" top="2670" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="MultitouchData" visible="1">
@@ -844,7 +844,7 @@
    </NODE>
    <LINK dstnodeid="179" dstpinname="Render State In" srcnodeid="180" srcpinname="Render State Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="tools\QuickBind.v4p" id="181" managers="boygroup" nodename="tools\QuickBind.v4p" systemname="QuickBind" path="c:\Switchboy3\engine\tools\">
+   <NODE componentmode="Hidden" filename="tools\QuickBind.v4p" id="181" managers="boygroup" nodename="tools\QuickBind.v4p" systemname="QuickBind">
    <BOUNDS height="270" left="3900" top="5625" type="Node" width="2145">
    </BOUNDS>
    <BOUNDS height="3600" left="3900" top="5625" type="Box" width="4800">
@@ -882,7 +882,7 @@
    </LINK>
    <LINK dstnodeid="112" dstpinname="Values" hiddenwhenlocked="1" srcnodeid="181" srcpinname="Value">
    </LINK>
-   <NODE componentmode="Hidden" debug="0" filename="tools\QuickBind.v4p" id="182" managers="boygroup" nodename="tools\QuickBind.v4p" systemname="QuickBind" path="c:\Switchboy3\engine\tools\">
+   <NODE componentmode="Hidden" debug="0" filename="tools\QuickBind.v4p" id="182" managers="boygroup" nodename="tools\QuickBind.v4p" systemname="QuickBind">
    <BOUNDS height="270" left="7125" top="5625" type="Node" width="2190">
    </BOUNDS>
    <BOUNDS height="3600" left="7125" top="5625" type="Box" width="4800">
@@ -992,7 +992,7 @@
    <LINKPOINT x="7440" y="10200">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" debug="0" filename="..\gui\ChannelGUI2.v4p" id="119" nodename="..\gui\ChannelGUI2.v4p" systemname="ChannelGUI2" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" debug="0" filename="..\gui\ChannelGUI2.v4p" id="119" nodename="..\gui\ChannelGUI2.v4p" systemname="ChannelGUI2">
    <PIN pinname="Transform" visible="1">
    </PIN>
    <PIN pinname="Active" visible="1">
@@ -1166,7 +1166,7 @@
    </LINK>
    <LINK dstnodeid="168" dstpinname="Render State" srcnodeid="187" srcpinname="Render State Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\gui\ChannelGUI2.v4p" id="124" nodename="..\gui\ChannelGUI2.v4p" systemname="ChannelGUI2" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" filename="..\gui\ChannelGUI2.v4p" id="124" nodename="..\gui\ChannelGUI2.v4p" systemname="ChannelGUI2">
    <PIN pinname="isBinded" visible="1">
    </PIN>
    <PIN pinname="Value" visible="1">

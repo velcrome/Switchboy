@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\engine\projection\SmartMap.v4p" filename="D:\dev\vvvv\switchboy2\engine\projection\SmartMap.v4p" systemname="SmartMap">
    <BOUNDS height="11700" left="7140" top="1665" type="Window" width="15540">
    </BOUNDS>
@@ -126,6 +126,8 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="SmartMap">
    </PIN>
    <PIN pinname="Windowed Backbuffer Count" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
    </PIN>
    </NODE>
    <LINK dstnodeid="36" dstpinname="Source" srcnodeid="22" srcpinname="EX9 Out">
@@ -386,14 +388,14 @@
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="70" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="14415" top="2850" width="0" height="0">
+   <NODE componentmode="InABox" id="70" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="14415" top="2850" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="14415" top="2850" width="480" height="480">
+   <BOUNDS height="480" left="14415" top="2850" type="Box" width="480">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -401,11 +403,11 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="ShowBorder" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="ShowBorder">
    </PIN>
    </NODE>
-   <LINK srcnodeid="70" srcpinname="Y Output Value" dstnodeid="63" dstpinname="Enabled">
+   <LINK dstnodeid="63" dstpinname="Enabled" srcnodeid="70" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="69" srcpinname="Texture Out" dstnodeid="63" dstpinname="Texture">
+   <LINK dstnodeid="63" dstpinname="Texture" srcnodeid="69" srcpinname="Texture Out">
    </LINK>
    </PATCH>

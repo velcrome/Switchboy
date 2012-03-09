@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\engine\channels\Channel0.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\engine\channels\Channel0.v4p" systemname="Channel0">
    <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
    </BOUNDS>
@@ -262,7 +262,7 @@
    </NODE>
    <LINK dstnodeid="22" dstpinname="Input String" srcnodeid="31" srcpinname="Output 1">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\tools\IntervalFFT.v4p" id="43" nodename="..\tools\IntervalFFT.v4p" systemname="IntervalFFT" path="c:\Switchboy3\engine\tools\">
+   <NODE componentmode="Hidden" filename="..\tools\IntervalFFT.v4p" id="43" nodename="..\tools\IntervalFFT.v4p" systemname="IntervalFFT">
    <BOUNDS height="270" left="6375" top="3600" type="Node" width="1470">
    </BOUNDS>
    <BOUNDS height="3600" left="6375" top="3600" type="Box" width="4800">
@@ -378,7 +378,7 @@
    </LINK>
    <LINK dstnodeid="27" dstpinname="RenderState" srcnodeid="0" srcpinname="Output Node">
    </LINK>
-   <NODE componentmode="Hidden" debug="0" filename="..\..\Patches\JT_Rain\root_JT_Rain.v4p" id="27" nodename="..\..\Patches\JT_Rain\root_JT_Rain.v4p" systemname="root_JT_Rain">
+   <NODE componentmode="Hidden" debug="0" filename="..\..\Patches\Earth\root_Earth.v4p" id="27" nodename="..\..\Patches\Earth\root_Earth.v4p" systemname="root_Earth">
    <PIN pinname="RenderState" visible="1">
    </PIN>
    <PIN pinname="Transform" visible="1">

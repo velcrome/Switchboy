@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\dev\vvvv\switchboy_git\switchboy\gui\DMXList (2D GUI).v4p" filename="C:\dev\vvvv\switchboy3\gui\DMXList (2D GUI).v4p" systemname="DMXList (2D GUI)">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="c:\Switchboy3\gui\DMXList (2D GUI).v4p" filename="C:\dev\vvvv\switchboy3\gui\DMXList (2D GUI).v4p" systemname="DMXList (2D GUI)">
    <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="Hidden" id="89" nodename="Quad (DX9)" systemname="Quad (DX9)">
@@ -1106,54 +1106,6 @@
    </NODE>
    <LINK dstnodeid="42" dstpinname="Y Input Value" srcnodeid="148" srcpinname="First Slice">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\MTGui2d.dll" id="44" nodename="MTToggleButton (GUI Multitouch)" systemname="MTToggleButton (GUI Multitouch)">
-   <PIN pinname="Touch PositionXY" visible="1">
-   </PIN>
-   <PIN pinname="Count X" visible="1">
-   </PIN>
-   <PIN pinname="Count Y" visible="1">
-   </PIN>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="Touch Id" visible="1">
-   </PIN>
-   <PIN pinname="Is new" visible="1">
-   </PIN>
-   <BOUNDS height="270" left="6600" top="13110" type="Node" width="1755">
-   </BOUNDS>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Hit" visible="1">
-   </PIN>
-   <PIN pinname="Value Output" visible="1">
-   </PIN>
-   <PIN pinname="Set Value" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Value Input" slicecount="1" visible="1" values="0">
-   </PIN>
-   <BOUNDS left="6600" top="13110" type="Box">
-   </BOUNDS>
-   <PIN pinname="Size X" slicecount="1" values="0.91">
-   </PIN>
-   <PIN pinname="Size Y" slicecount="1" values="0.75">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="44" dstpinname="Is new" hiddenwhenlocked="1" srcnodeid="135" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="44" dstpinname="Touch Id" hiddenwhenlocked="1" srcnodeid="134" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="44" dstpinname="Transform In" srcnodeid="100" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="44" dstpinname="Count Y" linkstyle="PolyLine" srcnodeid="98" srcpinname="Whole Part">
-   </LINK>
-   <LINK dstnodeid="44" dstpinname="Count X" linkstyle="VHV" srcnodeid="95" srcpinname="Output">
-   <LINKPOINT x="8840" y="12660">
-   </LINKPOINT>
-   <LINKPOINT x="7225" y="12660">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="44" dstpinname="Touch PositionXY" hiddenwhenlocked="1" srcnodeid="67" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="Hidden" id="150" nodename="Quad (DX9)" systemname="Quad (DX9)">
    <BOUNDS height="100" left="18480" top="21180" type="Node" width="100">
    </BOUNDS>
@@ -1166,46 +1118,6 @@
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\MTGui2d.dll" id="143" nodename="MTSlider (GUI Multitouch)" systemname="MTSlider (GUI Multitouch)">
-   <BOUNDS height="100" left="18975" top="5955" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Is new" visible="1">
-   </PIN>
-   <PIN pinname="Touch PositionXY" visible="1">
-   </PIN>
-   <PIN pinname="Touch Id" visible="1">
-   </PIN>
-   <PIN pinname="Value Output" visible="1">
-   </PIN>
-   <PIN pinname="Hit" visible="1">
-   </PIN>
-   <PIN pinname="Slider Transform" visible="1">
-   </PIN>
-   <PIN pinname="Size X" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Size Y" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Value Input" visible="1">
-   </PIN>
-   <PIN pinname="Set Value" visible="1">
-   </PIN>
-   <PIN pinname="Size Slider" slicecount="1" values="0.1">
-   </PIN>
-   <BOUNDS left="18975" top="5955" type="Box">
-   </BOUNDS>
-   <PIN pinname="Slider Speed" slicecount="1" visible="1" values="4">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="143" dstpinname="Is new" hiddenwhenlocked="1" srcnodeid="65" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="143" dstpinname="Touch PositionXY" hiddenwhenlocked="1" srcnodeid="67" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="143" dstpinname="Touch Id" hiddenwhenlocked="1" srcnodeid="66" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="151" nodename="Cons (Transform)" systemname="Cons (Transform)">
    <BOUNDS height="100" left="18660" top="19725" type="Node" width="100">
    </BOUNDS>
@@ -1230,12 +1142,6 @@
    <BOUNDS left="19635" top="1815" type="Box">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="151" dstpinname="Input 2" hiddenwhenlocked="1" srcnodeid="143" srcpinname="Slider Transform">
-   </LINK>
-   <LINK dstnodeid="151" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="143" srcpinname="Transform Out">
-   <LINKPOINT x="18675" y="6915">
-   </LINKPOINT>
-   </LINK>
    <LINK dstnodeid="152" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="56" srcpinname="Color Output">
    </LINK>
    <NODE componentmode="Hidden" id="154" nodename="SetAlpha (Color)" systemname="SetAlpha (Color)">
@@ -1306,12 +1212,6 @@
    </LINK>
    <LINK dstnodeid="124" dstpinname="Input 2" srcnodeid="164" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="143" dstpinname="Value Input" linkstyle="VHV" srcnodeid="163" srcpinname="Output">
-   <LINKPOINT x="17025" y="5813">
-   </LINKPOINT>
-   <LINKPOINT x="19140" y="5813">
-   </LINKPOINT>
-   </LINK>
    <LINK dstnodeid="161" dstpinname="Destination Maximum" srcnodeid="162" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="161" dstpinname="Destination Minimum" linkstyle="Bezier" srcnodeid="147" srcpinname="Y Output Value">
@@ -1321,20 +1221,6 @@
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="122" dstpinname="Go To Position" srcnodeid="161" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="161" dstpinname="Input" linkstyle="Bezier" srcnodeid="143" srcpinname="Value Output">
-   <LINKPOINT x="19920" y="7388">
-   </LINKPOINT>
-   <LINKPOINT x="14910" y="7388">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="125" dstpinname="Input 1" srcnodeid="143" srcpinname="Value Output">
-   <LINKPOINT x="22170" y="6915">
-   </LINKPOINT>
-   <LINKPOINT x="22155" y="2625">
-   </LINKPOINT>
-   <LINKPOINT x="18630" y="2595">
-   </LINKPOINT>
    </LINK>
    <NODE componentmode="Hidden" id="171" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
    <BOUNDS height="100" left="18585" top="3300" type="Node" width="100">
@@ -1512,8 +1398,6 @@
    </NODE>
    <LINK dstnodeid="198" dstpinname="Matrix In" srcnodeid="197" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="196" dstpinname="Transform" srcnodeid="44" srcpinname="Transform Out">
-   </LINK>
    <LINK dstnodeid="197" dstpinname="Select" srcnodeid="191" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="86" dstpinname="Transform" srcnodeid="198" srcpinname="Transform Out">
@@ -1535,8 +1419,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="192" dstpinname="Select" srcnodeid="191" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="192" dstpinname="Input" srcnodeid="44" srcpinname="Hit">
    </LINK>
    <NODE componentmode="Hidden" id="202" nodename="Integral (Spreads)" systemname="Integral (Spreads Legacy)">
    <BOUNDS height="100" left="10110" top="13680" type="Node" width="100">
@@ -1624,12 +1506,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="143" dstpinname="Set Value" linkstyle="VHV" srcnodeid="209" srcpinname="Y Output Value">
-   <LINKPOINT x="20840" y="5820">
-   </LINKPOINT>
-   <LINKPOINT x="18850" y="5820">
-   </LINKPOINT>
-   </LINK>
    <LINK dstnodeid="18" dstpinname="Switch" hiddenwhenlocked="1" srcnodeid="20" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="81" dstpinname="Select" linkstyle="VHV" srcnodeid="192" srcpinname="Output">
@@ -1718,8 +1594,6 @@
    <PIN pinname="CenterX" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="143" dstpinname="Transform In" srcnodeid="48" srcpinname="Transform Out">
-   </LINK>
    <LINK dstnodeid="140" dstpinname="Transform In" srcnodeid="48" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="48" dstpinname="Transform In" srcnodeid="128" srcpinname="Transform Out">
@@ -1739,13 +1613,9 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
+   <PIN pinname="Y Input Value">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="214" dstpinname="Y Input Value" srcnodeid="143" srcpinname="Hit">
-   <LINKPOINT x="22680" y="6885">
-   </LINKPOINT>
-   <LINKPOINT x="22725" y="1350">
-   </LINKPOINT>
-   </LINK>
    <NODE componentmode="Hidden" id="215" nodename="AND (Boolean)" systemname="AND (Boolean)">
    <BOUNDS height="100" left="17625" top="2580" type="Node" width="100">
    </BOUNDS>
@@ -1773,9 +1643,9 @@
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
+   <PIN pinname="Y Input Value">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="216" dstpinname="Y Input Value" srcnodeid="143" srcpinname="Value Output">
-   </LINK>
    <LINK dstnodeid="137" dstpinname="Input 2" srcnodeid="212" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="217" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -1854,6 +1724,140 @@
    </LINK>
    <LINK dstnodeid="125" dstpinname="Initialize" hiddenwhenlocked="1" srcnodeid="218" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="214" srcpinname="Y Output Value" dstnodeid="171" dstpinname="Switch">
+   <LINK dstnodeid="171" dstpinname="Switch" srcnodeid="214" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\MTGui2d.dll" id="44" nodename="ToggleButton (GUI Multitouch)" systemname="ToggleButton (GUI Multitouch)">
+   <PIN pinname="Touch PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Count X" visible="1">
+   </PIN>
+   <PIN pinname="Count Y" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Touch Id" visible="1">
+   </PIN>
+   <PIN pinname="Is new" visible="1">
+   </PIN>
+   <BOUNDS height="270" left="6600" top="13110" type="Node" width="1755">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Hit" visible="1">
+   </PIN>
+   <PIN pinname="Value Output" visible="1">
+   </PIN>
+   <PIN pinname="Set Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Value Input" slicecount="1" visible="1" values="0">
+   </PIN>
+   <BOUNDS left="6600" top="13110" type="Box">
+   </BOUNDS>
+   <PIN pinname="Size X" slicecount="1" values="0.91">
+   </PIN>
+   <PIN pinname="Size Y" slicecount="1" values="0.75">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="44" dstpinname="Is new" hiddenwhenlocked="1" srcnodeid="135" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="44" dstpinname="Touch Id" hiddenwhenlocked="1" srcnodeid="134" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="44" dstpinname="Transform In" srcnodeid="100" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="44" dstpinname="Count Y" linkstyle="PolyLine" srcnodeid="98" srcpinname="Whole Part">
+   </LINK>
+   <LINK dstnodeid="44" dstpinname="Count X" linkstyle="VHV" srcnodeid="95" srcpinname="Output">
+   <LINKPOINT x="8840" y="12660">
+   </LINKPOINT>
+   <LINKPOINT x="7225" y="12660">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="44" dstpinname="Touch PositionXY" hiddenwhenlocked="1" srcnodeid="67" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="196" dstpinname="Transform" srcnodeid="44" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="192" dstpinname="Input" srcnodeid="44" srcpinname="Hit">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\MTGui2d.dll" id="143" nodename="Slider (GUI Multitouch)" systemname="Slider (GUI Multitouch)">
+   <BOUNDS height="100" left="18975" top="5955" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Is new" visible="1">
+   </PIN>
+   <PIN pinname="Touch PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Touch Id" visible="1">
+   </PIN>
+   <PIN pinname="Value Output" visible="1">
+   </PIN>
+   <PIN pinname="Hit" visible="1">
+   </PIN>
+   <PIN pinname="Slider Transform" visible="1">
+   </PIN>
+   <PIN pinname="Size X" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size Y" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Value Input" visible="1">
+   </PIN>
+   <PIN pinname="Set Value" visible="1">
+   </PIN>
+   <PIN pinname="Size Slider" slicecount="1" values="0.1">
+   </PIN>
+   <BOUNDS left="18975" top="5955" type="Box">
+   </BOUNDS>
+   <PIN pinname="Slider Speed" slicecount="1" visible="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="143" dstpinname="Is new" hiddenwhenlocked="1" srcnodeid="65" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="143" dstpinname="Touch PositionXY" hiddenwhenlocked="1" srcnodeid="67" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="143" dstpinname="Touch Id" hiddenwhenlocked="1" srcnodeid="66" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="151" dstpinname="Input 2" hiddenwhenlocked="1" srcnodeid="143" srcpinname="Slider Transform">
+   </LINK>
+   <LINK dstnodeid="151" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="143" srcpinname="Transform Out">
+   <LINKPOINT x="18675" y="6915">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="143" dstpinname="Value Input" linkstyle="VHV" srcnodeid="163" srcpinname="Output">
+   <LINKPOINT x="17025" y="5813">
+   </LINKPOINT>
+   <LINKPOINT x="19140" y="5813">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="161" dstpinname="Input" linkstyle="Bezier" srcnodeid="143" srcpinname="Value Output">
+   <LINKPOINT x="19920" y="7388">
+   </LINKPOINT>
+   <LINKPOINT x="14910" y="7388">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="125" dstpinname="Input 1" srcnodeid="143" srcpinname="Value Output">
+   <LINKPOINT x="22170" y="6915">
+   </LINKPOINT>
+   <LINKPOINT x="22155" y="2625">
+   </LINKPOINT>
+   <LINKPOINT x="18630" y="2595">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="143" dstpinname="Set Value" linkstyle="VHV" srcnodeid="209" srcpinname="Y Output Value">
+   <LINKPOINT x="20840" y="5820">
+   </LINKPOINT>
+   <LINKPOINT x="18850" y="5820">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="143" dstpinname="Transform In" srcnodeid="48" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="214" dstpinname="Y Input Value" srcnodeid="143" srcpinname="Hit">
+   <LINKPOINT x="22680" y="6885">
+   </LINKPOINT>
+   <LINKPOINT x="22725" y="1350">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="216" dstpinname="Y Input Value" srcnodeid="143" srcpinname="Value Output">
    </LINK>
    </PATCH>

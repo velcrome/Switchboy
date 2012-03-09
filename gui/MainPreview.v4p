@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\dev\vvvv\switchboy3\gui\MainPreview.v4p" filename="D:\dev\vvvv\switchcube\gui\MainPreview.v4p" systemname="MainPreview">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="c:\Switchboy3\gui\MainPreview.v4p" filename="D:\dev\vvvv\switchcube\gui\MainPreview.v4p" systemname="MainPreview">
    <BOUNDS height="7845" left="5865" top="6870" type="Window" width="9000">
    </BOUNDS>
    <NODE componentmode="InABox" id="0" nodename="IOBox (Node)" systemname="IOBox (Node)">
@@ -7,7 +7,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="1335" top="5385" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer" encoded="0">
    </PIN>
    <PIN pinname="Input Node" visible="1">
    </PIN>
@@ -17,12 +17,12 @@
    </BOUNDS>
    <BOUNDS height="240" left="1665" top="420" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Texture">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Texture" encoded="0">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="SplitMultitouch.v4p" id="3" nodename="SplitMultitouch.v4p" systemname="SplitMultitouch" path="C:\dev\vvvv\switchboy3\gui\">
+   <NODE componentmode="Hidden" filename="SplitMultitouch.v4p" id="3" nodename="SplitMultitouch.v4p" systemname="SplitMultitouch">
    <BOUNDS height="100" left="4545" top="1590" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="MultitouchData" visible="1">
@@ -38,7 +38,7 @@
    <PIN pinname="EditMode" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="4" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="4" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="3930" top="540" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="3930" top="540" type="Box" width="795">
@@ -47,7 +47,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="MultitouchData">
+   <PIN pinname="Descriptive Name" slicecount="1" values="MultitouchData" encoded="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="3" dstpinname="MultitouchData" srcnodeid="4" srcpinname="Y Output Value">
@@ -108,7 +108,7 @@
    </LINK>
    <LINK dstnodeid="9" dstpinname="Texture" srcnodeid="2" srcpinname="Output Node">
    </LINK>
-   <NODE componentmode="InABox" id="10" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="10" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="4035" top="5655" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="480" left="4035" top="5655" type="Box" width="480">
@@ -125,7 +125,7 @@
    </PIN>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="mouseOver">
+   <PIN pinname="Descriptive Name" slicecount="1" values="mouseOver" encoded="0">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="12" nodename="Group (EX9)" systemname="Group (EX9)">
@@ -165,38 +165,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="10" dstpinname="Y Input Value" srcnodeid="16" srcpinname="Output 1">
-   </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\MTGui2d.dll" id="57" nodename="MTToggleButton (GUI Multitouch)" systemname="MTToggleButton (GUI Multitouch)">
-   <BOUNDS height="100" left="2205" top="2895" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Touch Id" visible="1">
-   </PIN>
-   <PIN pinname="Touch PositionXY" visible="1">
-   </PIN>
-   <PIN pinname="Is new" visible="1">
-   </PIN>
-   <PIN pinname="Hit" visible="1">
-   </PIN>
-   <PIN pinname="Size X" slicecount="1" values="0.99">
-   </PIN>
-   <PIN pinname="Size Y" slicecount="1" values="0.99">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="57" dstpinname="Transform In" srcnodeid="8" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="9" dstpinname="Transform" srcnodeid="57" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="57" dstpinname="Touch Id" srcnodeid="3" srcpinname="ID">
-   </LINK>
-   <LINK dstnodeid="57" dstpinname="Touch PositionXY" srcnodeid="6" srcpinname="XY">
-   </LINK>
-   <LINK dstnodeid="57" dstpinname="Is new" srcnodeid="3" srcpinname="isNew">
-   </LINK>
-   <LINK dstnodeid="16" dstpinname="Input 1" srcnodeid="57" srcpinname="Hit">
    </LINK>
    <NODE componentmode="Hidden" id="58" nodename="Multiply (3d Vector)" systemname="Multiply (3d Vector)">
    <BOUNDS height="100" left="6705" top="3420" type="Node" width="100">
@@ -262,7 +230,7 @@
    </LINK>
    <LINK dstnodeid="61" dstpinname="Y" srcnodeid="62" srcpinname="Y">
    </LINK>
-   <NODE componentmode="InABox" id="63" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="63" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="6075" top="6585" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="645" left="6075" top="6585" type="Box" width="855">
@@ -271,7 +239,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="XY">
+   <PIN pinname="Descriptive Name" slicecount="1" values="XY" encoded="0">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="64" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
@@ -302,8 +270,6 @@
    </LINK>
    <LINK dstnodeid="62" dstpinname="XYZ" srcnodeid="67" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="67" dstpinname="Set" srcnodeid="57" srcpinname="Hit">
-   </LINK>
    <LINK dstnodeid="63" dstpinname="Y Input Value" srcnodeid="64" srcpinname="Output 1">
    </LINK>
    <NODE componentmode="InABox" id="68" nodename="IOBox (Node)" systemname="IOBox (Node)">
@@ -315,15 +281,15 @@
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform In|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform In|" encoded="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="7" dstpinname="Transform In" srcnodeid="68" srcpinname="Output Node">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="69">
-   <BOUNDS type="Node" left="8130" top="6030" width="100" height="100">
+   <NODE componentmode="InABox" id="69" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="8130" top="6030" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8130" top="6030" width="480" height="480">
+   <BOUNDS height="480" left="8130" top="6030" type="Box" width="480">
    </BOUNDS>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
@@ -337,9 +303,43 @@
    </PIN>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="EditMode">
+   <PIN pinname="Descriptive Name" slicecount="1" values="EditMode" encoded="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="3" srcpinname="EditMode" dstnodeid="69" dstpinname="Y Input Value">
+   <LINK dstnodeid="69" dstpinname="Y Input Value" srcnodeid="3" srcpinname="EditMode">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\MTGui2d.dll" id="57" nodename="ToggleButton (GUI Multitouch)" systemname="ToggleButton (GUI Multitouch)">
+   <BOUNDS height="100" left="2205" top="2895" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Touch Id" visible="1">
+   </PIN>
+   <PIN pinname="Touch PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Is new" visible="1">
+   </PIN>
+   <PIN pinname="Hit" visible="1">
+   </PIN>
+   <PIN pinname="Size X" slicecount="1" values="0.99">
+   </PIN>
+   <PIN pinname="Size Y" slicecount="1" values="0.99">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="57" dstpinname="Transform In" srcnodeid="8" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="9" dstpinname="Transform" srcnodeid="57" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="57" dstpinname="Touch Id" srcnodeid="3" srcpinname="ID">
+   </LINK>
+   <LINK dstnodeid="57" dstpinname="Touch PositionXY" srcnodeid="6" srcpinname="XY">
+   </LINK>
+   <LINK dstnodeid="57" dstpinname="Is new" srcnodeid="3" srcpinname="isNew">
+   </LINK>
+   <LINK dstnodeid="16" dstpinname="Input 1" srcnodeid="57" srcpinname="Hit">
+   </LINK>
+   <LINK dstnodeid="67" dstpinname="Set" srcnodeid="57" srcpinname="Hit">
    </LINK>
    </PATCH>

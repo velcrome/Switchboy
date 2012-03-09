@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\Switchboy.v4p" filename="C:\dev\vvvv\switchboy3\Switchboy_DoubleFull.v4p" locked="0" systemname="Switchboy_DoubleFull">
    <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
    </BOUNDS>
@@ -327,7 +327,7 @@
    </PIN>
    <PIN pinname="ID" pintype="Output" visible="1">
    </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="AsDesktop">
    </PIN>
    <PIN pinname="Fullscreen Refresh Rate" slicecount="1" values="60">
    </PIN>
@@ -356,7 +356,7 @@
    <PIN pinname="Clip Device" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="engine\tools\TestBeamerProjection.v4p" id="182" managers="boygroup" nodename="engine\tools\TestBeamerProjection.v4p" systemname="TestBeamerProjection" path="c:\Switchboy3\engine\tools\">
+   <NODE componentmode="Hidden" filename="engine\tools\TestBeamerProjection.v4p" id="182" managers="boygroup" nodename="engine\tools\TestBeamerProjection.v4p" systemname="TestBeamerProjection">
    <BOUNDS height="100" left="8832" top="19533" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="8832" top="19533" type="Box" width="4800">
@@ -516,7 +516,7 @@
    <PIN pinname="Layer 3" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" debug="0" filename="engine\ChannelContentDoubleFull.v4p" id="139" nodename="engine\ChannelContentDoubleFull.v4p" systemname="ChannelContentDoubleFull" path="c:\Switchboy3\engine\">
+   <NODE componentmode="InAWindow" debug="0" filename="engine\ChannelContentDoubleFull.v4p" id="139" nodename="engine\ChannelContentDoubleFull.v4p" systemname="ChannelContentDoubleFull">
    <BOUNDS height="270" left="10980" top="10320" type="Node" width="5100">
    </BOUNDS>
    <BOUNDS height="3600" left="10980" top="10320" type="Box" width="4800">
@@ -688,7 +688,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="EnvironmentMapperMode">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="engine\BeamerAreaOfInterest.v4p" id="184" managers="boygroup" nodename="engine\BeamerAreaOfInterest.v4p" systemname="BeamerAreaOfInterest" path="c:\Switchboy3\engine\">
+   <NODE componentmode="Hidden" filename="engine\BeamerAreaOfInterest.v4p" id="184" managers="boygroup" nodename="engine\BeamerAreaOfInterest.v4p" systemname="BeamerAreaOfInterest">
    <BOUNDS height="270" left="11505" top="11760" type="Node" width="3570">
    </BOUNDS>
    <BOUNDS height="3600" left="11505" top="11760" type="Box" width="4800">
@@ -754,7 +754,7 @@
    <PIN pinname="Layer 8" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" debug="0" filename="gui\AutomateGUI.v4p" id="235" nodename="gui\AutomateGUI.v4p" systemname="AutomateGUI" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" debug="0" filename="gui\AutomateGUI.v4p" id="235" nodename="gui\AutomateGUI.v4p" systemname="AutomateGUI">
    <BOUNDS height="270" left="24495" top="19890" type="Node" width="4575">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
@@ -860,7 +860,7 @@
    </NODE>
    <LINK dstnodeid="235" dstpinname="Values" linkstyle="PolyLine" srcnodeid="230" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="engine\DataBinder.v4p" id="227" managers="boygroup" nodename="DataBinder.v4p" systemname="DataBinder" path="c:\Switchboy3\engine\">
+   <NODE componentmode="Hidden" filename="engine\DataBinder.v4p" id="227" managers="boygroup" nodename="DataBinder.v4p" systemname="DataBinder">
    <BOUNDS height="270" left="24495" top="21240" type="Node" width="7995">
    </BOUNDS>
    <BOUNDS height="3600" left="24495" top="21240" type="Box" width="4800">
@@ -928,7 +928,7 @@
    <LINKPOINT x="19845" y="23430">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="gui\EmulateMultitouch.v4p" id="223" nodename="gui\EmulateMultitouch.v4p" systemname="EmulateMultitouch" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" filename="gui\EmulateMultitouch.v4p" id="223" nodename="gui\EmulateMultitouch.v4p" systemname="EmulateMultitouch">
    <BOUNDS height="100" left="18225" top="24600" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="18225" top="24600" type="Box" width="4800">
@@ -972,7 +972,7 @@
    <LINKPOINT x="8890" y="19842">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="engine\projection\SmartMap.v4p" id="252" managers="boygroup" nodename="engine\projection\SmartMap.v4p" systemname="SmartMap" path="c:\Switchboy3\engine\projection\">
+   <NODE componentmode="Hidden" filename="engine\projection\SmartMap.v4p" id="252" managers="boygroup" nodename="engine\projection\SmartMap.v4p" systemname="SmartMap">
    <BOUNDS height="270" left="7905" top="12750" type="Node" width="7170">
    </BOUNDS>
    <PIN pinname="ContentLayer" visible="1">
@@ -1004,7 +1004,7 @@
    </LINK>
    <LINK dstnodeid="252" dstpinname="PojectionTransform" srcnodeid="184" srcpinname="ImmersiveProjection">
    </LINK>
-   <NODE componentmode="InAWindow" filename="engine\projection\ImmersiveProjection.v4p" id="254" managers="boygroup" nodename="engine\projection\ImmersiveProjection.v4p" systemname="ImmersiveProjection" path="c:\Switchboy3\engine\projection\">
+   <NODE componentmode="InAWindow" filename="engine\projection\ImmersiveProjection.v4p" id="254" managers="boygroup" nodename="engine\projection\ImmersiveProjection.v4p" systemname="ImmersiveProjection">
    <BOUNDS height="270" left="7920" top="17280" type="Node" width="7215">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
@@ -1019,7 +1019,7 @@
    </PIN>
    <PIN pinname="ImmersiveLayer" visible="1">
    </PIN>
-   <BOUNDS height="15930" left="0" top="0" type="Window" width="10470">
+   <BOUNDS height="15930" left="13890" top="705" type="Window" width="10470">
    </BOUNDS>
    <BOUNDS left="7920" top="17280" type="Box">
    </BOUNDS>
@@ -1060,7 +1060,7 @@
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="gui\MainPreview.v4p" id="259" nodename="gui\MainPreview.v4p" systemname="MainPreview" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" filename="gui\MainPreview.v4p" id="259" nodename="gui\MainPreview.v4p" systemname="MainPreview">
    <BOUNDS height="100" left="17040" top="25770" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
@@ -1232,7 +1232,7 @@
    <LINKPOINT x="18705" y="22740">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="gui\PreviewCamera.v4p" id="278" nodename="gui\PreviewCamera.v4p" systemname="PreviewCamera" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" filename="gui\PreviewCamera.v4p" id="278" nodename="gui\PreviewCamera.v4p" systemname="PreviewCamera">
    <BOUNDS height="270" left="16815" top="9600" type="Node" width="4905">
    </BOUNDS>
    <BOUNDS height="3600" left="16815" top="9600" type="Box" width="4800">
@@ -1324,7 +1324,7 @@
    <LINKPOINT x="13050" y="10195">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="gui\SplitMultitouch.v4p" id="280" nodename="gui\SplitMultitouch.v4p" systemname="SplitMultitouch" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" filename="gui\SplitMultitouch.v4p" id="280" nodename="gui\SplitMultitouch.v4p" systemname="SplitMultitouch">
    <BOUNDS height="100" left="27015" top="17505" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="MultitouchData" visible="1">
@@ -1586,7 +1586,7 @@
    <LINKPOINT x="9915" y="24248">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="engine\tools\WallVignette.v4p" id="316" managers="boygroup" nodename="engine\tools\WallVignette.v4p" systemname="WallVignette" path="c:\Switchboy3\engine\tools\">
+   <NODE componentmode="Hidden" filename="engine\tools\WallVignette.v4p" id="316" managers="boygroup" nodename="engine\tools\WallVignette.v4p" systemname="WallVignette">
    <BOUNDS height="270" left="2310" top="17280" type="Node" width="2235">
    </BOUNDS>
    <BOUNDS height="3600" left="2310" top="17280" type="Box" width="4800">
@@ -1619,7 +1619,7 @@
    </PIN>
    <PIN pinname="UseBeamer" visible="1">
    </PIN>
-   <PIN pinname="SoftEdgeTexture" visible="1">
+   <PIN pinname="SoftEdgeTexture" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="317" managers="boygroup" nodename="Group (EX9)" systemname="Group (EX9)">
@@ -1635,7 +1635,7 @@
    </PIN>
    <PIN pinname="Layer Template Count" slicecount="1" values="5">
    </PIN>
-   <PIN pinname="Layer 3" visible="1">
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer 4" visible="1">
    </PIN>
@@ -1710,7 +1710,7 @@
    </LINK>
    <LINK dstnodeid="322" dstpinname="Input 2" srcnodeid="324" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InAWindow" filename="engine\DMXInput.v4p" id="325" managers="" nodename="engine\DMXInput.v4p" systemname="DMXInput" path="c:\Switchboy3\engine\">
+   <NODE componentmode="InAWindow" filename="engine\DMXInput.v4p" id="325" managers="" nodename="engine\DMXInput.v4p" systemname="DMXInput">
    <BOUNDS height="100" left="27255" top="6540" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="27255" top="6540" type="Box" width="4800">
@@ -1870,7 +1870,7 @@
    </LINK>
    <LINK dstnodeid="237" dstpinname="Layer 3" linkstyle="PolyLine" srcnodeid="139" srcpinname="LayerGUI">
    </LINK>
-   <NODE componentmode="Hidden" filename="gui\GlobalGUI2.v4p" id="342" nodename="gui\GlobalGUI2.v4p" systemname="GlobalGUI2" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" filename="gui\GlobalGUI2.v4p" id="342" nodename="gui\GlobalGUI2.v4p" systemname="GlobalGUI2">
    <BOUNDS height="100" left="29670" top="18840" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="15930" left="2055" top="1860" type="Window" width="15645">
@@ -2494,7 +2494,7 @@
    </LINK>
    <LINK dstnodeid="142" dstpinname="Fullscreen" srcnodeid="322" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="engine\tools\Mask.v4p" id="388" managers="boygroup" nodename="engine\tools\Mask.v4p" systemname="Mask" path="c:\Switchboy3\engine\tools\">
+   <NODE componentmode="Hidden" filename="engine\tools\Mask.v4p" id="388" managers="boygroup" nodename="engine\tools\Mask.v4p" systemname="Mask">
    <BOUNDS height="100" left="5175" top="17280" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="9255" left="3000" top="2355" type="Window" width="10980">
@@ -2527,7 +2527,7 @@
    </PIN>
    <PIN pinname="Reset" visible="1">
    </PIN>
-   <PIN pinname="WallTexture" visible="1">
+   <PIN pinname="WallTexture" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK dstnodeid="388" dstpinname="BeamerProjection" hiddenwhenlocked="1" srcnodeid="199" srcpinname="Output Node">
@@ -2539,7 +2539,7 @@
    </BOUNDS>
    <BOUNDS height="480" left="2010" top="16005" type="Box" width="480">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
@@ -2553,7 +2553,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="IncludeWallVignetteInMask">
    </PIN>
@@ -2583,7 +2583,7 @@
    <NODE componentmode="Hidden" id="394" managers="boygroup" nodename="Switch (Node Input)" systemname="Switch (Node Input)">
    <PIN pinname="Switch" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
    </PIN>
    <BOUNDS height="100" left="2010" top="18420" type="Node" width="100">
    </BOUNDS>
@@ -2950,7 +2950,7 @@
    </LINK>
    <LINK dstnodeid="290" dstpinname="Y Input Value" srcnodeid="419" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="engine\MappedEnvironment.v4p" id="195" managers="boygroup" nodename="engine\MappedEnvironment.v4p" systemname="MappedEnvironment" path="c:\Switchboy3\engine\">
+   <NODE componentmode="InAWindow" filename="engine\MappedEnvironment.v4p" id="195" managers="boygroup" nodename="engine\MappedEnvironment.v4p" systemname="MappedEnvironment">
    <PIN pinname="CalcMesh" visible="1">
    </PIN>
    <PIN pinname="CalibrationMode" visible="1">
@@ -2967,7 +2967,7 @@
    </PIN>
    <PIN pinname="EnvironmentTransform" visible="1">
    </PIN>
-   <BOUNDS height="15090" left="300" top="2610" type="Window" width="12600">
+   <BOUNDS height="15090" left="8790" top="2070" type="Window" width="12600">
    </BOUNDS>
    <PIN pinname="Color" visible="1">
    </PIN>
@@ -3134,7 +3134,7 @@
    </LINK>
    <LINK dstnodeid="278" dstpinname="ImmersivePersonStart" srcnodeid="295" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" debug="0" filename="engine\projection\EditWallMesh.v4p" id="425" nodename="engine\projection\EditWallMesh.v4p" systemname="EditWallMesh" path="c:\Switchboy3\engine\projection\">
+   <NODE componentmode="Hidden" debug="0" filename="engine\projection\EditWallMesh.v4p" id="425" nodename="engine\projection\EditWallMesh.v4p" systemname="EditWallMesh">
    <BOUNDS height="100" left="2325" top="10320" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Transform Mesh" visible="1">
@@ -3198,7 +3198,7 @@
    </LINK>
    <LINK dstnodeid="183" dstpinname="Layer 2" srcnodeid="425" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" filename="gui\SplitMultitouch.v4p" id="426" nodename="gui\SplitMultitouch.v4p" systemname="SplitMultitouch" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" filename="gui\SplitMultitouch.v4p" id="426" nodename="gui\SplitMultitouch.v4p" systemname="SplitMultitouch">
    <BOUNDS height="100" left="4260" top="5160" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="MultitouchData" visible="1">
@@ -3289,8 +3289,6 @@
    </LINKPOINT>
    <LINKPOINT x="7485" y="17738">
    </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="394" dstpinname="Input 1" srcnodeid="316" srcpinname="Layer">
    </LINK>
    <NODE componentmode="InABox" id="434" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="23436" top="8496" type="Node" width="0">
@@ -3410,7 +3408,7 @@
    <LINKPOINT x="33225" y="17340">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="engine\PostFXContent.v4p" id="253" nodename="engine\PostFXContent.v4p" systemname="PostFXContent" path="c:\Switchboy3\engine\">
+   <NODE componentmode="InAWindow" filename="engine\PostFXContent.v4p" id="253" nodename="engine\PostFXContent.v4p" systemname="PostFXContent">
    <BOUNDS height="270" left="9990" top="15195" type="Node" width="4170">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
@@ -3492,26 +3490,6 @@
    <LINKPOINT x="9165" y="11160">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="engine\tools\SetRes (EX 9).v4p" id="286" managers="boygroup" nodename="SetRes (EX 9)" systemname="SetRes (EX 9)">
-   <PIN pinname="Node ID" visible="1">
-   </PIN>
-   <PIN pinname="Force Update" visible="1">
-   </PIN>
-   <PIN pinname="X Resolution" visible="1">
-   </PIN>
-   <PIN pinname="Y Resolution" visible="1">
-   </PIN>
-   <BOUNDS height="100" left="11964" top="28221" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   <BOUNDS left="11964" top="28224" type="Box">
-   </BOUNDS>
-   </NODE>
-   <LINK dstnodeid="286" dstpinname="Y Resolution" srcnodeid="411" srcpinname="Y">
-   </LINK>
-   <LINK dstnodeid="286" dstpinname="Node ID" srcnodeid="142" srcpinname="ID">
-   </LINK>
    <NODE componentmode="InABox" id="443" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="13470" top="27885" type="Node" width="0">
    </BOUNDS>
@@ -3549,10 +3527,6 @@
    <LINK dstnodeid="189" dstpinname="Screen Count X" srcnodeid="205" srcpinname="Count">
    </LINK>
    <LINK dstnodeid="142" dstpinname="Viewport" srcnodeid="189" srcpinname="Viewports">
-   </LINK>
-   <LINK dstnodeid="286" dstpinname="Force Update" srcnodeid="287" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="286" dstpinname="X Resolution" srcnodeid="412" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="316" dstpinname="UseBeamer" srcnodeid="404" srcpinname="Y Output Value">
    </LINK>
@@ -3603,12 +3577,6 @@
    <LINK dstnodeid="183" dstpinname="Layer 3" srcnodeid="289" srcpinname="Layer">
    </LINK>
    <LINK dstnodeid="388" dstpinname="WallTexture" srcnodeid="446" srcpinname="Output Node">
-   </LINK>
-   <LINK dstnodeid="317" dstpinname="Layer 3" linkstyle="Bezier" srcnodeid="388" srcpinname="Layer">
-   <LINKPOINT x="5205" y="21218">
-   </LINKPOINT>
-   <LINKPOINT x="7290" y="21218">
-   </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="449" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="15915" top="10770" type="Node" width="0">

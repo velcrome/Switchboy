@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\switchboy3\environment\BoygroupSetup.v4p" filename="C:\dev\vvvv\switchboy3\environment\BoygroupSetup.v4p" systemname="BoygroupSetup">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="c:\Switchboy3\environment\BoygroupSetup.v4p" filename="C:\dev\vvvv\switchboy3\environment\BoygroupSetup.v4p" systemname="BoygroupSetup">
    <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="InABox" id="4" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -26,7 +26,7 @@
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="-4" nodename="Boygroup (VVVV Server)" systemname="Boygroup (VVVV Server)">
+   <NODE componentmode="Hidden" id="-3" nodename="Boygroup (VVVV Server)" systemname="Boygroup (VVVV Server)">
    <BOUNDS height="270" left="1185" top="2340" type="Node" width="2265">
    </BOUNDS>
    <PIN pinname="Clients" visible="1">
@@ -116,26 +116,26 @@
    </NODE>
    <LINK dstnodeid="4" dstpinname="Y Input Value" srcnodeid="0" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="-4" dstpinname="Clients" srcnodeid="3" srcpinname="Output String">
+   <LINK dstnodeid="-3" dstpinname="Clients" srcnodeid="3" srcpinname="Output String">
    </LINK>
-   <LINK dstnodeid="2" dstpinname="Y Input Value" srcnodeid="-4" srcpinname="Connected">
+   <LINK dstnodeid="2" dstpinname="Y Input Value" srcnodeid="-3" srcpinname="Connected">
    <LINKPOINT x="15" y="3165">
    </LINKPOINT>
    <LINKPOINT x="45" y="45">
    </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="9" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="3450" top="180" type="Node" width="100">
+   <BOUNDS height="100" left="3600" top="315" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="660" left="3450" top="180" type="Box" width="1410">
+   <BOUNDS height="660" left="3600" top="315" type="Box" width="1410">
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="Columns" slicecount="1" values="3">
+   <PIN pinname="Columns" slicecount="1" values="5">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="3" values="0,1,2">
+   <PIN pinname="Y Input Value" slicecount="5" values="0,1,2,3,4">
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="1">
    </PIN>
@@ -147,7 +147,7 @@
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="BeamersConnected">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="3" values="1,1,1">
+   <PIN pinname="X Input Value" slicecount="5" values="1,1,1,1,1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Integer.dll" id="10" managers="" nodename="Integer (Value)" systemname="Integer (Value Legacy)">
@@ -314,7 +314,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Bridge Count|">
    </PIN>
    </NODE>
-   <LINK dstnodeid="28" dstpinname="Y Input Value" srcnodeid="-4" srcpinname="Bridge Count">
+   <LINK dstnodeid="28" dstpinname="Y Input Value" srcnodeid="-3" srcpinname="Bridge Count">
    </LINK>
    <NODE componentmode="InABox" id="29" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="1935" top="3225" type="Node" width="100">
@@ -326,7 +326,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Active Bridges|">
    </PIN>
    </NODE>
-   <LINK dstnodeid="29" dstpinname="Y Input Value" srcnodeid="-4" srcpinname="Active Bridges">
+   <LINK dstnodeid="29" dstpinname="Y Input Value" srcnodeid="-3" srcpinname="Active Bridges">
    </LINK>
    <NODE componentmode="InABox" id="30" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="885" top="3855" type="Node" width="100">
@@ -338,7 +338,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Warnings">
    </PIN>
    </NODE>
-   <LINK dstnodeid="30" dstpinname="Input String" srcnodeid="-4" srcpinname="Warnings">
+   <LINK dstnodeid="30" dstpinname="Input String" srcnodeid="-3" srcpinname="Warnings">
    </LINK>
    <NODE componentmode="Hidden" id="31" managers="boygroup" nodename="AsValue (String)" systemname="AsValue (String)">
    <BOUNDS height="100" left="3585" top="12405" type="Node" width="100">

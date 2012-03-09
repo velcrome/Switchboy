@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\gui\ChannelPreset.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\ChannelPreset.v4p" systemname="ChannelPreset">
    <BOUNDS height="11145" left="525" top="2220" type="Window" width="22320">
    </BOUNDS>
@@ -96,10 +96,10 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Background">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Gui2d.dll" id="14" nodename="RadioButton (GUI)" systemname="RadioButton (GUI)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Gui2d.dll" id="14" nodename="RadioButton (GUI)" systemname="RADIOBUTTON (GUI)">
    <BOUNDS height="270" left="2700" top="5520" type="Node" width="13215">
    </BOUNDS>
-   <PIN pinname="Tarnsform In" visible="1">
+   <PIN pinname="Transform In" visible="1">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -121,7 +121,7 @@
    </PIN>
    <PIN pinname="Mouse Left" visible="1">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="8" values="0,0,0,0,0,0,0,0">
+   <PIN pinname="Internal Value" slicecount="8" values="1,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Count X" slicecount="1" values="2">
    </PIN>
@@ -254,7 +254,7 @@
    </LINK>
    <LINK dstnodeid="33" dstpinname="Transform In 1" srcnodeid="15" srcpinname="Transform Out">
    </LINK>
-   <LINK dstnodeid="14" dstpinname="Tarnsform In" srcnodeid="33" srcpinname="Transform Out">
+   <LINK dstnodeid="14" dstpinname="Transform In" srcnodeid="33" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="InABox" id="36" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="2145" top="3450" type="Node" width="100">

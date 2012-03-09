@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\gui\ChannelBlend.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\ChannelBlend.v4p" systemname="ChannelBlend">
    <BOUNDS height="14445" left="1230" top="2430" type="Window" width="19050">
    </BOUNDS>
@@ -38,7 +38,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Background">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Gui2d.dll" id="49" nodename="RadioButton (GUI)" systemname="RadioButton (GUI)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Gui2d.dll" id="49" nodename="RadioButton (GUI)" systemname="RADIOBUTTON (GUI)">
    <BOUNDS height="100" left="7770" top="9135" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
@@ -55,13 +55,13 @@
    </PIN>
    <PIN pinname="Count X" slicecount="1" values="5">
    </PIN>
-   <PIN pinname="Tarnsform In" visible="1">
+   <PIN pinname="Transform In" visible="1">
    </PIN>
    <PIN pinname="Size X" slicecount="1" values="0.96">
    </PIN>
    <PIN pinname="Mouse Left" visible="1">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="5" values="3,0,0,0,0">
+   <PIN pinname="Internal Value" slicecount="5" values="4,0,0,0,0">
    </PIN>
    <PIN pinname="Mouse Over Color" visible="1">
    </PIN>
@@ -124,7 +124,7 @@
    </LINK>
    <LINK dstnodeid="50" dstpinname="Color" srcnodeid="49" srcpinname="Color">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Gui2d.dll" id="58" nodename="RadioButton (GUI)" systemname="RadioButton (GUI)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Gui2d.dll" id="58" nodename="RadioButton (GUI)" systemname="RADIOBUTTON (GUI)">
    <BOUNDS height="100" left="11880" top="9135" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
@@ -141,13 +141,13 @@
    </PIN>
    <PIN pinname="Count X" slicecount="1" values="5">
    </PIN>
-   <PIN pinname="Tarnsform In" visible="1">
+   <PIN pinname="Transform In" visible="1">
    </PIN>
    <PIN pinname="Size X" slicecount="1" visible="1" values="0.96">
    </PIN>
    <PIN pinname="Mouse Left" visible="1">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="5" values="1,0,0,0,0">
+   <PIN pinname="Internal Value" slicecount="5" values="0,0,0,0,0">
    </PIN>
    <PIN pinname="Mouse Over Color" visible="1">
    </PIN>
@@ -232,9 +232,9 @@
    </NODE>
    <LINK dstnodeid="62" dstpinname="Transform In 2" srcnodeid="55" srcpinname="Transform Out">
    </LINK>
-   <LINK dstnodeid="58" dstpinname="Tarnsform In" srcnodeid="62" srcpinname="Transform Out">
+   <LINK dstnodeid="58" dstpinname="Transform In" srcnodeid="62" srcpinname="Transform Out">
    </LINK>
-   <LINK dstnodeid="49" dstpinname="Tarnsform In" srcnodeid="61" srcpinname="Transform Out">
+   <LINK dstnodeid="49" dstpinname="Transform In" srcnodeid="61" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="InABox" id="64" nodename="IOBox (Value Advanced)" systemname="IOBox (Node)">
    <BOUNDS height="100" left="1650" top="2625" type="Node" width="100">

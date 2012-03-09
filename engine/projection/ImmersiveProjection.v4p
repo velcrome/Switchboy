@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\dev\vvvv\switchboy3\engine\projection\ImmersiveProjection.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\engine\projection\ImmersiveProjection.v4p" systemname="ImmersiveProjection">
-   <BOUNDS height="15930" left="0" top="0" type="Window" width="10470">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="c:\Switchboy3\engine\projection\ImmersiveProjection.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\engine\projection\ImmersiveProjection.v4p" systemname="ImmersiveProjection">
+   <BOUNDS height="15930" left="13890" top="705" type="Window" width="10470">
    </BOUNDS>
    <NODE componentmode="InABox" id="16" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <BOUNDS height="0" left="660" top="12348" type="Node" width="0">
@@ -9,9 +9,9 @@
    </BOUNDS>
    <BOUNDS height="160" left="-1035" top="8760" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   <PIN pinname="Input Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="ImmersiveLayer">
+   <PIN pinname="Descriptive Name" slicecount="1" values="ImmersiveLayer" encoded="0">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
@@ -25,7 +25,7 @@
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="EnvironmentMesh">
+   <PIN pinname="Descriptive Name" slicecount="1" values="EnvironmentMesh" encoded="0">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
@@ -87,7 +87,7 @@
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="ImmersiveView">
+   <PIN pinname="Descriptive Name" slicecount="1" values="ImmersiveView" encoded="0">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="20" nodename="IOBox (Node)" systemname="IOBox (Node)">
@@ -99,10 +99,10 @@
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="ImmersiveProjection">
+   <PIN pinname="Descriptive Name" slicecount="1" values="ImmersiveProjection" encoded="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" hiddenwhenlocked="1" id="32" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="32" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="0" left="825" top="7368" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="16575" top="6165" type="Window" width="215">
@@ -114,7 +114,7 @@
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" hiddenwhenlocked="1" id="31" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" hiddenwhenlocked="1" id="31" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="0" left="1650" top="7383" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="17115" top="6255" type="Window" width="215">
@@ -190,11 +190,9 @@
    </LINK>
    <LINK dstnodeid="24" dstpinname="Texture View Transform" hiddenwhenlocked="1" srcnodeid="19" srcpinname="Output Node">
    </LINK>
-   <LINK dstnodeid="16" dstpinname="Input Node" srcnodeid="24" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="24" dstpinname="Mesh" srcnodeid="14" srcpinname="Output Node">
    </LINK>
-   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="33" nodename="Info (EX9.Texture)" systemname="Info (EX9.Texture)">
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="33" nodename="Info (EX9.Texture)" systemname="INFO (EX9.TEXTURE)">
    <BOUNDS height="100" left="1575" top="6858" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Texture" slicecount="1" visible="1" values="||">
@@ -219,7 +217,7 @@
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Texture">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Texture" encoded="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="24" dstpinname="Texture" srcnodeid="56" srcpinname="Output Node">
@@ -235,31 +233,33 @@
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="ViewPortTransform">
+   <PIN pinname="Descriptive Name" slicecount="1" values="ViewPortTransform" encoded="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="24" dstpinname="Texture ViewPort Transform" srcnodeid="57" srcpinname="Output Node">
    </LINK>
-   <NODE systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden" id="58">
-   <BOUNDS type="Node" left="3585" top="10380" width="100" height="100">
+   <NODE componentmode="Hidden" id="58" nodename="I (Spreads)" systemname="I (Spreads)">
+   <BOUNDS height="100" left="3585" top="10380" type="Node" width="100">
    </BOUNDS>
    <PIN pinname=".. To [" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="58" srcpinname="Output" dstnodeid="24" dstpinname="Index">
+   <LINK dstnodeid="24" dstpinname="Index" srcnodeid="58" srcpinname="Output">
    </LINK>
-   <NODE systemname="Count (Node)" nodename="Count (Node)" componentmode="Hidden" id="59">
-   <BOUNDS type="Node" left="4410" top="9240" width="100" height="100">
+   <NODE componentmode="Hidden" id="59" nodename="Count (Node)" systemname="Count (Node)">
+   <BOUNDS height="100" left="4410" top="9240" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Count" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="57" srcpinname="Output Node" dstnodeid="59" dstpinname="Input">
+   <LINK dstnodeid="59" dstpinname="Input" srcnodeid="57" srcpinname="Output Node">
    </LINK>
-   <LINK srcnodeid="59" srcpinname="Count" dstnodeid="58" dstpinname=".. To [">
+   <LINK dstnodeid="58" dstpinname=".. To [" srcnodeid="59" srcpinname="Count">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Layer" dstnodeid="16" dstpinname="Input Node">
    </LINK>
    </PATCH>

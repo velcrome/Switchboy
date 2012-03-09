@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\gui\AutomateGUI.v4p" filename="C:\dev\vvvv\switchboy3\gui\AutomateGUI.v4p" systemname="AutomateGUI">
    <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
    </BOUNDS>
@@ -450,30 +450,6 @@
    </NODE>
    <LINK dstnodeid="131" dstpinname="Y Input Value" srcnodeid="103" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\MTGui2d.dll" id="154" nodename="MTToggleButton (GUI Multitouch)" systemname="MTToggleButton (GUI Multitouch)">
-   <BOUNDS height="100" left="1785" top="9015" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Count X" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Hit" visible="1">
-   </PIN>
-   <PIN pinname="Touch Id" visible="1">
-   </PIN>
-   <PIN pinname="Touch PositionXY" visible="1">
-   </PIN>
-   <PIN pinname="Is new" visible="1">
-   </PIN>
-   <PIN pinname="Value Output" visible="1">
-   </PIN>
-   <PIN pinname="Count Y" slicecount="1" values="3">
-   </PIN>
-   <BOUNDS left="1785" top="9015" type="Box">
-   </BOUNDS>
-   </NODE>
    <NODE componentmode="Hidden" id="155" nodename="Translate (Transform)" systemname="Translate (Transform)">
    <BOUNDS height="100" left="1785" top="7755" type="Node" width="100">
    </BOUNDS>
@@ -506,16 +482,6 @@
    </NODE>
    <LINK dstnodeid="156" dstpinname="Transform In" srcnodeid="155" srcpinname="Transform Out">
    </LINK>
-   <LINK dstnodeid="154" dstpinname="Transform In" srcnodeid="156" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="78" dstpinname="Transform" srcnodeid="154" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="154" dstpinname="Touch Id" hiddenwhenlocked="1" srcnodeid="101" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="154" dstpinname="Touch PositionXY" hiddenwhenlocked="1" srcnodeid="102" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="154" dstpinname="Is new" hiddenwhenlocked="1" srcnodeid="100" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="Hidden" id="158" nodename="Switch (Value Input)" systemname="Switch (Color Input)">
    <BOUNDS height="100" left="2730" top="10665" type="Node" width="100">
    </BOUNDS>
@@ -531,8 +497,6 @@
    <LINK dstnodeid="158" dstpinname="Input 2" hiddenwhenlocked="1" srcnodeid="120" srcpinname="Color Output">
    </LINK>
    <LINK dstnodeid="158" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="119" srcpinname="Color Output">
-   </LINK>
-   <LINK dstnodeid="158" dstpinname="Switch" srcnodeid="154" srcpinname="Hit">
    </LINK>
    <LINK dstnodeid="78" dstpinname="Color" srcnodeid="158" srcpinname="Output">
    </LINK>
@@ -720,14 +684,6 @@
    </NODE>
    <LINK dstnodeid="160" dstpinname="Input 1" srcnodeid="159" srcpinname="X">
    </LINK>
-   <LINK dstnodeid="159" dstpinname="XYZ" srcnodeid="154" srcpinname="Hit">
-   <LINKPOINT x="611" y="10144">
-   </LINKPOINT>
-   <LINKPOINT x="426" y="833">
-   </LINKPOINT>
-   <LINKPOINT x="7654" y="1121">
-   </LINKPOINT>
-   </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\plugins\DrawText.dll" id="194" nodename="Text (EX9)" systemname="Text (EX9 Legacy)">
    <BOUNDS height="100" left="4020" top="11415" type="Node" width="100">
    </BOUNDS>
@@ -752,8 +708,6 @@
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="195" dstpinname="Transform In" srcnodeid="154" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="Hidden" id="196" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
    <BOUNDS height="100" left="4170" top="10260" type="Node" width="100">
    </BOUNDS>
@@ -1030,7 +984,7 @@
    </LINK>
    <LINK dstnodeid="216" dstpinname="Transform" srcnodeid="217" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="MightyMapper.v4p" id="218" nodename="MightyMapper.v4p" systemname="MightyMapper" path="c:\Switchboy3\gui\">
+   <NODE componentmode="Hidden" filename="MightyMapper.v4p" id="218" nodename="MightyMapper.v4p" systemname="MightyMapper">
    <BOUNDS height="100" left="13680" top="11805" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
@@ -1345,5 +1299,51 @@
    <LINK dstnodeid="237" dstpinname="Set" srcnodeid="243" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="208" dstpinname="Reset" srcnodeid="241" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\MTGui2d.dll" id="154" nodename="ToggleButton (GUI Multitouch)" systemname="ToggleButton (GUI Multitouch)">
+   <BOUNDS height="100" left="1785" top="9015" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Count X" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Hit" visible="1">
+   </PIN>
+   <PIN pinname="Touch Id" visible="1">
+   </PIN>
+   <PIN pinname="Touch PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Is new" visible="1">
+   </PIN>
+   <PIN pinname="Value Output" visible="1">
+   </PIN>
+   <PIN pinname="Count Y" slicecount="1" values="3">
+   </PIN>
+   <BOUNDS left="1785" top="9015" type="Box">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="154" dstpinname="Transform In" srcnodeid="156" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="78" dstpinname="Transform" srcnodeid="154" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="154" dstpinname="Touch Id" hiddenwhenlocked="1" srcnodeid="101" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="154" dstpinname="Touch PositionXY" hiddenwhenlocked="1" srcnodeid="102" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="154" dstpinname="Is new" hiddenwhenlocked="1" srcnodeid="100" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="158" dstpinname="Switch" srcnodeid="154" srcpinname="Hit">
+   </LINK>
+   <LINK dstnodeid="159" dstpinname="XYZ" srcnodeid="154" srcpinname="Hit">
+   <LINKPOINT x="611" y="10144">
+   </LINKPOINT>
+   <LINKPOINT x="426" y="833">
+   </LINKPOINT>
+   <LINKPOINT x="7654" y="1121">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="195" dstpinname="Transform In" srcnodeid="154" srcpinname="Transform Out">
    </LINK>
    </PATCH>

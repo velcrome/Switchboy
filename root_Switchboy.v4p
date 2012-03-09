@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\root_Switchboy.v4p" componentmode="Hidden" filename="C:\dev\vvvv\switchboy3\root_Switchboy.v4p" systemname="root_Switchboy">
    <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
    </BOUNDS>
-   <NODE componentmode="InAWindow" filename="environment\BoygroupSetup.v4p" id="58" nodename="environment\BoygroupSetup.v4p" systemname="BoygroupSetup" path="c:\Switchboy3\environment\">
+   <NODE componentmode="InAWindow" filename="environment\BoygroupSetup.v4p" id="58" nodename="environment\BoygroupSetup.v4p" systemname="BoygroupSetup">
    <BOUNDS height="100" left="3405" top="4305" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="isClient" visible="1">
@@ -32,7 +32,7 @@
    </NODE>
    <LINK dstnodeid="62" dstpinname="Y Input Value" srcnodeid="63" srcpinname="frames per second">
    </LINK>
-   <NODE componentmode="Hidden" id="-7" managers="boygroup" nodename="MainLoop (VVVV)" systemname="MainLoop (VVVV)">
+   <NODE componentmode="Hidden" id="-6" managers="boygroup" nodename="MainLoop (VVVV)" systemname="MainLoop (VVVV)">
    <BOUNDS height="0" left="540" top="9090" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Time Mode" slicecount="1" values="Filtered">
@@ -60,7 +60,7 @@
    </NODE>
    <LINK dstnodeid="60" dstpinname="Y Input Value" srcnodeid="61" srcpinname="Available Texture Memory on automatic Devices">
    </LINK>
-   <NODE componentmode="Hidden" id="-9" managers="boygroup" nodename="Undo (VVVV)" systemname="Undo (VVVV)">
+   <NODE componentmode="Hidden" id="-8" managers="boygroup" nodename="Undo (VVVV)" systemname="Undo (VVVV)">
    <BOUNDS height="100" left="540" top="8565" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="0" left="630" top="8490" type="Box" width="0">
@@ -80,7 +80,7 @@
    <PIN pinname="Log Messages" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" filename="Switchboy.v4p" id="47" nodename="Switchboy.v4p" systemname="Switchboy" path="c:\Switchboy3\">
+   <NODE componentmode="InAWindow" filename="Switchboy.v4p" id="47" nodename="Switchboy.v4p" systemname="Switchboy">
    <BOUNDS height="270" left="1440" top="7890" type="Node" width="10680">
    </BOUNDS>
    <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
@@ -133,7 +133,7 @@
    </PIN>
    <PIN pinname="PersonPosition" visible="1">
    </PIN>
-   <PIN pinname="IncludeWallVignetteInMask" slicecount="1" visible="1" values="0">
+   <PIN pinname="IncludeWallVignetteInMask" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
@@ -153,7 +153,7 @@
    </PIN>
    <PIN pinname="UseSpaceMouse" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="SoftEdgeTexture" visible="1">
+   <PIN pinname="SoftEdgeTexture" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="ClientID" visible="1">
    </PIN>
@@ -393,9 +393,9 @@
    </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="87" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="2880" top="6900" type="Node" width="100">
+   <BOUNDS height="100" left="2460" top="6600" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="735" left="2880" top="6900" type="Box" width="555">
+   <BOUNDS height="735" left="2460" top="6600" type="Box" width="555">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -471,9 +471,9 @@
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="87" dstpinname="Y Input Value" linkstyle="VHV" srcnodeid="93" srcpinname="Count">
-   <LINKPOINT x="4080" y="6443">
+   <LINKPOINT x="3940" y="6343">
    </LINKPOINT>
-   <LINKPOINT x="3600" y="6638">
+   <LINKPOINT x="3320" y="6438">
    </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="94" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -630,7 +630,31 @@
    </NODE>
    <LINK dstnodeid="47" dstpinname="LoadCalibration" srcnodeid="108" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InAWindow" filename="environment\BeamerGrassi.v4p" id="90" managers="boygroup" nodename="environment\BeamerGrassi.v4p" systemname="BeamerGrassi" path="c:\Switchboy3\environment\">
+   <LINK dstnodeid="47" dstpinname="ClientID" srcnodeid="58" srcpinname="ClientID">
+   </LINK>
+   <NODE componentmode="InABox" id="110" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="9720" top="6975" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="9720" top="6975" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="AttemptAngulationFix">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="47" dstpinname="AttemptAngulationFix" srcnodeid="110" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InAWindow" filename="environment\BeamerInsomnia.v4p" id="90" managers="boygroup" nodename="environment\BeamerInsomnia.v4p" systemname="BeamerInsomnia">
    <PIN pinname="ShowBeamer">
    </PIN>
    <BOUNDS height="270" left="4980" top="5475" type="Node" width="2100">
@@ -658,7 +682,7 @@
    </LINK>
    <LINK dstnodeid="47" dstpinname="BeamerView" srcnodeid="90" srcpinname="BeamerView">
    </LINK>
-   <NODE componentmode="Hidden" debug="0" filename="environment\WallsGrassi.v4p" id="52" managers="boygroup" nodename="environment\WallsGrassi.v4p" systemname="WallsGrassi" path="c:\Switchboy3\environment\">
+   <NODE componentmode="Hidden" debug="0" filename="environment\WallsInsomnia.v4p" id="52" managers="boygroup" nodename="environment\WallsInsomnia.v4p" systemname="WallsInsomnia">
    <BOUNDS height="270" left="3750" top="7335" type="Node" width="1530">
    </BOUNDS>
    <BOUNDS height="3600" left="3750" top="7335" type="Box" width="4800">
@@ -678,64 +702,8 @@
    <PIN pinname="Complete">
    </PIN>
    </NODE>
-   <LINK dstnodeid="47" dstpinname="WallTransform" linkstyle="VHV" srcnodeid="52" srcpinname="WallTransform">
-   <LINKPOINT x="3580" y="7823">
-   </LINKPOINT>
-   <LINKPOINT x="3725" y="7673">
-   </LINKPOINT>
+   <LINK srcnodeid="52" srcpinname="WallTransform" dstnodeid="47" dstpinname="WallTransform">
    </LINK>
-   <LINK dstnodeid="47" dstpinname="WallBelongsTo" linkstyle="VHV" srcnodeid="52" srcpinname="WallBelongsTo">
-   <LINKPOINT x="4810" y="7823">
-   </LINKPOINT>
-   <LINKPOINT x="4250" y="7673">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="47" dstpinname="SoftEdgeTexture" srcnodeid="52" srcpinname="SoftEdgeTexture">
-   </LINK>
-   <LINK dstnodeid="47" dstpinname="ClientID" srcnodeid="58" srcpinname="ClientID">
-   </LINK>
-   <NODE componentmode="InABox" id="109" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="4575" top="6600" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="480" left="4575" top="6600" type="Box" width="480">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Complete">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="52" dstpinname="Complete" srcnodeid="109" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="InABox" id="110" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="9720" top="6975" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="480" left="9720" top="6975" type="Box" width="480">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="AttemptAngulationFix">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="47" dstpinname="AttemptAngulationFix" srcnodeid="110" srcpinname="Y Output Value">
+   <LINK srcnodeid="52" srcpinname="WallBelongsTo" dstnodeid="47" dstpinname="WallBelongsTo">
    </LINK>
    </PATCH>
