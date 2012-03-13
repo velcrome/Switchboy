@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\engine\PostFXContent.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\engine\PostFXContent.v4p" systemname="PostFXContent">
+   <PATCH nodename="c:\Switchboy3\modules\content\PostFXContent.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\engine\PostFXContent.v4p" systemname="PostFXContent">
    <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="Hidden" debug="0" filename="..\gui\PostFXGUI.v4p" id="62" nodename="..\gui\PostFXGUI.v4p" systemname="PostFXGUI">
@@ -311,8 +311,6 @@
    </LINKPOINT>
    <LINKPOINT x="13275" y="8573">
    </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="45" dstpinname="Y Input Value" srcnodeid="53" srcpinname="OnChange">
    </LINK>
    <LINK dstnodeid="41" dstpinname="Node Name" linkstyle="Bezier" srcnodeid="52" srcpinname="Output String">
    <LINKPOINT x="10470" y="9735">
@@ -908,7 +906,9 @@
    </LINK>
    <LINK dstnodeid="62" dstpinname="BindedValues" srcnodeid="88" srcpinname="Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\PostFX\Ascii\root_Ascii.v4p" id="90" managers="boygroup" nodename="..\PostFX\Ascii\root_Ascii.v4p" systemname="root_Ascii">
+   <LINK srcnodeid="53" srcpinname="OnChange" dstnodeid="45" dstpinname="Y Input Value">
+   </LINK>
+   <NODE componentmode="Hidden" filename="..\..\PostFX\tiler\root_Tiler.v4p" id="90" managers="boygroup" nodename="..\..\PostFX\tiler\root_Tiler.v4p" systemname="root_Tiler">
    <BOUNDS height="270" left="4605" top="10500" type="Node" width="6615">
    </BOUNDS>
    <PIN pinname="ID" pintype="Output" visible="1">
@@ -935,9 +935,9 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN encoded="0" pinname="GlobalStrings" slicecount="1" visible="1" values="||">
+   <PIN encoded="0" pinname="GlobalStrings" visible="1">
    </PIN>
-   <PIN pinname="Globals" slicecount="1" visible="1" values="0">
+   <PIN pinname="Globals" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="41" dstpinname="Node ID" linkstyle="VHV" srcnodeid="90" srcpinname="ID">

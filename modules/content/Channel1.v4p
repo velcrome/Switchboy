@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\engine\channels\Channel1.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\engine\channels\Channel0.v4p" systemname="Channel0">
+   <PATCH nodename="c:\Switchboy3\modules\content\Channel1.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\engine\channels\Channel0.v4p" systemname="Channel0">
    <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)" systemname="IOBox (Node)">
@@ -19,7 +19,7 @@
    </BOUNDS>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
-   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="8" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -71,7 +71,7 @@
    <NODE componentmode="Hidden" id="13" nodename="CreateNode (VVVV)" systemname="CreateNode (VVVV)">
    <BOUNDS height="100" left="9015" top="8550" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Node ID" visible="1" slicecount="1" values="27">
+   <PIN pinname="Node ID" slicecount="1" visible="1" values="27">
    </PIN>
    <PIN pinname="Parent Patch" visible="1">
    </PIN>
@@ -154,8 +154,6 @@
    <PIN pinname="Input 3" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="15" dstpinname="Y Input Value" srcnodeid="20" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="20" dstpinname="Input 1" linkstyle="Bezier" srcnodeid="9" srcpinname="Y Output Value">
    <LINKPOINT x="8325" y="2573">
    </LINKPOINT>
@@ -255,7 +253,7 @@
    <NODE componentmode="Hidden" id="31" nodename="FrameDelay (String)" systemname="FrameDelay (String)">
    <BOUNDS height="100" left="3105" top="8100" type="Node" width="100">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input 1" visible="1" slicecount="1" values="||">
+   <PIN encoded="0" pinname="Input 1" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Output 1" visible="1">
    </PIN>
@@ -378,7 +376,7 @@
    </LINK>
    <LINK dstnodeid="27" dstpinname="RenderState" srcnodeid="0" srcpinname="Output Node">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\..\Patches\JT_Balken\root_JT_Balken.v4p" id="27" nodename="..\..\Patches\JT_Balken\root_JT_Balken.v4p" systemname="root_JT_Balken">
+   <NODE componentmode="Hidden" filename="..\..\Patches\Heightmap\root_Heightmap.v4p" id="27" nodename="..\..\Patches\Heightmap\root_Heightmap.v4p" systemname="root_Heightmap">
    <PIN pinname="RenderState" visible="1">
    </PIN>
    <PIN pinname="Transform" visible="1">
@@ -424,4 +422,6 @@
    <PIN pinname="OSCString" visible="1">
    </PIN>
    </NODE>
+   <LINK srcnodeid="20" srcpinname="Output" dstnodeid="15" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>

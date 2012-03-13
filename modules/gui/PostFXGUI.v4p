@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\gui\PostFXGUI.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\PostFXGUI.v4p" systemname="PostFXGUI">
+   <PATCH nodename="c:\Switchboy3\modules\gui\PostFXGUI.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\PostFXGUI.v4p" systemname="PostFXGUI">
    <BOUNDS height="15090" left="705" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="Hidden" id="34" nodename="Quad (DX9)" systemname="Quad (DX9)">
@@ -433,7 +433,7 @@
    </PIN>
    <PIN pinname="Size X" slicecount="1" values="0.96">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="3" values="0,0,0">
+   <PIN pinname="Internal Value" slicecount="3" values="1,0,0">
    </PIN>
    <PIN pinname="Mouse Over Color" visible="1">
    </PIN>

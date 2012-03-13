@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\engine\channels\Channel0.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\engine\channels\Channel0.v4p" systemname="Channel0">
+   <PATCH nodename="c:\Switchboy3\modules\content\Channel0.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\engine\channels\Channel0.v4p" systemname="Channel0">
    <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)" systemname="IOBox (Node)">
@@ -378,7 +378,7 @@
    </LINK>
    <LINK dstnodeid="27" dstpinname="RenderState" srcnodeid="0" srcpinname="Output Node">
    </LINK>
-   <NODE componentmode="Hidden" debug="0" filename="..\..\Patches\Earth\root_Earth.v4p" id="27" nodename="..\..\Patches\Earth\root_Earth.v4p" systemname="root_Earth">
+   <NODE componentmode="Hidden" debug="0" filename="..\..\Patches\Heightmap\root_Heightmap.v4p" id="27" nodename="..\..\Patches\Heightmap\root_Heightmap.v4p" systemname="root_Heightmap">
    <PIN pinname="RenderState" visible="1">
    </PIN>
    <PIN pinname="Transform" visible="1">

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\engine\ChannelContentDoubleFull.v4p" filename="C:\dev\vvvv\switchboy3\engine\ChannelContentDoubleFull.v4p" locked="0" systemname="ChannelContentDoubleFull">
+   <PATCH nodename="c:\Switchboy3\modules\content\ChannelContentDoubleFull.v4p" filename="C:\dev\vvvv\switchboy3\engine\ChannelContentDoubleFull.v4p" locked="0" systemname="ChannelContentDoubleFull">
    <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="Hidden" id="3" managers="boygroup" nodename="Group (EX9 Priority)" systemname="Group (EX9 Priority)">
@@ -258,70 +258,16 @@
    <LINKPOINT x="9135" y="5370">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="InAWindow" filename="channels\Channel0.v4p" id="112" managers="boygroup" nodename="channels\Channel0.v4p" systemname="Channel0">
-   <BOUNDS height="270" left="4395" top="9840" type="Node" width="2190">
-   </BOUNDS>
-   <PIN pinname="RenderState" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <BOUNDS left="4395" top="9840" type="Box">
-   </BOUNDS>
-   <PIN pinname="Transform" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Reset" visible="1">
-   </PIN>
-   <PIN pinname="DMXTable" visible="1">
-   </PIN>
-   <PIN pinname="Values" visible="1">
-   </PIN>
-   <PIN pinname="Color" visible="1">
-   </PIN>
-   <PIN pinname="Patch" visible="1">
-   </PIN>
-   <PIN pinname="Interval" visible="1">
-   </PIN>
-   <PIN pinname="BackgroundColor" visible="1">
-   </PIN>
-   <PIN pinname="Controller Names" visible="1">
-   </PIN>
-   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
-   </BOUNDS>
-   <PIN pinname="ViewerPositionXYZ" visible="1">
-   </PIN>
-   <PIN encoded="0" pinname="OSCString" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN encoded="0" pinname="OSCAdresses" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Globals" visible="1">
-   </PIN>
-   <PIN pinname="GlobalStrings" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="112" dstpinname="Reset" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="116" srcpinname="X">
-   <LINKPOINT x="18895" y="7320">
-   </LINKPOINT>
-   <LINKPOINT x="6320" y="7320">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="112" dstpinname="DMXTable" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="117" srcpinname="Y Output Value">
-   <LINKPOINT x="20505" y="5370">
-   </LINKPOINT>
-   <LINKPOINT x="5790" y="5370">
-   </LINKPOINT>
-   </LINK>
    <NODE componentmode="Hidden" hiddenwhenlocked="1" id="118" managers="boygroup" nodename="Switch (Node Input)" systemname="Switch (Node Input)">
    <BOUNDS height="100" left="3855" top="10260" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" visible="1" values="||">
+   <PIN pinname="Input 2" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Switch" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="118" dstpinname="Input 2" srcnodeid="112" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="3" dstpinname="Layer 1" linkstyle="VHV" srcnodeid="118" srcpinname="Output">
    <LINKPOINT x="3725" y="10880">
    </LINKPOINT>
@@ -604,12 +550,6 @@
    <LINKPOINT x="4400" y="10125">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="112" dstpinname="RenderState" linkstyle="VHV" srcnodeid="93" srcpinname="RenderState">
-   <LINKPOINT x="4675" y="9443">
-   </LINKPOINT>
-   <LINKPOINT x="4430" y="9443">
-   </LINKPOINT>
-   </LINK>
    <NODE componentmode="InABox" id="152" nodename="IOBox (Value Advanced)" systemname="IOBox (Node)">
    <BOUNDS height="100" left="4275" top="14970" type="Node" width="100">
    </BOUNDS>
@@ -880,8 +820,6 @@
    </NODE>
    <LINK dstnodeid="181" dstpinname="BindControl" srcnodeid="174" srcpinname="Output 1">
    </LINK>
-   <LINK dstnodeid="112" dstpinname="Values" hiddenwhenlocked="1" srcnodeid="181" srcpinname="Value">
-   </LINK>
    <NODE componentmode="Hidden" debug="0" filename="tools\QuickBind.v4p" id="182" managers="boygroup" nodename="tools\QuickBind.v4p" systemname="QuickBind">
    <BOUNDS height="270" left="7125" top="5625" type="Node" width="2190">
    </BOUNDS>
@@ -999,7 +937,7 @@
    </PIN>
    <PIN pinname="Default" visible="1">
    </PIN>
-   <PIN pinname="ControllerNames" visible="1">
+   <PIN pinname="ControllerNames" visible="1" encoded="0">
    </PIN>
    <PIN pinname="PreviewTexture" visible="1">
    </PIN>
@@ -1124,19 +1062,7 @@
    <LINKPOINT x="3280" y="4790">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="119" dstpinname="ControllerNames" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="112" srcpinname="Controller Names">
-   <LINKPOINT x="6720" y="10290">
-   </LINKPOINT>
-   <LINKPOINT x="6720" y="4395">
-   </LINKPOINT>
-   </LINK>
    <LINK dstnodeid="139" dstpinname="Y Input Value" srcnodeid="119" srcpinname="Live">
-   </LINK>
-   <LINK dstnodeid="112" dstpinname="Patch" linkstyle="VHV" srcnodeid="119" srcpinname="CurrentPatch">
-   <LINKPOINT x="5805" y="7140">
-   </LINKPOINT>
-   <LINKPOINT x="6555" y="7335">
-   </LINKPOINT>
    </LINK>
    <LINK dstnodeid="119" dstpinname="Default" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="134" srcpinname="Color Output">
    <LINKPOINT x="17340" y="4373">
@@ -1394,25 +1320,13 @@
    <LINKPOINT x="7635" y="8265">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="112" dstpinname="BackgroundColor" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="140" srcpinname="Color Output">
-   <LINKPOINT x="19645" y="9728">
-   </LINKPOINT>
-   <LINKPOINT x="5255" y="9728">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="112" dstpinname="Color" srcnodeid="181" srcpinname="Color">
-   </LINK>
    <LINK dstnodeid="113" dstpinname="Transform" srcnodeid="182" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="112" dstpinname="Transform" srcnodeid="181" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="181" dstpinname="Interval" linkstyle="VHV" srcnodeid="119" srcpinname="Interval">
    <LINKPOINT x="5265" y="5228">
    </LINKPOINT>
    <LINKPOINT x="5475" y="5228">
    </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="112" dstpinname="Interval" srcnodeid="181" srcpinname="Interval">
    </LINK>
    <LINK dstnodeid="182" dstpinname="Transform AsValue" srcnodeid="142" srcpinname="Transform AsValue">
    <LINKPOINT x="7890" y="11145">
@@ -1441,7 +1355,7 @@
    <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="191" nodename="Cons (String)" systemname="Cons (String)">
    <BOUNDS height="100" left="7530" top="13575" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" encoded="0">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -1450,14 +1364,12 @@
    <BOUNDS left="7530" top="13575" type="Box">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="191" dstpinname="Input 1" srcnodeid="112" srcpinname="OSCString">
-   </LINK>
    <LINK dstnodeid="191" dstpinname="Input 2" srcnodeid="113" srcpinname="OSCString">
    </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="193" nodename="Cons (String)" systemname="Cons (String)">
    <BOUNDS height="100" left="8865" top="13575" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" encoded="0">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -1466,8 +1378,6 @@
    <BOUNDS left="8865" top="13575" type="Box">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="193" dstpinname="Input 1" srcnodeid="112" srcpinname="OSCAdresses">
-   </LINK>
    <LINK dstnodeid="193" dstpinname="Input 2" srcnodeid="113" srcpinname="OSCAdresses">
    </LINK>
    <NODE componentmode="InABox" id="198" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -1512,12 +1422,6 @@
    <LINKPOINT x="9425" y="9270">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="112" dstpinname="Globals" linkstyle="VHV" srcnodeid="200" srcpinname="Y Output Value">
-   <LINKPOINT x="2170" y="9270">
-   </LINKPOINT>
-   <LINKPOINT x="6380" y="9270">
-   </LINKPOINT>
-   </LINK>
    <NODE componentmode="InABox" id="201" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="30" top="8490" type="Node" width="100">
    </BOUNDS>
@@ -1530,12 +1434,6 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="GlobalStrings">
    </PIN>
    </NODE>
-   <LINK dstnodeid="112" dstpinname="GlobalStrings" linkstyle="VHV" srcnodeid="201" srcpinname="Output String">
-   <LINKPOINT x="90" y="9270">
-   </LINKPOINT>
-   <LINKPOINT x="5880" y="9270">
-   </LINKPOINT>
-   </LINK>
    <LINK dstnodeid="113" dstpinname="GlobalStrings" linkstyle="VHV" srcnodeid="201" srcpinname="Output String">
    <LINKPOINT x="90" y="9270">
    </LINKPOINT>
@@ -1697,5 +1595,107 @@
    <LINK dstnodeid="174" dstpinname="Input 1" srcnodeid="219" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="212" dstpinname="Y Input Value" srcnodeid="200" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InAWindow" filename="Channel0.v4p" id="112" managers="boygroup" nodename="Channel0.v4p" systemname="Channel0">
+   <BOUNDS height="270" left="4395" top="9840" type="Node" width="2190">
+   </BOUNDS>
+   <PIN pinname="RenderState" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS left="4395" top="9840" type="Box">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="DMXTable" visible="1">
+   </PIN>
+   <PIN pinname="Values" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Patch" visible="1">
+   </PIN>
+   <PIN pinname="Interval" visible="1">
+   </PIN>
+   <PIN pinname="BackgroundColor" visible="1">
+   </PIN>
+   <PIN pinname="Controller Names" visible="1">
+   </PIN>
+   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
+   </BOUNDS>
+   <PIN pinname="ViewerPositionXYZ" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="OSCString" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="OSCAdresses" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Globals" visible="1">
+   </PIN>
+   <PIN pinname="GlobalStrings" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="112" dstpinname="Reset" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="116" srcpinname="X">
+   <LINKPOINT x="18895" y="7320">
+   </LINKPOINT>
+   <LINKPOINT x="6320" y="7320">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="DMXTable" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="117" srcpinname="Y Output Value">
+   <LINKPOINT x="20505" y="5370">
+   </LINKPOINT>
+   <LINKPOINT x="5790" y="5370">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="118" dstpinname="Input 2" srcnodeid="112" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="RenderState" linkstyle="VHV" srcnodeid="93" srcpinname="RenderState">
+   <LINKPOINT x="4675" y="9443">
+   </LINKPOINT>
+   <LINKPOINT x="4430" y="9443">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="Values" hiddenwhenlocked="1" srcnodeid="181" srcpinname="Value">
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="ControllerNames" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="112" srcpinname="Controller Names">
+   <LINKPOINT x="6720" y="10290">
+   </LINKPOINT>
+   <LINKPOINT x="6720" y="4395">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="Patch" linkstyle="VHV" srcnodeid="119" srcpinname="CurrentPatch">
+   <LINKPOINT x="5805" y="7140">
+   </LINKPOINT>
+   <LINKPOINT x="6555" y="7335">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="BackgroundColor" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="140" srcpinname="Color Output">
+   <LINKPOINT x="19645" y="9728">
+   </LINKPOINT>
+   <LINKPOINT x="5255" y="9728">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="Color" srcnodeid="181" srcpinname="Color">
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="Transform" srcnodeid="181" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="Interval" srcnodeid="181" srcpinname="Interval">
+   </LINK>
+   <LINK dstnodeid="191" dstpinname="Input 1" srcnodeid="112" srcpinname="OSCString">
+   </LINK>
+   <LINK dstnodeid="193" dstpinname="Input 1" srcnodeid="112" srcpinname="OSCAdresses">
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="Globals" linkstyle="VHV" srcnodeid="200" srcpinname="Y Output Value">
+   <LINKPOINT x="2170" y="9270">
+   </LINKPOINT>
+   <LINKPOINT x="6380" y="9270">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="GlobalStrings" linkstyle="VHV" srcnodeid="201" srcpinname="Output String">
+   <LINKPOINT x="90" y="9270">
+   </LINKPOINT>
+   <LINKPOINT x="5880" y="9270">
+   </LINKPOINT>
    </LINK>
    </PATCH>

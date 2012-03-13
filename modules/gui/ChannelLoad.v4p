@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\gui\ChannelLoad.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\ChannelLoad.v4p" systemname="ChannelLoad">
+   <PATCH nodename="c:\Switchboy3\modules\gui\ChannelLoad.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\ChannelLoad.v4p" systemname="ChannelLoad">
    <BOUNDS height="11145" left="-900" top="2265" type="Window" width="22320">
    </BOUNDS>
    <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)" systemname="IOBox (String)">
@@ -195,7 +195,7 @@
    </PIN>
    <PIN pinname="Mouse Left" visible="1">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="45" values="4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   <PIN pinname="Internal Value" slicecount="45" values="18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Count X" slicecount="1" values="3">
    </PIN>

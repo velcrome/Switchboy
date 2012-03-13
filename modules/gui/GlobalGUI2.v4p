@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\gui\GlobalGUI2.v4p" filename="C:\dev\vvvv\switchboy3\gui\GlobalGUI.v4p" systemname="GlobalGUI">
+   <PATCH nodename="c:\Switchboy3\modules\gui\GlobalGUI2.v4p" filename="C:\dev\vvvv\switchboy3\gui\GlobalGUI.v4p" systemname="GlobalGUI">
    <BOUNDS height="15930" left="2055" top="1860" type="Window" width="15645">
    </BOUNDS>
    <NODE componentmode="Hidden" id="34" nodename="Quad (DX9)" systemname="Quad (DX9)">
@@ -922,24 +922,6 @@
    </LINK>
    <LINK dstnodeid="230" dstpinname="Layer 3" srcnodeid="253" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\engine\tools\SplitDMXTable (Spreads).v4p" id="365" nodename="SplitDMXTable (Spreads)" systemname="SplitDMXTable (Spreads)">
-   <BOUNDS height="100" left="17235" top="10275" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Audio Analysis" visible="1">
-   </PIN>
-   <PIN pinname="MasterBeat" visible="1">
-   </PIN>
-   <PIN pinname="BpM" visible="1">
-   </PIN>
-   <BOUNDS height="8865" left="0" top="1650" type="Window" width="17235">
-   </BOUNDS>
-   <PIN pinname="FourBeats" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="362" dstpinname="MasterBeat" srcnodeid="365" srcpinname="MasterBeat">
-   </LINK>
-   <LINK dstnodeid="362" dstpinname="BpM" srcnodeid="365" srcpinname="BpM">
-   </LINK>
    <LINK dstnodeid="33" dstpinname="Mouse Over Color" hiddenwhenlocked="1" linkstyle="Bezier" srcnodeid="45" srcpinname="Color Output">
    <LINKPOINT x="20430" y="3758">
    </LINKPOINT>
@@ -1018,14 +1000,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="365" dstpinname="Audio Analysis" linkstyle="Bezier" srcnodeid="369" srcpinname="Y Output Value">
-   <LINKPOINT x="24495" y="5595">
-   </LINKPOINT>
-   <LINKPOINT x="17295" y="5595">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="362" dstpinname="FourBeats" srcnodeid="365" srcpinname="FourBeats">
-   </LINK>
    <NODE componentmode="InABox" id="370" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="21375" top="9855" type="Node" width="100">
    </BOUNDS>
@@ -1111,5 +1085,31 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="371" dstpinname="Y Input Value" srcnodeid="340" srcpinname="LoadBindings">
+   </LINK>
+   <NODE componentmode="Hidden" filename="..\input\SplitDMXTable (Spreads).v4p" id="365" nodename="SplitDMXTable (Spreads)" systemname="SplitDMXTable (Spreads)">
+   <BOUNDS height="100" left="17235" top="10275" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Audio Analysis" visible="1">
+   </PIN>
+   <PIN pinname="MasterBeat" visible="1">
+   </PIN>
+   <PIN pinname="BpM" visible="1">
+   </PIN>
+   <BOUNDS height="8865" left="0" top="1650" type="Window" width="17235">
+   </BOUNDS>
+   <PIN pinname="FourBeats" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="362" dstpinname="MasterBeat" srcnodeid="365" srcpinname="MasterBeat">
+   </LINK>
+   <LINK dstnodeid="362" dstpinname="BpM" srcnodeid="365" srcpinname="BpM">
+   </LINK>
+   <LINK dstnodeid="365" dstpinname="Audio Analysis" linkstyle="Bezier" srcnodeid="369" srcpinname="Y Output Value">
+   <LINKPOINT x="24495" y="5595">
+   </LINKPOINT>
+   <LINKPOINT x="17295" y="5595">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="362" dstpinname="FourBeats" srcnodeid="365" srcpinname="FourBeats">
    </LINK>
    </PATCH>

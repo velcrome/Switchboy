@@ -153,7 +153,7 @@
    </PIN>
    <PIN pinname="UseSpaceMouse" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="SoftEdgeTexture" visible="1" slicecount="1" values="||">
+   <PIN pinname="SoftEdgeTexture" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="ClientID" visible="1">
    </PIN>
@@ -417,7 +417,7 @@
    </BOUNDS>
    <BOUNDS height="720" left="9300" top="4755" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,2,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,1.02,0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -637,7 +637,7 @@
    </BOUNDS>
    <BOUNDS height="480" left="9720" top="6975" type="Box" width="480">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -649,7 +649,7 @@
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="AttemptAngulationFix">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="47" dstpinname="AttemptAngulationFix" srcnodeid="110" srcpinname="Y Output Value">
@@ -702,8 +702,8 @@
    <PIN pinname="Complete">
    </PIN>
    </NODE>
-   <LINK srcnodeid="52" srcpinname="WallTransform" dstnodeid="47" dstpinname="WallTransform">
+   <LINK dstnodeid="47" dstpinname="WallTransform" srcnodeid="52" srcpinname="WallTransform">
    </LINK>
-   <LINK srcnodeid="52" srcpinname="WallBelongsTo" dstnodeid="47" dstpinname="WallBelongsTo">
+   <LINK dstnodeid="47" dstpinname="WallBelongsTo" srcnodeid="52" srcpinname="WallBelongsTo">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\gui\ChannelGUI2.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\ChannelGUI2.v4p" systemname="ChannelGUI2">
+   <PATCH nodename="c:\Switchboy3\modules\gui\ChannelGUI2.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\ChannelGUI2.v4p" systemname="ChannelGUI2">
    <BOUNDS height="15930" left="195" top="3090" type="Window" width="15645">
    </BOUNDS>
    <NODE componentmode="Hidden" id="34" nodename="Quad (DX9)" systemname="Quad (DX9)">

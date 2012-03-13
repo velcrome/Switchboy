@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\gui\ChannelPreset.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\ChannelPreset.v4p" systemname="ChannelPreset">
+   <PATCH nodename="c:\Switchboy3\modules\gui\ChannelPreset.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\ChannelPreset.v4p" systemname="ChannelPreset">
    <BOUNDS height="11145" left="525" top="2220" type="Window" width="22320">
    </BOUNDS>
    <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)" systemname="IOBox (String)">

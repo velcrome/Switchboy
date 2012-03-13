@@ -608,12 +608,6 @@
    <PIN pinname="Path" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="209" dstpinname="Layer 1" linkstyle="Bezier" srcnodeid="139" srcpinname="Layer">
-   <LINKPOINT x="10970" y="11355">
-   </LINKPOINT>
-   <LINKPOINT x="9775" y="11160">
-   </LINKPOINT>
-   </LINK>
    <NODE componentmode="InAWindow" debug="0" id="213" nodename="Renderer (EX9)" stayontop="0" systemname="RENDERER (EX9)">
    <BOUNDS height="100" left="14280" top="27690" type="Node" width="100">
    </BOUNDS>
@@ -688,7 +682,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="EnvironmentMapperMode">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="engine\BeamerAreaOfInterest.v4p" id="184" managers="boygroup" nodename="engine\BeamerAreaOfInterest.v4p" systemname="BeamerAreaOfInterest">
+   <NODE componentmode="InAWindow" filename="engine\BeamerAreaOfInterest.v4p" id="184" managers="boygroup" nodename="engine\BeamerAreaOfInterest.v4p" systemname="BeamerAreaOfInterest">
    <BOUNDS height="270" left="11505" top="11760" type="Node" width="3570">
    </BOUNDS>
    <BOUNDS height="3600" left="11505" top="11760" type="Box" width="4800">
@@ -972,8 +966,8 @@
    <LINKPOINT x="8890" y="19842">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="engine\projection\SmartMap.v4p" id="252" managers="boygroup" nodename="engine\projection\SmartMap.v4p" systemname="SmartMap">
-   <BOUNDS height="270" left="7905" top="12750" type="Node" width="7170">
+   <NODE componentmode="InAWindow" filename="engine\projection\SmartMap.v4p" id="252" managers="boygroup" nodename="engine\projection\SmartMap.v4p" systemname="SmartMap">
+   <BOUNDS height="270" left="7845" top="12960" type="Node" width="7170">
    </BOUNDS>
    <PIN pinname="ContentLayer" visible="1">
    </PIN>
@@ -989,17 +983,17 @@
    </PIN>
    <PIN pinname="InternalResolution" visible="1">
    </PIN>
-   <BOUNDS left="7905" top="12750" type="Box">
+   <BOUNDS left="7845" top="12960" type="Box">
    </BOUNDS>
-   <BOUNDS height="11700" left="7140" top="1665" type="Window" width="15540">
+   <BOUNDS height="11700" left="8535" top="3390" type="Window" width="15540">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="252" dstpinname="ContentLayer" srcnodeid="209" srcpinname="Layer">
    </LINK>
    <LINK dstnodeid="252" dstpinname="ViewTransform" linkstyle="VHV" srcnodeid="184" srcpinname="ImmersiveView">
-   <LINKPOINT x="11505" y="12490">
+   <LINKPOINT x="11485" y="12560">
    </LINKPOINT>
-   <LINKPOINT x="11490" y="12290">
+   <LINKPOINT x="11450" y="12430">
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="252" dstpinname="PojectionTransform" srcnodeid="184" srcpinname="ImmersiveProjection">
@@ -1179,7 +1173,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="273" managers="boygroup" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
-   <BOUNDS height="100" left="7950" top="12375" type="Node" width="100">
+   <BOUNDS height="100" left="8130" top="12375" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1195,9 +1189,9 @@
    <LINK dstnodeid="252" dstpinname="InternalResolution" srcnodeid="273" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="273" dstpinname="Switch" linkstyle="Bezier" srcnodeid="255" srcpinname="Y Output Value">
-   <LINKPOINT x="12320" y="9438">
+   <LINKPOINT x="12380" y="9438">
    </LINKPOINT>
-   <LINKPOINT x="8035" y="9838">
+   <LINKPOINT x="8155" y="9838">
    </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="276" nodename="IOBox (Node)" systemname="IOBox (Node)">
@@ -1619,7 +1613,7 @@
    </PIN>
    <PIN pinname="UseBeamer" visible="1">
    </PIN>
-   <PIN pinname="SoftEdgeTexture" visible="1" slicecount="1" values="||">
+   <PIN pinname="SoftEdgeTexture" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="317" managers="boygroup" nodename="Group (EX9)" systemname="Group (EX9)">
@@ -1635,7 +1629,7 @@
    </PIN>
    <PIN pinname="Layer Template Count" slicecount="1" values="5">
    </PIN>
-   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   <PIN pinname="Layer 3" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Layer 4" visible="1">
    </PIN>
@@ -2527,7 +2521,7 @@
    </PIN>
    <PIN pinname="Reset" visible="1">
    </PIN>
-   <PIN pinname="WallTexture" visible="1" slicecount="1" values="||">
+   <PIN pinname="WallTexture" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
    <LINK dstnodeid="388" dstpinname="BeamerProjection" hiddenwhenlocked="1" srcnodeid="199" srcpinname="Output Node">
@@ -2583,7 +2577,7 @@
    <NODE componentmode="Hidden" id="394" managers="boygroup" nodename="Switch (Node Input)" systemname="Switch (Node Input)">
    <PIN pinname="Switch" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="||">
    </PIN>
    <BOUNDS height="100" left="2010" top="18420" type="Node" width="100">
    </BOUNDS>
@@ -3024,8 +3018,6 @@
    <LINKPOINT x="8865" y="18855">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="209" dstpinname="Layer 2" srcnodeid="195" srcpinname="DebugLayer">
-   </LINK>
    <LINK dstnodeid="184" dstpinname="ShowBeamer" linkstyle="VHV" srcnodeid="195" srcpinname="ShowBeamerEnvironmentCombo">
    <LINKPOINT x="9780" y="10800">
    </LINKPOINT>
@@ -3445,9 +3437,9 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="253" dstpinname="Texture" linkstyle="Bezier" srcnodeid="252" srcpinname="Texture">
-   <LINKPOINT x="8070" y="13993">
+   <LINKPOINT x="8030" y="14133">
    </LINKPOINT>
-   <LINKPOINT x="9870" y="14193">
+   <LINKPOINT x="9850" y="14263">
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="253" dstpinname="DMXPacket" linkstyle="PolyLine" srcnodeid="230" srcpinname="Y Output Value">
@@ -3671,5 +3663,9 @@
    <LINK dstnodeid="450" dstpinname="ServerResolution" srcnodeid="378" srcpinname="Value Output">
    </LINK>
    <LINK dstnodeid="450" dstpinname="ClientResolution" srcnodeid="408" srcpinname="Value Output">
+   </LINK>
+   <LINK srcnodeid="139" srcpinname="Layer" dstnodeid="209" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="195" srcpinname="DebugLayer" dstnodeid="209" dstpinname="Layer 2">
    </LINK>
    </PATCH>

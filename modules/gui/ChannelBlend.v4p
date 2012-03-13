@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\gui\ChannelBlend.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\ChannelBlend.v4p" systemname="ChannelBlend">
+   <PATCH nodename="c:\Switchboy3\modules\gui\ChannelBlend.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\ChannelBlend.v4p" systemname="ChannelBlend">
    <BOUNDS height="14445" left="1230" top="2430" type="Window" width="19050">
    </BOUNDS>
    <NODE componentmode="InABox" id="45" nodename="IOBox (Value Advanced)" systemname="IOBox (Color)">
@@ -61,7 +61,7 @@
    </PIN>
    <PIN pinname="Mouse Left" visible="1">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="5" values="4,0,0,0,0">
+   <PIN pinname="Internal Value" slicecount="5" values="0,0,0,0,0">
    </PIN>
    <PIN pinname="Mouse Over Color" visible="1">
    </PIN>
@@ -147,7 +147,7 @@
    </PIN>
    <PIN pinname="Mouse Left" visible="1">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="5" values="0,0,0,0,0">
+   <PIN pinname="Internal Value" slicecount="5" values="1,0,0,0,0">
    </PIN>
    <PIN pinname="Mouse Over Color" visible="1">
    </PIN>
