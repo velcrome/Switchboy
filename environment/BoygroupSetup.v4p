@@ -133,9 +133,9 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="Columns" slicecount="1" values="5">
+   <PIN pinname="Columns" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="5" values="0,1,2,3,4">
+   <PIN pinname="Y Input Value" slicecount="3" values="0,1,2">
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="1">
    </PIN>
@@ -147,7 +147,7 @@
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="BeamersConnected">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="5" values="1,1,1,1,1">
+   <PIN pinname="X Input Value" slicecount="3" values="1,1,1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Integer.dll" id="10" managers="" nodename="Integer (Value)" systemname="Integer (Value Legacy)">

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\modules\mapping\BeamerAreaOfInterest.v4p" filename="D:\dev\vvvv\switchboy2\engine\BeamerAreaOfInterest.v4p" systemname="BeamerAreaOfInterest">
+   <PATCH nodename="c:\Switchboy3\modules\mapping\SmartMapping.v4p" filename="C:\switchboy3\modules\mapping\SmartMapping.v4p" systemname="SmartMapping">
    <BOUNDS height="11700" left="4740" top="1770" type="Window" width="19455">
    </BOUNDS>
    <NODE componentmode="InABox" id="9" nodename="IOBox (Node)" systemname="IOBox (Node)">
@@ -32,7 +32,7 @@
    <PIN pinname="Input Node" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="13" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <NODE componentmode="InABox" id="13" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="1425" top="3360" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="810" left="1425" top="3360" type="Box" width="870">
@@ -78,7 +78,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="61" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <NODE componentmode="InABox" id="61" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="12630" top="13935" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="480" left="12630" top="13935" type="Box" width="480">
@@ -258,7 +258,7 @@
    <LINKPOINT x="3210" y="7485">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\VectorSized.dll" id="108" nodename="Bounds (Spectral Advanced)" systemname="Bounds (Spectral Advanced)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" id="108" nodename="Bounds (Spectral Advanced)" systemname="Bounds (Spectral Advanced)">
    <BOUNDS height="100" left="2475" top="6495" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -324,7 +324,7 @@
    <LINKPOINT x="2745" y="9863">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="InABox" id="151" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <NODE componentmode="InABox" id="151" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="6435" top="2880" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="585" left="6435" top="2880" type="Box" width="855">
@@ -340,7 +340,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="152" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <NODE componentmode="InABox" id="152" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="7695" top="2505" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="435" left="7695" top="2505" type="Box" width="930">
@@ -400,7 +400,7 @@
    <PIN pinname="Count" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\effects\PhongDirectional.fx" id="186" nodename="PhongDirectional (EX9.Effect)" systemname="PhongDirectional (EX9.Effect)">
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\effects\PhongDirectional.fx" id="186" nodename="PhongDirectional (EX9.Effect)" systemname="PhongDirectional (EX9.Effect)">
    <BOUNDS height="100" left="6480" top="16215" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Mesh" visible="1">
@@ -730,7 +730,7 @@
    </LINK>
    <LINK dstnodeid="168" dstpinname="Transform In" srcnodeid="246" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="InABox" id="249" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <NODE componentmode="InABox" id="249" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="6315" top="870" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="1530" left="6315" top="870" type="Box" width="840">
@@ -746,7 +746,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="248" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <NODE componentmode="InABox" id="248" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="8295" top="690" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="1050" left="8295" top="690" type="Box" width="780">
@@ -784,7 +784,7 @@
    </NODE>
    <LINK dstnodeid="186" dstpinname="Ambient Color" srcnodeid="253" srcpinname="Color Output">
    </LINK>
-   <NODE componentmode="InABox" id="254" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <NODE componentmode="InABox" id="254" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="13725" top="8550" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="13725" top="8550" type="Box" width="795">
@@ -832,7 +832,7 @@
    </NODE>
    <LINK dstnodeid="258" dstpinname="Transform" srcnodeid="101" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\VectorSized.dll" id="260" nodename="Select (Value Advanced)" systemname="Select (Value Advanced)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" id="260" nodename="Select (Value Advanced)" systemname="Select (Value Advanced)">
    <BOUNDS height="100" left="3195" top="8655" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Vector Size" slicecount="1" values="16">
@@ -882,7 +882,7 @@
    </LINK>
    <LINK dstnodeid="192" dstpinname="Spread Count" srcnodeid="261" srcpinname="Count">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\VectorSized.dll" id="263" nodename="Select (Value Advanced)" systemname="Select (Value Advanced)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" id="263" nodename="Select (Value Advanced)" systemname="Select (Value Advanced)">
    <BOUNDS height="100" left="5880" top="20790" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Vector Size" slicecount="1" values="3">
@@ -950,7 +950,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="PosXY">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\VectorSized.dll" id="277" nodename="Bounds (Spectral Advanced)" systemname="Bounds (Spectral Advanced)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" id="277" nodename="Bounds (Spectral Advanced)" systemname="Bounds (Spectral Advanced)">
    <BOUNDS height="270" left="5310" top="24660" type="Node" width="2610">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -1080,7 +1080,7 @@
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\VectorSized.dll" id="310" nodename="Select (Value Advanced)" systemname="Select (Value Advanced)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" id="310" nodename="Select (Value Advanced)" systemname="Select (Value Advanced)">
    <BOUNDS height="100" left="7845" top="25410" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -1098,7 +1098,7 @@
    </LINK>
    <LINK dstnodeid="290" dstpinname="Input 2" srcnodeid="310" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\VectorSized.dll" id="311" nodename="Select (Value Advanced)" systemname="Select (Value Advanced)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" id="311" nodename="Select (Value Advanced)" systemname="Select (Value Advanced)">
    <BOUNDS height="100" left="7005" top="25410" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -1116,7 +1116,7 @@
    </LINK>
    <LINK dstnodeid="289" dstpinname="Input 2" srcnodeid="311" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\VectorSized.dll" id="304" nodename="Cross (Spectral)" systemname="Cross (Spectral)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" id="304" nodename="Cross (Spectral)" systemname="Cross (Spectral)">
    <BOUNDS height="100" left="6150" top="30330" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="X In" visible="1">
@@ -1520,7 +1520,7 @@
    <LINKPOINT x="4765" y="14850">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\Spreads\NIL (Spreads).v4p" id="399" nodename="NIL (Spreads)" systemname="NIL (Spreads)">
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\Spreads\NIL (Spreads).v4p" id="399" nodename="NIL (Spreads)" systemname="NIL (Spreads)">
    <BOUNDS height="100" left="5685" top="19230" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
@@ -1532,34 +1532,34 @@
    </LINK>
    <LINK dstnodeid="263" dstpinname="Input" srcnodeid="398" srcpinname="Output">
    </LINK>
-   <NODE systemname="Count (Node)" nodename="Count (Node)" componentmode="Hidden" id="400">
-   <BOUNDS type="Node" left="4785" top="33945" width="100" height="100">
+   <NODE componentmode="Hidden" id="400" nodename="Count (Node)" systemname="Count (Node)">
+   <BOUNDS height="100" left="4785" top="33945" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Count" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="309" srcpinname="Transform Out" dstnodeid="400" dstpinname="Input">
+   <LINK dstnodeid="400" dstpinname="Input" srcnodeid="309" srcpinname="Transform Out">
    </LINK>
-   <NODE systemname="MultiViewport (EX9)" filename="%VVVV%\lib\nodes\modules\EX9\MultiViewport (EX9).v4p" nodename="MultiViewport (EX9)" componentmode="Hidden" id="401">
-   <BOUNDS type="Node" left="4470" top="34920" width="100" height="100">
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\EX9\MultiViewport (EX9).v4p" id="401" nodename="MultiViewport (EX9)" systemname="MultiViewport (EX9)">
+   <BOUNDS height="100" left="4875" top="34845" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Screen Count Y" visible="1">
+   <PIN pinname="Screen Count Y" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Screen Count X" slicecount="1" values="1">
+   <PIN pinname="Screen Count X" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="400" srcpinname="Count" dstnodeid="401" dstpinname="Screen Count Y">
-   </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="402" systemname="IOBox (Node)">
-   <BOUNDS type="Node" left="5265" top="36210" width="0" height="0">
+   <NODE componentmode="InABox" id="402" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="5265" top="36210" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="5265" top="36210" width="795" height="240">
+   <BOUNDS height="240" left="5265" top="36210" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Viewports" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Viewports">
    </PIN>
    </NODE>
-   <LINK srcnodeid="401" srcpinname="Viewports" dstnodeid="402" dstpinname="Input Node">
+   <LINK dstnodeid="402" dstpinname="Input Node" srcnodeid="401" srcpinname="Viewports">
+   </LINK>
+   <LINK srcnodeid="400" srcpinname="Count" dstnodeid="401" dstpinname="Screen Count X">
    </LINK>
    </PATCH>
