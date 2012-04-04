@@ -262,7 +262,7 @@
    </NODE>
    <LINK dstnodeid="22" dstpinname="Input String" srcnodeid="31" srcpinname="Output 1">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\tools\IntervalFFT.v4p" id="43" nodename="..\tools\IntervalFFT.v4p" systemname="IntervalFFT">
+   <NODE componentmode="Hidden" filename="..\input\IntervalFFT.v4p" id="43" nodename="..\input\IntervalFFT.v4p" systemname="IntervalFFT">
    <BOUNDS height="270" left="6375" top="3600" type="Node" width="1470">
    </BOUNDS>
    <BOUNDS height="3600" left="6375" top="3600" type="Box" width="4800">

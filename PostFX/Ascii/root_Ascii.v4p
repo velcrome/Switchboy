@@ -776,7 +776,7 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\modules\common\TextureFX\Filter\Ascii\Ascii (EX9.Texture Filter).v4p" id="52" nodename="Ascii (EX9.Texture Filter)" systemname="Ascii (EX9.Texture Filter)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Ascii\Ascii (EX9.Texture Filter).v4p" id="52" nodename="Ascii (EX9.Texture Filter)" systemname="Ascii (EX9.Texture Filter)">
    <BOUNDS height="100" left="1215" top="6255" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="result" visible="1">

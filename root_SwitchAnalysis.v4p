@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\root_SwitchAnalysis.v4p" filename="C:\switchboy3\root_SwitchAnalysis.v4p" systemname="root_SwitchAnalysis">
-   <BOUNDS height="11040" left="0" top="30" type="Window" width="11130">
+   <PATCH nodename="c:\switchboy3\root_SwitchAnalysis.v4p" filename="C:\switchboy3\root_SwitchAnalysis.v4p" systemname="root_SwitchAnalysis">
+   <BOUNDS height="11040" left="1080" top="1695" type="Window" width="11130">
    </BOUNDS>
    <NODE componentmode="InAWindow" debug="0" filename="SwitchAnalysis.v4p" id="0" nodename="SwitchAnalysis.v4p" systemname="SwitchAnalysis">
    <BOUNDS height="270" left="735" top="15000" type="Node" width="10545">
@@ -19,7 +19,7 @@
    </PIN>
    <PIN pinname="MidiChannel">
    </PIN>
-   <BOUNDS height="11040" left="0" top="30" type="Window" width="11130">
+   <BOUNDS height="11040" left="1080" top="1695" type="Window" width="11130">
    </BOUNDS>
    <PIN pinname="Debug">
    </PIN>
@@ -65,6 +65,8 @@
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Enable">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="0" dstpinname="Enable" srcnodeid="1" srcpinname="Y Output Value">
    </LINK>
@@ -91,7 +93,7 @@
    </BOUNDS>
    <BOUNDS height="510" left="1230" top="5265" type="Box" width="2520">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" values="|Stereomix (SoundMAX Integrated |">
+   <PIN pinname="Input Enum" slicecount="1" values="|Mikrofon (SoundMAX Integrated D|">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Driver">
    </PIN>
@@ -103,7 +105,7 @@
    </BOUNDS>
    <BOUNDS height="255" left="3015" top="13590" type="Box" width="1650">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" values="localhost">
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="192.168.2.255">
    </PIN>
    <PIN encoded="0" pinname="Default" slicecount="1" values="255.255.255.255">
    </PIN>

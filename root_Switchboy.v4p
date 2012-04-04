@@ -157,6 +157,8 @@
    </PIN>
    <PIN pinname="ClientID" visible="1">
    </PIN>
+   <PIN pinname="AdditionalEnvironment" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="InABox" id="64" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="720" top="6030" type="Node" width="100">
@@ -417,7 +419,7 @@
    </BOUNDS>
    <BOUNDS height="720" left="9300" top="4755" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,2,8">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,2,0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -654,18 +656,18 @@
    </NODE>
    <LINK dstnodeid="47" dstpinname="AttemptAngulationFix" srcnodeid="110" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InAWindow" debug="0" filename="environment\WallsEventwerk.v4p" id="52" managers="boygroup" nodename="environment\WallsEventwerk.v4p" systemname="WallsEventwerk">
+   <NODE componentmode="InAWindow" debug="0" filename="environment\WallsSubsektorness.v4p" id="52" managers="boygroup" nodename="environment\WallsSubsektorness.v4p" systemname="WallsSubsektorness">
    <BOUNDS height="270" left="3750" top="7335" type="Node" width="1530">
    </BOUNDS>
    <BOUNDS height="3600" left="3750" top="7335" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="15090" left="12600" top="465" type="Window" width="12600">
+   <BOUNDS height="15090" left="11340" top="2745" type="Window" width="12600">
    </BOUNDS>
    <PIN pinname="WallTransform" visible="1">
    </PIN>
    <PIN pinname="WallBelongsTo" visible="1">
    </PIN>
-   <PIN pinname="WallTextureFilename" visible="1" slicecount="1" values="c:\Switchboy3\environment\vignette\blank.png" encoded="0">
+   <PIN encoded="0" pinname="WallTextureFilename" slicecount="1" visible="1" values="c:\Switchboy3\environment\vignette\blank.png">
    </PIN>
    <PIN pinname="CountPerBeamer">
    </PIN>
@@ -678,7 +680,7 @@
    </LINK>
    <LINK dstnodeid="47" dstpinname="WallBelongsTo" srcnodeid="52" srcpinname="WallBelongsTo">
    </LINK>
-   <NODE componentmode="InAWindow" filename="environment\BeamerEventwerk.v4p" id="90" managers="boygroup" nodename="environment\BeamerEventwerk.v4p" systemname="BeamerEventwerk">
+   <NODE componentmode="InAWindow" filename="environment\BeamerSubsektorness.v4p" id="90" managers="boygroup" nodename="environment\BeamerSubsektorness.v4p" systemname="BeamerSubsektorness">
    <PIN pinname="ShowBeamer">
    </PIN>
    <BOUNDS height="270" left="4980" top="5475" type="Node" width="2100">
@@ -705,5 +707,17 @@
    <LINK dstnodeid="47" dstpinname="BeamerProjection" srcnodeid="90" srcpinname="BeamerProjection">
    </LINK>
    <LINK dstnodeid="47" dstpinname="BeamerView" srcnodeid="90" srcpinname="BeamerView">
+   </LINK>
+   <NODE systemname="Eventwerk" filename="environment\Eventwerk.v4p" componentmode="InAWindow" id="111" nodename="environment\Eventwerk.v4p">
+   <BOUNDS type="Node" left="10740" top="7005" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10740" top="7005" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16200" top="7785" width="9000" height="6000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="111" srcpinname="Layer" dstnodeid="47" dstpinname="AdditionalEnvironment">
    </LINK>
    </PATCH>

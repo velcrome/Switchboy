@@ -204,7 +204,7 @@
    </NODE>
    <LINK dstnodeid="39" dstpinname="Y Input Value" srcnodeid="38" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\..\engine\tools\SplitDMXTable (Spreads).v4p" id="42" nodename="SplitDMXTable (Spreads)" systemname="SplitDMXTable (Spreads)">
+   <NODE componentmode="Hidden" filename="..\..\modules\input\SplitDMXTable (Spreads).v4p" id="42" nodename="SplitDMXTable (Spreads)" systemname="SplitDMXTable (Spreads)">
    <BOUNDS height="100" left="10230" top="1500" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Audio Analysis" visible="1">

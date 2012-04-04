@@ -300,7 +300,7 @@
    </NODE>
    <LINK dstnodeid="37" dstpinname="Index" srcnodeid="41" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\..\engine\tools\SplitDMXTable (Spreads).v4p" id="42" nodename="SplitDMXTable (Spreads)" systemname="SplitDMXTable (Spreads)">
+   <NODE componentmode="Hidden" filename="..\..\modules\input\SplitDMXTable (Spreads).v4p" id="42" nodename="SplitDMXTable (Spreads)" systemname="SplitDMXTable (Spreads)">
    <BOUNDS height="100" left="14010" top="1350" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Audio Analysis" visible="1">
@@ -794,7 +794,7 @@
    </LINK>
    <LINK dstnodeid="83" dstpinname="Y" srcnodeid="68" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\modules\common\TextureFX\Filter\Hexagonize\Hexagonize (EX9.Texture Filter).v4p" id="88" nodename="Hexagonize (EX9.Texture Filter)" systemname="Hexagonize (EX9.Texture Filter)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Hexagonize\Hexagonize (EX9.Texture Filter).v4p" id="88" nodename="Hexagonize (EX9.Texture Filter)" systemname="Hexagonize (EX9.Texture Filter)">
    <BOUNDS height="100" left="2055" top="6210" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">

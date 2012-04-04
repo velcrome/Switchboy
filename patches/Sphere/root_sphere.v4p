@@ -292,7 +292,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="" hiddenwhenlocked="0" id="342" nodename="..\..\engine\tools\SplitGlobals (Spreads).v4p" systemname="SplitGlobals (Spreads)">
+   <NODE componentmode="Hidden" filename="" hiddenwhenlocked="0" id="342" nodename="..\..\modules\globals\SplitGlobals (Spreads).v4p" systemname="SplitGlobals (Spreads)">
    <BOUNDS height="100" left="24885" top="2130" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="24885" top="2130" type="Box" width="4800">

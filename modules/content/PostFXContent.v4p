@@ -576,7 +576,7 @@
    <LINKPOINT x="15645" y="8573">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="tools\IntervalFFT.v4p" id="79" managers="boygroup" nodename="tools\IntervalFFT.v4p" systemname="IntervalFFT">
+   <NODE componentmode="Hidden" filename="..\input\IntervalFFT.v4p" id="79" managers="boygroup" nodename="..\input\IntervalFFT.v4p" systemname="IntervalFFT">
    <BOUNDS height="100" left="10080" top="7305" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="DMXPacket" visible="1">

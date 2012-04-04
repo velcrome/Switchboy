@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\Switchboy.v4p" filename="C:\dev\vvvv\switchboy3\Switchboy_DoubleFull.v4p" locked="0" systemname="Switchboy_DoubleFull">
-   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
+   <BOUNDS height="11700" left="540" top="1200" type="Window" width="14400">
    </BOUNDS>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="53" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="12036" top="21030" type="Node" width="5505">
@@ -17,25 +17,25 @@
    </PIN>
    <PIN pinname="Layer 5" visible="1">
    </PIN>
-   <PIN pinname="Layer 11" slicecount="1" visible="1" values="||">
+   <PIN pinname="Layer 11" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Layer 6" visible="1">
    </PIN>
-   <PIN pinname="Layer 8" slicecount="1" visible="1" values="||">
+   <PIN pinname="Layer 8" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Layer 7" visible="1">
    </PIN>
    <PIN pinname="Layer 9" visible="1">
    </PIN>
-   <PIN pinname="Layer 12" slicecount="1" visible="1" values="||">
+   <PIN pinname="Layer 12" slicecount="1" values="||" visible="1">
    </PIN>
-   <PIN pinname="Layer 4" slicecount="1" visible="1" values="||">
+   <PIN pinname="Layer 4" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Control">
    </PIN>
-   <PIN pinname="Layer 10" slicecount="1" visible="1" values="||">
+   <PIN pinname="Layer 10" slicecount="1" values="||" visible="1">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
+   <PIN pinname="Enabled" slicecount="1" values="1" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="20" nodename="Renderer (EX9)" stayontop="1" systemname="RENDERER (EX9)">
@@ -47,9 +47,9 @@
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
-   <PIN pinname="View" slicecount="1" visible="1" values="||">
+   <PIN pinname="View" slicecount="1" values="||" visible="1">
    </PIN>
-   <PIN pinname="Projection" slicecount="1" visible="1" values="||">
+   <PIN pinname="Projection" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Aspect Ratio" visible="1">
    </PIN>
@@ -71,7 +71,7 @@
    </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
-   <PIN pinname="Clear" slicecount="1" visible="1" values="1">
+   <PIN pinname="Clear" slicecount="1" values="1" visible="1">
    </PIN>
    <PIN pinname="EX9 Out" visible="1">
    </PIN>
@@ -87,7 +87,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="12105" top="9825" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -165,7 +165,7 @@
    </BOUNDS>
    <PIN pinname="Switch" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" visible="1" values="||">
+   <PIN pinname="Input 2" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -205,7 +205,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="9600" top="4860" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.40610,0.40610,0.40610,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" values="|0.40610,0.40610,0.40610,1.00000|" visible="1">
    </PIN>
    <PIN pinname="Color Output" visible="1">
    </PIN>
@@ -247,7 +247,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="5025" top="10710" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input Node" slicecount="3" visible="1" values=",,">
+   <PIN pinname="Input Node" slicecount="3" values=",," visible="1">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
@@ -261,7 +261,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="5025" top="10710" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input Node" slicecount="3" visible="1" values=",,">
+   <PIN pinname="Input Node" slicecount="3" values=",," visible="1">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
@@ -285,41 +285,41 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Show3DScene">
    </PIN>
    </NODE>
-   <NODE border="1" componentmode="InAWindow" id="142" managers="boygroup" nodename="Renderer (EX9)" stayontop="1" systemname="RENDERER (EX9)">
+   <NODE border="1" componentmode="FullScreen" id="142" managers="boygroup" nodename="Renderer (EX9)" stayontop="0" systemname="RENDERER (EX9)">
    <BOUNDS height="270" left="6981" top="26505" type="Node" width="4470">
    </BOUNDS>
    <BOUNDS height="1800" left="6981" top="26505" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="1335" left="17505" top="5745" type="Window" width="1650">
+   <BOUNDS height="1350" left="21450" top="3405" type="Window" width="3975">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
-   <PIN pinname="Clear" slicecount="1" visible="1" values="1">
+   <PIN pinname="Clear" slicecount="1" values="1" visible="1">
    </PIN>
-   <PIN pinname="Projection" slicecount="3" visible="1" values=",,">
+   <PIN pinname="Projection" slicecount="3" values=",," visible="1">
    </PIN>
-   <PIN pinname="View" slicecount="3" visible="1" values=",,">
+   <PIN pinname="View" slicecount="3" values=",," visible="1">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Heads">
    </PIN>
-   <PIN pinname="Transformations Index" pintype="Input" slicecount="1" visible="0" values="-1">
+   <PIN pinname="Transformations Index" pintype="Input" slicecount="1" values="-1" visible="0">
    </PIN>
    <PIN pinname="Viewport" pintype="Input" visible="1">
    </PIN>
-   <PIN pinname="Crop" pintype="Input" slicecount="1" visible="0" values="||">
+   <PIN pinname="Crop" pintype="Input" slicecount="1" values="||" visible="0">
    </PIN>
    <PIN pinname="Enabled" visible="1">
    </PIN>
    <PIN pinname="ID" pintype="Output" visible="1">
    </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="AsDesktop">
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|3072 x 768|">
    </PIN>
    <PIN pinname="Fullscreen Refresh Rate" slicecount="1" values="60">
    </PIN>
@@ -327,9 +327,9 @@
    </PIN>
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="8">
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="8">
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
    <PIN pinname="Background Color" visible="1">
    </PIN>
@@ -348,22 +348,22 @@
    <PIN pinname="Clip Device" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="engine\tools\TestBeamerProjection.v4p" id="182" managers="boygroup" nodename="engine\tools\TestBeamerProjection.v4p" systemname="TestBeamerProjection">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\engine\TestBeamerProjection.v4p" id="182" managers="boygroup" nodename="engine\tools\TestBeamerProjection.v4p" systemname="TestBeamerProjection">
    <BOUNDS height="100" left="8832" top="19533" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="8832" top="19533" type="Box" width="4800">
    </BOUNDS>
    <BOUNDS height="10080" left="5040" top="3510" type="Window" width="9000">
    </BOUNDS>
-   <PIN pinname="ImmersiveProjection" slicecount="1" visible="1" values="||">
+   <PIN pinname="ImmersiveProjection" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Mesh" visible="1">
    </PIN>
-   <PIN pinname="BeamerView" slicecount="3" visible="1" values=",,">
+   <PIN pinname="BeamerView" slicecount="3" values=",," visible="1">
    </PIN>
-   <PIN pinname="BeamerProjection" slicecount="3" visible="1" values=",,">
+   <PIN pinname="BeamerProjection" slicecount="3" values=",," visible="1">
    </PIN>
-   <PIN pinname="TestProjection" slicecount="1" visible="1" values="||">
+   <PIN pinname="TestProjection" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="ImmersiveLayer" visible="1">
    </PIN>
@@ -387,7 +387,7 @@
    </PIN>
    <PIN pinname="Layer 2" visible="1">
    </PIN>
-   <PIN pinname="Enabled" pintype="Input" slicecount="1" visible="-1" values="1">
+   <PIN pinname="Enabled" pintype="Input" slicecount="1" values="1" visible="-1">
    </PIN>
    <PIN pinname="Layer Template Count" slicecount="1" values="3">
    </PIN>
@@ -396,7 +396,7 @@
    </NODE>
    <LINK dstnodeid="182" dstpinname="ImmersiveLayer" linkstyle="PolyLine" srcnodeid="183" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\AxisAndGrid (DX9).v4p" hiddenwhenlocked="1" id="186" nodename="AxisAndGrid (DX9)" systemname="AxisAndGrid (DX9)">
+   <NODE componentmode="Hidden" filename="C:\apps\code\vvvv_45beta27.1\lib\nodes\modules\EX9\AxisAndGrid (DX9).v4p" hiddenwhenlocked="1" id="186" nodename="AxisAndGrid (DX9)" systemname="AxisAndGrid (DX9)">
    <BOUNDS height="100" left="12696" top="20385" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
@@ -413,7 +413,7 @@
    </BOUNDS>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="BeamerView">
    </PIN>
-   <PIN pinname="Input Node" slicecount="3" visible="1" values=",,">
+   <PIN pinname="Input Node" slicecount="3" values=",," visible="1">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
@@ -427,7 +427,7 @@
    </BOUNDS>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="BeamerProjection">
    </PIN>
-   <PIN pinname="Input Node" slicecount="3" visible="1" values=",,">
+   <PIN pinname="Input Node" slicecount="3" values=",," visible="1">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
@@ -447,7 +447,7 @@
    </BOUNDS>
    <BOUNDS height="0" left="5472" top="7368" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Input" slicecount="3" visible="1" values=",,">
+   <PIN pinname="Input" slicecount="3" values=",," visible="1">
    </PIN>
    <PIN pinname="Count" visible="1">
    </PIN>
@@ -469,27 +469,27 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Enabled" pintype="Input" slicecount="1" visible="-1" values="1">
+   <PIN pinname="Enabled" pintype="Input" slicecount="1" values="1" visible="-1">
    </PIN>
    <PIN pinname="Layer Template Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Layer 3" slicecount="1" visible="1" values="||">
+   <PIN pinname="Layer 3" slicecount="1" values="||" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" debug="0" filename="engine\ChannelContentDoubleFull.v4p" id="139" nodename="engine\ChannelContentDoubleFull.v4p" systemname="ChannelContentDoubleFull">
+   <NODE componentmode="InAWindow" debug="0" filename="c:\Switchboy3\modules\content\ChannelContentDoubleFull.v4p" id="139" nodename="engine\ChannelContentDoubleFull.v4p" systemname="ChannelContentDoubleFull">
    <BOUNDS height="270" left="10545" top="10665" type="Node" width="5100">
    </BOUNDS>
    <BOUNDS height="3600" left="10545" top="10665" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
+   <BOUNDS height="11715" left="11580" top="1485" type="Window" width="12600">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="BackgroundColor" visible="1">
+   <PIN pinname="BackgroundColor" visible="1" slicecount="1" values="|0.03125,0.03125,0.03125,0.00000|">
    </PIN>
    <PIN pinname="Pause" visible="1">
    </PIN>
-   <PIN pinname="Transform" slicecount="1" visible="1" values="||">
+   <PIN pinname="Transform" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="DebugLayer" visible="1">
    </PIN>
@@ -521,7 +521,7 @@
    </PIN>
    <PIN pinname="StageLayer" visible="1">
    </PIN>
-   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
+   <PIN pinname="Reset" slicecount="1" values="0" visible="1">
    </PIN>
    <PIN pinname="Mesh" visible="1">
    </PIN>
@@ -539,7 +539,7 @@
    </PIN>
    <PIN pinname="Environment" visible="1">
    </PIN>
-   <PIN pinname="CameraViewTransform" slicecount="1" visible="1" values="||">
+   <PIN pinname="CameraViewTransform" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="CameraProjectionTransform" visible="1">
    </PIN>
@@ -547,11 +547,11 @@
    </PIN>
    <PIN pinname="PreviewSizeXY" visible="1">
    </PIN>
-   <PIN pinname="WallTransform" slicecount="1" visible="1" values="||">
+   <PIN pinname="WallTransform" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="ViewerPositionXYZ" visible="1">
    </PIN>
-   <PIN pinname="BeamerTransforms" slicecount="1" visible="1" values="||">
+   <PIN pinname="BeamerTransforms" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="PersonPosXYZ" visible="1">
    </PIN>
@@ -573,15 +573,15 @@
    </BOUNDS>
    <BOUNDS height="1800" left="14280" top="27690" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
+   <BOUNDS height="8535" left="720" top="6375" type="Window" width="12600">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
-   <PIN pinname="View" slicecount="1" visible="1" values="||">
+   <PIN pinname="View" slicecount="1" values="||" visible="1">
    </PIN>
-   <PIN pinname="Projection" slicecount="1" visible="1" values="||">
+   <PIN pinname="Projection" slicecount="1" values="||" visible="1">
    </PIN>
-   <PIN pinname="Background Color" slicecount="1" visible="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|" visible="1">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Switchboy">
    </PIN>
@@ -589,7 +589,7 @@
    </PIN>
    <PIN pinname="Actual Backbuffer Height" visible="1">
    </PIN>
-   <PIN pinname="Aspect Ratio" slicecount="1" visible="1" values="||">
+   <PIN pinname="Aspect Ratio" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
    </PIN>
@@ -635,7 +635,7 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Bang">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -645,7 +645,7 @@
    <NODE componentmode="Hidden" id="237" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="14265" top="26715" type="Node" width="9720">
    </BOUNDS>
-   <PIN pinname="Layer 1" slicecount="1" visible="1" values="||">
+   <PIN pinname="Layer 1" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -663,15 +663,15 @@
    </PIN>
    <PIN pinname="Layer 5" visible="1">
    </PIN>
-   <PIN pinname="Layer 8" slicecount="1" visible="1" values="||">
+   <PIN pinname="Layer 8" slicecount="1" values="||" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" debug="0" filename="gui\AutomateGUI.v4p" id="235" nodename="gui\AutomateGUI.v4p" systemname="AutomateGUI">
+   <NODE componentmode="Hidden" debug="0" filename="c:\Switchboy3\modules\gui\AutomateGUI.v4p" id="235" nodename="gui\AutomateGUI.v4p" systemname="AutomateGUI">
    <BOUNDS height="270" left="24495" top="19890" type="Node" width="4575">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Enable" slicecount="1" visible="1" values="1">
+   <PIN pinname="Enable" slicecount="1" values="1" visible="1">
    </PIN>
    <PIN pinname="Values" visible="1">
    </PIN>
@@ -683,7 +683,7 @@
    </PIN>
    <PIN pinname="CursorXY" visible="1">
    </PIN>
-   <PIN pinname="Set" slicecount="1" visible="1" values="0">
+   <PIN pinname="Set" slicecount="1" values="0" visible="1">
    </PIN>
    <PIN pinname="Selected" visible="1">
    </PIN>
@@ -772,12 +772,12 @@
    </NODE>
    <LINK dstnodeid="235" dstpinname="Values" linkstyle="PolyLine" srcnodeid="230" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="engine\DataBinder.v4p" id="227" managers="boygroup" nodename="DataBinder.v4p" systemname="DataBinder">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\input\DataBinder.v4p" id="227" managers="boygroup" nodename="DataBinder.v4p" systemname="DataBinder">
    <BOUNDS height="270" left="24495" top="21240" type="Node" width="7995">
    </BOUNDS>
    <BOUNDS height="3600" left="24495" top="21240" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
+   <BOUNDS height="15090" left="1335" top="825" type="Window" width="12600">
    </BOUNDS>
    <PIN pinname="BindID" visible="1">
    </PIN>
@@ -787,7 +787,7 @@
    </PIN>
    <PIN pinname="Reset" visible="1">
    </PIN>
-   <PIN pinname="Edit" visible="1">
+   <PIN pinname="Edit" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="BindIt!" visible="1">
    </PIN>
@@ -799,17 +799,17 @@
    </PIN>
    <PIN pinname="BindID Channels" visible="1">
    </PIN>
-   <PIN pinname="Load" visible="1">
+   <PIN pinname="Load" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Load Channels" visible="1">
    </PIN>
    <PIN pinname="Load PostFX" visible="1">
    </PIN>
-   <PIN pinname="MappedValue" visible="1">
+   <PIN pinname="MappedValue" visible="1" slicecount="6" values="0,1,0,1,0,-1">
    </PIN>
    <PIN pinname="Bindings" visible="1">
    </PIN>
-   <PIN pinname="LoadBindings" visible="1">
+   <PIN pinname="LoadBindings" visible="1" slicecount="1260" values="-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1,-1,0,1,0,1,0,-1">
    </PIN>
    </NODE>
    <LINK dstnodeid="227" dstpinname="Selected" linkstyle="PolyLine" srcnodeid="235" srcpinname="Selected">
@@ -832,7 +832,7 @@
    </NODE>
    <LINK dstnodeid="237" dstpinname="Layer 5" linkstyle="PolyLine" srcnodeid="235" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" filename="gui\EmulateMultitouch.v4p" id="223" nodename="gui\EmulateMultitouch.v4p" systemname="EmulateMultitouch">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\gui\EmulateMultitouch.v4p" id="223" nodename="gui\EmulateMultitouch.v4p" systemname="EmulateMultitouch">
    <BOUNDS height="100" left="18225" top="24600" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="18225" top="24600" type="Box" width="4800">
@@ -872,7 +872,7 @@
    </LINK>
    <LINK dstnodeid="80" dstpinname="Input 2" linkstyle="PolyLine" srcnodeid="182" srcpinname="TestProjection">
    </LINK>
-   <NODE componentmode="Hidden" filename="engine\projection\ImmersiveProjection.v4p" id="254" managers="boygroup" nodename="engine\projection\ImmersiveProjection.v4p" systemname="ImmersiveProjection">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\engine\ImmersiveProjection.v4p" id="254" managers="boygroup" nodename="engine\projection\ImmersiveProjection.v4p" systemname="ImmersiveProjection">
    <BOUNDS height="270" left="7920" top="17280" type="Node" width="7215">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
@@ -883,7 +883,7 @@
    </PIN>
    <PIN pinname="ImmersiveProjection" visible="1">
    </PIN>
-   <PIN pinname="ViewPortTransform" slicecount="1" visible="1" values="||">
+   <PIN pinname="ViewPortTransform" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="ImmersiveLayer" visible="1">
    </PIN>
@@ -917,10 +917,10 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="0" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="gui\MainPreview.v4p" id="259" nodename="gui\MainPreview.v4p" systemname="MainPreview">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\gui\MainPreview.v4p" id="259" nodename="gui\MainPreview.v4p" systemname="MainPreview">
    <BOUNDS height="100" left="17040" top="25770" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
@@ -1041,7 +1041,7 @@
    <NODE componentmode="Hidden" id="273" managers="boygroup" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
    <BOUNDS height="100" left="8130" top="12375" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="512">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -1059,7 +1059,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="18405" top="20745" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   <PIN pinname="Input Node" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="PreviewViewTransform">
    </PIN>
@@ -1082,7 +1082,7 @@
    </LINK>
    <LINK dstnodeid="20" dstpinname="Projection" linkstyle="PolyLine" srcnodeid="277" srcpinname="Output Node">
    </LINK>
-   <NODE componentmode="Hidden" filename="gui\PreviewCamera.v4p" id="278" nodename="gui\PreviewCamera.v4p" systemname="PreviewCamera">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\gui\PreviewCamera.v4p" id="278" nodename="gui\PreviewCamera.v4p" systemname="PreviewCamera">
    <BOUNDS height="270" left="16815" top="9600" type="Node" width="4905">
    </BOUNDS>
    <BOUNDS height="3600" left="16815" top="9600" type="Box" width="4800">
@@ -1118,14 +1118,6 @@
    <PIN pinname="EditMode" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="276" dstpinname="Input Node" linkstyle="PolyLine" srcnodeid="278" srcpinname="PreviewViewTransform">
-   </LINK>
-   <LINK dstnodeid="277" dstpinname="Input Node" linkstyle="PolyLine" srcnodeid="278" srcpinname="PreviewProjectionTransform">
-   </LINK>
-   <LINK dstnodeid="278" dstpinname="mouseOver" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="259" srcpinname="mouseOver">
-   </LINK>
-   <LINK dstnodeid="278" dstpinname="XY" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="259" srcpinname="XY">
-   </LINK>
    <LINK dstnodeid="269" dstpinname="Y Input Value" linkstyle="PolyLine" srcnodeid="278" srcpinname="PersonPositionXYZ">
    </LINK>
    <LINK dstnodeid="278" dstpinname="Immersion" linkstyle="PolyLine" srcnodeid="96" srcpinname="Y Output Value">
@@ -1134,13 +1126,11 @@
    </LINK>
    <LINK dstnodeid="278" dstpinname="Reset" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="60" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="53" dstpinname="Layer 7" linkstyle="PolyLine" srcnodeid="278" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="139" dstpinname="CameraViewTransform" linkstyle="PolyLine" srcnodeid="278" srcpinname="PreviewViewTransform">
    </LINK>
    <LINK dstnodeid="139" dstpinname="CameraProjectionTransform" linkstyle="PolyLine" srcnodeid="278" srcpinname="PreviewProjectionTransform">
    </LINK>
-   <NODE componentmode="Hidden" filename="gui\SplitMultitouch.v4p" id="280" nodename="gui\SplitMultitouch.v4p" systemname="SplitMultitouch">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\gui\SplitMultitouch.v4p" id="280" nodename="gui\SplitMultitouch.v4p" systemname="SplitMultitouch">
    <BOUNDS height="100" left="27015" top="17505" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="MultitouchData" visible="1">
@@ -1281,11 +1271,11 @@
    </PIN>
    <PIN pinname="Color Output" pintype="Output" visible="1">
    </PIN>
-   <BOUNDS height="100" left="14640" top="9195" type="Node" width="100">
+   <BOUNDS height="100" left="13932" top="9711" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="465" left="14640" top="9195" type="Box" width="1275">
+   <BOUNDS height="465" left="13932" top="9711" type="Box" width="1275">
    </BOUNDS>
-   <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="BackgroundColor">
+   <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="ScreenColor">
    </PIN>
    <BOUNDS height="0" left="0" top="0" type="Window" width="0">
    </BOUNDS>
@@ -1309,7 +1299,7 @@
    </PIN>
    <PIN pinname="Chooser Style" pintype="Configuration" slicecount="1" values="HSVAField">
    </PIN>
-   <PIN pinname="SliceOffset" pintype="Input" slicecount="1" visible="0" values="0">
+   <PIN pinname="SliceOffset" pintype="Input" slicecount="1" values="0" visible="0">
    </PIN>
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
@@ -1357,7 +1347,7 @@
    </BOUNDS>
    <PIN pinname="Index" visible="1">
    </PIN>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   <PIN pinname="Input Node" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
@@ -1369,7 +1359,7 @@
    </BOUNDS>
    <PIN pinname="Index" visible="1">
    </PIN>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   <PIN pinname="Input Node" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
@@ -1380,7 +1370,7 @@
    </LINK>
    <LINK dstnodeid="142" dstpinname="Projection" linkstyle="PolyLine" srcnodeid="107" srcpinname="Output Node">
    </LINK>
-   <NODE componentmode="Hidden" filename="engine\tools\WallVignette.v4p" id="316" managers="boygroup" nodename="engine\tools\WallVignette.v4p" systemname="WallVignette">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\calibration\WallVignette.v4p" id="316" managers="boygroup" nodename="engine\tools\WallVignette.v4p" systemname="WallVignette">
    <BOUNDS height="270" left="2310" top="17280" type="Node" width="2235">
    </BOUNDS>
    <BOUNDS height="3600" left="2310" top="17280" type="Box" width="4800">
@@ -1399,7 +1389,7 @@
    </PIN>
    <PIN pinname="SaveMask" visible="1">
    </PIN>
-   <PIN pinname="WallTransform" slicecount="1" visible="1" values="||">
+   <PIN pinname="WallTransform" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Mesh" visible="1">
    </PIN>
@@ -1413,7 +1403,7 @@
    </PIN>
    <PIN pinname="UseBeamer" visible="1">
    </PIN>
-   <PIN pinname="SoftEdgeTexture" slicecount="1" visible="1" values="||">
+   <PIN pinname="SoftEdgeTexture" slicecount="1" values="||" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="317" managers="boygroup" nodename="Group (EX9)" systemname="Group (EX9)">
@@ -1421,7 +1411,7 @@
    </BOUNDS>
    <PIN pinname="Layer 1" visible="1">
    </PIN>
-   <PIN pinname="Layer 2" slicecount="1" visible="1" values="||">
+   <PIN pinname="Layer 2" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -1429,11 +1419,11 @@
    </PIN>
    <PIN pinname="Layer Template Count" slicecount="1" values="5">
    </PIN>
-   <PIN pinname="Layer 3" slicecount="1" visible="1" values="||">
+   <PIN pinname="Layer 3" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Layer 4" visible="1">
    </PIN>
-   <PIN pinname="Layer 5" slicecount="1" visible="1" values="||">
+   <PIN pinname="Layer 5" slicecount="1" values="||" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="322" managers="boygroup" nodename="AND (Boolean)" systemname="AND (Boolean)">
@@ -1441,7 +1431,7 @@
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1500,12 +1490,12 @@
    </LINK>
    <LINK dstnodeid="322" dstpinname="Input 2" linkstyle="PolyLine" srcnodeid="324" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InAWindow" filename="engine\DMXInput.v4p" id="325" managers="" nodename="engine\DMXInput.v4p" systemname="DMXInput">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\input\DMXInput.v4p" id="325" managers="" nodename="engine\DMXInput.v4p" systemname="DMXInput">
    <BOUNDS height="100" left="27255" top="6540" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="27255" top="6540" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
+   <BOUNDS height="15090" left="5115" top="1455" type="Window" width="12600">
    </BOUNDS>
    <PIN pinname="DMXPacket" visible="1">
    </PIN>
@@ -1525,13 +1515,13 @@
    </PIN>
    <PIN pinname="BangManual" visible="1">
    </PIN>
-   <PIN pinname="AutoMode" slicecount="1" visible="1" values="1">
+   <PIN pinname="AutoMode" slicecount="1" values="1" visible="1">
    </PIN>
    <PIN pinname="Latency" visible="1">
    </PIN>
    <PIN pinname="DMX Host" visible="1">
    </PIN>
-   <PIN pinname="Do Send" slicecount="1" visible="1" values="1">
+   <PIN pinname="Do Send" slicecount="1" values="1" visible="1">
    </PIN>
    <PIN pinname="BangOne" visible="1">
    </PIN>
@@ -1640,7 +1630,7 @@
    </LINK>
    <LINK dstnodeid="237" dstpinname="Layer 3" linkstyle="PolyLine" srcnodeid="139" srcpinname="LayerGUI">
    </LINK>
-   <NODE componentmode="Hidden" filename="gui\GlobalGUI2.v4p" id="342" nodename="gui\GlobalGUI2.v4p" systemname="GlobalGUI2">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\gui\GlobalGUI2.v4p" id="342" nodename="gui\GlobalGUI2.v4p" systemname="GlobalGUI2">
    <BOUNDS height="100" left="29670" top="18840" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="15930" left="2055" top="1860" type="Window" width="15645">
@@ -1899,7 +1889,7 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -2082,8 +2072,6 @@
    </LINK>
    <LINK dstnodeid="235" dstpinname="Transform" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="373" srcpinname="Transform Out">
    </LINK>
-   <LINK dstnodeid="259" dstpinname="Transform In" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="373" srcpinname="Transform Out">
-   </LINK>
    <LINK dstnodeid="139" dstpinname="Transform In" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="373" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="235" dstpinname="BindIt! Channels" linkstyle="PolyLine" srcnodeid="224" srcpinname="Output">
@@ -2178,7 +2166,7 @@
    </LINK>
    <LINK dstnodeid="142" dstpinname="Fullscreen" linkstyle="PolyLine" srcnodeid="322" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="engine\tools\Mask.v4p" id="388" managers="boygroup" nodename="engine\tools\Mask.v4p" systemname="Mask">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\calibration\Mask.v4p" id="388" managers="boygroup" nodename="engine\tools\Mask.v4p" systemname="Mask">
    <BOUNDS height="100" left="5175" top="17280" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="9255" left="3000" top="2355" type="Window" width="10980">
@@ -2187,13 +2175,13 @@
    </PIN>
    <PIN pinname="Mesh" visible="1">
    </PIN>
-   <PIN pinname="BeamerProjection" slicecount="3" visible="1" values=",,">
+   <PIN pinname="BeamerProjection" slicecount="3" values=",," visible="1">
    </PIN>
-   <PIN pinname="BeamerView" slicecount="3" visible="1" values=",,">
+   <PIN pinname="BeamerView" slicecount="3" values=",," visible="1">
    </PIN>
    <PIN pinname="Resolution" visible="1">
    </PIN>
-   <PIN pinname="WallTransform" slicecount="1" visible="1" values="||">
+   <PIN pinname="WallTransform" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="WallBelongsTo" visible="1">
    </PIN>
@@ -2211,7 +2199,7 @@
    </PIN>
    <PIN pinname="Reset" visible="1">
    </PIN>
-   <PIN pinname="WallTexture" slicecount="1" visible="1" values="||">
+   <PIN pinname="WallTexture" slicecount="1" values="||" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="388" dstpinname="BeamerProjection" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="199" srcpinname="Output Node">
@@ -2267,11 +2255,11 @@
    <NODE componentmode="Hidden" id="394" managers="boygroup" nodename="Switch (Node Input)" systemname="Switch (Node Input)">
    <PIN pinname="Switch" visible="1">
    </PIN>
-   <PIN pinname="Input 1" slicecount="1" visible="1" values="||">
+   <PIN pinname="Input 1" slicecount="1" values="||" visible="1">
    </PIN>
    <BOUNDS height="100" left="2010" top="18420" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" visible="1" values="||">
+   <PIN pinname="Input 2" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -2287,7 +2275,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="4110" top="8820" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   <PIN pinname="Input Node" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="BeamerLayer">
    </PIN>
@@ -2303,7 +2291,7 @@
    </BOUNDS>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="BeamerView">
    </PIN>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   <PIN pinname="Input Node" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
@@ -2317,7 +2305,7 @@
    </BOUNDS>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="BeamerProjection">
    </PIN>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   <PIN pinname="Input Node" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
@@ -2329,7 +2317,7 @@
    <NODE componentmode="Hidden" id="401" managers="" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="100" left="4215" top="10995" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Layer 1" slicecount="1" visible="1" values="||">
+   <PIN pinname="Layer 1" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="Enabled" visible="1">
    </PIN>
@@ -2347,7 +2335,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="9525" top="9045" type="Box" width="1035">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="3" visible="1" values="|0.00000,0.00000,1.00000,1.00000|,|1.00000,0.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|">
+   <PIN pinname="Color Input" slicecount="3" values="|0.00000,0.00000,1.00000,1.00000|,|1.00000,0.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|" visible="1">
    </PIN>
    <PIN pinname="Columns" slicecount="1" values="8">
    </PIN>
@@ -2361,7 +2349,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="10695" top="8400" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   <PIN pinname="Y Input Value" slicecount="1" values="2" visible="1">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="ShowBeamer">
    </PIN>
@@ -2373,7 +2361,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="1770" top="7380" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,1,2">
+   <PIN pinname="Y Input Value" slicecount="3" values="0,1,2" visible="1">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="UseBeamer">
    </PIN>
@@ -2451,7 +2439,7 @@
    </BOUNDS>
    <BOUNDS height="660" left="15360" top="510" type="Box" width="1095">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1024">
+   <PIN pinname="Y Input Value" slicecount="1" values="512">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -2473,7 +2461,7 @@
    </BOUNDS>
    <BOUNDS height="480" left="1230" top="9066" type="Box" width="480">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="0" visible="1">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
@@ -2551,7 +2539,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="27630" top="2730" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="||">
+   <PIN pinname="Input String" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Keyboard">
    </PIN>
@@ -2584,8 +2572,6 @@
    </LINK>
    <LINK dstnodeid="388" dstpinname="Reset" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="60" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="53" dstpinname="Layer 8" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="214" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="419" nodename="OR (Boolean)" systemname="OR (Boolean)">
    <BOUNDS height="100" left="15810" top="13740" type="Node" width="100">
    </BOUNDS>
@@ -2602,12 +2588,12 @@
    </LINK>
    <LINK dstnodeid="290" dstpinname="Y Input Value" linkstyle="PolyLine" srcnodeid="419" srcpinname="Output">
    </LINK>
-   <NODE componentmode="InAWindow" filename="engine\MappedEnvironment.v4p" id="195" managers="boygroup" nodename="engine\MappedEnvironment.v4p" systemname="MappedEnvironment">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\engine\MappedEnvironment.v4p" id="195" managers="boygroup" nodename="engine\MappedEnvironment.v4p" systemname="MappedEnvironment">
    <PIN pinname="CalcMesh" visible="1">
    </PIN>
    <PIN pinname="CalibrationMode" visible="1">
    </PIN>
-   <PIN pinname="BeamerColor" visible="1">
+   <PIN pinname="BeamerColor" visible="1" slicecount="3" values="|0.00000,0.00000,1.00000,1.00000|,|1.00000,0.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|">
    </PIN>
    <BOUNDS height="270" left="7905" top="9600" type="Node" width="2790">
    </BOUNDS>
@@ -2730,11 +2716,9 @@
    </LINK>
    <LINK dstnodeid="237" dstpinname="Layer 6" linkstyle="PolyLine" srcnodeid="342" srcpinname="Layer">
    </LINK>
-   <LINK dstnodeid="278" dstpinname="EditMode" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="259" srcpinname="EditMode">
-   </LINK>
    <LINK dstnodeid="278" dstpinname="ImmersivePersonStart" linkstyle="PolyLine" srcnodeid="295" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" debug="0" filename="engine\projection\EditWallMesh.v4p" id="425" nodename="engine\projection\EditWallMesh.v4p" systemname="EditWallMesh">
+   <NODE componentmode="Hidden" debug="0" filename="c:\Switchboy3\modules\calibration\EditWallMesh.v4p" id="425" nodename="engine\projection\EditWallMesh.v4p" systemname="EditWallMesh">
    <BOUNDS height="100" left="2325" top="10320" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Transform Mesh" visible="1">
@@ -2757,7 +2741,7 @@
    </PIN>
    <BOUNDS left="2325" top="10320" type="Box">
    </BOUNDS>
-   <PIN pinname="ResetAll" slicecount="1" visible="1" values="0">
+   <PIN pinname="ResetAll" slicecount="1" values="0" visible="1">
    </PIN>
    <PIN pinname="Helper" visible="1">
    </PIN>
@@ -2765,9 +2749,9 @@
    </PIN>
    <PIN pinname="EnvironmentMapperMode" visible="1">
    </PIN>
-   <BOUNDS height="11700" left="4920" top="0" type="Window" width="12210">
+   <BOUNDS height="11700" left="4185" top="2070" type="Window" width="12210">
    </BOUNDS>
-   <PIN pinname="Load" visible="1">
+   <PIN pinname="Load" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Sensitivity" slicecount="1" values="0.02">
    </PIN>
@@ -2790,7 +2774,7 @@
    </LINK>
    <LINK dstnodeid="183" dstpinname="Layer 2" linkstyle="PolyLine" srcnodeid="425" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" filename="gui\SplitMultitouch.v4p" id="426" nodename="gui\SplitMultitouch.v4p" systemname="SplitMultitouch">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\gui\SplitMultitouch.v4p" id="426" nodename="gui\SplitMultitouch.v4p" systemname="SplitMultitouch">
    <BOUNDS height="100" left="4260" top="5160" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="MultitouchData" visible="1">
@@ -2976,11 +2960,9 @@
    </LINK>
    <LINK dstnodeid="227" dstpinname="LoadBindings" linkstyle="PolyLine" srcnodeid="342" srcpinname="LoadBindings">
    </LINK>
-   <LINK dstnodeid="139" dstpinname="BindControl" linkstyle="PolyLine" srcnodeid="227" srcpinname="Bindings">
-   </LINK>
    <LINK dstnodeid="342" dstpinname="SaveBindings" linkstyle="PolyLine" srcnodeid="227" srcpinname="Bindings">
    </LINK>
-   <NODE componentmode="InAWindow" filename="engine\PostFXContent.v4p" id="253" nodename="engine\PostFXContent.v4p" systemname="PostFXContent">
+   <NODE componentmode="InAWindow" filename="c:\Switchboy3\modules\content\PostFXContent.v4p" id="253" nodename="engine\PostFXContent.v4p" systemname="PostFXContent">
    <BOUNDS height="270" left="9555" top="15165" type="Node" width="4170">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
@@ -2999,11 +2981,11 @@
    </PIN>
    <PIN pinname="Bypass" visible="1">
    </PIN>
-   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
+   <BOUNDS height="11715" left="11580" top="1485" type="Window" width="12600">
    </BOUNDS>
    <PIN pinname="Color" visible="1">
    </PIN>
-   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
+   <PIN pinname="Reset" slicecount="1" values="0" visible="1">
    </PIN>
    <PIN pinname="Transform In" visible="1">
    </PIN>
@@ -3036,8 +3018,6 @@
    </LINK>
    <LINK dstnodeid="253" dstpinname="Path" linkstyle="PolyLine" srcnodeid="421" srcpinname="Output String">
    </LINK>
-   <LINK dstnodeid="253" dstpinname="BindControl" linkstyle="PolyLine" srcnodeid="227" srcpinname="Bindings">
-   </LINK>
    <LINK dstnodeid="214" dstpinname="Input 2" linkstyle="PolyLine" srcnodeid="139" srcpinname="Layer">
    </LINK>
    <NODE componentmode="InABox" id="443" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -3060,7 +3040,7 @@
    </NODE>
    <LINK dstnodeid="254" dstpinname="Texture" linkstyle="PolyLine" srcnodeid="253" srcpinname="Texture">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\MultiViewport (EX9).v4p" id="189" managers="boygroup" nodename="MultiViewport (EX9)" systemname="MultiViewport (EX9)">
+   <NODE componentmode="Hidden" filename="C:\apps\code\vvvv_45beta27.1\lib\nodes\modules\EX9\MultiViewport (EX9).v4p" id="189" managers="boygroup" nodename="MultiViewport (EX9)" systemname="MultiViewport (EX9)">
    <PIN pinname="Screen Count X" visible="1">
    </PIN>
    <BOUNDS height="100" left="11277" top="25734" type="Node" width="100">
@@ -3083,7 +3063,7 @@
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="446" managers="boygroup" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <PIN pinname="Output Node" pintype="Output" visible="1">
    </PIN>
-   <PIN pinname="Bin Size" pintype="Input" slicecount="1" visible="1" values="1">
+   <PIN pinname="Bin Size" pintype="Input" slicecount="1" values="1" visible="1">
    </PIN>
    <BOUNDS height="100" left="2670" top="15630" type="Node" width="100">
    </BOUNDS>
@@ -3095,7 +3075,7 @@
    </BOUNDS>
    <PIN pinname="Pin Visibility" pintype="Configuration" slicecount="1" values="True">
    </PIN>
-   <PIN pinname="Input Node" pintype="Input" slicecount="1" visible="1" values="||">
+   <PIN pinname="Input Node" pintype="Input" slicecount="1" values="||" visible="1">
    </PIN>
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
@@ -3106,12 +3086,12 @@
    </LINK>
    <LINK dstnodeid="291" dstpinname="Color Input" linkstyle="PolyLine" srcnodeid="253" srcpinname="Color">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\modules\catweasel\Debug\PerfMeter (Debug).v4p" id="289" managers="boygroup" nodename="PerfMeter (Debug)" systemname="PerfMeter (Debug)">
+   <NODE componentmode="Hidden" filename="C:\apps\code\vvvv_45beta27.1\lib\nodes\modules\Debug\PerfMeter (Debug).v4p" id="289" managers="boygroup" nodename="PerfMeter (Debug)" systemname="PerfMeter (Debug)">
    <BOUNDS height="100" left="8970" top="18285" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Enabled" visible="1">
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
    </PIN>
    <BOUNDS height="8685" left="4710" top="3645" type="Window" width="11760">
    </BOUNDS>
@@ -3144,7 +3124,7 @@
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="engine\tools\JoinGlobals (Spreads).v4p" id="450" nodename="JoinGlobals (Spreads)" systemname="JoinGlobals (Spreads)">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\globals\JoinGlobals (Spreads).v4p" id="450" nodename="JoinGlobals (Spreads)" systemname="JoinGlobals (Spreads)">
    <BOUNDS height="100" left="11955" top="9825" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Globals" visible="1">
@@ -3216,7 +3196,7 @@
    </LINK>
    <LINK dstnodeid="209" dstpinname="Layer 2" linkstyle="PolyLine" srcnodeid="195" srcpinname="DebugLayer">
    </LINK>
-   <NODE componentmode="Hidden" filename="modules\mapping\SmartMapping.v4p" id="184" managers="boygroup" nodename="modules\mapping\SmartMapping.v4p" systemname="SmartMapping">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\mapping\SmartMapping.v4p" id="184" managers="boygroup" nodename="modules\mapping\SmartMapping.v4p" systemname="SmartMapping">
    <BOUNDS height="270" left="11505" top="11760" type="Node" width="3570">
    </BOUNDS>
    <BOUNDS height="3600" left="11505" top="11760" type="Box" width="4800">
@@ -3229,7 +3209,7 @@
    </PIN>
    <PIN pinname="BeamerProjection" visible="1">
    </PIN>
-   <PIN pinname="PersonPos" visible="1">
+   <PIN pinname="PersonPos" visible="1" slicecount="3" values="0,2,0">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -3251,7 +3231,7 @@
    </PIN>
    <PIN pinname="BeamerScreenColor" visible="1">
    </PIN>
-   <PIN pinname="AttemptAngulationFix">
+   <PIN pinname="AttemptAngulationFix" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Viewports" visible="1">
    </PIN>
@@ -3280,7 +3260,7 @@
    </LINK>
    <LINK dstnodeid="450" dstpinname="ImmersiveView" linkstyle="PolyLine" srcnodeid="184" srcpinname="ImmersiveView">
    </LINK>
-   <NODE componentmode="Hidden" filename="modules\engine\RenderMap.v4p" id="252" managers="boygroup" nodename="modules\engine\RenderMap.v4p" systemname="RenderMap">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\engine\RenderMap.v4p" id="252" managers="boygroup" nodename="modules\engine\RenderMap.v4p" systemname="RenderMap">
    <BOUNDS height="270" left="8685" top="13980" type="Node" width="3855">
    </BOUNDS>
    <PIN pinname="ContentLayer" visible="1">
@@ -3289,7 +3269,7 @@
    </PIN>
    <PIN pinname="PojectionTransform" visible="1">
    </PIN>
-   <PIN pinname="Color" visible="1">
+   <PIN pinname="Color" visible="1" slicecount="1" values="|0.03125,0.03125,0.03125,0.00000|">
    </PIN>
    <PIN pinname="Texture" visible="1">
    </PIN>
@@ -3318,126 +3298,38 @@
    </LINK>
    <LINK dstnodeid="254" dstpinname="ViewPortTransform" srcnodeid="184" srcpinname="Viewports">
    </LINK>
-   <NODE systemname="Box (EX9.Geometry)" nodename="Box (EX9.Geometry)" componentmode="Hidden" id="452">
-   <BOUNDS type="Node" left="17250" top="18525" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Mesh" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="PhongDirectional (EX9.Effect)" filename="%VVVV%\lib\nodes\effects\PhongDirectional.fx" nodename="PhongDirectional (EX9.Effect)" componentmode="Hidden" id="453">
-   <BOUNDS type="Node" left="16890" top="19890" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Mesh" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   <PIN pinname="Ambient Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Alpha" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Diffuse Color" slicecount="1" values="|0.47631,0.47631,0.47631,1.00000|">
-   </PIN>
-   <PIN pinname="Specular Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Light Direction XYZ">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="452" srcpinname="Mesh" dstnodeid="453" dstpinname="Mesh">
+   <LINK dstnodeid="139" dstpinname="BindControl" linkstyle="PolyLine" srcnodeid="227" srcpinname="Bindings">
    </LINK>
-   <LINK srcnodeid="453" srcpinname="Layer" dstnodeid="53" dstpinname="Layer 9">
+   <LINK dstnodeid="253" dstpinname="BindControl" linkstyle="PolyLine" srcnodeid="227" srcpinname="Bindings">
    </LINK>
-   <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="454">
-   <BOUNDS type="Node" left="17670" top="18930" width="100" height="100">
+   <LINK dstnodeid="278" dstpinname="mouseOver" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="259" srcpinname="mouseOver">
+   </LINK>
+   <LINK dstnodeid="278" dstpinname="XY" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="259" srcpinname="XY">
+   </LINK>
+   <LINK dstnodeid="278" dstpinname="EditMode" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="259" srcpinname="EditMode">
+   </LINK>
+   <LINK dstnodeid="276" dstpinname="Input Node" linkstyle="PolyLine" srcnodeid="278" srcpinname="PreviewViewTransform">
+   </LINK>
+   <LINK dstnodeid="277" dstpinname="Input Node" linkstyle="PolyLine" srcnodeid="278" srcpinname="PreviewProjectionTransform">
+   </LINK>
+   <LINK dstnodeid="53" dstpinname="Layer 7" linkstyle="PolyLine" srcnodeid="278" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="259" dstpinname="Transform In" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="373" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="InABox" id="460" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="17355" top="19995" type="Node" width="0">
    </BOUNDS>
-   <PIN pinname="Transform Out" visible="1">
+   <BOUNDS height="240" left="17355" top="19995" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node">
    </PIN>
-   <PIN pinname="X">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="AdditionalEnvironment">
    </PIN>
-   <PIN pinname="CenterY" slicecount="1" values="-0.5">
-   </PIN>
-   <PIN pinname="ScaleY" slicecount="1" values="0.4">
-   </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="8">
-   </PIN>
-   <PIN pinname="ScaleZ" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="TranslateZ" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="CenterZ" slicecount="1" values="-0.5">
+   <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Cons (Transform)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Transform)" componentmode="Hidden" id="456">
-   <BOUNDS type="Node" left="18735" top="19320" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="454" srcpinname="Transform Out" dstnodeid="456" dstpinname="Input 1">
+   <LINK dstnodeid="53" dstpinname="Layer 8" srcnodeid="214" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="456" srcpinname="Output" dstnodeid="453" dstpinname="Transform">
-   </LINK>
-   <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="457">
-   <BOUNDS type="Node" left="19785" top="19020" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="CenterZ" slicecount="1" values="-0.5">
-   </PIN>
-   <PIN pinname="CenterY" slicecount="1" values="-0.5">
-   </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="8">
-   </PIN>
-   <PIN pinname="ScaleY" slicecount="1" values="1.5">
-   </PIN>
-   <PIN pinname="TranslateZ">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="457" srcpinname="Transform Out" dstnodeid="456" dstpinname="Input 2">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="458" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="20400" top="17880" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="20400" top="17880" width="795" height="480">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" values="0,3">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="|0, 0|" encoded="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="458" srcpinname="Y Output Value" dstnodeid="457" dstpinname="TranslateZ">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="459" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="16935" top="18825" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="16935" top="18825" width="795" height="720">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" values="0,-2,1.01">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="3" values="0,-5,2">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="459" srcpinname="Y Output Value" dstnodeid="453" dstpinname="Light Direction XYZ">
+   <LINK dstnodeid="53" dstpinname="Layer 9" srcnodeid="460" srcpinname="Output Node">
    </LINK>
    </PATCH>

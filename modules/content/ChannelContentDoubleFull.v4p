@@ -62,7 +62,7 @@
    </NODE>
    <LINK dstnodeid="3" dstpinname="Priority 1" hiddenwhenlocked="1" srcnodeid="48" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="tools\LayerMode.v4p" id="93" managers="boygroup" nodename="LayerMode.v4p" systemname="LayerMode">
+   <NODE componentmode="Hidden" filename="LayerMode.v4p" id="93" managers="boygroup" nodename="LayerMode.v4p" systemname="LayerMode">
    <BOUNDS height="270" left="3870" top="8775" type="Node" width="1635">
    </BOUNDS>
    <BOUNDS height="3600" left="3870" top="8775" type="Box" width="4800">
@@ -96,7 +96,7 @@
    </NODE>
    <LINK dstnodeid="93" dstpinname="ChannelID" hiddenwhenlocked="0" srcnodeid="94" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="tools\LayerMode.v4p" id="96" managers="boygroup" nodename="LayerMode.v4p" systemname="LayerMode">
+   <NODE componentmode="Hidden" filename="LayerMode.v4p" id="96" managers="boygroup" nodename="LayerMode.v4p" systemname="LayerMode">
    <BOUNDS height="270" left="7125" top="8775" type="Node" width="1635">
    </BOUNDS>
    <BOUNDS height="3600" left="7125" top="8775" type="Box" width="4800">
@@ -784,7 +784,7 @@
    </NODE>
    <LINK dstnodeid="179" dstpinname="Render State In" srcnodeid="180" srcpinname="Render State Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="tools\QuickBind.v4p" id="181" managers="boygroup" nodename="tools\QuickBind.v4p" systemname="QuickBind">
+   <NODE componentmode="Hidden" filename="..\input\QuickBind.v4p" id="181" managers="boygroup" nodename="..\input\QuickBind.v4p" systemname="QuickBind">
    <BOUNDS height="270" left="3900" top="5625" type="Node" width="2145">
    </BOUNDS>
    <BOUNDS height="3600" left="3900" top="5625" type="Box" width="4800">
@@ -820,7 +820,7 @@
    </NODE>
    <LINK dstnodeid="181" dstpinname="BindControl" srcnodeid="174" srcpinname="Output 1">
    </LINK>
-   <NODE componentmode="Hidden" debug="0" filename="tools\QuickBind.v4p" id="182" managers="boygroup" nodename="tools\QuickBind.v4p" systemname="QuickBind">
+   <NODE componentmode="Hidden" debug="0" filename="..\input\QuickBind.v4p" id="182" managers="boygroup" nodename="..\input\QuickBind.v4p" systemname="QuickBind">
    <BOUNDS height="270" left="7125" top="5625" type="Node" width="2190">
    </BOUNDS>
    <BOUNDS height="3600" left="7125" top="5625" type="Box" width="4800">

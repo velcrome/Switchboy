@@ -204,7 +204,7 @@
    </NODE>
    <LINK dstnodeid="19" dstpinname="Index" srcnodeid="16" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\..\engine\tools\SplitDMXTable (Spreads).v4p" id="15" nodename="SplitDMXTable (Spreads)" systemname="SplitDMXTable (Spreads)">
+   <NODE componentmode="Hidden" filename="..\..\modules\input\SplitDMXTable (Spreads).v4p" id="15" nodename="SplitDMXTable (Spreads)" systemname="SplitDMXTable (Spreads)">
    <BOUNDS height="270" left="16785" top="1230" type="Node" width="2925">
    </BOUNDS>
    <PIN pinname="Audio Analysis" visible="1">
@@ -312,7 +312,7 @@
    </NODE>
    <LINK dstnodeid="5" dstpinname="Transform" srcnodeid="4" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\modules\common\TextureFX\Filter\UnsharpMask\UnsharpMask (EX9.Texture Filter).v4p" id="3" nodename="UnsharpMask (EX9.Texture Filter)" systemname="UnsharpMask (EX9.Texture Filter)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\UnsharpMask\UnsharpMask (EX9.Texture Filter).v4p" id="3" nodename="UnsharpMask (EX9.Texture Filter)" systemname="UnsharpMask (EX9.Texture Filter)">
    <BOUNDS height="270" left="8145" top="10050" type="Node" width="7425">
    </BOUNDS>
    <PIN pinname="Input" slicecount="1" visible="1" values="||">

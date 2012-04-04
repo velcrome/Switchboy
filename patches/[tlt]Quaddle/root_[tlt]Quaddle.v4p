@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\Patches\[tlt]Quaddle\root_[tlt]Quaddle.v4p" filename="C:\switchboy3\patches\Template\root_Template.v4p" locked="0" systemname="root_Template">
-   <BOUNDS height="15090" left="2145" top="1050" type="Window" width="22035">
+   <BOUNDS height="15090" left="6060" top="630" type="Window" width="22035">
    </BOUNDS>
    <NODE componentmode="InABox" id="7" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="6180" top="300" type="Node" width="100">
@@ -234,30 +234,6 @@
    </LINK>
    <LINK dstnodeid="306" dstpinname="Input 1" srcnodeid="62" srcpinname="Output String">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\..\engine\tools\SplitCynetArt.v4p" id="336" nodename="SplitCynetArt" systemname="SplitCynetArt" path="c:\Switchboy3\engine\tools\">
-   <BOUNDS height="100" left="17685" top="2148" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Audio Analysis" visible="1">
-   </PIN>
-   <PIN pinname="FFT" visible="1">
-   </PIN>
-   <BOUNDS height="8865" left="1755" top="3525" type="Window" width="15660">
-   </BOUNDS>
-   <PIN pinname="StepSequencer" visible="1">
-   </PIN>
-   <PIN pinname="LaserHarp" visible="1">
-   </PIN>
-   <PIN pinname="MegaButton" visible="1">
-   </PIN>
-   <PIN pinname="Balloon" visible="1">
-   </PIN>
-   <PIN pinname="Beats" visible="1">
-   </PIN>
-   <PIN pinname="Subjectives" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="336" dstpinname="Audio Analysis" srcnodeid="11" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="337" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="18060" top="540" type="Node" width="100">
    </BOUNDS>
@@ -288,12 +264,12 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="..\..\engine\tools\SplitGlobals (Spreads).v4p" id="342" nodename="..\..\engine\tools\SplitGlobals (Spreads).v4p" systemname="SplitGlobals (Spreads)">
-   <BOUNDS height="100" left="9081" top="5784" type="Node" width="100">
+   <NODE componentmode="Hidden" filename="..\..\modules\globals\SplitGlobals (Spreads).v4p" id="342" nodename="..\..\modules\globals\SplitGlobals (Spreads).v4p" systemname="SplitGlobals (Spreads)">
+   <BOUNDS height="100" left="8913" top="6120" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="3600" left="9081" top="5784" type="Box" width="4800">
+   <BOUNDS height="3600" left="8913" top="6120" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="6000" left="4170" top="2790" type="Window" width="12840">
+   <BOUNDS height="6000" left="2385" top="2475" type="Window" width="9000">
    </BOUNDS>
    <PIN pinname="Globals" visible="1">
    </PIN>
@@ -302,7 +278,7 @@
    </NODE>
    <LINK dstnodeid="342" dstpinname="Globals" srcnodeid="339" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\..\engine\tools\SplitDMXTable (Spreads).v4p" id="370" nodename="SplitDMXTable (Spreads)" systemname="SplitDMXTable (Spreads)">
+   <NODE componentmode="Hidden" filename="..\..\modules\input\SplitDMXTable (Spreads).v4p" id="370" nodename="SplitDMXTable (Spreads)" systemname="SplitDMXTable (Spreads)">
    <BOUNDS height="100" left="12840" top="5178" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Audio Analysis" visible="1">
@@ -331,7 +307,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="12090" top="8175" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="14">
+   <PIN pinname="Y Input Value" slicecount="1" values="9">
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
@@ -370,7 +346,7 @@
    <PIN pinname="Flat Texture" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="846" nodename="Renderer (EX9)" stayontop="1" systemname="Renderer (EX9)">
+   <NODE componentmode="Hidden" id="846" nodename="Renderer (EX9)" stayontop="1" systemname="RENDERER (EX9)">
    <BOUNDS height="100" left="630" top="14295" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="1800" left="630" top="14295" type="Box" width="2400">
@@ -396,6 +372,14 @@
    <PIN pinname="Backbuffer Width" slicecount="1" values="1700">
    </PIN>
    <PIN pinname="Backbuffer Height" slicecount="1" values="1290">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="845" nodename="Mesh (EX9.Geometry Join)" systemname="Mesh (EX9.Geometry Join)">
@@ -757,7 +741,7 @@
    <NODE componentmode="Hidden" id="848" nodename="Quad (DX9)" systemname="Quad (DX9)">
    <BOUNDS height="100" left="8295" top="12750" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Transform" visible="1">
+   <PIN pinname="Transform" slicecount="14" visible="1" values=",,,,,,,,,,,,,">
    </PIN>
    <PIN pinname="Texture" visible="1">
    </PIN>
@@ -823,7 +807,7 @@
    <NODE componentmode="Hidden" id="854" nodename="GetSlice (Node)" systemname="GetSlice (Node)">
    <BOUNDS height="100" left="8790" top="7125" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input Node" visible="1">
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Bin Size" slicecount="1" values="14">
    </PIN>
@@ -860,7 +844,7 @@
    </NODE>
    <LINK dstnodeid="816" dstpinname="Render State In" srcnodeid="856" srcpinname="Render State Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\modules\common\TextureFX\Filter\Glow\Glow (EX9.Texture Filter).v4p" id="858" nodename="Glow (EX9.Texture Filter)" systemname="Glow (EX9.Texture Filter)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Glow\Glow (EX9.Texture Filter).v4p" id="858" nodename="Glow (EX9.Texture Filter)" systemname="Glow (EX9.Texture Filter)">
    <BOUNDS height="100" left="5580" top="16095" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -879,10 +863,10 @@
    </PIN>
    <PIN pinname="Post Brightness" visible="1">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
+   <PIN pinname="Enabled" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\modules\common\TextureFX\Filter\Edge\Edge (EX9.Texture Filter).v4p" id="859" nodename="Edge (EX9.Texture Filter)" systemname="Edge (EX9.Texture Filter)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Edge\Edge (EX9.Texture Filter).v4p" id="859" nodename="Edge (EX9.Texture Filter)" systemname="Edge (EX9.Texture Filter)">
    <BOUNDS height="100" left="5565" top="14805" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -1023,21 +1007,9 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="887" nodename="Map (Value)" systemname="Map (Value)">
-   <BOUNDS height="100" left="6405" top="9690" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Destination Minimum" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Destination Maximum" slicecount="1" values="-0.3">
    </PIN>
    </NODE>
    <LINK dstnodeid="862" dstpinname="Z" srcnodeid="886" srcpinname="Output">
@@ -1054,24 +1026,6 @@
    <PIN pinname="Destination Maximum" slicecount="1" values="5">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="900" nodename="Decay (Animation)" systemname="Decay (Animation)">
-   <BOUNDS height="100" left="6285" top="10275" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Decay" slicecount="1" values="0.5">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Terrain" slicecount="1" values="Descending">
-   </PIN>
-   <PIN pinname="Attack" slicecount="1" values="0.1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="900" dstpinname="Input" srcnodeid="887" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="886" dstpinname="Input 2" srcnodeid="900" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="902" nodename="LFO (Animation)" systemname="LFO (Animation)">
    <BOUNDS height="100" left="4950" top="9870" type="Node" width="100">
    </BOUNDS>
@@ -1168,7 +1122,7 @@
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\modules\common\TextureFX\Filter\Distort\Distort (EX9.Texture Filter).v4p" id="930" nodename="Distort (EX9.Texture Filter)" systemname="Distort (EX9.Texture Filter)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Distort\Distort (EX9.Texture Filter).v4p" id="930" nodename="Distort (EX9.Texture Filter)" systemname="Distort (EX9.Texture Filter)">
    <BOUNDS height="100" left="5580" top="15450" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -1261,13 +1215,11 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="Maximum">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0,0,0,0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="964" dstpinname="Y Input Value" srcnodeid="336" srcpinname="Beats">
-   </LINK>
    <NODE componentmode="InABox" id="965" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="17145" top="6210" type="Node" width="100">
    </BOUNDS>
@@ -1283,11 +1235,9 @@
    </PIN>
    <PIN pinname="Show Slider" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="965" dstpinname="Y Input Value" srcnodeid="336" srcpinname="Subjectives">
-   </LINK>
    <LINK dstnodeid="848" dstpinname="Render State" srcnodeid="963" srcpinname="Output Node">
    </LINK>
    <NODE componentmode="Hidden" id="966" nodename="Quad (DX9)" systemname="Quad (DX9)">
@@ -1301,7 +1251,7 @@
    </PIN>
    <PIN pinname="Color" visible="1">
    </PIN>
-   <PIN pinname="Transform" slicecount="1" visible="1" values="||">
+   <PIN pinname="Transform" slicecount="14" visible="1" values=",,,,,,,,,,,,,">
    </PIN>
    <PIN pinname="Texture Transform" visible="1">
    </PIN>
@@ -1354,7 +1304,7 @@
    </NODE>
    <LINK dstnodeid="980" dstpinname="Up" srcnodeid="981" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\modules\common\TextureFX\Source\Noise\Noise (EX9.Texture Source).v4p" id="984" nodename="Noise (EX9.Texture Source)" systemname="Noise (EX9.Texture Source)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Source\Noise\Noise (EX9.Texture Source).v4p" id="984" nodename="Noise (EX9.Texture Source)" systemname="Noise (EX9.Texture Source)">
    <BOUNDS height="100" left="11565" top="10455" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
@@ -1374,7 +1324,7 @@
    <PIN pinname="Height" slicecount="1" values="1536">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\modules\common\TextureFX\Filter\Echo\Echo (EX9.Texture Filter).v4p" id="987" nodename="Echo (EX9.Texture Filter)" systemname="Echo (EX9.Texture Filter)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Echo\Echo (EX9.Texture Filter).v4p" id="987" nodename="Echo (EX9.Texture Filter)" systemname="Echo (EX9.Texture Filter)">
    <BOUNDS height="100" left="11760" top="11625" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -2174,8 +2124,6 @@
    </LINK>
    <LINK dstnodeid="1045" dstpinname="Switch" srcnodeid="996" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="887" dstpinname="Input" srcnodeid="1045" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="1048" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
    <BOUNDS height="100" left="13140" top="8835" type="Node" width="100">
    </BOUNDS>
@@ -2204,30 +2152,30 @@
    </LINK>
    <LINK dstnodeid="907" dstpinname="Input" srcnodeid="1048" srcpinname="Output">
    </LINK>
-   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="1052">
-   <BOUNDS type="Node" left="3660" top="3300" width="100" height="100">
+   <NODE componentmode="Hidden" id="1052" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
+   <BOUNDS height="100" left="3660" top="3300" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Up Edge" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Toggle (Animation)" nodename="Toggle (Animation)" componentmode="Hidden" id="1053">
-   <BOUNDS type="Node" left="3660" top="3690" width="100" height="100">
+   <NODE componentmode="Hidden" id="1053" nodename="Toggle (Animation)" systemname="Toggle (Animation)">
+   <BOUNDS height="100" left="3660" top="3690" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="995" srcpinname="Output" dstnodeid="1052" dstpinname="Input">
+   <LINK dstnodeid="1052" dstpinname="Input" srcnodeid="995" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="1052" srcpinname="Up Edge" dstnodeid="1053" dstpinname="Input">
+   <LINK dstnodeid="1053" dstpinname="Input" srcnodeid="1052" srcpinname="Up Edge">
    </LINK>
-   <LINK srcnodeid="1053" srcpinname="Output" dstnodeid="996" dstpinname="Y Input Value">
+   <LINK dstnodeid="996" dstpinname="Y Input Value" srcnodeid="1053" srcpinname="Output">
    </LINK>
-   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="1055">
-   <BOUNDS type="Node" left="7725" top="10890" width="100" height="100">
+   <NODE componentmode="Hidden" id="1055" nodename="Multiply (Value)" systemname="Multiply (Value)">
+   <BOUNDS height="100" left="7725" top="10890" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -2236,9 +2184,9 @@
    <PIN pinname="Input 2" slicecount="1" values="0.75">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1031" srcpinname="Output" dstnodeid="1055" dstpinname="Input 1">
+   <LINK dstnodeid="1055" dstpinname="Input 1" srcnodeid="1031" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="1055" srcpinname="Output" dstnodeid="932" dstpinname="Input 2">
+   <LINK dstnodeid="932" dstpinname="Input 2" srcnodeid="1055" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="1059" nodename="GetSlice (Spreads)" systemname="GetSlice (Spreads)">
    <BOUNDS height="100" left="17400" top="2985" type="Node" width="100">
@@ -2292,8 +2240,8 @@
    </NODE>
    <LINK dstnodeid="1059" dstpinname="Index" srcnodeid="1056" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="1057" srcpinname="Y Output Value" dstnodeid="858" dstpinname="Post Brightness">
+   <LINK dstnodeid="858" dstpinname="Post Brightness" srcnodeid="1057" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="1059" dstpinname="Input">
+   <LINK dstnodeid="1059" dstpinname="Input" srcnodeid="7" srcpinname="Y Output Value">
    </LINK>
    </PATCH>

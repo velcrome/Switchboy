@@ -190,7 +190,7 @@
    </NODE>
    <LINK dstnodeid="39" dstpinname="Y Input Value" srcnodeid="38" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\..\engine\tools\SplitDMXTable (Spreads).v4p" id="42" nodename="SplitDMXTable (Spreads)" systemname="SplitDMXTable (Spreads)">
+   <NODE componentmode="Hidden" filename="..\..\modules\input\SplitDMXTable (Spreads).v4p" id="42" nodename="SplitDMXTable (Spreads)" systemname="SplitDMXTable (Spreads)">
    <BOUNDS height="100" left="14010" top="1350" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Audio Analysis" visible="1">
@@ -734,7 +734,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\modules\common\TextureFX\Filter\Glow\Glow (EX9.Texture Filter).v4p" id="128" nodename="Glow (EX9.Texture Filter)" systemname="Glow (EX9.Texture Filter)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Glow\Glow (EX9.Texture Filter).v4p" id="128" nodename="Glow (EX9.Texture Filter)" systemname="Glow (EX9.Texture Filter)">
    <BOUNDS height="100" left="4800" top="8550" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">

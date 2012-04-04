@@ -1334,7 +1334,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="..\..\engine\tools\SplitGlobals (Spreads).v4p" id="522" nodename="..\..\engine\tools\SplitGlobals (Spreads).v4p" systemname="SplitGlobals (Spreads)">
+   <NODE componentmode="Hidden" filename="..\..\modules\globals\SplitGlobals (Spreads).v4p" id="522" nodename="..\..\modules\globals\SplitGlobals (Spreads).v4p" systemname="SplitGlobals (Spreads)">
    <BOUNDS height="100" left="25080" top="2565" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="25080" top="2565" type="Box" width="4800">

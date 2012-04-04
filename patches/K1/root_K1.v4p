@@ -266,7 +266,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="..\..\engine\tools\SplitGlobals (Spreads).v4p" id="342" nodename="..\..\engine\tools\SplitGlobals (Spreads).v4p" systemname="SplitGlobals (Spreads)">
+   <NODE componentmode="Hidden" filename="..\..\modules\globals\SplitGlobals (Spreads).v4p" id="342" nodename="..\..\modules\globals\SplitGlobals (Spreads).v4p" systemname="SplitGlobals (Spreads)">
    <BOUNDS height="100" left="17166" top="1224" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="17166" top="1224" type="Box" width="4800">
@@ -278,7 +278,7 @@
    </NODE>
    <LINK dstnodeid="342" dstpinname="Globals" srcnodeid="339" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\..\engine\tools\SplitDMXTable (Spreads).v4p" id="370" nodename="SplitDMXTable (Spreads)" systemname="SplitDMXTable (Spreads)">
+   <NODE componentmode="Hidden" filename="..\..\modules\input\SplitDMXTable (Spreads).v4p" id="370" nodename="SplitDMXTable (Spreads)" systemname="SplitDMXTable (Spreads)">
    <BOUNDS height="270" left="12765" top="1863" type="Node" width="4020">
    </BOUNDS>
    <PIN pinname="Audio Analysis" visible="1">
