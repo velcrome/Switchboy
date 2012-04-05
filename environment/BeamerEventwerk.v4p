@@ -375,7 +375,7 @@
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
-   <PIN pinname="Bin Size" slicecount="1" values="4">
+   <PIN pinname="Bin Size" slicecount="1" values="3">
    </PIN>
    </NODE>
    <LINK dstnodeid="174" dstpinname="Input Node" srcnodeid="166" srcpinname="Projection">
@@ -420,14 +420,14 @@
    </NODE>
    <LINK dstnodeid="155" dstpinname="X" srcnodeid="176" srcpinname="Y Output Value">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="177" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="5520" top="3045" width="0" height="0">
+   <NODE componentmode="InABox" id="177" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="5520" top="3045" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="5520" top="3045" width="795" height="720">
+   <BOUNDS height="720" left="5520" top="3045" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="3" values="-0.25,0.5,0.25">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -435,19 +435,19 @@
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="|0, 0, 0|" encoded="0">
+   <PIN encoded="0" pinname="Default" slicecount="1" values="|0, 0, 0|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="177" srcpinname="Y Output Value" dstnodeid="175" dstpinname="Z">
+   <LINK dstnodeid="175" dstpinname="Z" srcnodeid="177" srcpinname="Y Output Value">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="179" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="6000" top="1635" width="0" height="0">
+   <NODE componentmode="InABox" id="179" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="6000" top="1635" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="6000" top="1635" width="795" height="720">
+   <BOUNDS height="720" left="6000" top="1635" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="3" values="-1.5,-3,-1.5">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -455,9 +455,9 @@
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="|0, 0, 0|" encoded="0">
+   <PIN encoded="0" pinname="Default" slicecount="1" values="|0, 0, 0|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="179" srcpinname="Y Output Value" dstnodeid="155" dstpinname="Z">
+   <LINK dstnodeid="155" dstpinname="Z" srcnodeid="179" srcpinname="Y Output Value">
    </LINK>
    </PATCH>

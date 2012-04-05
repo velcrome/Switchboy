@@ -2,7 +2,7 @@
    <PATCH nodename="c:\switchboy3\audio\Devices\ControllerAdapter.v4p" filename="C:\Users\Andre\Documents\My Dropbox\buggeschwarz\Camera_Control.v4p" systemname="Camera_Control">
    <BOUNDS height="10860" left="1830" top="1755" type="Window" width="15360">
    </BOUNDS>
-   <NODE componentmode="Hidden" filename="Xbox360Controller\obj\Debug\Xbox360Controller.dll" id="33" nodename="Xbox360Controller (Devices)" systemname="Xbox360Controller (Devices)">
+   <NODE componentmode="Hidden" filename="Xbox360Controller\Xbox360Controller.csproj" id="33" nodename="Xbox360Controller (Devices)" systemname="Xbox360Controller (Devices)">
    <BOUNDS height="270" left="3000" top="840" type="Node" width="5205">
    </BOUNDS>
    <BOUNDS left="3000" top="840" type="Box">
