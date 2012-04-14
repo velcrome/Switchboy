@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\switchboy3\engine\projection\EditWallMesh.v4p" filename="C:\dev\vvvv\switchboy3\engine\projection\EditWallMesh.v4p" systemname="EditWallMesh">
-   <BOUNDS height="11700" left="4920" top="0" type="Window" width="12210">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="c:\Switchboy3\modules\calibration\EditWallMesh.v4p" filename="C:\dev\vvvv\switchboy3\engine\projection\EditWallMesh.v4p" systemname="EditWallMesh">
+   <BOUNDS height="11700" left="8700" top="1815" type="Window" width="12210">
    </BOUNDS>
    <NODE componentmode="Hidden" id="34" nodename="Grid (EX9.Geometry)" systemname="Grid (EX9.Geometry)">
    <BOUNDS height="100" left="3270" top="2880" type="Node" width="100">
@@ -368,7 +368,7 @@
    </NODE>
    <LINK dstnodeid="25" dstpinname="Input 2" srcnodeid="6" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="MoveCorner.v4p" id="5" managers="boygroup" nodename="MoveCorner.v4p" systemname="MoveCorner" path="C:\switchboy3\engine\projection\">
+   <NODE componentmode="Hidden" filename="MoveCorner.v4p" id="5" managers="boygroup" nodename="MoveCorner.v4p" systemname="MoveCorner">
    <BOUNDS height="100" left="3012" top="8904" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="3012" top="8904" type="Box" width="4800">
@@ -411,7 +411,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="2520" top="12195" type="Box" width="795">
    </BOUNDS>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="CalibrationLayer">
    </PIN>
    </NODE>
    <LINK dstnodeid="4" dstpinname="Input Node" srcnodeid="30" srcpinname="Layer">
@@ -759,8 +759,6 @@
    <LINK dstnodeid="20" dstpinname="Input" srcnodeid="67" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="67" dstpinname="Input 2" srcnodeid="65" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="30" dstpinname="Enabled" srcnodeid="65" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="35" dstpinname="Screen Space Points XY" srcnodeid="51" srcpinname="Y Output Value">
    <LINKPOINT x="7371" y="13401">
@@ -1220,18 +1218,18 @@
    </LINK>
    <LINK dstnodeid="73" dstpinname="Input" srcnodeid="100" srcpinname="Output">
    </LINK>
-   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="102">
-   <BOUNDS type="Node" left="1860" top="5805" width="100" height="100">
+   <NODE componentmode="Hidden" id="102" nodename="Change (Animation)" systemname="Change (Animation)">
+   <BOUNDS height="100" left="1860" top="5805" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="OnChange" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="17" srcpinname="Count" dstnodeid="102" dstpinname="Input">
+   <LINK dstnodeid="102" dstpinname="Input" srcnodeid="17" srcpinname="Count">
    </LINK>
-   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="103">
-   <BOUNDS type="Node" left="3495" top="7815" width="100" height="100">
+   <NODE componentmode="Hidden" id="103" nodename="OR (Boolean)" systemname="OR (Boolean)">
+   <BOUNDS height="100" left="3495" top="7815" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -1240,10 +1238,12 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="92" srcpinname="Y Output Value" dstnodeid="103" dstpinname="Input 2">
+   <LINK dstnodeid="103" dstpinname="Input 2" srcnodeid="92" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="102" srcpinname="OnChange" dstnodeid="103" dstpinname="Input 1">
+   <LINK dstnodeid="103" dstpinname="Input 1" srcnodeid="102" srcpinname="OnChange">
    </LINK>
-   <LINK srcnodeid="103" srcpinname="Output" dstnodeid="5" dstpinname="Init">
+   <LINK dstnodeid="5" dstpinname="Init" srcnodeid="103" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="65" srcpinname="Y Output Value" dstnodeid="30" dstpinname="Enabled">
    </LINK>
    </PATCH>
