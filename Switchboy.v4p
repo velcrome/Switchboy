@@ -4962,22 +4962,7 @@
    </LINK>
    <LINK srcnodeid="195" srcpinname="DebugLayer" dstnodeid="183" dstpinname="Layer 1" hiddenwhenlocked="1">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="624" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="3315" top="15255" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3315" top="15255" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="UsedBeamers" encoded="0">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
+
    <LINK srcnodeid="195" srcpinname="UsedBeamers" dstnodeid="624" dstpinname="Y Input Value" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="624" srcpinname="Y Output Value" dstnodeid="304" dstpinname="Index">
