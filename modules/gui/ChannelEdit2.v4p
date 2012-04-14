@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\gui\ChannelEdit2.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\ChannelEdit2.v4p" systemname="ChannelEdit2">
-   <BOUNDS height="14445" left="2715" top="2160" type="Window" width="13920">
+   <PATCH nodename="c:\Switchboy3\modules\gui\ChannelEdit2.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\ChannelEdit2.v4p" systemname="ChannelEdit2">
+   <BOUNDS height="15090" left="9465" top="750" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="InABox" id="45" nodename="IOBox (Value Advanced)" systemname="IOBox (Color)">
    <BOUNDS height="100" left="10065" top="120" type="Node" width="100">
@@ -1609,7 +1609,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="2865" top="1425" type="Box" width="795">
    </BOUNDS>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="ID">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="TouchID">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>

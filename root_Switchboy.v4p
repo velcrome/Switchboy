@@ -160,32 +160,6 @@
    <PIN pinname="AdditionalEnvironment" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="64" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="720" top="6030" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="480" left="720" top="6030" type="Box" width="480">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Show Value" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Show Slider" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Minimum" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Maximum" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="FullScreen">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="47" dstpinname="FullScreen" hiddenwhenlocked="1" srcnodeid="64" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="66" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="8790" top="6615" type="Node" width="100">
    </BOUNDS>
@@ -656,7 +630,7 @@
    </NODE>
    <LINK dstnodeid="47" dstpinname="AttemptAngulationFix" srcnodeid="110" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InAWindow" filename="environment\Eventwerk.v4p" id="111" nodename="environment\Eventwerk.v4p" systemname="Eventwerk">
+   <NODE componentmode="Hidden" filename="environment\Eventwerk.v4p" id="111" nodename="environment\Eventwerk.v4p" systemname="Eventwerk">
    <BOUNDS height="100" left="10740" top="7005" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="10740" top="7005" type="Box" width="4800">
@@ -664,6 +638,8 @@
    <BOUNDS height="6000" left="16200" top="7785" type="Window" width="9000">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="47" dstpinname="AdditionalEnvironment" srcnodeid="111" srcpinname="Layer">
@@ -696,7 +672,7 @@
    </LINK>
    <LINK dstnodeid="47" dstpinname="BeamerView" srcnodeid="90" srcpinname="BeamerView">
    </LINK>
-   <NODE componentmode="InAWindow" debug="0" filename="environment\WallsEventwerk.v4p" id="52" managers="boygroup" nodename="environment\WallsEventwerk.v4p" systemname="WallsEventwerk">
+   <NODE componentmode="Hidden" debug="0" filename="environment\WallsEventwerk.v4p" id="52" managers="boygroup" nodename="environment\WallsEventwerk.v4p" systemname="WallsEventwerk">
    <BOUNDS height="270" left="3750" top="7335" type="Node" width="1530">
    </BOUNDS>
    <BOUNDS height="3600" left="3750" top="7335" type="Box" width="4800">

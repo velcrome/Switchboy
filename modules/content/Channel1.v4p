@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\modules\content\Channel1.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\engine\channels\Channel0.v4p" systemname="Channel0">
-   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
+   <BOUNDS height="15090" left="8880" top="1695" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)" systemname="IOBox (Node)">
    <BOUNDS height="100" left="360" top="420" type="Node" width="100">
@@ -19,7 +19,7 @@
    </BOUNDS>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   <PIN pinname="Input Node" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="8" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -71,7 +71,7 @@
    <NODE componentmode="Hidden" id="13" nodename="CreateNode (VVVV)" systemname="CreateNode (VVVV)">
    <BOUNDS height="100" left="9015" top="8550" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Node ID" slicecount="1" visible="1" values="27">
+   <PIN pinname="Node ID" visible="1">
    </PIN>
    <PIN pinname="Parent Patch" visible="1">
    </PIN>
@@ -253,7 +253,7 @@
    <NODE componentmode="Hidden" id="31" nodename="FrameDelay (String)" systemname="FrameDelay (String)">
    <BOUNDS height="100" left="3105" top="8100" type="Node" width="100">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input 1" slicecount="1" visible="1" values="||">
+   <PIN encoded="0" pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Output 1" visible="1">
    </PIN>
@@ -283,7 +283,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="7665" top="5820" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="||">
+   <PIN encoded="0" pinname="Input String" slicecount="8" values="Hello,World,This,Is,Global,String,Domination,">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -295,7 +295,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="6825" top="6255" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="273" values="0,2,-6,0,0,0,0,0,0,-5.74499988555908,1,0,5.74499988555908,7,2,-1,512,512,80,5,16,48,3,48,48,1.49000000953674,0,0,0,0,6,0,0,0,0,1,0,-5,4,2,1,1.49000000953674,0,0,0,0,5,0,0,0,0,1,0,-3,4.5,1,1,1.49000000953674,0,0,0,0,5,0,0,0,0,1,0,3,4.5,1,1,1.49000000953674,0,0,0,0,6,0,0,0,0,1,0,5,4,2,1,4,0,0,0,0,3,0,0,0,0,1,0,0,5.5,0,1,0,0,2,2,1,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,1.20000004768372,0,0,0,0,1.60000002384186,0,0,0,0.439999997615814,1.00803303718567,1,0,0,-0.200823366641998,0,1.20000004768372,0,0,0,0,1.60000002384186,0,0,0,0.439999997615814,1.00803303718567,1,0,0,-0.200823366641998,0,1.20000004768372,0,0,0,0,1.60000002384186,0,0,0,0.439999997615814,1.00803303718567,1,0,0,-0.200823366641998,0,0,1,2,0.958797991275787,0,-0.284088343381882,0,0,0.999999940395355,0,0,0.284088283777237,0,0.958798170089722,0,1.70452976226807,-1.99999988079071,5.75278902053833,1,1,0,0,0,0,0.992277860641479,0.124034732580185,0,0,-0.124034732580185,0.992277860641479,0,0,-2.72876405715942,5.70559787750244,1,0.958797991275787,0,0.284088343381882,0,0,0.999999940395355,0,0,-0.284088283777237,0,0.958798170089722,0,-1.70452976226807,-1.99999988079071,5.75278902053833,1,6.16854190826416,0,0,0,0,2.52305150032043,0,0,1.14554357528687,-0.715846419334412,1.00001001358032,1,0,0,-0.100000500679016,0,3.10086846351624,0,0,0,0,4.52991485595703,0,0,0,-1.90598297119141,1.00001001358032,1,0,0,-0.100000500679016,0,6.16854190826416,0,0,0,0,2.52305150032043,0,0,-1.14554357528687,-0.715846419334412,1.00001001358032,1,0,0,-0.100000500679016,0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -346,6 +346,8 @@
    </LINK>
    <LINK dstnodeid="30" dstpinname="Input 1" srcnodeid="51" srcpinname="Output">
    </LINK>
+   <LINK dstnodeid="15" dstpinname="Y Input Value" srcnodeid="20" srcpinname="Output">
+   </LINK>
    <LINK dstnodeid="27" dstpinname="DMXTable" srcnodeid="43" srcpinname="DMXPacket">
    </LINK>
    <LINK dstnodeid="31" dstpinname="Input 1" srcnodeid="27" srcpinname="Controller Names">
@@ -376,7 +378,7 @@
    </LINK>
    <LINK dstnodeid="27" dstpinname="RenderState" srcnodeid="0" srcpinname="Output Node">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\..\Patches\Heightmap\root_Heightmap.v4p" id="27" nodename="..\..\Patches\Heightmap\root_Heightmap.v4p" systemname="root_Heightmap">
+   <NODE componentmode="Hidden" filename="..\..\Patches\Earth\root_Earth.v4p" id="27" nodename="..\..\Patches\Earth\root_Earth.v4p" systemname="root_Earth">
    <PIN pinname="RenderState" visible="1">
    </PIN>
    <PIN pinname="Transform" visible="1">
@@ -422,6 +424,4 @@
    <PIN pinname="OSCString" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="20" srcpinname="Output" dstnodeid="15" dstpinname="Y Input Value">
-   </LINK>
    </PATCH>

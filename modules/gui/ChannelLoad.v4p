@@ -195,7 +195,7 @@
    </PIN>
    <PIN pinname="Mouse Left" visible="1">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="45" values="18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   <PIN pinname="Internal Value" slicecount="45" values="15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Count X" slicecount="1" values="3">
    </PIN>

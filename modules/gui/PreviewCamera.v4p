@@ -204,20 +204,6 @@
    </NODE>
    <LINK dstnodeid="30" dstpinname="Transform" srcnodeid="23" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="InABox" id="22" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="10680" top="8145" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="300" left="10680" top="8145" type="Box" width="1050">
-   </BOUNDS>
-   <BOUNDS height="160" left="8220" top="9105" type="Window" width="215">
-   </BOUNDS>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.21">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="30" dstpinname="Alpha" srcnodeid="22" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="Hidden" id="21" nodename="Sphere (EX9.Geometry)" systemname="Sphere (EX9.Geometry)">
    <BOUNDS height="100" left="8385" top="8385" type="Node" width="100">
    </BOUNDS>
@@ -235,7 +221,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="10905" top="8010" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.67">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.43">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -354,8 +340,6 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Keyboard">
    </PIN>
    </NODE>
-   <LINK dstnodeid="30" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="4" srcpinname="Y Output Value">
-   </LINK>
    <LINK dstnodeid="32" dstpinname="Switch" hiddenwhenlocked="1" srcnodeid="4" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="33" dstpinname="Switch" hiddenwhenlocked="1" srcnodeid="4" srcpinname="Y Output Value">
@@ -379,114 +363,6 @@
    <LINK dstnodeid="23" dstpinname="Transform In" srcnodeid="26" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="26" dstpinname="XYZ" hiddenwhenlocked="1" srcnodeid="36" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="Hidden" filename="..\engine\tools\Camera (Transform Softimage SpaceNavigator)\Camera (Transform Softimage SpaceNavigator).v4p" id="39" nodename="Camera (Transform Softimage SpaceNavigator)" systemname="Camera (Transform Softimage SpaceNavigator)">
-   <BOUNDS height="100" left="9045" top="3960" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="View" visible="1">
-   </PIN>
-   <PIN pinname="Projection" visible="1">
-   </PIN>
-   <PIN pinname="Reset" visible="1">
-   </PIN>
-   <PIN pinname="Initial Distance" slicecount="1" values="17.91">
-   </PIN>
-   <PIN pinname="Initial FOV" slicecount="1" values="0.15">
-   </PIN>
-   <PIN pinname="Initial Pitch" slicecount="1" values="0.15">
-   </PIN>
-   <PIN pinname="Initial Yaw" slicecount="1" values="3.46944695195361E-018">
-   </PIN>
-   <BOUNDS height="15060" left="2685" top="525" type="Window" width="13500">
-   </BOUNDS>
-   <BOUNDS left="9045" top="3960" type="Box">
-   </BOUNDS>
-   <PIN pinname="Enabled" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="39" dstpinname="Reset" hiddenwhenlocked="1" srcnodeid="5" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="Hidden" id="42" nodename="Switch (Node Input)" systemname="Switch (Node Input)">
-   <BOUNDS height="270" left="6885" top="5385" type="Node" width="885">
-   </BOUNDS>
-   <PIN pinname="Switch" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="41" nodename="Switch (Node Input)" systemname="Switch (Node Input)">
-   <BOUNDS height="100" left="8790" top="5385" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Switch" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="2">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="42" dstpinname="Input 2" linkstyle="Bezier" srcnodeid="39" srcpinname="View">
-   <LINKPOINT x="9210" y="4793">
-   </LINKPOINT>
-   <LINKPOINT x="7770" y="4793">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="41" dstpinname="Input 2" srcnodeid="39" srcpinname="Projection">
-   </LINK>
-   <LINK dstnodeid="33" dstpinname="Input 2" linkstyle="VHV" srcnodeid="41" srcpinname="Output">
-   <LINKPOINT x="8790" y="5798">
-   </LINKPOINT>
-   <LINKPOINT x="6060" y="5798">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="32" dstpinname="Input 2" linkstyle="VHV" srcnodeid="42" srcpinname="Output">
-   <LINKPOINT x="6865" y="5798">
-   </LINKPOINT>
-   <LINKPOINT x="3920" y="5798">
-   </LINKPOINT>
-   </LINK>
-   <NODE componentmode="InABox" id="43" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="7920" top="180" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="480" left="7920" top="180" type="Box" width="480">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Show Value" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Show Slider" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Minimum" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Maximum" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="UseSpaceMouse">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="42" dstpinname="Switch" linkstyle="Bezier" srcnodeid="43" srcpinname="Y Output Value">
-   <LINKPOINT x="8355" y="2730">
-   </LINKPOINT>
-   <LINKPOINT x="6915" y="2880">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="39" dstpinname="Enabled" linkstyle="Bezier" srcnodeid="43" srcpinname="Y Output Value">
-   <LINKPOINT x="8400" y="2018">
-   </LINKPOINT>
-   <LINKPOINT x="10155" y="2168">
-   </LINKPOINT>
    </LINK>
    <NODE componentmode="Hidden" id="44" nodename="Subtract (Value)" systemname="Subtract (Value)">
    <BOUNDS height="100" left="5175" top="1950" type="Node" width="100">
@@ -526,7 +402,7 @@
    </NODE>
    <LINK dstnodeid="45" dstpinname="Input 2" srcnodeid="46" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\engine\tools\Camera (Transform).v4p" id="47" nodename="..\engine\tools\Camera (Transform).v4p" systemname="Camera (Transform)">
+   <NODE componentmode="InAWindow" filename="..\engine\tools\Camera (Transform).v4p" id="47" nodename="..\engine\tools\Camera (Transform).v4p" systemname="Camera (Transform)">
    <BOUNDS height="270" left="7290" top="3960" type="Node" width="1200">
    </BOUNDS>
    <PIN pinname="XY" visible="1">
@@ -545,6 +421,8 @@
    </BOUNDS>
    <PIN pinname="LookAt XYZ" visible="1">
    </PIN>
+   <PIN pinname="Position XYZ" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="47" dstpinname="XY" srcnodeid="13" srcpinname="Y Output Value">
    </LINK>
@@ -552,14 +430,6 @@
    <LINKPOINT x="9990" y="2235">
    </LINKPOINT>
    <LINKPOINT x="8475" y="2385">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="42" dstpinname="Input 1" srcnodeid="47" srcpinname="View">
-   </LINK>
-   <LINK dstnodeid="41" dstpinname="Input 1" linkstyle="Bezier" srcnodeid="47" srcpinname="Projection">
-   <LINKPOINT x="8490" y="4808">
-   </LINKPOINT>
-   <LINKPOINT x="9075" y="4808">
    </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="48" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -669,5 +539,53 @@
    <LINK dstnodeid="35" dstpinname="Keyboard" srcnodeid="38" srcpinname="Output String">
    </LINK>
    <LINK dstnodeid="35" dstpinname="XY" srcnodeid="45" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Projection" dstnodeid="33" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="View" dstnodeid="32" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="30" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="59">
+   <BOUNDS type="Node" left="10035" top="6060" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Polar (3d Vector)" nodename="Polar (3d Vector)" componentmode="Hidden" id="60">
+   <BOUNDS type="Node" left="10035" top="6495" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Length" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="60" dstpinname="XYZ">
+   </LINK>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="61">
+   <BOUNDS type="Node" left="10035" top="6825" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mapping" slicecount="1" values="Clamp">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Maximum" slicecount="1" values="0.5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="60" srcpinname="Length" dstnodeid="61" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="30" dstpinname="Alpha">
+   </LINK>
+   <LINK srcnodeid="36" srcpinname="Output" dstnodeid="59" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Position XYZ" dstnodeid="59" dstpinname="Input 2">
    </LINK>
    </PATCH>

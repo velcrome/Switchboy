@@ -953,11 +953,11 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="299" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="7110" top="1845" type="Node" width="100">
+   <BOUNDS height="100" left="6855" top="1770" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="7110" top="1845" type="Box" width="795">
+   <BOUNDS height="240" left="6855" top="1770" type="Box" width="795">
    </BOUNDS>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="ID">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="TouchID">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -1217,6 +1217,8 @@
    </PIN>
    <PIN pinname="IsUsed" visible="1">
    </PIN>
+   <PIN pinname="TouchID" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="229" dstpinname="Default" hiddenwhenlocked="1" linkstyle="Bezier" srcnodeid="45" srcpinname="Color Output">
    <LINKPOINT x="18330" y="5950">
@@ -1387,5 +1389,7 @@
    <LINK dstnodeid="316" dstpinname="Retriggerable" srcnodeid="318" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="284" dstpinname="Input 2" linkstyle="PolyLine" srcnodeid="286" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="229" dstpinname="TouchID" srcnodeid="299" srcpinname="Y Output Value">
    </LINK>
    </PATCH>
