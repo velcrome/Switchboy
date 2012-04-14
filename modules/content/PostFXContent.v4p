@@ -890,64 +890,6 @@
    </LINK>
    <LINK dstnodeid="62" dstpinname="TouchID" srcnodeid="112" srcpinname="TouchID">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\..\PostFX\selfdistort\root_Selfdistort.v4p" id="90" managers="boygroup" nodename="..\..\PostFX\selfdistort\root_Selfdistort.v4p" systemname="root_Selfdistort">
-   <BOUNDS height="270" left="5490" top="12825" type="Node" width="6615">
-   </BOUNDS>
-   <PIN pinname="ID" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Layer Out" visible="1">
-   </PIN>
-   <PIN pinname="Color" visible="1">
-   </PIN>
-   <PIN pinname="BackgroundColor" visible="1">
-   </PIN>
-   <PIN pinname="DMXTable" visible="1">
-   </PIN>
-   <PIN pinname="Buttons" visible="1">
-   </PIN>
-   <PIN pinname="Fader" visible="1">
-   </PIN>
-   <PIN pinname="Controller Names" visible="1">
-   </PIN>
-   <PIN pinname="Reset" visible="1">
-   </PIN>
-   <BOUNDS height="14520" left="4755" top="3540" type="Window" width="15000">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN encoded="0" pinname="GlobalStrings" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Globals" slicecount="1" visible="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="41" dstpinname="Node ID" linkstyle="VHV" srcnodeid="90" srcpinname="ID">
-   <LINKPOINT x="12585" y="13335">
-   </LINKPOINT>
-   <LINKPOINT x="13710" y="13335">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="90" dstpinname="Texture" srcnodeid="56" srcpinname="Output Node">
-   </LINK>
-   <LINK dstnodeid="90" dstpinname="Color" linkstyle="Bezier" srcnodeid="62" srcpinname="Color">
-   <LINKPOINT x="7500" y="10928">
-   </LINKPOINT>
-   <LINKPOINT x="9870" y="10928">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="90" dstpinname="DMXTable" srcnodeid="79" srcpinname="DMXPacket">
-   </LINK>
-   <LINK dstnodeid="90" dstpinname="Buttons" srcnodeid="82" srcpinname="Output 1">
-   </LINK>
-   <LINK dstnodeid="90" dstpinname="Fader" srcnodeid="82" srcpinname="Output 2">
-   </LINK>
-   <LINK dstnodeid="90" dstpinname="Reset" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="92" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="93" dstpinname="Input 1" srcnodeid="90" srcpinname="Controller Names">
-   </LINK>
-   <LINK dstnodeid="38" dstpinname="Layers" srcnodeid="90" srcpinname="Layer">
-   </LINK>
    <NODE componentmode="Hidden" id="116" managers="" nodename="R (Value)" systemname="R (Value)">
    <BOUNDS height="100" left="18810" top="855" type="Node" width="100">
    </BOUNDS>
@@ -1069,5 +1011,63 @@
    <LINK dstnodeid="122" dstpinname="Input 2" srcnodeid="115" srcpinname="TestProjection">
    </LINK>
    <LINK dstnodeid="96" dstpinname="Y Input Value" srcnodeid="122" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" filename="..\..\PostFX\Ascii\root_Ascii.v4p" id="90" managers="boygroup" nodename="..\..\PostFX\Ascii\root_Ascii.v4p" systemname="root_Ascii">
+   <BOUNDS height="270" left="5490" top="12825" type="Node" width="6615">
+   </BOUNDS>
+   <PIN pinname="ID" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="BackgroundColor" visible="1">
+   </PIN>
+   <PIN pinname="DMXTable" visible="1">
+   </PIN>
+   <PIN pinname="Buttons" visible="1">
+   </PIN>
+   <PIN pinname="Fader" visible="1">
+   </PIN>
+   <PIN pinname="Controller Names" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <BOUNDS height="14520" left="4755" top="3540" type="Window" width="15000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="GlobalStrings" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Globals" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="41" dstpinname="Node ID" linkstyle="VHV" srcnodeid="90" srcpinname="ID">
+   <LINKPOINT x="12585" y="13335">
+   </LINKPOINT>
+   <LINKPOINT x="13710" y="13335">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="90" dstpinname="Texture" srcnodeid="56" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="90" dstpinname="Color" linkstyle="Bezier" srcnodeid="62" srcpinname="Color">
+   <LINKPOINT x="7500" y="10928">
+   </LINKPOINT>
+   <LINKPOINT x="9870" y="10928">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="90" dstpinname="DMXTable" srcnodeid="79" srcpinname="DMXPacket">
+   </LINK>
+   <LINK dstnodeid="90" dstpinname="Buttons" srcnodeid="82" srcpinname="Output 1">
+   </LINK>
+   <LINK dstnodeid="90" dstpinname="Fader" srcnodeid="82" srcpinname="Output 2">
+   </LINK>
+   <LINK dstnodeid="90" dstpinname="Reset" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="92" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="93" dstpinname="Input 1" srcnodeid="90" srcpinname="Controller Names">
+   </LINK>
+   <LINK dstnodeid="38" dstpinname="Layers" srcnodeid="90" srcpinname="Layer">
    </LINK>
    </PATCH>

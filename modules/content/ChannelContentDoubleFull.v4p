@@ -142,7 +142,7 @@
    </NODE>
    <LINK dstnodeid="110" dstpinname="Input Node" srcnodeid="3" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="InAWindow" filename="channels\Channel1.v4p" id="113" managers="boygroup" nodename="channels\Channel1.v4p" systemname="Channel1">
+   <NODE componentmode="Hidden" filename="channels\Channel1.v4p" id="113" managers="boygroup" nodename="channels\Channel1.v4p" systemname="Channel1">
    <BOUNDS height="270" left="7650" top="9840" type="Node" width="2190">
    </BOUNDS>
    <PIN pinname="RenderState" visible="1">
@@ -1408,7 +1408,7 @@
    </NODE>
    <LINK dstnodeid="174" dstpinname="Input 1" srcnodeid="219" srcpinname="Output">
    </LINK>
-   <NODE componentmode="InAWindow" filename="Channel0.v4p" id="112" managers="boygroup" nodename="Channel0.v4p" systemname="Channel0">
+   <NODE componentmode="Hidden" filename="Channel0.v4p" id="112" managers="boygroup" nodename="Channel0.v4p" systemname="Channel0">
    <BOUNDS height="270" left="4395" top="9840" type="Node" width="2190">
    </BOUNDS>
    <PIN pinname="RenderState" visible="1">

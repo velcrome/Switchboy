@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\root_Switchboy.v4p" componentmode="Hidden" filename="C:\dev\vvvv\switchboy3\root_Switchboy.v4p" systemname="root_Switchboy">
-   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
+   <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="InAWindow" filename="environment\BoygroupSetup.v4p" id="58" nodename="environment\BoygroupSetup.v4p" systemname="BoygroupSetup">
    <BOUNDS height="100" left="3405" top="4305" type="Node" width="100">
@@ -9,7 +9,7 @@
    </PIN>
    <PIN pinname="UseBeamer" visible="1">
    </PIN>
-   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
+   <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
    </BOUNDS>
    <PIN pinname="ClientID" visible="1">
    </PIN>
@@ -83,7 +83,7 @@
    <NODE componentmode="InAWindow" filename="Switchboy.v4p" id="47" nodename="Switchboy.v4p" systemname="Switchboy">
    <BOUNDS height="270" left="1440" top="7890" type="Node" width="10680">
    </BOUNDS>
-   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
+   <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
    </BOUNDS>
    <PIN pinname="WallTransform" visible="1">
    </PIN>
@@ -303,7 +303,7 @@
    </BOUNDS>
    <BOUNDS height="480" left="4410" top="2970" type="Box" width="480">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -319,7 +319,7 @@
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="UseBoygrouping">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="83" dstpinname="Switch" srcnodeid="84" srcpinname="Y Output Value">
@@ -649,7 +649,7 @@
    </PIN>
    <BOUNDS height="270" left="4980" top="5475" type="Node" width="2100">
    </BOUNDS>
-   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
+   <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
    </BOUNDS>
    <PIN pinname="BeamerView" visible="1">
    </PIN>
@@ -672,12 +672,12 @@
    </LINK>
    <LINK dstnodeid="47" dstpinname="BeamerView" srcnodeid="90" srcpinname="BeamerView">
    </LINK>
-   <NODE componentmode="Hidden" debug="0" filename="environment\WallsEventwerk.v4p" id="52" managers="boygroup" nodename="environment\WallsEventwerk.v4p" systemname="WallsEventwerk">
+   <NODE componentmode="InAWindow" debug="0" filename="environment\WallsEventwerk.v4p" id="52" managers="boygroup" nodename="environment\WallsEventwerk.v4p" systemname="WallsEventwerk">
    <BOUNDS height="270" left="3750" top="7335" type="Node" width="1530">
    </BOUNDS>
    <BOUNDS height="3600" left="3750" top="7335" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="15090" left="11340" top="2745" type="Window" width="12600">
+   <BOUNDS height="15090" left="465" top="960" type="Window" width="12600">
    </BOUNDS>
    <PIN pinname="WallTransform" visible="1">
    </PIN>

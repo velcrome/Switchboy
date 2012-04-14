@@ -455,7 +455,7 @@
    </PIN>
    <PIN pinname="Size X" slicecount="1" values="0.96">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="3" values="1,0,0">
+   <PIN pinname="Internal Value" slicecount="3" values="0,0,0">
    </PIN>
    <PIN pinname="Mouse Over Color" visible="1">
    </PIN>

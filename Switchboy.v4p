@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\Switchboy.v4p" filename="C:\dev\vvvv\switchboy3\Switchboy_DoubleFull.v4p" locked="0" systemname="Switchboy_DoubleFull">
-   <BOUNDS height="15090" left="8880" top="1695" type="Window" width="12600">
+   <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="53" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="16590" top="27540" type="Node" width="5505">
@@ -13,7 +13,7 @@
    </PIN>
    <PIN pinname="Layer Template Count" slicecount="1" values="9">
    </PIN>
-   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   <PIN pinname="Layer 3" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Layer 5" visible="1">
    </PIN>
@@ -190,7 +190,7 @@
    <PIN pinname="Clip Device" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" filename="c:\Switchboy3\modules\engine\TestBeamerProjection.v4p" id="182" managers="boygroup" nodename="engine\tools\TestBeamerProjection.v4p" systemname="TestBeamerProjection">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\engine\TestBeamerProjection.v4p" id="182" managers="boygroup" nodename="engine\tools\TestBeamerProjection.v4p" systemname="TestBeamerProjection">
    <BOUNDS height="100" left="12942" top="22698" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="12942" top="22698" type="Box" width="4800">
@@ -220,14 +220,14 @@
    <PIN pinname="BeamerResolution" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="53" dstpinname="Layer 1" linkstyle="PolyLine" srcnodeid="80" srcpinname="Output" hiddenwhenlocked="1">
+   <LINK dstnodeid="53" dstpinname="Layer 1" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="80" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="183" managers="boygroup" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="11199" top="22185" type="Node" width="1125">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   <PIN pinname="Layer 1" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Layer 2" visible="1">
    </PIN>
@@ -389,7 +389,7 @@
    </BOUNDS>
    <BOUNDS height="1800" left="23940" top="30555" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="15090" left="19785" top="0" type="Window" width="12600">
+   <BOUNDS height="15090" left="11205" top="405" type="Window" width="12600">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -437,7 +437,7 @@
    <NODE componentmode="Hidden" id="237" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="23940" top="27540" type="Node" width="9720">
    </BOUNDS>
-   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   <PIN pinname="Layer 1" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -550,7 +550,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" filename="c:\Switchboy3\modules\input\DataBinder.v4p" id="227" managers="boygroup" nodename="DataBinder.v4p" systemname="DataBinder">
+   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\input\DataBinder.v4p" id="227" managers="boygroup" nodename="DataBinder.v4p" systemname="DataBinder">
    <BOUNDS height="270" left="24795" top="21135" type="Node" width="6000">
    </BOUNDS>
    <BOUNDS height="3600" left="24795" top="21135" type="Box" width="4800">
@@ -607,10 +607,10 @@
    </PIN>
    <BOUNDS left="24180" top="15540" type="Box">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="BindIt!" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="BindIt!">
    </PIN>
    </NODE>
-   <LINK dstnodeid="237" dstpinname="Layer 5" linkstyle="PolyLine" srcnodeid="235" srcpinname="Layer" hiddenwhenlocked="1">
+   <LINK dstnodeid="237" dstpinname="Layer 5" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="235" srcpinname="Layer">
    </LINK>
    <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\gui\EmulateMultitouch.v4p" id="223" nodename="gui\EmulateMultitouch.v4p" systemname="EmulateMultitouch">
    <BOUNDS height="100" left="31080" top="4470" type="Node" width="100">
@@ -653,7 +653,7 @@
    </PIN>
    <PIN encoded="0" pinname="Send String" slicecount="1" values="Multitouch">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Multitouch" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Multitouch">
    </PIN>
    </NODE>
    <LINK dstnodeid="222" dstpinname="Input Value" linkstyle="PolyLine" srcnodeid="223" srcpinname="MTData">
@@ -733,7 +733,7 @@
    </PIN>
    <PIN pinname="Mouse XYZ" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="2385" top="4305" width="9000" height="7845">
+   <BOUNDS height="7845" left="2385" top="4305" type="Window" width="9000">
    </BOUNDS>
    </NODE>
    <NODE componentmode="Hidden" id="260" nodename="DX9Texture (EX9.Texture)" systemname="DX9Texture (EX9.Texture)">
@@ -963,7 +963,7 @@
    <NODE componentmode="Hidden" id="304" managers="boygroup" nodename="GetSlice (Node)" systemname="GetSlice (Node)">
    <BOUNDS height="270" left="2040" top="15855" type="Node" width="735">
    </BOUNDS>
-   <PIN pinname="Index" visible="1">
+   <PIN pinname="Index" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -975,7 +975,7 @@
    <NODE componentmode="Hidden" id="305" managers="boygroup" nodename="GetSlice (Node)" systemname="GetSlice (Node)">
    <BOUNDS height="270" left="1080" top="15720" type="Node" width="735">
    </BOUNDS>
-   <PIN pinname="Index" visible="1">
+   <PIN pinname="Index" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -1035,7 +1035,7 @@
    </PIN>
    <PIN pinname="Layer 3" visible="1">
    </PIN>
-   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   <PIN pinname="Layer 4" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Layer 5" visible="1">
    </PIN>
@@ -1140,9 +1140,9 @@
    <PIN pinname="Y" slicecount="1" values="0.72">
    </PIN>
    </NODE>
-   <LINK dstnodeid="237" dstpinname="Layer 7" linkstyle="PolyLine" srcnodeid="223" srcpinname="Layer" hiddenwhenlocked="1">
+   <LINK dstnodeid="237" dstpinname="Layer 7" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="223" srcpinname="Layer">
    </LINK>
-   <LINK dstnodeid="237" dstpinname="Layer 3" linkstyle="PolyLine" srcnodeid="139" srcpinname="LayerGUI" hiddenwhenlocked="1">
+   <LINK dstnodeid="237" dstpinname="Layer 3" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="139" srcpinname="LayerGUI">
    </LINK>
    <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\gui\GlobalGUI2.v4p" id="342" nodename="gui\GlobalGUI2.v4p" systemname="GlobalGUI2">
    <BOUNDS height="270" left="30780" top="17070" type="Node" width="7140">
@@ -1281,14 +1281,14 @@
    </PIN>
    <PIN pinname="&lt;RETURN&gt; Output" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Tap Rhythm|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Tap Rhythm|">
    </PIN>
    </NODE>
    <LINK dstnodeid="343" dstpinname="Transform In" linkstyle="PolyLine" srcnodeid="344" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="235" dstpinname="BindIt! Channels" linkstyle="PolyLine" srcnodeid="224" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="237" dstpinname="Layer 4" linkstyle="PolyLine" srcnodeid="259" srcpinname="Layer" hiddenwhenlocked="0">
+   <LINK dstnodeid="237" dstpinname="Layer 4" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="259" srcpinname="Layer">
    </LINK>
    <LINK dstnodeid="235" dstpinname="XY" linkstyle="VHV" srcnodeid="231" srcpinname="XY">
    <LINKPOINT x="26665" y="16898">
@@ -1390,7 +1390,7 @@
    <LINKPOINT x="6875" y="16793">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="317" dstpinname="Layer 1" linkstyle="PolyLine" srcnodeid="80" srcpinname="Output" hiddenwhenlocked="1">
+   <LINK dstnodeid="317" dstpinname="Layer 1" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="80" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="394" managers="boygroup" nodename="Switch (Node Input)" systemname="Switch (Node Input)">
    <PIN pinname="Switch" visible="1">
@@ -1406,7 +1406,7 @@
    </NODE>
    <LINK dstnodeid="394" dstpinname="Switch" linkstyle="PolyLine" srcnodeid="389" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="317" dstpinname="Layer 2" linkstyle="PolyLine" srcnodeid="394" srcpinname="Output" hiddenwhenlocked="1">
+   <LINK dstnodeid="317" dstpinname="Layer 2" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="394" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="396" managers="" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <BOUNDS height="100" left="18795" top="25485" type="Node" width="100">
@@ -1452,10 +1452,10 @@
    </LINK>
    <LINK dstnodeid="304" dstpinname="Input Node" linkstyle="PolyLine" srcnodeid="398" srcpinname="Output Node">
    </LINK>
-   <NODE componentmode="InABox" id="402" nodename="IOBox (Color)" systemname="IOBox (Color)" managers="boygroup">
-   <BOUNDS height="100" left="20340" top="10440" type="Node" width="100">
+   <NODE componentmode="InABox" id="402" managers="boygroup" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="100" left="10335" top="6405" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="480" left="20340" top="10440" type="Box" width="1380">
+   <BOUNDS height="480" left="10335" top="6405" type="Box" width="1380">
    </BOUNDS>
    <PIN pinname="Color Input" slicecount="3" visible="1" values="|0.00000,0.00000,1.00000,1.00000|,|1.00000,0.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|">
    </PIN>
@@ -1467,9 +1467,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="403" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="21945" top="10440" type="Node" width="100">
+   <BOUNDS height="100" left="11640" top="10275" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="465" left="21945" top="10440" type="Box" width="795">
+   <BOUNDS height="465" left="11640" top="10275" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
    </PIN>
@@ -1493,9 +1493,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="405" managers="boygroup" nodename="IOBox (Node)" systemname="IOBox (Node)">
-   <BOUNDS height="100" left="1800" top="6780" type="Node" width="100">
+   <BOUNDS height="100" left="5070" top="7080" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="1800" top="6780" type="Box" width="795">
+   <BOUNDS height="240" left="5070" top="7080" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
@@ -1569,7 +1569,7 @@
    <NODE componentmode="InABox" id="413" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="2895" top="17220" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="2895" top="17220" type="Box" width="345">
+   <BOUNDS height="480" left="2895" top="17220" type="Box" width="585">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="2" values="1024,768">
    </PIN>
@@ -1619,7 +1619,7 @@
    </PIN>
    <PIN pinname="EnvironmentTransform" visible="1">
    </PIN>
-   <BOUNDS height="15090" left="8790" top="2070" type="Window" width="12600">
+   <BOUNDS height="15090" left="2115" top="1065" type="Window" width="12600">
    </BOUNDS>
    <PIN pinname="Color" visible="1">
    </PIN>
@@ -1667,9 +1667,9 @@
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="195" dstpinname="BeamerColor" linkstyle="VHV" srcnodeid="402" srcpinname="Color Output">
-   <LINKPOINT x="20340" y="11348">
+   <LINKPOINT x="13670" y="8658">
    </LINKPOINT>
-   <LINKPOINT x="18255" y="11348">
+   <LINKPOINT x="14920" y="10003">
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="195" dstpinname="UseBeamer" linkstyle="PolyLine" srcnodeid="404" srcpinname="Y Output Value">
@@ -1724,7 +1724,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Multitouch">
    </PIN>
    </NODE>
-   <LINK dstnodeid="237" dstpinname="Layer 6" linkstyle="PolyLine" srcnodeid="342" srcpinname="Layer" hiddenwhenlocked="1">
+   <LINK dstnodeid="237" dstpinname="Layer 6" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="342" srcpinname="Layer">
    </LINK>
    <LINK dstnodeid="278" dstpinname="ImmersivePersonStart" linkstyle="Bezier" srcnodeid="295" srcpinname="Y Output Value">
    <LINKPOINT x="39360" y="11265">
@@ -1732,8 +1732,8 @@
    <LINKPOINT x="39930" y="11265">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="InAWindow" debug="0" filename="c:\Switchboy3\modules\calibration\EditWallMesh.v4p" id="425" nodename="engine\projection\EditWallMesh.v4p" systemname="EditWallMesh">
-   <BOUNDS height="100" left="10560" top="6585" type="Node" width="100">
+   <NODE componentmode="Hidden" debug="0" filename="c:\Switchboy3\modules\calibration\EditWallMesh.v4p" id="425" nodename="engine\projection\EditWallMesh.v4p" systemname="EditWallMesh">
+   <BOUNDS height="100" left="5910" top="9375" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Transform Mesh" visible="1">
    </PIN>
@@ -1753,7 +1753,7 @@
    </PIN>
    <PIN pinname="Initialize">
    </PIN>
-   <BOUNDS left="10560" top="6585" type="Box">
+   <BOUNDS left="5910" top="9375" type="Box">
    </BOUNDS>
    <PIN pinname="ResetAll" slicecount="1" visible="1" values="0">
    </PIN>
@@ -1814,9 +1814,9 @@
    </LINK>
    <LINK dstnodeid="425" dstpinname="Save" linkstyle="PolyLine" srcnodeid="410" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="53" dstpinname="Layer 4" linkstyle="PolyLine" srcnodeid="394" srcpinname="Output" hiddenwhenlocked="1">
+   <LINK dstnodeid="53" dstpinname="Layer 4" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="394" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="317" dstpinname="Layer 4" linkstyle="PolyLine" srcnodeid="425" srcpinname="Layer" hiddenwhenlocked="1">
+   <LINK dstnodeid="317" dstpinname="Layer 4" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="425" srcpinname="Layer">
    </LINK>
    <LINK dstnodeid="142" dstpinname="Layers" linkstyle="PolyLine" srcnodeid="317" srcpinname="Layer">
    </LINK>
@@ -1952,7 +1952,7 @@
    <LINKPOINT x="25620" y="13185">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="237" dstpinname="Layer 2" linkstyle="PolyLine" srcnodeid="253" srcpinname="GuiLayer" hiddenwhenlocked="1">
+   <LINK dstnodeid="237" dstpinname="Layer 2" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="253" srcpinname="GuiLayer">
    </LINK>
    <LINK dstnodeid="253" dstpinname="Update" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="379" srcpinname="Y Output Value">
    </LINK>
@@ -1960,7 +1960,7 @@
    </LINK>
    <LINK dstnodeid="253" dstpinname="Path" linkstyle="PolyLine" srcnodeid="421" srcpinname="Output String">
    </LINK>
-   <LINK dstnodeid="214" dstpinname="Input 2" linkstyle="PolyLine" srcnodeid="139" srcpinname="Layer" hiddenwhenlocked="1">
+   <LINK dstnodeid="214" dstpinname="Input 2" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="139" srcpinname="Layer">
    </LINK>
    <LINK dstnodeid="254" dstpinname="Texture" linkstyle="PolyLine" srcnodeid="253" srcpinname="Texture">
    </LINK>
@@ -2023,10 +2023,10 @@
    </PIN>
    <BOUNDS height="8685" left="4710" top="3645" type="Window" width="11760">
    </BOUNDS>
-   <BOUNDS type="Box" left="14985" top="26535">
+   <BOUNDS left="14985" top="26535" type="Box">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="53" dstpinname="Layer 5" linkstyle="Bezier" srcnodeid="289" srcpinname="Layer" hiddenwhenlocked="0">
+   <LINK dstnodeid="53" dstpinname="Layer 5" hiddenwhenlocked="0" linkstyle="Bezier" srcnodeid="289" srcpinname="Layer">
    <LINKPOINT x="15045" y="27158">
    </LINKPOINT>
    <LINKPOINT x="19005" y="27158">
@@ -2178,13 +2178,13 @@
    </LINK>
    <LINK dstnodeid="252" dstpinname="ViewportTransform" linkstyle="PolyLine" srcnodeid="184" srcpinname="Viewports">
    </LINK>
-   <LINK dstnodeid="254" dstpinname="ViewPortTransform" srcnodeid="184" srcpinname="Viewports" linkstyle="Bezier">
+   <LINK dstnodeid="254" dstpinname="ViewPortTransform" linkstyle="Bezier" srcnodeid="184" srcpinname="Viewports">
    <LINKPOINT x="17130" y="15915">
    </LINKPOINT>
    <LINKPOINT x="19395" y="15915">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="53" dstpinname="Layer 7" linkstyle="PolyLine" srcnodeid="278" srcpinname="Layer" hiddenwhenlocked="1">
+   <LINK dstnodeid="53" dstpinname="Layer 7" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="278" srcpinname="Layer">
    </LINK>
    <NODE componentmode="InABox" id="460" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <BOUNDS height="0" left="22530" top="25485" type="Node" width="0">
@@ -2198,7 +2198,7 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="53" dstpinname="Layer 8" srcnodeid="214" srcpinname="Output" hiddenwhenlocked="0">
+   <LINK dstnodeid="53" dstpinname="Layer 8" hiddenwhenlocked="0" srcnodeid="214" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" id="462" nodename="MessageConfig (Value)" systemname="MessageConfig (Value)">
    <BOUNDS height="100" left="4050" top="3180" type="Node" width="100">
@@ -2591,7 +2591,7 @@
    </PIN>
    <PIN pinname="TouchID" slicecount="1" visible="1" values="0">
    </PIN>
-   <BOUNDS type="Box" left="31080" top="5010">
+   <BOUNDS left="31080" top="5010" type="Box">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="491" dstpinname="ID" srcnodeid="223" srcpinname="ID">
@@ -2641,36 +2641,36 @@
    </PIN>
    <PIN pinname="TouchID" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="25995" top="15900">
+   <BOUNDS left="25995" top="15900" type="Box">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="492" dstpinname="Data" srcnodeid="423" srcpinname="Input Value">
    </LINK>
-   <LINK dstnodeid="235" dstpinname="isNew" srcnodeid="492" srcpinname="isNew" linkstyle="VHV">
+   <LINK dstnodeid="235" dstpinname="isNew" linkstyle="VHV" srcnodeid="492" srcpinname="isNew">
    <LINKPOINT x="26615" y="16620">
    </LINKPOINT>
    <LINKPOINT x="27025" y="16620">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="235" dstpinname="Scroll" srcnodeid="492" srcpinname="Scroll" linkstyle="VHV">
+   <LINK dstnodeid="235" dstpinname="Scroll" linkstyle="VHV" srcnodeid="492" srcpinname="Scroll">
    <LINKPOINT x="27425" y="16620">
    </LINKPOINT>
    <LINKPOINT x="27385" y="16620">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="235" dstpinname="EditMode" srcnodeid="492" srcpinname="EditMode" linkstyle="VHV">
+   <LINK dstnodeid="235" dstpinname="EditMode" linkstyle="VHV" srcnodeid="492" srcpinname="EditMode">
    <LINKPOINT x="27710" y="16620">
    </LINKPOINT>
    <LINKPOINT x="27730" y="16620">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="231" dstpinname="X" srcnodeid="492" srcpinname="X" linkstyle="VHV">
+   <LINK dstnodeid="231" dstpinname="X" linkstyle="VHV" srcnodeid="492" srcpinname="X">
    <LINKPOINT x="26815" y="16305">
    </LINKPOINT>
    <LINKPOINT x="26675" y="16305">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="231" dstpinname="Y" srcnodeid="492" srcpinname="Y" linkstyle="VHV">
+   <LINK dstnodeid="231" dstpinname="Y" linkstyle="VHV" srcnodeid="492" srcpinname="Y">
    <LINKPOINT x="27145" y="16313">
    </LINKPOINT>
    <LINKPOINT x="27200" y="16313">
@@ -2719,46 +2719,46 @@
    </PIN>
    <PIN pinname="Bang One" slicecount="1" visible="1" values="0">
    </PIN>
-   <BOUNDS type="Box" left="38070" top="17805">
+   <BOUNDS left="38070" top="17805" type="Box">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="495" dstpinname="Filtertime" srcnodeid="342" srcpinname="Filtertime" linkstyle="VHV">
+   <LINK dstnodeid="495" dstpinname="Filtertime" linkstyle="VHV" srcnodeid="342" srcpinname="Filtertime">
    <LINKPOINT x="37140" y="17558">
    </LINKPOINT>
    <LINKPOINT x="39345" y="17558">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="495" dstpinname="Energy Decay" srcnodeid="342" srcpinname="Decay" linkstyle="VHV">
+   <LINK dstnodeid="495" dstpinname="Energy Decay" linkstyle="VHV" srcnodeid="342" srcpinname="Decay">
    <LINKPOINT x="35955" y="17558">
    </LINKPOINT>
    <LINKPOINT x="39180" y="17558">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="495" dstpinname="AutoMode" srcnodeid="342" srcpinname="Auto" linkstyle="VHV">
+   <LINK dstnodeid="495" dstpinname="AutoMode" linkstyle="VHV" srcnodeid="342" srcpinname="Auto">
    <LINKPOINT x="36735" y="17558">
    </LINKPOINT>
    <LINKPOINT x="39495" y="17558">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="495" dstpinname="Reset" srcnodeid="342" srcpinname="AudioReset" linkstyle="VHV">
+   <LINK dstnodeid="495" dstpinname="Reset" linkstyle="VHV" srcnodeid="342" srcpinname="AudioReset">
    <LINKPOINT x="36345" y="17558">
    </LINKPOINT>
    <LINKPOINT x="39660" y="17558">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="495" dstpinname="Latency" srcnodeid="342" srcpinname="Latency" linkstyle="VHV">
+   <LINK dstnodeid="495" dstpinname="Latency" linkstyle="VHV" srcnodeid="342" srcpinname="Latency">
    <LINKPOINT x="35565" y="17558">
    </LINKPOINT>
    <LINKPOINT x="39030" y="17558">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="495" dstpinname="Gain" srcnodeid="342" srcpinname="Gain" linkstyle="VHV">
+   <LINK dstnodeid="495" dstpinname="Gain" linkstyle="VHV" srcnodeid="342" srcpinname="Gain">
    <LINKPOINT x="34770" y="17558">
    </LINKPOINT>
    <LINKPOINT x="38385" y="17558">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="495" dstpinname="Finetune" srcnodeid="342" srcpinname="FineTune" linkstyle="VHV">
+   <LINK dstnodeid="495" dstpinname="Finetune" linkstyle="VHV" srcnodeid="342" srcpinname="FineTune">
    <LINKPOINT x="35160" y="17558">
    </LINKPOINT>
    <LINKPOINT x="38550" y="17558">
@@ -2799,7 +2799,7 @@
    </PIN>
    <PIN pinname="Latency" visible="1">
    </PIN>
-   <PIN pinname="Energy Decay" visible="-1" pintype="Output">
+   <PIN pinname="Energy Decay" pintype="Output" visible="-1">
    </PIN>
    <PIN pinname="Filtertime" visible="1">
    </PIN>
@@ -2809,7 +2809,7 @@
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="22560" top="4260">
+   <BOUNDS left="22560" top="4260" type="Box">
    </BOUNDS>
    </NODE>
    <NODE componentmode="Hidden" id="498" nodename="R (Value)" systemname="R (Value)">
@@ -2824,19 +2824,19 @@
    </NODE>
    <LINK dstnodeid="497" dstpinname="Data" srcnodeid="498" srcpinname="Input Value">
    </LINK>
-   <LINK dstnodeid="495" dstpinname="Bang Manual" srcnodeid="369" srcpinname="&lt;SPACE&gt; Output" linkstyle="Bezier">
+   <LINK dstnodeid="495" dstpinname="Bang Manual" linkstyle="Bezier" srcnodeid="369" srcpinname="&lt;SPACE&gt; Output">
    <LINKPOINT x="39060" y="17453">
    </LINKPOINT>
    <LINKPOINT x="38730" y="17453">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="495" dstpinname="Bang One" srcnodeid="369" srcpinname="&lt;RETURN&gt; Output" linkstyle="Bezier">
+   <LINK dstnodeid="495" dstpinname="Bang One" linkstyle="Bezier" srcnodeid="369" srcpinname="&lt;RETURN&gt; Output">
    <LINKPOINT x="40800" y="17438">
    </LINKPOINT>
    <LINKPOINT x="38925" y="17438">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" id="500" nodename="MessageSender (Value)" systemname="MessageSender (Value)" managers="boygroup">
+   <NODE componentmode="Hidden" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" id="500" managers="boygroup" nodename="MessageSender (Value)" systemname="MessageSender (Value)">
    <BOUNDS height="100" left="30855" top="18315" type="Node" width="100">
    </BOUNDS>
    <PIN encoded="0" pinname="MessageID" slicecount="1" values="Modus">
@@ -2870,37 +2870,37 @@
    <PIN pinname="UseMask" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="500" dstpinname="Overview" srcnodeid="342" srcpinname="Overview" linkstyle="VHV">
+   <LINK dstnodeid="500" dstpinname="Overview" linkstyle="VHV" srcnodeid="342" srcpinname="Overview">
    <LINKPOINT x="31575" y="17828">
    </LINKPOINT>
    <LINKPOINT x="31365" y="17828">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="500" dstpinname="Calibrate" srcnodeid="342" srcpinname="Calibrate" linkstyle="VHV">
+   <LINK dstnodeid="500" dstpinname="Calibrate" linkstyle="VHV" srcnodeid="342" srcpinname="Calibrate">
    <LINKPOINT x="31965" y="17828">
    </LINKPOINT>
    <LINKPOINT x="31515" y="17828">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="500" dstpinname="Show 3D Scene" srcnodeid="342" srcpinname="Show 3D Scene" linkstyle="VHV">
+   <LINK dstnodeid="500" dstpinname="Show 3D Scene" linkstyle="VHV" srcnodeid="342" srcpinname="Show 3D Scene">
    <LINKPOINT x="32355" y="17828">
    </LINKPOINT>
    <LINKPOINT x="31995" y="17828">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="500" dstpinname="TestProjection" srcnodeid="342" srcpinname="TestProjection" linkstyle="VHV">
+   <LINK dstnodeid="500" dstpinname="TestProjection" linkstyle="VHV" srcnodeid="342" srcpinname="TestProjection">
    <LINKPOINT x="32745" y="17813">
    </LINKPOINT>
    <LINKPOINT x="31710" y="17813">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="500" dstpinname="ShowPerfmeter" srcnodeid="342" srcpinname="ShowPerfmeter" linkstyle="VHV">
+   <LINK dstnodeid="500" dstpinname="ShowPerfmeter" linkstyle="VHV" srcnodeid="342" srcpinname="ShowPerfmeter">
    <LINKPOINT x="33135" y="17813">
    </LINKPOINT>
    <LINKPOINT x="31875" y="17813">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="500" dstpinname="Immersion" srcnodeid="342" srcpinname="Immersion" linkstyle="VHV">
+   <LINK dstnodeid="500" dstpinname="Immersion" linkstyle="VHV" srcnodeid="342" srcpinname="Immersion">
    <LINKPOINT x="33540" y="17813">
    </LINKPOINT>
    <LINKPOINT x="32190" y="17813">
@@ -2916,7 +2916,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Modus">
    </PIN>
    </NODE>
-   <LINK dstnodeid="501" dstpinname="Input Value" srcnodeid="500" srcpinname="Data" linkstyle="VHV">
+   <LINK dstnodeid="501" dstpinname="Input Value" linkstyle="VHV" srcnodeid="500" srcpinname="Data">
    <LINKPOINT x="32445" y="18638">
    </LINKPOINT>
    <LINKPOINT x="31650" y="18638">
@@ -2945,7 +2945,7 @@
    </PIN>
    <PIN pinname="Add" slicecount="1" values="0">
    </PIN>
-   <BOUNDS type="Box" left="25605" top="5880">
+   <BOUNDS left="25605" top="5880" type="Box">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="503" dstpinname="Identifier" srcnodeid="325" srcpinname="Description">
@@ -2973,7 +2973,7 @@
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Keyboard" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Keyboard">
    </PIN>
    </NODE>
    <LINK dstnodeid="278" dstpinname="Keyboard" srcnodeid="505" srcpinname="Input Value">
@@ -3002,7 +3002,7 @@
    </NODE>
    <LINK dstnodeid="369" dstpinname="Input" srcnodeid="507" srcpinname="Input Value">
    </LINK>
-   <LINK dstnodeid="235" dstpinname="ID" srcnodeid="492" srcpinname="TouchID" linkstyle="VHV">
+   <LINK dstnodeid="235" dstpinname="ID" linkstyle="VHV" srcnodeid="492" srcpinname="TouchID">
    <LINKPOINT x="26315" y="16620">
    </LINKPOINT>
    <LINKPOINT x="26335" y="16620">
@@ -3017,7 +3017,7 @@
    </PIN>
    <PIN pinname="Save" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="ConfigBinSize" slicecount="6" values="3,3,3,3,3,2">
+   <PIN pinname="ConfigBinSize" slicecount="6" values="3,3,3,3,1,2">
    </PIN>
    <PIN pinname="ConfigType" slicecount="6" values="Transform,Transform,Transform,Transform,Value,Value">
    </PIN>
@@ -3033,7 +3033,7 @@
    </PIN>
    <PIN pinname="UsedBeamerProjection" visible="1">
    </PIN>
-   <PIN pinname="UseBeamer" visible="1">
+   <PIN pinname="UseBeamer" slicecount="3" visible="1" values="0">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -3052,36 +3052,8 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Beamer">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" id="511" managers="boygroup" nodename="MessageSender (Value)" systemname="MessageSender (Value)">
-   <BOUNDS height="100" left="945" top="11565" type="Node" width="100">
-   </BOUNDS>
-   <PIN encoded="0" pinname="MessageID" slicecount="1" values="Walls">
-   </PIN>
-   <PIN pinname="Save" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="ConfigBinSize" slicecount="4" values="5,5,5,5">
-   </PIN>
-   <PIN pinname="ConfigType" slicecount="4" values="Transform,Transform,Value,Transform">
-   </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|WallTransform&lf;CorrectedWallTransform&lf;WallBelongsTo&lf;WallColor&lf;|">
-   </PIN>
-   <PIN pinname="WallTransform" visible="1">
-   </PIN>
-   <PIN pinname="CorrectedWallTransform" visible="1">
-   </PIN>
-   <PIN pinname="WallBelongsTo" visible="1">
-   </PIN>
-   <PIN pinname="Data" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="511" dstpinname="WallTransform" srcnodeid="405" srcpinname="Output Node">
-   </LINK>
-   <LINK dstnodeid="511" dstpinname="CorrectedWallTransform" srcnodeid="425" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="511" dstpinname="WallBelongsTo" srcnodeid="406" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="Hidden" id="512" managers="boygroup" nodename="S (Value)" systemname="S (Value)">
-   <BOUNDS height="100" left="2070" top="11940" type="Node" width="100">
+   <BOUNDS height="100" left="2640" top="12045" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
    </PIN>
@@ -3090,8 +3062,6 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Walls">
    </PIN>
    </NODE>
-   <LINK dstnodeid="512" dstpinname="Input Value" srcnodeid="511" srcpinname="Data">
-   </LINK>
    <NODE componentmode="Hidden" id="513" managers="boygroup" nodename="R (Value)" systemname="R (Value)">
    <BOUNDS height="100" left="13485" top="28260" type="Node" width="100">
    </BOUNDS>
@@ -3111,7 +3081,7 @@
    </PIN>
    <PIN pinname="Save" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="ConfigBinSize" slicecount="6" values="3,3,3,3,3,2">
+   <PIN pinname="ConfigBinSize" slicecount="6" values="3,3,3,3,1,2">
    </PIN>
    <PIN pinname="ConfigType" slicecount="6" values="Transform,Transform,Transform,Transform,Value,Value">
    </PIN>
@@ -3123,7 +3093,7 @@
    </PIN>
    <PIN pinname="Resolution Beamer" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="12750" top="28725">
+   <BOUNDS left="12750" top="28725" type="Box">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="514" dstpinname="Data" srcnodeid="513" srcpinname="Input Value">
@@ -3185,7 +3155,7 @@
    <NODE componentmode="Hidden" id="519" managers="boygroup" nodename="Count (Value)" systemname="Count (Value)">
    <BOUNDS height="270" left="2400" top="19800" type="Node" width="600">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Count" visible="1">
    </PIN>
@@ -3353,16 +3323,16 @@
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="38115" top="14235">
+   <BOUNDS left="38115" top="14235" type="Box">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="534" dstpinname="Internal Server Resolution" srcnodeid="377" srcpinname="Y Output Value" linkstyle="Bezier">
+   <LINK dstnodeid="534" dstpinname="Internal Server Resolution" linkstyle="Bezier" srcnodeid="377" srcpinname="Y Output Value">
    <LINKPOINT x="37875" y="13418">
    </LINKPOINT>
    <LINKPOINT x="39000" y="13418">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="534" dstpinname="Internal Client Resolution" srcnodeid="409" srcpinname="Y Output Value" linkstyle="Bezier">
+   <LINK dstnodeid="534" dstpinname="Internal Client Resolution" linkstyle="Bezier" srcnodeid="409" srcpinname="Y Output Value">
    <LINKPOINT x="38025" y="13785">
    </LINKPOINT>
    <LINKPOINT x="39270" y="13785">
@@ -3411,7 +3381,7 @@
    </PIN>
    <PIN pinname="IsClient" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="10485" top="28725">
+   <BOUNDS left="10485" top="28725" type="Box">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="537" dstpinname="Data" srcnodeid="536" srcpinname="Input Value">
@@ -3443,12 +3413,12 @@
    </PIN>
    <PIN pinname="Fullscreen" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="7620" top="28725">
+   <BOUNDS left="7620" top="28725" type="Box">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="539" dstpinname="Data" srcnodeid="538" srcpinname="Input Value">
    </LINK>
-   <LINK dstnodeid="322" dstpinname="Input 1" srcnodeid="539" srcpinname="Fullscreen" linkstyle="Bezier">
+   <LINK dstnodeid="322" dstpinname="Input 1" linkstyle="Bezier" srcnodeid="539" srcpinname="Fullscreen">
    <LINKPOINT x="9015" y="29355">
    </LINKPOINT>
    <LINKPOINT x="10875" y="29355">
@@ -3479,7 +3449,7 @@
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="40905" top="14235">
+   <BOUNDS left="40905" top="14235" type="Box">
    </BOUNDS>
    </NODE>
    <NODE componentmode="Hidden" id="543" nodename="R (Value)" systemname="R (Value)">
@@ -3513,7 +3483,7 @@
    </PIN>
    <PIN pinname="Preview Projection Transform" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="19005" top="29925">
+   <BOUNDS left="19005" top="29925" type="Box">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="544" dstpinname="Data" srcnodeid="543" srcpinname="Input Value">
@@ -3546,13 +3516,13 @@
    </NODE>
    <LINK dstnodeid="524" dstpinname="MessageID" srcnodeid="546" srcpinname="Output String">
    </LINK>
-   <LINK dstnodeid="20" dstpinname="View" srcnodeid="544" srcpinname="Preview View Transform" linkstyle="VHV">
+   <LINK dstnodeid="20" dstpinname="View" linkstyle="VHV" srcnodeid="544" srcpinname="Preview View Transform">
    <LINKPOINT x="20205" y="30360">
    </LINKPOINT>
    <LINKPOINT x="18420" y="30360">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="20" dstpinname="Projection" srcnodeid="544" srcpinname="Preview Projection Transform" linkstyle="VHV">
+   <LINK dstnodeid="20" dstpinname="Projection" linkstyle="VHV" srcnodeid="544" srcpinname="Preview Projection Transform">
    <LINKPOINT x="20505" y="30360">
    </LINKPOINT>
    <LINKPOINT x="18675" y="30360">
@@ -3584,7 +3554,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|GUI Resolution|">
    </PIN>
    </NODE>
-   <LINK dstnodeid="540" dstpinname="SwitchboyResolution" srcnodeid="548" srcpinname="Input Value" linkstyle="Bezier">
+   <LINK dstnodeid="540" dstpinname="SwitchboyResolution" linkstyle="Bezier" srcnodeid="548" srcpinname="Input Value">
    <LINKPOINT x="46725" y="12548">
    </LINKPOINT>
    <LINKPOINT x="41655" y="12548">
@@ -3597,7 +3567,7 @@
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Switchboy" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Switchboy">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" id="550" managers="boygroup" nodename="MessageReceiver (Value)" systemname="MessageReceiver (Value)">
@@ -3623,28 +3593,28 @@
    </PIN>
    <PIN pinname="ImmersivePoint" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="12345" top="14070">
+   <BOUNDS left="12345" top="14070" type="Box">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="273" dstpinname="Input 1" srcnodeid="550" srcpinname="Internal Server Resolution" linkstyle="VHV">
+   <LINK dstnodeid="273" dstpinname="Input 1" linkstyle="VHV" srcnodeid="550" srcpinname="Internal Server Resolution">
    <LINKPOINT x="13005" y="14423">
    </LINKPOINT>
    <LINKPOINT x="13275" y="14423">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="273" dstpinname="Input 2" srcnodeid="550" srcpinname="Internal Client Resolution" linkstyle="VHV">
+   <LINK dstnodeid="273" dstpinname="Input 2" linkstyle="VHV" srcnodeid="550" srcpinname="Internal Client Resolution">
    <LINKPOINT x="13305" y="14423">
    </LINKPOINT>
    <LINKPOINT x="14250" y="14423">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="550" dstpinname="Data" srcnodeid="549" srcpinname="Input Value" linkstyle="VHV">
+   <LINK dstnodeid="550" dstpinname="Data" linkstyle="VHV" srcnodeid="549" srcpinname="Input Value">
    <LINKPOINT x="12405" y="14003">
    </LINKPOINT>
    <LINKPOINT x="13095" y="14003">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="273" dstpinname="Switch" srcnodeid="550" srcpinname="IsClient" linkstyle="VHV">
+   <LINK dstnodeid="273" dstpinname="Switch" linkstyle="VHV" srcnodeid="550" srcpinname="IsClient">
    <LINKPOINT x="13545" y="14423">
    </LINKPOINT>
    <LINKPOINT x="12405" y="14423">
@@ -3657,7 +3627,7 @@
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Modus" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Modus">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" id="551" managers="boygroup" nodename="MessageReceiver (Value)" systemname="MessageReceiver (Value)">
@@ -3689,10 +3659,10 @@
    </PIN>
    <PIN pinname="Overview" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="16020" top="14070">
+   <BOUNDS left="16020" top="14070" type="Box">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="551" dstpinname="Data" srcnodeid="552" srcpinname="Input Value" linkstyle="VHV">
+   <LINK dstnodeid="551" dstpinname="Data" linkstyle="VHV" srcnodeid="552" srcpinname="Input Value">
    <LINKPOINT x="16080" y="14003">
    </LINKPOINT>
    <LINKPOINT x="16770" y="14003">
@@ -3707,7 +3677,7 @@
    </PIN>
    <PIN encoded="0" pinname="Send String" slicecount="1" values="PreviewTexture">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="PreviewTexture" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="PreviewTexture">
    </PIN>
    </NODE>
    <LINK dstnodeid="553" dstpinname="Input Value" srcnodeid="260" srcpinname="Texture Out">
@@ -3719,7 +3689,7 @@
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="PreviewTexture" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="PreviewTexture">
    </PIN>
    </NODE>
    <LINK dstnodeid="342" dstpinname="PreviewTexture" srcnodeid="554" srcpinname="Input Value">
@@ -3787,12 +3757,12 @@
    </PIN>
    <PIN pinname="TouchID" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="32370" top="15900">
+   <BOUNDS left="32370" top="15900" type="Box">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="557" dstpinname="Data" srcnodeid="558" srcpinname="Input Value">
    </LINK>
-   <LINK dstnodeid="342" dstpinname="ID" srcnodeid="557" srcpinname="TouchID" linkstyle="VHV">
+   <LINK dstnodeid="342" dstpinname="ID" linkstyle="VHV" srcnodeid="557" srcpinname="TouchID">
    <LINKPOINT x="32775" y="16320">
    </LINKPOINT>
    <LINKPOINT x="32100" y="16320">
@@ -3808,13 +3778,13 @@
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="559" dstpinname="X" srcnodeid="557" srcpinname="X" linkstyle="VHV">
+   <LINK dstnodeid="559" dstpinname="X" linkstyle="VHV" srcnodeid="557" srcpinname="X">
    <LINKPOINT x="33510" y="16305">
    </LINKPOINT>
    <LINKPOINT x="32760" y="16305">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="559" dstpinname="Y" srcnodeid="557" srcpinname="Y" linkstyle="VHV">
+   <LINK dstnodeid="559" dstpinname="Y" linkstyle="VHV" srcnodeid="557" srcpinname="Y">
    <LINKPOINT x="33885" y="16305">
    </LINKPOINT>
    <LINKPOINT x="33330" y="16305">
@@ -3822,13 +3792,13 @@
    </LINK>
    <LINK dstnodeid="342" dstpinname="XY" srcnodeid="559" srcpinname="XY">
    </LINK>
-   <LINK dstnodeid="342" dstpinname="isNew" srcnodeid="557" srcpinname="isNew" linkstyle="VHV">
+   <LINK dstnodeid="342" dstpinname="isNew" linkstyle="VHV" srcnodeid="557" srcpinname="isNew">
    <LINKPOINT x="33165" y="16335">
    </LINKPOINT>
    <LINKPOINT x="33390" y="16335">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="342" dstpinname="Scroll" srcnodeid="557" srcpinname="Scroll" linkstyle="VHV">
+   <LINK dstnodeid="342" dstpinname="Scroll" linkstyle="VHV" srcnodeid="557" srcpinname="Scroll">
    <LINKPOINT x="34275" y="16620">
    </LINKPOINT>
    <LINKPOINT x="34035" y="16620">
@@ -3836,13 +3806,13 @@
    </LINK>
    <LINK dstnodeid="342" dstpinname="EditMode" srcnodeid="557" srcpinname="EditMode">
    </LINK>
-   <LINK dstnodeid="500" dstpinname="Fullscreen" srcnodeid="342" srcpinname="Fullscreen" linkstyle="VHV">
+   <LINK dstnodeid="500" dstpinname="Fullscreen" linkstyle="VHV" srcnodeid="342" srcpinname="Fullscreen">
    <LINKPOINT x="34320" y="17820">
    </LINKPOINT>
    <LINKPOINT x="32340" y="17820">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="500" dstpinname="UseMask" srcnodeid="342" srcpinname="UseMask" linkstyle="VHV">
+   <LINK dstnodeid="500" dstpinname="UseMask" linkstyle="VHV" srcnodeid="342" srcpinname="UseMask">
    <LINKPOINT x="33930" y="17813">
    </LINKPOINT>
    <LINKPOINT x="32505" y="17813">
@@ -3870,7 +3840,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Bindings">
    </PIN>
    </NODE>
-   <LINK dstnodeid="342" dstpinname="SaveBindings" srcnodeid="561" srcpinname="Input Value" linkstyle="VHV">
+   <LINK dstnodeid="342" dstpinname="SaveBindings" linkstyle="VHV" srcnodeid="561" srcpinname="Input Value">
    <LINKPOINT x="36780" y="16793">
    </LINKPOINT>
    <LINKPOINT x="37215" y="16793">
@@ -3880,7 +3850,7 @@
    </LINK>
    <LINK dstnodeid="139" dstpinname="BindControl" srcnodeid="563" srcpinname="Input Value">
    </LINK>
-   <LINK dstnodeid="184" dstpinname="PersonPos" srcnodeid="550" srcpinname="ImmersivePoint" linkstyle="VHV">
+   <LINK dstnodeid="184" dstpinname="PersonPos" linkstyle="VHV" srcnodeid="550" srcpinname="ImmersivePoint">
    <LINKPOINT x="12705" y="14423">
    </LINKPOINT>
    <LINKPOINT x="15555" y="14423">
@@ -3893,7 +3863,7 @@
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Modus" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Modus">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" id="568" managers="" nodename="MessageReceiver (Value)" systemname="MessageReceiver (Value)">
@@ -3925,7 +3895,7 @@
    </PIN>
    <PIN pinname="Overview" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="42195" top="11130">
+   <BOUNDS left="42195" top="11130" type="Box">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="568" dstpinname="Data" srcnodeid="569" srcpinname="Input Value">
@@ -3982,7 +3952,7 @@
    </LINK>
    <LINK dstnodeid="139" dstpinname="DMXTable" srcnodeid="573" srcpinname="Input Value">
    </LINK>
-   <NODE componentmode="Hidden" id="574" nodename="OR (Boolean)" systemname="OR (Boolean)" managers="boygroup">
+   <NODE componentmode="Hidden" id="574" managers="boygroup" nodename="OR (Boolean)" systemname="OR (Boolean)">
    <BOUNDS height="100" left="30795" top="17880" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
@@ -3992,13 +3962,13 @@
    <PIN pinname="Input 2" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="500" dstpinname="Reset" srcnodeid="574" srcpinname="Output" linkstyle="VHV">
+   <LINK dstnodeid="500" dstpinname="Reset" linkstyle="VHV" srcnodeid="574" srcpinname="Output">
    <LINKPOINT x="30855" y="18218">
    </LINKPOINT>
    <LINKPOINT x="31170" y="18218">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" id="575" nodename="OnOpen (VVVV)" systemname="OnOpen (VVVV)" managers="boygroup">
+   <NODE componentmode="Hidden" id="575" managers="boygroup" nodename="OnOpen (VVVV)" systemname="OnOpen (VVVV)">
    <BOUNDS height="100" left="30795" top="17445" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Bang" visible="1">
@@ -4043,18 +4013,18 @@
    </PIN>
    <PIN pinname="Overview" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="21045" top="15900">
+   <BOUNDS left="21045" top="15900" type="Box">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="580" dstpinname="Data" srcnodeid="581" srcpinname="Input Value">
    </LINK>
-   <LINK dstnodeid="235" dstpinname="Reset" srcnodeid="580" srcpinname="Reset" linkstyle="VHV">
+   <LINK dstnodeid="235" dstpinname="Reset" linkstyle="VHV" srcnodeid="580" srcpinname="Reset">
    <LINKPOINT x="21270" y="16605">
    </LINKPOINT>
    <LINKPOINT x="25230" y="16605">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="227" dstpinname="Reset" srcnodeid="580" srcpinname="Reset" linkstyle="Bezier">
+   <LINK dstnodeid="227" dstpinname="Reset" linkstyle="Bezier" srcnodeid="580" srcpinname="Reset">
    <LINKPOINT x="21270" y="18645">
    </LINKPOINT>
    <LINKPOINT x="24795" y="18645">
@@ -4197,14 +4167,14 @@
    </PIN>
    <PIN pinname="UseMask" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="8790" top="20700">
+   <BOUNDS left="8790" top="20700" type="Box">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="586" dstpinname="Data" srcnodeid="587" srcpinname="Input Value">
    </LINK>
    <LINK dstnodeid="80" dstpinname="Switch" srcnodeid="586" srcpinname="TestProjection">
    </LINK>
-   <LINK dstnodeid="182" dstpinname="Enable" srcnodeid="586" srcpinname="TestProjection" linkstyle="VHV">
+   <LINK dstnodeid="182" dstpinname="Enable" linkstyle="VHV" srcnodeid="586" srcpinname="TestProjection">
    <LINKPOINT x="9510" y="21818">
    </LINKPOINT>
    <LINKPOINT x="14145" y="21818">
@@ -4268,7 +4238,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="DataInput">
    </PIN>
    </NODE>
-   <LINK dstnodeid="235" dstpinname="Values" srcnodeid="590" srcpinname="Input Value" linkstyle="VHV">
+   <LINK dstnodeid="235" dstpinname="Values" linkstyle="VHV" srcnodeid="590" srcpinname="Input Value">
    <LINKPOINT x="22980" y="16605">
    </LINKPOINT>
    <LINKPOINT x="24870" y="16605">
@@ -4295,7 +4265,7 @@
    </PIN>
    <PIN pinname="ConfigBinSize" slicecount="4" values="5,5,5,5">
    </PIN>
-   <PIN pinname="ConfigType" slicecount="4" values="Transform,Transform,Value,Transform">
+   <PIN pinname="ConfigType" slicecount="4" values="Transform,Transform,Value,Color">
    </PIN>
    <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|WallTransform&lf;CorrectedWallTransform&lf;WallBelongsTo&lf;WallColor&lf;|">
    </PIN>
@@ -4306,6 +4276,8 @@
    <PIN pinname="CorrectedWallTransform" visible="1">
    </PIN>
    <PIN pinname="WallTransform" visible="1">
+   </PIN>
+   <PIN pinname="WallColor" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="593" dstpinname="Data" srcnodeid="592" srcpinname="Input Value">
@@ -4357,7 +4329,7 @@
    </PIN>
    <PIN pinname="Save" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="ConfigBinSize" slicecount="6" values="3,3,3,3,3,2">
+   <PIN pinname="ConfigBinSize" slicecount="6" values="3,3,3,3,1,2">
    </PIN>
    <PIN pinname="ConfigType" slicecount="6" values="Transform,Transform,Transform,Transform,Value,Value">
    </PIN>
@@ -4395,7 +4367,7 @@
    </PIN>
    <PIN pinname="Save" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="ConfigBinSize" slicecount="6" values="3,3,3,3,3,2">
+   <PIN pinname="ConfigBinSize" slicecount="6" values="3,3,3,3,1,2">
    </PIN>
    <PIN pinname="ConfigType" slicecount="6" values="Transform,Transform,Transform,Transform,Value,Value">
    </PIN>
@@ -4405,20 +4377,20 @@
    </PIN>
    <PIN pinname="UsedBeamerView" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="12750" top="20700">
+   <BOUNDS left="12750" top="20700" type="Box">
    </BOUNDS>
    <PIN pinname="BeamerResolution" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="596" dstpinname="Data" srcnodeid="597" srcpinname="Input Value">
    </LINK>
-   <LINK dstnodeid="182" dstpinname="BeamerView" srcnodeid="596" srcpinname="UsedBeamerView" linkstyle="VHV">
+   <LINK dstnodeid="182" dstpinname="BeamerView" linkstyle="VHV" srcnodeid="596" srcpinname="UsedBeamerView">
    <LINKPOINT x="13620" y="21833">
    </LINKPOINT>
    <LINKPOINT x="13275" y="21833">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="182" dstpinname="BeamerProjection" srcnodeid="596" srcpinname="UsedBeamerProjection" linkstyle="VHV">
+   <LINK dstnodeid="182" dstpinname="BeamerProjection" linkstyle="VHV" srcnodeid="596" srcpinname="UsedBeamerProjection">
    <LINKPOINT x="13890" y="21833">
    </LINKPOINT>
    <LINKPOINT x="13575" y="21833">
@@ -4447,7 +4419,7 @@
    </PIN>
    <PIN pinname="ConfigBinSize" slicecount="4" values="5,5,5,5">
    </PIN>
-   <PIN pinname="ConfigType" slicecount="4" values="Transform,Transform,Value,Transform">
+   <PIN pinname="ConfigType" slicecount="4" values="Transform,Transform,Value,Color">
    </PIN>
    <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|WallTransform&lf;CorrectedWallTransform&lf;WallBelongsTo&lf;WallColor&lf;|">
    </PIN>
@@ -4500,10 +4472,10 @@
    </LINK>
    <LINK dstnodeid="342" dstpinname="Transform" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="343" srcpinname="Transform Out">
    </LINK>
-   <LINK srcnodeid="460" srcpinname="Output Node" dstnodeid="53" dstpinname="Layer 9">
+   <LINK dstnodeid="53" dstpinname="Layer 9" srcnodeid="460" srcpinname="Output Node">
    </LINK>
-   <NODE systemname="MessageConfig (Value)" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" nodename="MessageConfig (Value)" componentmode="Hidden" id="602">
-   <BOUNDS type="Node" left="28980" top="2040" width="100" height="100">
+   <NODE componentmode="Hidden" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" id="602" nodename="MessageConfig (Value)" systemname="MessageConfig (Value)">
+   <BOUNDS height="100" left="28980" top="2040" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="MessageID">
    </PIN>
@@ -4516,16 +4488,16 @@
    <PIN pinname="Add" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="603" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="28740" top="480" width="0" height="0">
+   <NODE componentmode="InABox" id="603" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="28740" top="480" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="28740" top="480" width="735" height="900">
+   <BOUNDS height="900" left="28740" top="480" type="Box" width="735">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="3" values="MouseOver,XY,EditMode" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="3" values="MouseOver,XY,EditMode">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="Pin" encoded="0">
+   <PIN encoded="0" pinname="Default" slicecount="1" values="Pin">
    </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
@@ -4534,16 +4506,16 @@
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
    </NODE>
-   <LINK srcnodeid="603" srcpinname="Output String" dstnodeid="602" dstpinname="Identifier">
+   <LINK dstnodeid="602" dstpinname="Identifier" srcnodeid="603" srcpinname="Output String">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="604" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="29970" top="480" width="0" height="0">
+   <NODE componentmode="InABox" id="604" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="29970" top="480" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="29970" top="480" width="735" height="900">
+   <BOUNDS height="900" left="29970" top="480" type="Box" width="735">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="3" values="1,2,1">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -4554,12 +4526,12 @@
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
    </NODE>
-   <LINK srcnodeid="604" srcpinname="Y Output Value" dstnodeid="602" dstpinname="Vector Size">
+   <LINK dstnodeid="602" dstpinname="Vector Size" srcnodeid="604" srcpinname="Y Output Value">
    </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="605" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Node" left="31320" top="480" width="0" height="0">
+   <NODE componentmode="InABox" id="605" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
+   <BOUNDS height="0" left="31320" top="480" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="31320" top="480" width="1530" height="900">
+   <BOUNDS height="900" left="31320" top="480" type="Box" width="1530">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="3" values="Value,Value,Value">
    </PIN>
@@ -4568,18 +4540,18 @@
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
    </NODE>
-   <LINK srcnodeid="605" srcpinname="Output Enum" dstnodeid="602" dstpinname="Type">
+   <LINK dstnodeid="602" dstpinname="Type" srcnodeid="605" srcpinname="Output Enum">
    </LINK>
-   <NODE systemname="MessageSender (Value)" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" nodename="MessageSender (Value)" componentmode="Hidden" id="606">
-   <BOUNDS type="Node" left="25890" top="25890" width="1590" height="270">
+   <NODE componentmode="Hidden" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" id="606" nodename="MessageSender (Value)" systemname="MessageSender (Value)">
+   <BOUNDS height="270" left="25890" top="25890" type="Node" width="1590">
    </BOUNDS>
-   <PIN pinname="MessageID" slicecount="1" values="PreviewInteraction" encoded="0">
+   <PIN encoded="0" pinname="MessageID" slicecount="1" values="PreviewInteraction">
    </PIN>
    <PIN pinname="ConfigBinSize" slicecount="3" values="1,2,1">
    </PIN>
    <PIN pinname="ConfigType" slicecount="3" values="Value,Value,Value">
    </PIN>
-   <PIN pinname="ConfigName" slicecount="1" values="|MouseOver&lf;XY&lf;EditMode&lf;|" encoded="0">
+   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|MouseOver&lf;XY&lf;EditMode&lf;|">
    </PIN>
    <PIN pinname="Save" slicecount="1" values="0">
    </PIN>
@@ -4591,51 +4563,51 @@
    </PIN>
    <PIN pinname="EditMode" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="25890" top="25890">
+   <BOUNDS left="25890" top="25890" type="Box">
    </BOUNDS>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="607" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="28620" top="1590" width="0" height="0">
+   <NODE componentmode="InABox" id="607" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="28620" top="1590" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="28620" top="1590" width="795" height="240">
+   <BOUNDS height="240" left="28620" top="1590" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="PreviewInteraction" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="PreviewInteraction">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="Bundle" encoded="0">
+   <PIN encoded="0" pinname="Default" slicecount="1" values="Bundle">
    </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="607" srcpinname="Output String" dstnodeid="602" dstpinname="MessageID">
+   <LINK dstnodeid="602" dstpinname="MessageID" srcnodeid="607" srcpinname="Output String">
    </LINK>
-   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="608">
-   <BOUNDS type="Node" left="25890" top="26265" width="100" height="100">
+   <NODE componentmode="Hidden" id="608" nodename="S (Value)" systemname="S (Value)">
+   <BOUNDS height="100" left="25890" top="26265" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Send String" slicecount="1" values="PreviewInteraction" encoded="0">
+   <PIN encoded="0" pinname="Send String" slicecount="1" values="PreviewInteraction">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="PreviewInteraction" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="PreviewInteraction">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="606" srcpinname="Data" dstnodeid="608" dstpinname="Input Value" linkstyle="VHV">
+   <LINK dstnodeid="608" dstpinname="Input Value" linkstyle="VHV" srcnodeid="606" srcpinname="Data">
    <LINKPOINT x="27420" y="26198">
    </LINKPOINT>
    <LINKPOINT x="25950" y="26198">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="259" srcpinname="mouseOver" dstnodeid="606" dstpinname="MouseOver">
+   <LINK dstnodeid="606" dstpinname="MouseOver" srcnodeid="259" srcpinname="mouseOver">
    </LINK>
-   <LINK srcnodeid="259" srcpinname="XY" dstnodeid="606" dstpinname="XY">
+   <LINK dstnodeid="606" dstpinname="XY" srcnodeid="259" srcpinname="XY">
    </LINK>
-   <LINK srcnodeid="259" srcpinname="EditMode" dstnodeid="606" dstpinname="EditMode">
+   <LINK dstnodeid="606" dstpinname="EditMode" srcnodeid="259" srcpinname="EditMode">
    </LINK>
-   <NODE systemname="MessageReceiver (Value)" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" nodename="MessageReceiver (Value)" componentmode="Hidden" id="609">
-   <BOUNDS type="Node" left="44100" top="11130" width="100" height="100">
+   <NODE componentmode="Hidden" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" id="609" nodename="MessageReceiver (Value)" systemname="MessageReceiver (Value)">
+   <BOUNDS height="100" left="44100" top="11130" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="MessageID" slicecount="1" values="PreviewInteraction" encoded="0">
+   <PIN encoded="0" pinname="MessageID" slicecount="1" values="PreviewInteraction">
    </PIN>
    <PIN pinname="Save" slicecount="1" values="0">
    </PIN>
@@ -4643,7 +4615,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="3" values="Value,Value,Value">
    </PIN>
-   <PIN pinname="ConfigName" slicecount="1" values="|MouseOver&lf;XY&lf;EditMode&lf;|" encoded="0">
+   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|MouseOver&lf;XY&lf;EditMode&lf;|">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -4653,118 +4625,118 @@
    </PIN>
    <PIN pinname="EditMode" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="44100" top="11130">
+   <BOUNDS left="44100" top="11130" type="Box">
    </BOUNDS>
    </NODE>
-   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="610">
-   <BOUNDS type="Node" left="44835" top="10620" width="100" height="100">
+   <NODE componentmode="Hidden" id="610" nodename="R (Value)" systemname="R (Value)">
+   <BOUNDS height="100" left="44835" top="10620" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="PreviewInteraction">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="PreviewInteraction" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="PreviewInteraction">
    </PIN>
    </NODE>
-   <LINK srcnodeid="610" srcpinname="Input Value" dstnodeid="609" dstpinname="Data">
+   <LINK dstnodeid="609" dstpinname="Data" srcnodeid="610" srcpinname="Input Value">
    </LINK>
-   <LINK srcnodeid="609" srcpinname="MouseOver" dstnodeid="278" dstpinname="mouseOver" linkstyle="VHV">
+   <LINK dstnodeid="278" dstpinname="mouseOver" linkstyle="VHV" srcnodeid="609" srcpinname="MouseOver">
    <LINKPOINT x="44595" y="11550">
    </LINKPOINT>
    <LINKPOINT x="41805" y="11550">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="609" srcpinname="XY" dstnodeid="278" dstpinname="XY" linkstyle="VHV">
+   <LINK dstnodeid="278" dstpinname="XY" linkstyle="VHV" srcnodeid="609" srcpinname="XY">
    <LINKPOINT x="45105" y="11550">
    </LINKPOINT>
    <LINKPOINT x="41190" y="11550">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="609" srcpinname="EditMode" dstnodeid="278" dstpinname="EditMode" linkstyle="VHV">
+   <LINK dstnodeid="278" dstpinname="EditMode" linkstyle="VHV" srcnodeid="609" srcpinname="EditMode">
    <LINKPOINT x="45600" y="11550">
    </LINKPOINT>
    <LINKPOINT x="43620" y="11550">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="568" srcpinname="Overview" dstnodeid="278" dstpinname="OverviewMode" linkstyle="VHV">
+   <LINK dstnodeid="278" dstpinname="OverviewMode" linkstyle="VHV" srcnodeid="568" srcpinname="Overview">
    <LINKPOINT x="42585" y="11550">
    </LINKPOINT>
    <LINKPOINT x="42945" y="11550">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="568" srcpinname="Immersion" dstnodeid="278" dstpinname="Immersion" linkstyle="VHV">
+   <LINK dstnodeid="278" dstpinname="Immersion" linkstyle="VHV" srcnodeid="568" srcpinname="Immersion">
    <LINKPOINT x="43365" y="11550">
    </LINKPOINT>
    <LINKPOINT x="38775" y="11550">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="278" srcpinname="PersonPositionXYZ" dstnodeid="534" dstpinname="ImmersivePoint">
+   <LINK dstnodeid="534" dstpinname="ImmersivePoint" srcnodeid="278" srcpinname="PersonPositionXYZ">
    </LINK>
-   <LINK srcnodeid="497" srcpinname="Bang One" dstnodeid="325" dstpinname="TapOne">
+   <LINK dstnodeid="325" dstpinname="TapOne" srcnodeid="497" srcpinname="Bang One">
    </LINK>
-   <LINK srcnodeid="497" srcpinname="Bang Manual" dstnodeid="325" dstpinname="Tap">
+   <LINK dstnodeid="325" dstpinname="Tap" srcnodeid="497" srcpinname="Bang Manual">
    </LINK>
-   <LINK srcnodeid="575" srcpinname="Bang" dstnodeid="574" dstpinname="Input 1" linkstyle="VHV">
+   <LINK dstnodeid="574" dstpinname="Input 1" linkstyle="VHV" srcnodeid="575" srcpinname="Bang">
    <LINKPOINT x="30825" y="17798">
    </LINKPOINT>
    <LINKPOINT x="30825" y="17798">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="342" srcpinname="Reset" dstnodeid="574" dstpinname="Input 2" linkstyle="VHV">
+   <LINK dstnodeid="574" dstpinname="Input 2" linkstyle="VHV" srcnodeid="342" srcpinname="Reset">
    <LINKPOINT x="31185" y="17610">
    </LINKPOINT>
    <LINKPOINT x="31185" y="17610">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="611">
-   <BOUNDS type="Node" left="24780" top="15900" width="100" height="100">
+   <NODE componentmode="Hidden" id="611" nodename="R (Value)" systemname="R (Value)">
+   <BOUNDS height="100" left="24780" top="15900" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="Bindings">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Bindings" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Bindings">
    </PIN>
    </NODE>
-   <LINK srcnodeid="611" srcpinname="Input Value" dstnodeid="235" dstpinname="Bindings" linkstyle="VHV">
+   <LINK dstnodeid="235" dstpinname="Bindings" linkstyle="VHV" srcnodeid="611" srcpinname="Input Value">
    <LINKPOINT x="24840" y="16605">
    </LINKPOINT>
    <LINKPOINT x="25920" y="16605">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="612">
-   <BOUNDS type="Node" left="23820" top="18525" width="100" height="100">
+   <NODE componentmode="Hidden" id="612" nodename="S (Node)" systemname="S (Node)">
+   <BOUNDS height="100" left="23820" top="18525" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Send String" slicecount="1" values="|GUI Transform|" encoded="0">
+   <PIN encoded="0" pinname="Send String" slicecount="1" values="|GUI Transform|">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="522" srcpinname="Transform Out" dstnodeid="612" dstpinname="Input Value">
+   <LINK dstnodeid="612" dstpinname="Input Value" srcnodeid="522" srcpinname="Transform Out">
    </LINK>
-   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="613">
-   <BOUNDS type="Node" left="48675" top="10620" width="100" height="100">
+   <NODE componentmode="Hidden" id="613" nodename="R (Node)" systemname="R (Node)">
+   <BOUNDS height="100" left="48675" top="10620" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="|GUI Transform|">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|GUI Transform|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|GUI Transform|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="613" srcpinname="Input Value" dstnodeid="540" dstpinname="Gui Transform" linkstyle="Bezier">
+   <LINK dstnodeid="540" dstpinname="Gui Transform" linkstyle="Bezier" srcnodeid="613" srcpinname="Input Value">
    <LINKPOINT x="48675" y="12548">
    </LINKPOINT>
    <LINKPOINT x="41880" y="12548">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="278" srcpinname="PreviewProjectionTransform" dstnodeid="540" dstpinname="Preview Projection Transform" linkstyle="VHV">
+   <LINK dstnodeid="540" dstpinname="Preview Projection Transform" linkstyle="VHV" srcnodeid="278" srcpinname="PreviewProjectionTransform">
    <LINKPOINT x="41970" y="13118">
    </LINKPOINT>
    <LINKPOINT x="42300" y="13118">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="278" srcpinname="PreviewViewTransform" dstnodeid="540" dstpinname="Preview View Transform" linkstyle="VHV">
+   <LINK dstnodeid="540" dstpinname="Preview View Transform" linkstyle="VHV" srcnodeid="278" srcpinname="PreviewViewTransform">
    <LINKPOINT x="40395" y="13110">
    </LINKPOINT>
    <LINKPOINT x="42060" y="13110">
@@ -4809,80 +4781,80 @@
    </PIN>
    <PIN pinname="TouchID" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="26445" top="24750">
+   <BOUNDS left="26445" top="24750" type="Box">
    </BOUNDS>
    <PIN pinname="MouseXYZ" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="614" dstpinname="Data" srcnodeid="615" srcpinname="Input Value">
    </LINK>
-   <LINK srcnodeid="614" srcpinname="TouchID" dstnodeid="259" dstpinname="Touch Id">
+   <LINK dstnodeid="259" dstpinname="Touch Id" srcnodeid="614" srcpinname="TouchID">
    </LINK>
-   <LINK srcnodeid="614" srcpinname="MouseXYZ" dstnodeid="259" dstpinname="Mouse XYZ" linkstyle="VHV">
+   <LINK dstnodeid="259" dstpinname="Mouse XYZ" linkstyle="VHV" srcnodeid="614" srcpinname="MouseXYZ">
    <LINKPOINT x="28425" y="25200">
    </LINKPOINT>
    <LINKPOINT x="27030" y="25200">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="614" srcpinname="isNew" dstnodeid="259" dstpinname="Is new" linkstyle="VHV">
+   <LINK dstnodeid="259" dstpinname="Is new" linkstyle="VHV" srcnodeid="614" srcpinname="isNew">
    <LINKPOINT x="27060" y="25215">
    </LINKPOINT>
    <LINKPOINT x="27210" y="25215">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="614" srcpinname="EditMode" dstnodeid="259" dstpinname="EditMode" linkstyle="VHV">
+   <LINK dstnodeid="259" dstpinname="EditMode" linkstyle="VHV" srcnodeid="614" srcpinname="EditMode">
    <LINKPOINT x="28140" y="25200">
    </LINKPOINT>
    <LINKPOINT x="27495" y="25200">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="618">
-   <BOUNDS type="Node" left="32625" top="4020" width="100" height="100">
+   <NODE componentmode="Hidden" id="618" nodename="R (Node)" systemname="R (Node)">
+   <BOUNDS height="100" left="32625" top="4020" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="|GUI Transform|">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|GUI Transform|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|GUI Transform|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="618" srcpinname="Input Value" dstnodeid="223" dstpinname="ViewProjection">
+   <LINK dstnodeid="223" dstpinname="ViewProjection" srcnodeid="618" srcpinname="Input Value">
    </LINK>
-   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="619">
-   <BOUNDS type="Node" left="25500" top="30135" width="100" height="100">
+   <NODE componentmode="Hidden" id="619" nodename="R (Node)" systemname="R (Node)">
+   <BOUNDS height="100" left="25500" top="30135" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="|GUI Transform|">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|GUI Transform|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|GUI Transform|">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="619" srcpinname="Input Value" dstnodeid="213" dstpinname="View">
+   <LINK dstnodeid="213" dstpinname="View" srcnodeid="619" srcpinname="Input Value">
    </LINK>
-   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="620">
-   <BOUNDS type="Node" left="17370" top="28650" width="100" height="100">
+   <NODE componentmode="Hidden" id="620" nodename="R (Value)" systemname="R (Value)">
+   <BOUNDS height="100" left="17370" top="28650" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="|GUI Resolution|">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|GUI Resolution|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|GUI Resolution|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="620" srcpinname="Input Value" dstnodeid="265" dstpinname="Input">
+   <LINK dstnodeid="265" dstpinname="Input" srcnodeid="620" srcpinname="Input Value">
    </LINK>
-   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="621">
-   <BOUNDS type="Node" left="25890" top="24240" width="100" height="100">
+   <NODE componentmode="Hidden" id="621" nodename="R (Node)" systemname="R (Node)">
+   <BOUNDS height="100" left="25890" top="24240" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="PreviewTexture">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="PreviewTexture" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="PreviewTexture">
    </PIN>
    </NODE>
-   <LINK srcnodeid="621" srcpinname="Input Value" dstnodeid="259" dstpinname="Texture" linkstyle="Bezier">
+   <LINK dstnodeid="259" dstpinname="Texture" linkstyle="Bezier" srcnodeid="621" srcpinname="Input Value">
    <LINKPOINT x="25935" y="24960">
    </LINKPOINT>
    <LINKPOINT x="26280" y="24960">
@@ -4904,26 +4876,26 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="396" srcpinname="Output Node" dstnodeid="401" dstpinname="Input 2">
+   <LINK dstnodeid="401" dstpinname="Input 2" srcnodeid="396" srcpinname="Output Node">
    </LINK>
-   <LINK srcnodeid="584" srcpinname="TestProjection" dstnodeid="401" dstpinname="Switch">
+   <LINK dstnodeid="401" dstpinname="Switch" srcnodeid="584" srcpinname="TestProjection">
    </LINK>
-   <LINK srcnodeid="401" srcpinname="Output" dstnodeid="53" dstpinname="Layer 3">
+   <LINK dstnodeid="53" dstpinname="Layer 3" srcnodeid="401" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="537" srcpinname="IsClient" dstnodeid="322" dstpinname="Input 2" linkstyle="Bezier">
+   <LINK dstnodeid="322" dstpinname="Input 2" linkstyle="Bezier" srcnodeid="537" srcpinname="IsClient">
    <LINKPOINT x="11685" y="29370">
    </LINKPOINT>
    <LINKPOINT x="11370" y="29370">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="537" srcpinname="IsClient" dstnodeid="142" dstpinname="Enabled">
+   <LINK dstnodeid="142" dstpinname="Enabled" srcnodeid="537" srcpinname="IsClient">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="622" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="780" top="28560" width="960" height="270">
+   <NODE componentmode="InABox" id="622" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="780" top="28560" type="Node" width="960">
    </BOUNDS>
-   <BOUNDS type="Box" left="780" top="28560" width="3645" height="1380">
+   <BOUNDS height="1380" left="780" top="28560" type="Box" width="3645">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="Output" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="Output">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -4934,111 +4906,108 @@
    <PIN pinname="Size" slicecount="1" values="46">
    </PIN>
    </NODE>
-   <LINK srcnodeid="289" srcpinname="Layer" dstnodeid="317" dstpinname="Layer 5" hiddenwhenlocked="0" linkstyle="Bezier">
+   <LINK dstnodeid="317" dstpinname="Layer 5" hiddenwhenlocked="0" linkstyle="Bezier" srcnodeid="289" srcpinname="Layer">
    <LINKPOINT x="14985" y="27158">
    </LINKPOINT>
    <LINKPOINT x="13605" y="27158">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="596" srcpinname="BeamerResolution" dstnodeid="182" dstpinname="BeamerResolution" linkstyle="VHV">
+   <LINK dstnodeid="182" dstpinname="BeamerResolution" linkstyle="VHV" srcnodeid="596" srcpinname="BeamerResolution">
    <LINKPOINT x="14360" y="21833">
    </LINKPOINT>
    <LINKPOINT x="14575" y="21833">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="254" srcpinname="ImmersiveLayer" dstnodeid="183" dstpinname="Layer 3">
+   <LINK dstnodeid="183" dstpinname="Layer 3" srcnodeid="254" srcpinname="ImmersiveLayer">
    </LINK>
-   <LINK srcnodeid="584" srcpinname="Show 3D Scene" dstnodeid="214" dstpinname="Switch" linkstyle="VHV">
+   <LINK dstnodeid="214" dstpinname="Switch" linkstyle="VHV" srcnodeid="584" srcpinname="Show 3D Scene">
    <LINKPOINT x="18185" y="26363">
    </LINKPOINT>
    <LINKPOINT x="20815" y="26363">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="584" srcpinname="ShowPerfmeter" dstnodeid="289" dstpinname="Enabled" linkstyle="VHV">
+   <LINK dstnodeid="289" dstpinname="Enabled" linkstyle="VHV" srcnodeid="584" srcpinname="ShowPerfmeter">
    <LINKPOINT x="17970" y="26363">
    </LINKPOINT>
    <LINKPOINT x="16050" y="26363">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="195" srcpinname="DebugLayer" dstnodeid="183" dstpinname="Layer 1" hiddenwhenlocked="1">
+   <LINK dstnodeid="183" dstpinname="Layer 1" hiddenwhenlocked="1" srcnodeid="195" srcpinname="DebugLayer">
    </LINK>
-
-   <LINK srcnodeid="195" srcpinname="UsedBeamers" dstnodeid="624" dstpinname="Y Input Value" hiddenwhenlocked="1">
+   <LINK dstnodeid="624" dstpinname="Y Input Value" hiddenwhenlocked="1" srcnodeid="195" srcpinname="UsedBeamers">
    </LINK>
-   <LINK srcnodeid="624" srcpinname="Y Output Value" dstnodeid="304" dstpinname="Index">
+   <LINK dstnodeid="304" dstpinname="Index" srcnodeid="624" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="624" srcpinname="Y Output Value" dstnodeid="305" dstpinname="Index">
+   <LINK dstnodeid="305" dstpinname="Index" srcnodeid="624" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="624" srcpinname="Y Output Value" dstnodeid="519" dstpinname="Input">
+   <LINK dstnodeid="519" dstpinname="Input" srcnodeid="624" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="624" srcpinname="Y Output Value" dstnodeid="509" dstpinname="UseBeamer">
+   <LINK dstnodeid="509" dstpinname="UseBeamer" srcnodeid="624" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="403" srcpinname="Y Output Value" dstnodeid="195" dstpinname="ShowBeamer" linkstyle="VHV">
-   <LINKPOINT x="21945" y="11340">
+   <LINK dstnodeid="195" dstpinname="ShowBeamer" linkstyle="VHV" srcnodeid="403" srcpinname="Y Output Value">
+   <LINKPOINT x="15075" y="11230">
    </LINKPOINT>
-   <LINKPOINT x="18690" y="11340">
+   <LINKPOINT x="15255" y="11285">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="626" managers="boygroup">
-   <BOUNDS type="Node" left="15675" top="12195" width="100" height="100">
+   <NODE componentmode="Hidden" id="626" managers="boygroup" nodename="S (Node)" systemname="S (Node)">
+   <BOUNDS height="100" left="15675" top="12195" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Send String" slicecount="1" values="EnvironmentMesh" encoded="0">
+   <PIN encoded="0" pinname="Send String" slicecount="1" values="EnvironmentMesh">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="EnvironmentMesh" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="EnvironmentMesh">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="195" srcpinname="Mesh" dstnodeid="626" dstpinname="Input Value">
+   <LINK dstnodeid="626" dstpinname="Input Value" srcnodeid="195" srcpinname="Mesh">
    </LINK>
-   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="627" managers="boygroup">
-   <BOUNDS type="Node" left="14715" top="20220" width="100" height="100">
+   <NODE componentmode="Hidden" id="627" managers="boygroup" nodename="R (Node)" systemname="R (Node)">
+   <BOUNDS height="100" left="14715" top="20220" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="EnvironmentMesh">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="EnvironmentMesh" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="EnvironmentMesh">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="627" srcpinname="Input Value" dstnodeid="182" dstpinname="Mesh" linkstyle="VHV">
+   <LINK dstnodeid="182" dstpinname="Mesh" linkstyle="VHV" srcnodeid="627" srcpinname="Input Value">
    <LINKPOINT x="13695" y="21825">
    </LINKPOINT>
    <LINKPOINT x="14025" y="21825">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="425" srcpinname="CalibrationLayer" dstnodeid="183" dstpinname="Layer 2" hiddenwhenlocked="1">
+   <LINK dstnodeid="183" dstpinname="Layer 2" hiddenwhenlocked="1" srcnodeid="425" srcpinname="CalibrationLayer">
    </LINK>
-   <LINK srcnodeid="425" srcpinname="CalibrationLayer" dstnodeid="317" dstpinname="Layer 3">
+   <LINK dstnodeid="317" dstpinname="Layer 3" srcnodeid="425" srcpinname="CalibrationLayer">
    </LINK>
-   <NODE componentmode="Hidden" filename="DebugEnvironment.v4p" id="628" nodename="DebugEnvironment.v4p" systemname="DebugEnvironment" managers="boygroup">
-   <BOUNDS height="100" left="11670" top="12615" type="Node" width="100">
+   <NODE componentmode="InAWindow" filename="DebugEnvironment.v4p" id="628" managers="boygroup" nodename="DebugEnvironment.v4p" systemname="DebugEnvironment">
+   <BOUNDS height="100" left="11730" top="12615" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="DebugLayer" visible="1">
    </PIN>
-   <PIN pinname="WallColor" visible="1" slicecount="1" values="|0.00000,1.00000,0.00000,1.00000|">
+   <PIN pinname="WallColor" visible="1">
    </PIN>
    <PIN pinname="Enable" visible="1">
    </PIN>
-   <PIN pinname="BeamerID" visible="1" slicecount="1" values="1">
+   <PIN pinname="BeamerID" visible="1">
    </PIN>
    <PIN pinname="WallTransform" visible="1">
    </PIN>
    <PIN pinname="Mesh" visible="1">
    </PIN>
-   <PIN pinname="MeshColor" visible="1" slicecount="1" values="|0.00000,1.00000,0.00000,1.00000|">
+   <PIN pinname="MeshColor" visible="1">
    </PIN>
-   <BOUNDS height="10350" left="9810" top="2535" type="Window" width="14250">
+   <BOUNDS height="10350" left="1350" top="2100" type="Window" width="14250">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="593" srcpinname="WallTransform" dstnodeid="628" dstpinname="WallTransform">
+   <LINK dstnodeid="628" dstpinname="Mesh" srcnodeid="195" srcpinname="Mesh">
    </LINK>
-   <LINK srcnodeid="195" srcpinname="Mesh" dstnodeid="628" dstpinname="Mesh">
+   <LINK dstnodeid="628" dstpinname="Enable" srcnodeid="530" srcpinname="Calibrate">
    </LINK>
-   <LINK srcnodeid="530" srcpinname="Calibrate" dstnodeid="628" dstpinname="Enable">
-   </LINK>
-   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="629" managers="boygroup">
-   <BOUNDS type="Node" left="14805" top="13695" width="100" height="100">
+   <NODE componentmode="Hidden" id="629" managers="boygroup" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="100" left="14805" top="13695" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Layer 2" visible="1">
    </PIN>
@@ -5047,18 +5016,100 @@
    <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="139" srcpinname="Layer" dstnodeid="629" dstpinname="Layer 2" linkstyle="Bezier">
+   <LINK dstnodeid="629" dstpinname="Layer 2" linkstyle="Bezier" srcnodeid="139" srcpinname="Layer">
    <LINKPOINT x="13560" y="13268">
    </LINKPOINT>
    <LINKPOINT x="15075" y="13268">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="628" srcpinname="DebugLayer" dstnodeid="629" dstpinname="Layer 1" linkstyle="Bezier">
-   <LINKPOINT x="11730" y="13275">
+   <LINK dstnodeid="629" dstpinname="Layer 1" linkstyle="Bezier" srcnodeid="628" srcpinname="DebugLayer">
+   <LINKPOINT x="11770" y="13275">
    </LINKPOINT>
-   <LINKPOINT x="14805" y="13275">
+   <LINKPOINT x="14825" y="13275">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="629" srcpinname="Layer" dstnodeid="252" dstpinname="ContentLayer">
+   <LINK dstnodeid="252" dstpinname="ContentLayer" srcnodeid="629" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InABox" id="630" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="6300" top="15255" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="6300" top="15255" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="UseBeamer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="509" dstpinname="UseBeamer" srcnodeid="630" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="305" dstpinname="Index" srcnodeid="630" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="304" dstpinname="Index" srcnodeid="630" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="630" dstpinname="Y Input Value" srcnodeid="195" srcpinname="UsedBeamers">
+   </LINK>
+   <NODE componentmode="Hidden" id="631" managers="boygroup" nodename="GetSlice (Color)" systemname="GetSlice (Color)">
+   <BOUNDS height="100" left="3330" top="10965" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="631" dstpinname="Input" srcnodeid="402" srcpinname="Color Output">
+   </LINK>
+   <LINK dstnodeid="628" dstpinname="MeshColor" srcnodeid="195" srcpinname="BeamerScreenColor">
+   </LINK>
+   <LINK dstnodeid="628" dstpinname="WallColor" srcnodeid="593" srcpinname="WallColor">
+   </LINK>
+   <NODE componentmode="Hidden" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" id="633" managers="boygroup" nodename="MessageSender (Value)" systemname="MessageSender (Value)">
+   <BOUNDS height="100" left="1965" top="11535" type="Node" width="100">
+   </BOUNDS>
+   <PIN encoded="0" pinname="MessageID" slicecount="1" values="Walls">
+   </PIN>
+   <PIN pinname="Save" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="ConfigBinSize" slicecount="4" values="5,5,5,5">
+   </PIN>
+   <PIN pinname="ConfigType" slicecount="4" values="Transform,Transform,Value,Color">
+   </PIN>
+   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|WallTransform&lf;CorrectedWallTransform&lf;WallBelongsTo&lf;WallColor&lf;|">
+   </PIN>
+   <PIN pinname="WallBelongsTo" visible="1">
+   </PIN>
+   <PIN pinname="Data" visible="1">
+   </PIN>
+   <PIN pinname="WallTransform" visible="1">
+   </PIN>
+   <PIN pinname="CorrectedWallTransform" visible="1">
+   </PIN>
+   <PIN pinname="WallColor" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="633" dstpinname="WallBelongsTo" srcnodeid="406" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="512" dstpinname="Input Value" srcnodeid="633" srcpinname="Data">
+   </LINK>
+   <LINK dstnodeid="633" dstpinname="WallTransform" srcnodeid="405" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="633" dstpinname="CorrectedWallTransform" srcnodeid="425" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="631" dstpinname="Index" srcnodeid="406" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="633" dstpinname="WallColor" srcnodeid="631" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="195" srcpinname="UsedBeamers" dstnodeid="628" dstpinname="BeamerID">
+   </LINK>
+   <LINK srcnodeid="593" srcpinname="CorrectedWallTransform" dstnodeid="628" dstpinname="WallTransform">
    </LINK>
    </PATCH>

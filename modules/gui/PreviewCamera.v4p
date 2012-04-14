@@ -402,7 +402,7 @@
    </NODE>
    <LINK dstnodeid="45" dstpinname="Input 2" srcnodeid="46" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InAWindow" filename="..\engine\tools\Camera (Transform).v4p" id="47" nodename="..\engine\tools\Camera (Transform).v4p" systemname="Camera (Transform)">
+   <NODE componentmode="Hidden" filename="..\engine\tools\Camera (Transform).v4p" id="47" nodename="..\engine\tools\Camera (Transform).v4p" systemname="Camera (Transform)">
    <BOUNDS height="270" left="7290" top="3960" type="Node" width="1200">
    </BOUNDS>
    <PIN pinname="XY" visible="1">
@@ -540,14 +540,14 @@
    </LINK>
    <LINK dstnodeid="35" dstpinname="XY" srcnodeid="45" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="47" srcpinname="Projection" dstnodeid="33" dstpinname="Input 2">
+   <LINK dstnodeid="33" dstpinname="Input 2" srcnodeid="47" srcpinname="Projection">
    </LINK>
-   <LINK srcnodeid="47" srcpinname="View" dstnodeid="32" dstpinname="Input 2">
+   <LINK dstnodeid="32" dstpinname="Input 2" srcnodeid="47" srcpinname="View">
    </LINK>
-   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="30" dstpinname="Enabled">
+   <LINK dstnodeid="30" dstpinname="Enabled" srcnodeid="4" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="59">
-   <BOUNDS type="Node" left="10035" top="6060" width="100" height="100">
+   <NODE componentmode="Hidden" id="59" nodename="Subtract (Value)" systemname="Subtract (Value)">
+   <BOUNDS height="100" left="10035" top="6060" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -556,8 +556,8 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Polar (3d Vector)" nodename="Polar (3d Vector)" componentmode="Hidden" id="60">
-   <BOUNDS type="Node" left="10035" top="6495" width="100" height="100">
+   <NODE componentmode="Hidden" id="60" nodename="Polar (3d Vector)" systemname="Polar (3d Vector)">
+   <BOUNDS height="100" left="10035" top="6495" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="XY" visible="1">
    </PIN>
@@ -566,10 +566,10 @@
    <PIN pinname="Length" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="60" dstpinname="XYZ">
+   <LINK dstnodeid="60" dstpinname="XYZ" srcnodeid="59" srcpinname="Output">
    </LINK>
-   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="61">
-   <BOUNDS type="Node" left="10035" top="6825" width="100" height="100">
+   <NODE componentmode="Hidden" id="61" nodename="Map (Value)" systemname="Map (Value)">
+   <BOUNDS height="100" left="10035" top="6825" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Mapping" slicecount="1" values="Clamp">
    </PIN>
@@ -580,12 +580,12 @@
    <PIN pinname="Destination Maximum" slicecount="1" values="0.5">
    </PIN>
    </NODE>
-   <LINK srcnodeid="60" srcpinname="Length" dstnodeid="61" dstpinname="Input">
+   <LINK dstnodeid="61" dstpinname="Input" srcnodeid="60" srcpinname="Length">
    </LINK>
-   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="30" dstpinname="Alpha">
+   <LINK dstnodeid="30" dstpinname="Alpha" srcnodeid="61" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="36" srcpinname="Output" dstnodeid="59" dstpinname="Input 1">
+   <LINK dstnodeid="59" dstpinname="Input 1" srcnodeid="36" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="47" srcpinname="Position XYZ" dstnodeid="59" dstpinname="Input 2">
+   <LINK dstnodeid="59" dstpinname="Input 2" srcnodeid="47" srcpinname="Position XYZ">
    </LINK>
    </PATCH>

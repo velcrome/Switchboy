@@ -338,7 +338,7 @@
    </LINK>
    <LINK dstnodeid="27" dstpinname="RenderState" srcnodeid="0" srcpinname="Output Node">
    </LINK>
-   <NODE componentmode="Hidden" debug="0" filename="..\..\Patches\Earth\root_Earth.v4p" id="27" nodename="..\..\Patches\Earth\root_Earth.v4p" systemname="root_Earth">
+   <NODE componentmode="Hidden" debug="0" filename="..\..\Patches\AdLaterne\root_AdLaterne.v4p" id="27" nodename="..\..\Patches\AdLaterne\root_AdLaterne.v4p" systemname="root_AdLaterne">
    <PIN pinname="RenderState" visible="1">
    </PIN>
    <PIN pinname="Transform" visible="1">

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\engine\DebugEnvironment.v4p" filename="C:\dev\vvvv\switchboy3\engine\DebugEnvironment.v4p" systemname="DebugEnvironment">
-   <BOUNDS height="10350" left="9810" top="2535" type="Window" width="14250">
+   <PATCH nodename="c:\Switchboy3\modules\engine\DebugEnvironment.v4p" filename="C:\dev\vvvv\switchboy3\engine\DebugEnvironment.v4p" systemname="DebugEnvironment">
+   <BOUNDS height="10350" left="1350" top="2100" type="Window" width="14250">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Integer.dll" id="18" nodename="Integer (Value)" systemname="Integer (Value Legacy)">
    <BOUNDS height="100" left="10140" top="8640" type="Node" width="100">
@@ -186,28 +186,6 @@
    <PIN pinname="XYZ" slicecount="1" values="8">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="3" nodename="Quad (DX9)" systemname="Quad (DX9)">
-   <BOUNDS height="100" left="5730" top="10410" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Sampler State" visible="1">
-   </PIN>
-   <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,0.84557|">
-   </PIN>
-   <PIN pinname="Texture Transform" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" visible="1">
-   </PIN>
-   <PIN pinname="Render State" visible="1">
-   </PIN>
-   <PIN pinname="Transform" slicecount="1" visible="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="3" dstpinname="Texture" srcnodeid="6" srcpinname="Texture Out">
-   </LINK>
    <NODE componentmode="Hidden" id="2" nodename="Filter (EX9.SamplerState)" systemname="Filter (EX9.SamplerState)">
    <BOUNDS height="100" left="6225" top="9585" type="Node" width="100">
    </BOUNDS>
@@ -216,13 +194,7 @@
    <PIN pinname="Magnification Filter" slicecount="1" values="Point">
    </PIN>
    </NODE>
-   <LINK dstnodeid="3" dstpinname="Sampler State" srcnodeid="2" srcpinname="Sampler State Out">
-   </LINK>
    <LINK dstnodeid="6" dstpinname="Alpha" srcnodeid="5" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="3" dstpinname="Texture Transform" srcnodeid="4" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="14" dstpinname="Layer 2" srcnodeid="3" srcpinname="Layer">
    </LINK>
    <NODE componentmode="Hidden" id="1" nodename="Blend (EX9.RenderState)" systemname="Blend (EX9.RenderState)">
    <BOUNDS height="100" left="4815" top="9780" type="Node" width="100">
@@ -234,8 +206,6 @@
    <PIN pinname="Render State In" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="3" dstpinname="Render State" srcnodeid="1" srcpinname="Render State Out">
-   </LINK>
    <NODE componentmode="InABox" id="0" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <BOUNDS height="100" left="1920" top="8400" type="Node" width="100">
    </BOUNDS>
@@ -272,8 +242,6 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="WallTransform">
    </PIN>
    </NODE>
-   <LINK dstnodeid="3" dstpinname="Transform" srcnodeid="21" srcpinname="Output Node">
-   </LINK>
    <NODE componentmode="InABox" id="22" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="11490" top="6630" type="Node" width="100">
    </BOUNDS>
@@ -424,8 +392,8 @@
    </NODE>
    <LINK dstnodeid="1" dstpinname="Render State In" srcnodeid="32" srcpinname="Render State Out">
    </LINK>
-   <NODE systemname="Constant (EX9.Effect)" filename="%VVVV%\lib\nodes\effects\Constant.fx" nodename="Constant (EX9.Effect)" componentmode="Hidden" id="37">
-   <BOUNDS type="Node" left="2175" top="10455" width="100" height="100">
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\effects\Constant.fx" id="37" nodename="Constant (EX9.Effect)" systemname="Constant (EX9.Effect)">
+   <BOUNDS height="100" left="2175" top="10455" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Mesh" visible="1">
    </PIN>
@@ -433,19 +401,19 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   <PIN pinname="Render State" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Technique" slicecount="1" values="| TConstant|">
    </PIN>
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="37" srcpinname="Layer" dstnodeid="14" dstpinname="Layer 1">
+   <LINK dstnodeid="14" dstpinname="Layer 1" srcnodeid="37" srcpinname="Layer">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="42">
-   <BOUNDS type="Node" left="12615" top="9375" width="100" height="100">
+   <NODE componentmode="InABox" id="42" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="12615" top="9375" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="12615" top="9375" width="480" height="480">
+   <BOUNDS height="480" left="12615" top="9375" type="Box" width="480">
    </BOUNDS>
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
@@ -458,12 +426,54 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Enabled">
+   <LINK dstnodeid="15" dstpinname="Enabled" srcnodeid="42" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Enabled">
+   <LINK dstnodeid="37" dstpinname="Color" srcnodeid="11" srcpinname="Color Output">
    </LINK>
-   <LINK srcnodeid="11" srcpinname="Color Output" dstnodeid="37" dstpinname="Color">
+   <LINK dstnodeid="37" dstpinname="Mesh" srcnodeid="0" srcpinname="Output Node">
    </LINK>
-   <LINK srcnodeid="0" srcpinname="Output Node" dstnodeid="37" dstpinname="Mesh">
+   <NODE componentmode="Hidden" id="3" nodename="DrawFixed (EX9.Effect)" systemname="DrawFixed (EX9.Effect)">
+   <BOUNDS height="100" left="5730" top="10410" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Sampler State" visible="1">
+   </PIN>
+   <PIN pinname="Color">
+   </PIN>
+   <PIN pinname="Texture Transform" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Texture" srcnodeid="6" srcpinname="Texture Out">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Sampler State" srcnodeid="2" srcpinname="Sampler State Out">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Texture Transform" srcnodeid="4" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="14" dstpinname="Layer 2" srcnodeid="3" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Render State" srcnodeid="1" srcpinname="Render State Out">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Transform" srcnodeid="21" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Enabled" srcnodeid="42" srcpinname="Y Output Value">
+   </LINK>
+   <NODE systemname="Grid (EX9.Geometry)" nodename="Grid (EX9.Geometry)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="5430" top="9765" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="44" srcpinname="Mesh" dstnodeid="3" dstpinname="Mesh">
    </LINK>
    </PATCH>
