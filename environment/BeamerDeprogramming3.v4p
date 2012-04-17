@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="C:\switchboy3\environment\BeamerDeprogramming3.v4p" filename="C:\switchboy3\environment\BeamerDeprogramming3.v4p" systemname="BeamerDeprogramming3">
-   <BOUNDS height="15090" left="-195" top="0" type="Window" width="12600">
+   <PATCH nodename="c:\Switchboy3\environment\BeamerDeprogramming3.v4p" filename="C:\switchboy3\environment\BeamerDeprogramming3.v4p" systemname="BeamerDeprogramming3">
+   <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <BOUNDS height="100" left="4983" top="11313" type="Node" width="100">
@@ -71,7 +71,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Y" slicecount="1" visible="1" values="7">
+   <PIN pinname="Y" slicecount="1" visible="1" values="4">
    </PIN>
    <PIN pinname="Z" visible="1">
    </PIN>
@@ -119,7 +119,7 @@
    </BOUNDS>
    <BOUNDS height="1395" left="8325" top="3345" type="Box" width="855">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.6">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.8">
    </PIN>
    <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -150,18 +150,6 @@
    </NODE>
    <LINK dstnodeid="166" dstpinname="Shift Y" srcnodeid="168" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="171" nodename="GetSlice (Spreads)" systemname="GetSlice (Spreads)">
-   <BOUNDS height="100" left="8040" top="5715" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="171" dstpinname="Input" srcnodeid="167" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="166" dstpinname="Zoom Ratio = distance / width" srcnodeid="171" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="174" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <BOUNDS height="100" left="6390" top="9900" type="Node" width="100">
    </BOUNDS>
@@ -181,11 +169,11 @@
    <NODE componentmode="Hidden" id="175" nodename="Rotate (Transform)" systemname="Rotate (Transform)">
    <BOUNDS height="100" left="4650" top="4245" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Z">
+   <PIN pinname="Z" visible="1" slicecount="1" values="0.5">
    </PIN>
    <PIN pinname="X" slicecount="1" values="0.1">
    </PIN>
-   <PIN pinname="Y" slicecount="1" values="0">
+   <PIN pinname="Y" visible="1">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -199,7 +187,7 @@
    </BOUNDS>
    <BOUNDS height="720" left="4290" top="1890" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" values="-3.77,0,3">
+   <PIN pinname="Y Input Value" slicecount="3" values="4.5,0,-4.5">
    </PIN>
    <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -210,6 +198,8 @@
    <PIN pinname="Vector Size" slicecount="1" values="3">
    </PIN>
    <PIN encoded="0" pinname="Default" slicecount="1" values="|0, 0, 0|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="3" values="0,0,0">
    </PIN>
    </NODE>
    <LINK dstnodeid="155" dstpinname="X" srcnodeid="176" srcpinname="Y Output Value">
@@ -219,7 +209,7 @@
    </BOUNDS>
    <BOUNDS height="720" left="5520" top="3045" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" values="-0.25,0.5,0.25">
+   <PIN pinname="Y Input Value" slicecount="3" values="-0.25,0,0.25">
    </PIN>
    <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -231,15 +221,17 @@
    </PIN>
    <PIN encoded="0" pinname="Default" slicecount="1" values="|0, 0, 0|">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="3" values="0,0,0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="175" dstpinname="Z" srcnodeid="177" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="179" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="6000" top="1635" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="720" left="6000" top="1635" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" values="-1.5,-3,-1.5">
+   <PIN pinname="Y Input Value" slicecount="3" values="0,-4.5,0">
    </PIN>
    <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -250,6 +242,8 @@
    <PIN pinname="Vector Size" slicecount="1" values="3">
    </PIN>
    <PIN encoded="0" pinname="Default" slicecount="1" values="|0, 0, 0|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="3" values="0,0,0">
    </PIN>
    </NODE>
    <LINK dstnodeid="155" dstpinname="Z" srcnodeid="179" srcpinname="Y Output Value">
@@ -306,8 +300,12 @@
    <PIN pinname="Input Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="166" srcpinname="Layer" dstnodeid="183" dstpinname="Input Node">
+   <LINK dstnodeid="183" dstpinname="Input Node" srcnodeid="166" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="166" dstpinname="Show Helpers">
+   <LINK dstnodeid="166" dstpinname="Show Helpers" srcnodeid="7" srcpinname="Y Output Value">
+   </LINK>
+   <LINK srcnodeid="177" srcpinname="Y Output Value" dstnodeid="175" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="167" srcpinname="Y Output Value" dstnodeid="166" dstpinname="Zoom Ratio = distance / width">
    </LINK>
    </PATCH>

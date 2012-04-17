@@ -1216,7 +1216,7 @@
    </LINK>
    <LINK dstnodeid="30" dstpinname="Enabled" srcnodeid="65" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InAWindow" filename="Persist (Vector).v4p" id="53" nodename="Persist (Vector).v4p" systemname="Persist (Vector)">
+   <NODE componentmode="Hidden" filename="Persist (Vector).v4p" id="53" nodename="Persist (Vector).v4p" systemname="Persist (Vector)">
    <BOUNDS height="100" left="7500" top="10575" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="7500" top="10575" type="Box" width="4800">

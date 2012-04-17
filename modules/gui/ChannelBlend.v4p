@@ -61,7 +61,7 @@
    </PIN>
    <PIN pinname="Mouse Left" visible="1">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="5" values="4,0,0,0,0">
+   <PIN pinname="Internal Value" slicecount="5" values="0,0,0,0,0">
    </PIN>
    <PIN pinname="Mouse Over Color" visible="1">
    </PIN>

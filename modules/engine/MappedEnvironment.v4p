@@ -568,7 +568,7 @@
    </LINK>
    <LINK dstnodeid="261" dstpinname="Input 2" srcnodeid="192" srcpinname="Indices">
    </LINK>
-   <LINK dstnodeid="262" dstpinname="Select" srcnodeid="192" srcpinname="Indices Bin Size" linkstyle="Bezier">
+   <LINK dstnodeid="262" dstpinname="Select" linkstyle="Bezier" srcnodeid="192" srcpinname="Indices Bin Size">
    <LINKPOINT x="3915" y="12090">
    </LINKPOINT>
    <LINKPOINT x="2685" y="12090">
@@ -588,14 +588,14 @@
    </LINK>
    <LINK dstnodeid="192" dstpinname="UseBeamer" srcnodeid="134" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="Mesh (EX9.Geometry Join Subsets)" filename="%VVVV%\addonpack\lib\nodes\plugins\MeshJoinSubsets.dll" nodename="Mesh (EX9.Geometry Join Subsets)" componentmode="Hidden" id="273">
-   <BOUNDS type="Node" left="1170" top="14370" width="2820" height="270">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\MeshJoinSubsets.dll" id="273" nodename="Mesh (EX9.Geometry Join Subsets)" systemname="Mesh (EX9.Geometry Join Subsets)">
+   <BOUNDS height="270" left="1170" top="14370" type="Node" width="2820">
    </BOUNDS>
    <PIN pinname="PositionXYZ" visible="1">
    </PIN>
-   <PIN pinname="NormalXYZ" visible="1" slicecount="12" values="0,0,1,0,0,1,0,0,1,0,0,1">
+   <PIN pinname="NormalXYZ" slicecount="12" visible="1" values="0,0,1,0,0,1,0,0,1,0,0,1">
    </PIN>
-   <PIN pinname="Texture CoordinateXY" visible="1" slicecount="8" values="0,0,1,0,0,1,1,1">
+   <PIN pinname="Texture CoordinateXY" slicecount="8" visible="1" values="0,0,1,0,0,1,1,1">
    </PIN>
    <PIN pinname="IndicesXYZ" visible="1">
    </PIN>
@@ -604,20 +604,38 @@
    <PIN pinname="Mesh" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="192" srcpinname="VerticesXYZ" dstnodeid="273" dstpinname="PositionXYZ">
+   <LINK dstnodeid="273" dstpinname="PositionXYZ" srcnodeid="192" srcpinname="VerticesXYZ">
    </LINK>
-   <LINK srcnodeid="272" srcpinname="Output" dstnodeid="273" dstpinname="Indices Bin Size">
+   <LINK dstnodeid="273" dstpinname="Indices Bin Size" srcnodeid="272" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="273" srcpinname="Mesh" dstnodeid="200" dstpinname="Input Node" linkstyle="Bezier">
+   <LINK dstnodeid="200" dstpinname="Input Node" linkstyle="Bezier" srcnodeid="273" srcpinname="Mesh">
    <LINKPOINT x="1155" y="15338">
    </LINKPOINT>
    <LINKPOINT x="75" y="15338">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="261" srcpinname="Output" dstnodeid="273" dstpinname="IndicesXYZ" linkstyle="Bezier">
+   <LINK dstnodeid="273" dstpinname="IndicesXYZ" linkstyle="Bezier" srcnodeid="261" srcpinname="Output">
    <LINKPOINT x="2145" y="13898">
    </LINKPOINT>
    <LINKPOINT x="3225" y="13898">
    </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="274" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="870" top="11865" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="870" top="11865" width="795" height="720">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y Input Value">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="192" srcpinname="VerticesXYZ" dstnodeid="274" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
