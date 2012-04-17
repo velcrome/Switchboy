@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\dev\vvvv\switchboy_git\switchboy\gui\BindingPreset.v4p" filename="C:\dev\vvvv\switchboy3\gui\BindingPreset.v4p" systemname="BindingPreset">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="c:\Switchboy3\modules\gui\BindingPreset.v4p" filename="C:\dev\vvvv\switchboy3\gui\BindingPreset.v4p" systemname="BindingPreset">
    <BOUNDS height="10695" left="3480" top="1125" type="Window" width="13425">
    </BOUNDS>
    <NODE componentmode="InABox" id="1" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -196,6 +196,42 @@
    </LINK>
    <LINK dstnodeid="24" dstpinname="FileName" srcnodeid="26" srcpinname="Output">
    </LINK>
+   <NODE componentmode="InABox" id="30" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="5445" top="3960" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="330" left="5445" top="3960" type="Box" width="3165">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="30" dstpinname="Input String" srcnodeid="22" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="6750" top="1455" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="300" left="6750" top="1455" type="Box" width="2310">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="..\environment\bindings\">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="22" dstpinname="Input 1" srcnodeid="31" srcpinname="Output String">
+   </LINK>
    <NODE componentmode="Hidden" filename="..\engine\projection\Persist (Vector).v4p" id="29" nodename="Persist (Vector)" systemname="Persist (Vector)">
    <BOUNDS height="100" left="8145" top="6345" type="Node" width="100">
    </BOUNDS>
@@ -214,50 +250,14 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="29" dstpinname="Input">
+   <LINK dstnodeid="29" dstpinname="Input" srcnodeid="3" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="1" dstpinname="Y Input Value">
+   <LINK dstnodeid="1" dstpinname="Y Input Value" srcnodeid="29" srcpinname="Output">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="30" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="5445" top="3960" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="5445" top="3960" width="3165" height="330">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="text" encoded="0">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="Filename">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="30" dstpinname="Input String">
+   <LINK dstnodeid="29" dstpinname="Filename" srcnodeid="30" srcpinname="Output String">
    </LINK>
-   <LINK srcnodeid="30" srcpinname="Output String" dstnodeid="29" dstpinname="Filename">
+   <LINK dstnodeid="29" dstpinname="Save" srcnodeid="4" srcpinname="Y Output Value">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="31" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="6750" top="1455" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6750" top="1455" width="2310" height="300">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="..\environment\bindings\" encoded="0">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="text" encoded="0">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="Directory">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="31" srcpinname="Output String" dstnodeid="22" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="29" dstpinname="Save">
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="29" dstpinname="Load">
+   <LINK dstnodeid="29" dstpinname="Load" srcnodeid="14" srcpinname="Y Output Value">
    </LINK>
    </PATCH>

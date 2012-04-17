@@ -23,7 +23,7 @@
    </PIN>
    <PIN pinname="View" slicecount="1" visible="1" values="||">
    </PIN>
-   <PIN pinname="Projection" visible="1" slicecount="1" values="||">
+   <PIN pinname="Projection" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Actual Backbuffer Width" visible="1">
    </PIN>
@@ -183,11 +183,11 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   <PIN pinname="Layer 1" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Layer Template Count" slicecount="1" values="8">
    </PIN>
-   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   <PIN pinname="Layer 3" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Layer 4" visible="1">
    </PIN>
@@ -299,9 +299,9 @@
    <LINK dstnodeid="12" dstpinname="Y Input Value" srcnodeid="23" srcpinname="Y">
    </LINK>
    <NODE componentmode="InABox" id="25" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="8985" top="2085" type="Node" width="100">
+   <BOUNDS height="100" left="8985" top="1755" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="480" left="8985" top="2085" type="Box" width="795">
+   <BOUNDS height="480" left="8985" top="1755" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
@@ -629,6 +629,10 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="87" dstpinname="Input 1" srcnodeid="66" srcpinname="Intersects Quad">
    </LINK>
@@ -801,16 +805,6 @@
    <LINK dstnodeid="92" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="99" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="23" dstpinname="XY" srcnodeid="22" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="Hidden" id="103" nodename="Inverse (Transform)" systemname="Inverse (Transform)">
-   <BOUNDS height="100" left="2745" top="13455" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Source" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="103" dstpinname="Source" srcnodeid="3" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="1" dstpinname="Aspect Ratio" srcnodeid="3" srcpinname="Transform Out">
    </LINK>
@@ -1049,7 +1043,7 @@
    <LINK dstnodeid="14" dstpinname="Layer 1" srcnodeid="0" srcpinname="Output Node">
    </LINK>
    <NODE componentmode="Hidden" id="124" nodename="GetMatrix (Transform)" systemname="GetMatrix (Transform)">
-   <BOUNDS height="100" left="8055" top="12465" type="Node" width="100">
+   <BOUNDS height="100" left="8145" top="11505" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Transform" visible="1">
    </PIN>
@@ -1070,8 +1064,6 @@
    <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
    </NODE>
-   <LINK dstnodeid="125" dstpinname="Y Input Value" srcnodeid="124" srcpinname="Matrix Out">
-   </LINK>
    <NODE componentmode="Hidden" id="129" nodename="Rotate (Transform)" systemname="Rotate (Transform)">
    <BOUNDS height="100" left="8295" top="10620" type="Node" width="100">
    </BOUNDS>
@@ -1117,9 +1109,9 @@
    <LINK dstnodeid="132" dstpinname="Input 1" srcnodeid="72" srcpinname="XYZ Transformed">
    </LINK>
    <NODE componentmode="InABox" id="133" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="12705" top="3705" type="Node" width="0">
+   <BOUNDS height="0" left="11955" top="3735" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="480" left="12705" top="3705" type="Box" width="480">
+   <BOUNDS height="480" left="11955" top="3735" type="Box" width="480">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
@@ -1144,10 +1136,34 @@
    </LINK>
    <LINK dstnodeid="131" dstpinname="Input 2" srcnodeid="133" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="95" srcpinname="Y Output Value" dstnodeid="70" dstpinname="XYZ">
+   <LINK dstnodeid="70" dstpinname="XYZ" srcnodeid="95" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="95" srcpinname="Y Output Value" dstnodeid="92" dstpinname="Horizontal">
+   <LINK dstnodeid="92" dstpinname="Horizontal" srcnodeid="95" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="95" srcpinname="Y Output Value" dstnodeid="92" dstpinname="Vertical">
+   <LINK dstnodeid="92" dstpinname="Vertical" srcnodeid="95" srcpinname="Y Output Value">
+   </LINK>
+   <NODE systemname="FrameDelay (Animation)" nodename="FrameDelay (Animation)" componentmode="Hidden" id="134">
+   <BOUNDS type="Node" left="12045" top="5025" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="99" srcpinname="Y Output Value" dstnodeid="134" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="134" srcpinname="Output 1" dstnodeid="87" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="135">
+   <BOUNDS type="Node" left="7980" top="12150" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="124" srcpinname="Matrix Out" dstnodeid="135" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="135" srcpinname="Position Out" dstnodeid="125" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

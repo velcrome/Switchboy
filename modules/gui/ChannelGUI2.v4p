@@ -455,7 +455,7 @@
    </PIN>
    <PIN pinname="Size X" slicecount="1" values="0.96">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="3" values="0,0,0">
+   <PIN pinname="Internal Value" slicecount="3" values="2,0,0">
    </PIN>
    <PIN pinname="Mouse Over Color" visible="1">
    </PIN>
@@ -1630,16 +1630,6 @@
    </LINK>
    <LINK dstnodeid="335" dstpinname="TouchID" srcnodeid="296" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="348" nodename="Damper (Animation)" systemname="Damper (Animation)">
-   <BOUNDS height="100" left="1980" top="11430" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Go To Position" visible="1">
-   </PIN>
-   <PIN pinname="Position Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="348" dstpinname="Go To Position" srcnodeid="335" srcpinname="PreviewPositionXY">
-   </LINK>
-   <LINK dstnodeid="314" dstpinname="Y Input Value" srcnodeid="348" srcpinname="Position Out">
+   <LINK dstnodeid="314" dstpinname="Y Input Value" srcnodeid="335" srcpinname="PreviewPositionXY">
    </LINK>
    </PATCH>

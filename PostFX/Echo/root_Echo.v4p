@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\switchboy3\PostFX\Echo\root_Echo.v4p" filename="C:\switchboy3\PostFX\Echo\root_Echo.v4p" systemname="root_Echo">
-   <BOUNDS height="14340" left="1995" top="1995" type="Window" width="15000">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="c:\Switchboy3\PostFX\Echo\root_Echo.v4p" filename="C:\switchboy3\PostFX\Echo\root_Echo.v4p" systemname="root_Echo">
+   <BOUNDS height="14520" left="4755" top="3540" type="Window" width="15000">
    </BOUNDS>
    <NODE componentmode="InABox" id="8" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <BOUNDS height="0" left="1455" top="8250" type="Node" width="0">
@@ -9,7 +9,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="6450" top="14490" type="Window" width="215">
    </BOUNDS>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Texture">
    </PIN>
    <PIN pinname="Input Node" visible="1">
    </PIN>
@@ -756,28 +756,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="76" nodename="Quad (DX9)" systemname="Quad (DX9)">
-   <BOUNDS height="100" left="1425" top="6915" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="77" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
-   <BOUNDS height="100" left="780" top="6255" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="XYZ" slicecount="1" values="2">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="76" dstpinname="Transform" srcnodeid="77" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="8" dstpinname="Input Node" srcnodeid="76" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="58" dstpinname="Input" srcnodeid="27" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="Hidden" id="83" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
@@ -808,10 +786,8 @@
    </NODE>
    <LINK dstnodeid="85" dstpinname="Input" srcnodeid="0" srcpinname="Output Node">
    </LINK>
-   <LINK dstnodeid="76" dstpinname="Texture" srcnodeid="85" srcpinname="Output">
-   </LINK>
-   <NODE systemname="Vector (4d Join)" nodename="Vector (4d Join)" componentmode="Hidden" id="86">
-   <BOUNDS type="Node" left="4605" top="6150" width="100" height="100">
+   <NODE componentmode="Hidden" id="86" nodename="Vector (4d Join)" systemname="Vector (4d Join)">
+   <BOUNDS height="100" left="4605" top="6150" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -824,16 +800,18 @@
    <PIN pinname="W" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="86" dstpinname="X">
+   <LINK dstnodeid="86" dstpinname="X" srcnodeid="22" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="86" dstpinname="Y">
+   <LINK dstnodeid="86" dstpinname="Y" srcnodeid="23" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="86" dstpinname="Z">
+   <LINK dstnodeid="86" dstpinname="Z" srcnodeid="56" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="59" srcpinname="Y Output Value" dstnodeid="85" dstpinname="Reset">
+   <LINK dstnodeid="85" dstpinname="Reset" srcnodeid="59" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="86" srcpinname="XYZW" dstnodeid="85" dstpinname="Fader">
+   <LINK dstnodeid="85" dstpinname="Fader" srcnodeid="86" srcpinname="XYZW">
    </LINK>
-   <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="86" dstpinname="W">
+   <LINK dstnodeid="86" dstpinname="W" srcnodeid="62" srcpinname="Y Output Value">
+   </LINK>
+   <LINK srcnodeid="85" srcpinname="Output" dstnodeid="8" dstpinname="Input Node">
    </LINK>
    </PATCH>

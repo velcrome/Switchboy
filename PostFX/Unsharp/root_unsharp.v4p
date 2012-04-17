@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\switchboy\PostFX\root_Unsharp.v4p" filename="C:\switchboy\PostFX\root_Unsharp.v4p" systemname="root_Unsharp">
-   <BOUNDS height="11670" left="0" top="195" type="Window" width="15000">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="c:\Switchboy3\PostFX\Unsharp\root_unsharp.v4p" filename="C:\switchboy\PostFX\root_Unsharp.v4p" systemname="root_Unsharp">
+   <BOUNDS height="14520" left="4755" top="3540" type="Window" width="15000">
    </BOUNDS>
    <NODE componentmode="InABox" id="8" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <BOUNDS height="0" left="435" top="8085" type="Node" width="0">
@@ -9,7 +9,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="6450" top="14490" type="Window" width="215">
    </BOUNDS>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Texture">
    </PIN>
    <PIN pinname="Input Node" visible="1">
    </PIN>
@@ -350,26 +350,6 @@
    </LINK>
    <LINK dstnodeid="58" dstpinname="Input" srcnodeid="27" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="128" nodename="Quad (DX9)" systemname="Quad (DX9)">
-   <BOUNDS height="100" left="435" top="7590" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="127" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
-   <BOUNDS height="100" left="585" top="7200" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="XYZ" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="128" dstpinname="Transform" srcnodeid="127" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\UnsharpMask\UnsharpMask (EX9.Texture Filter).v4p" id="123" nodename="UnsharpMask (EX9.Texture Filter)" systemname="UnsharpMask (EX9.Texture Filter)">
    <BOUNDS height="100" left="765" top="6690" type="Node" width="100">
    </BOUNDS>
@@ -390,10 +370,6 @@
    <PIN pinname="Saturation" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="128" dstpinname="Texture" srcnodeid="123" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="8" dstpinname="Input Node" srcnodeid="128" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="123" dstpinname="Input" srcnodeid="0" srcpinname="Output Node">
    </LINK>
    <LINK dstnodeid="123" dstpinname="Amount" srcnodeid="36" srcpinname="Output">
@@ -413,5 +389,7 @@
    <LINK dstnodeid="129" dstpinname="Input" srcnodeid="37" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="123" dstpinname="Balance" srcnodeid="129" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="123" srcpinname="Output" dstnodeid="8" dstpinname="Input Node">
    </LINK>
    </PATCH>

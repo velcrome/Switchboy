@@ -20,23 +20,20 @@ namespace VVVV.Nodes
 	{
 		#region fields & pins
 		[Input("Vertices")]
-		ISpread<ISpread<Vector3D>> FVerticesInput;
+		IDiffSpread<ISpread<Vector3D>> FVerticesInput;
 
 		[Input("Indices")]
-		ISpread<ISpread<int>> FIndicesInput;
+		IDiffSpread<ISpread<int>> FIndicesInput;
 
 		[Input("Transform")]
-		ISpread<Matrix4x4> FTransform;
+		IDiffSpread<Matrix4x4> FTransform;
 
 		[Input("WallBelongsToBeamer")]
-		ISpread<int> FWallBelongsToBeamerID;
+		IDiffSpread<int> FWallBelongsToBeamerID;
 
 		[Input("UseBeamer")]
-		ISpread<int> FUseBeamerID;
+		IDiffSpread<int> FUseBeamerID;
 
-		[Input("Reset")]
-		ISpread<bool> FReset;
-		
 		[Output("Vertices")]
 		ISpread<ISpread<Vector3D>> FVerticesOutput;
 
@@ -55,7 +52,7 @@ namespace VVVV.Nodes
 		public void Evaluate(int SpreadMax)
 		{
 			
-			if (FReset[0]) {
+			if (FVerticesInput.IsChanged || FIndicesInput.IsChanged || FTransform.IsChanged || FWallBelongsToBeamerID.IsChanged || FUseBeamerID.IsChanged) {
 				SortedDictionary<int, List<ISpread<Vector3D>>> vertex = new  SortedDictionary<int, List<ISpread<Vector3D>>>();				
 				Dictionary<int, List<ISpread<int>>> index = new  Dictionary<int, List<ISpread<int>>>();				
 				Dictionary<int, List<Matrix4x4>> transform = new  Dictionary<int, List<Matrix4x4>>();				
@@ -97,46 +94,39 @@ namespace VVVV.Nodes
 				
 				FVerticesOutput.SliceCount = count;
 				FIndicesOutput.SliceCount = count;
-				FBeamerID.SliceCount = count;
+				FBeamerID.SliceCount = 0;
 				
-				int counter = 0;
-			
-				for (int i = 0; i < keys.Length; i++) {
+				for (int i = 0;  i < FUseBeamerID.SliceCount; i++) {
+					int key = FUseBeamerID[i];
 					
-					bool contained = false;
-					for (int j=0; j<FUseBeamerID.SliceCount;j++) {
-						if (keys[i] == FUseBeamerID[j]) contained = true;	
-					}
-					
-					if (contained) {					
+					if (vertex.ContainsKey(key)) { 
 						int slicecountIndices = 0;
 						int slicecountVertices = 0;
-						for (int j = 0;j<vertex[keys[i]].Count;j++) {
-							slicecountVertices += vertex[keys[i]][j].SliceCount;
-							slicecountIndices += index[keys[i]][j].SliceCount;
+						for (int j = 0;j<vertex[key].Count;j++) {
+							slicecountVertices += vertex[key][j].SliceCount;
+							slicecountIndices += index[key][j].SliceCount;
 						}
-						FVerticesOutput[counter].SliceCount = slicecountVertices;
-						FIndicesOutput[counter].SliceCount = slicecountIndices;
+					
+						FVerticesOutput[i].SliceCount = slicecountVertices;
+						FIndicesOutput[i].SliceCount = slicecountIndices;
 					
 						slicecountIndices = 0;
 						slicecountVertices = 0;
-						for (int j = 0;j<vertex[keys[i]].Count;j++) {
-							for (int v = 0;v<vertex[keys[i]][j].SliceCount;v++) {
-								FVerticesOutput[counter][v+slicecountVertices] = transform[keys[i]][j] * vertex[keys[i]][j][v];
+					
+						for (int j = 0;j<vertex[key].Count;j++) {
+							for (int v = 0;v<vertex[key][j].SliceCount;v++) {
+								FVerticesOutput[i][v+slicecountVertices] = transform[key][j] * vertex[key][j][v];
 							}				
-
-							for (int v = 0;v<index[keys[i]][j].SliceCount;v++) {
-								FIndicesOutput[counter][v+slicecountIndices] = index[keys[i]][j][v]+slicecountVertices;
+							for (int v = 0;v<index[key][j].SliceCount;v++) {
+								FIndicesOutput[i][v+slicecountIndices] = index[key][j][v]+slicecountVertices;
 							}				
-							
-							slicecountVertices += vertex[keys[i]][j].SliceCount;
-							slicecountIndices += index[keys[i]][j].SliceCount;
+								
+							slicecountVertices += vertex[key][j].SliceCount;
+							slicecountIndices += index[key][j].SliceCount;
 						}
-						FBeamerID[counter] = keys[i];
-						counter++;
-	
-						
-					}
+					
+						FBeamerID.Add(key);
+					}				
 				}
 			}
 		}

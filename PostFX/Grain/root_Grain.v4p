@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\switchboy3\PostFX\Grain\root_Grain.v4p" filename="C:\switchboy3\PostFX\Grain\root_Grain.v4p" systemname="root_Grain">
-   <BOUNDS height="14340" left="1995" top="1995" type="Window" width="15000">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="c:\Switchboy3\PostFX\Grain\root_Grain.v4p" filename="C:\switchboy3\PostFX\Grain\root_Grain.v4p" systemname="root_Grain">
+   <BOUNDS height="14520" left="4755" top="3540" type="Window" width="15000">
    </BOUNDS>
    <NODE componentmode="InABox" id="8" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <BOUNDS height="0" left="1455" top="8250" type="Node" width="0">
@@ -9,7 +9,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="6450" top="14490" type="Window" width="215">
    </BOUNDS>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Texture">
    </PIN>
    <PIN pinname="Input Node" visible="1">
    </PIN>
@@ -756,28 +756,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="76" nodename="Quad (DX9)" systemname="Quad (DX9)">
-   <BOUNDS height="100" left="1425" top="6915" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="77" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
-   <BOUNDS height="100" left="780" top="6255" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="XYZ" slicecount="1" values="2">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="76" dstpinname="Transform" srcnodeid="77" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="8" dstpinname="Input Node" srcnodeid="76" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="58" dstpinname="Input" srcnodeid="27" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="Hidden" id="83" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
@@ -818,16 +796,16 @@
    </NODE>
    <LINK dstnodeid="87" dstpinname="Input" srcnodeid="0" srcpinname="Output Node">
    </LINK>
-   <LINK dstnodeid="76" dstpinname="Texture" srcnodeid="87" srcpinname="Output">
+   <LINK dstnodeid="87" dstpinname="Animated" srcnodeid="59" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="59" srcpinname="Y Output Value" dstnodeid="87" dstpinname="Animated">
+   <LINK dstnodeid="87" dstpinname="Amount" srcnodeid="22" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="87" dstpinname="Amount">
+   <LINK dstnodeid="87" dstpinname="Highlights" srcnodeid="23" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="87" dstpinname="Highlights">
+   <LINK dstnodeid="87" dstpinname="Midtones" srcnodeid="56" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="87" dstpinname="Midtones">
+   <LINK dstnodeid="87" dstpinname="Shadows" srcnodeid="62" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="87" dstpinname="Shadows">
+   <LINK srcnodeid="87" srcpinname="Output" dstnodeid="8" dstpinname="Input Node">
    </LINK>
    </PATCH>

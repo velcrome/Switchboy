@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\modules\engine\DebugEnvironment.v4p" filename="C:\dev\vvvv\switchboy3\engine\DebugEnvironment.v4p" systemname="DebugEnvironment">
-   <BOUNDS height="10350" left="1350" top="2100" type="Window" width="14250">
+   <BOUNDS height="10350" left="405" top="1470" type="Window" width="14250">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Integer.dll" id="18" nodename="Integer (Value)" systemname="Integer (Value Legacy)">
    <BOUNDS height="100" left="10140" top="8640" type="Node" width="100">
@@ -468,12 +468,12 @@
    </LINK>
    <LINK dstnodeid="3" dstpinname="Enabled" srcnodeid="42" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="Grid (EX9.Geometry)" nodename="Grid (EX9.Geometry)" componentmode="Hidden" id="44">
-   <BOUNDS type="Node" left="5430" top="9765" width="100" height="100">
+   <NODE componentmode="Hidden" id="44" nodename="Grid (EX9.Geometry)" systemname="Grid (EX9.Geometry)">
+   <BOUNDS height="100" left="5430" top="9765" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Mesh" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="44" srcpinname="Mesh" dstnodeid="3" dstpinname="Mesh">
+   <LINK dstnodeid="3" dstpinname="Mesh" srcnodeid="44" srcpinname="Mesh">
    </LINK>
    </PATCH>

@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\switchboy3\PostFX\Dots\root_Dots.v4p" filename="C:\switchboy3\PostFX\Dots\root_Dots.v4p" systemname="root_Dots">
-   <BOUNDS height="14340" left="1995" top="1995" type="Window" width="15000">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="c:\Switchboy3\PostFX\Dots\root_Dots.v4p" filename="C:\switchboy3\PostFX\Dots\root_Dots.v4p" systemname="root_Dots">
+   <BOUNDS height="14520" left="4755" top="3540" type="Window" width="15000">
    </BOUNDS>
    <NODE componentmode="InABox" id="8" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <BOUNDS height="0" left="1455" top="8250" type="Node" width="0">
@@ -9,7 +9,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="6450" top="14490" type="Window" width="215">
    </BOUNDS>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Texture">
    </PIN>
    <PIN pinname="Input Node" visible="1">
    </PIN>
@@ -774,28 +774,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="76" nodename="Quad (DX9)" systemname="Quad (DX9)">
-   <BOUNDS height="100" left="1425" top="6915" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="77" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
-   <BOUNDS height="100" left="780" top="6255" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="XYZ" slicecount="1" values="2">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="76" dstpinname="Transform" srcnodeid="77" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="8" dstpinname="Input Node" srcnodeid="76" srcpinname="Layer">
-   </LINK>
    <NODE componentmode="Hidden" id="80" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
    <BOUNDS height="100" left="2580" top="5610" type="Node" width="100">
    </BOUNDS>
@@ -810,8 +788,8 @@
    </LINK>
    <LINK dstnodeid="58" dstpinname="Input" srcnodeid="27" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="Dots (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Dots\Dots (EX9.Texture Filter).v4p" nodename="Dots (EX9.Texture Filter)" componentmode="Hidden" id="81">
-   <BOUNDS type="Node" left="2325" top="6360" width="100" height="100">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Dots\Dots (EX9.Texture Filter).v4p" id="81" nodename="Dots (EX9.Texture Filter)" systemname="Dots (EX9.Texture Filter)">
+   <BOUNDS height="100" left="2325" top="6360" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -826,11 +804,9 @@
    <PIN pinname="Scale" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Output Node" dstnodeid="81" dstpinname="Input">
+   <LINK dstnodeid="81" dstpinname="Input" srcnodeid="0" srcpinname="Output Node">
    </LINK>
-   <LINK srcnodeid="81" srcpinname="Output" dstnodeid="76" dstpinname="Texture">
-   </LINK>
-   <LINK srcnodeid="80" srcpinname="XY" dstnodeid="81" dstpinname="Pixel Size">
+   <LINK dstnodeid="81" dstpinname="Pixel Size" srcnodeid="80" srcpinname="XY">
    </LINK>
    <NODE componentmode="Hidden" id="82" nodename="Map (Value)" systemname="Map (Value)">
    <BOUNDS height="100" left="3975" top="5400" type="Node" width="100">
@@ -848,14 +824,14 @@
    <PIN pinname="Source Maximum" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="82" dstpinname="Input">
+   <LINK dstnodeid="82" dstpinname="Input" srcnodeid="23" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="80" dstpinname="Y">
+   <LINK dstnodeid="80" dstpinname="Y" srcnodeid="82" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="59" srcpinname="Y Output Value" dstnodeid="81" dstpinname="Point">
+   <LINK dstnodeid="81" dstpinname="Point" srcnodeid="59" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="83">
-   <BOUNDS type="Node" left="8115" top="5130" width="100" height="100">
+   <NODE componentmode="Hidden" id="83" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
+   <BOUNDS height="100" left="8115" top="5130" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -864,10 +840,12 @@
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="65" srcpinname="Y Output Value" dstnodeid="83" dstpinname="X">
+   <LINK dstnodeid="83" dstpinname="X" srcnodeid="65" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="68" srcpinname="Y Output Value" dstnodeid="83" dstpinname="Y">
+   <LINK dstnodeid="83" dstpinname="Y" srcnodeid="68" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="83" srcpinname="XY" dstnodeid="81" dstpinname="Scale">
+   <LINK dstnodeid="81" dstpinname="Scale" srcnodeid="83" srcpinname="XY">
+   </LINK>
+   <LINK srcnodeid="81" srcpinname="Output" dstnodeid="8" dstpinname="Input Node">
    </LINK>
    </PATCH>

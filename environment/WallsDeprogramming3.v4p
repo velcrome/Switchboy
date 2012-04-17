@@ -1,0 +1,125 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="C:\switchboy3\environment\WallsDeprogramming3.v4p" filename="C:\switchboy3\environment\WallsDeprogramming3.v4p" systemname="WallsDeprogramming3">
+   <BOUNDS height="15090" left="465" top="960" type="Window" width="12600">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="14" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="4878" top="13257" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="525" left="4878" top="13257" type="Box" width="1845">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="WallTransform">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="8445" top="13170" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1380" left="8445" top="13170" type="Box" width="2415">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="WallBelongsTo">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="18" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="14070" top="8895" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="330" left="14070" top="8895" type="Box" width="2835">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="1" values="c:\Switchboy3\environment\vignette\blank.png">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="WallTextureFilename">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="199" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="9570" top="10065" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="2160" left="9570" top="10065" type="Box" width="1080">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" values="0,1,2">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="3" values="1,1,1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="0" dstpinname="Y Input Value" srcnodeid="199" srcpinname="Y Output Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="210" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="4545" top="7185" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4545" top="7185" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="211" nodename="Transform (Transform 3d)" systemname="Transform (Transform 3d)">
+   <BOUNDS height="100" left="4230" top="8700" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="ScaleY" visible="1" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" values="9">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Pitch" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Yaw" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="210" srcpinname="Y Output Value" dstnodeid="211" dstpinname="TranslateY">
+   </LINK>
+   <NODE systemname="Translate (Transform)" nodename="Translate (Transform)" componentmode="Hidden" id="214">
+   <BOUNDS type="Node" left="4965" top="11430" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" values="4.5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="211" srcpinname="Transform Out" dstnodeid="214" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="214" srcpinname="Transform Out" dstnodeid="14" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="215">
+   <BOUNDS type="Node" left="6075" top="7845" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Width" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Alignment" slicecount="1" values="Block">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="215" srcpinname="Output" dstnodeid="211" dstpinname="Yaw">
+   </LINK>
+   </PATCH>

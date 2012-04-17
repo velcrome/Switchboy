@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\switchboy3\PostFX\root_painty.v4p" filename="C:\switchboy3\PostFX\root_painty.v4p" systemname="root_painty">
-   <BOUNDS height="11670" left="630" top="4005" type="Window" width="15015">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="c:\Switchboy3\PostFX\Painty\root_painty.v4p" filename="C:\switchboy3\PostFX\root_painty.v4p" systemname="root_painty">
+   <BOUNDS height="14520" left="4755" top="3540" type="Window" width="15000">
    </BOUNDS>
    <NODE componentmode="InABox" id="8" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <BOUNDS height="0" left="1515" top="10005" type="Node" width="0">
@@ -9,7 +9,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="6450" top="14490" type="Window" width="215">
    </BOUNDS>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Texture">
    </PIN>
    <PIN pinname="Input Node" visible="1">
    </PIN>
@@ -404,26 +404,6 @@
    </LINK>
    <LINK dstnodeid="58" dstpinname="Input" srcnodeid="27" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="109" nodename="Quad (DX9)" systemname="Quad (DX9)">
-   <BOUNDS height="100" left="1515" top="9015" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="108" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
-   <BOUNDS height="100" left="1680" top="8655" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="XYZ" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="109" dstpinname="Transform" srcnodeid="108" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="InABox" id="102" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="2205" top="3825" type="Node" width="100">
    </BOUNDS>
@@ -447,8 +427,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="101" dstpinname="Input" srcnodeid="102" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="8" dstpinname="Input Node" srcnodeid="109" srcpinname="Layer">
    </LINK>
    <LINK dstnodeid="102" dstpinname="Y Input Value" srcnodeid="36" srcpinname="Output">
    </LINK>
@@ -616,16 +594,14 @@
    </LINK>
    <LINK dstnodeid="135" dstpinname="Input" srcnodeid="138" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="109" dstpinname="Texture" srcnodeid="135" srcpinname="Output">
+   <LINK dstnodeid="134" dstpinname="Y Input Value" srcnodeid="101" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="101" srcpinname="Output" dstnodeid="134" dstpinname="Y Input Value">
+   <LINK dstnodeid="132" dstpinname="Y Input Value" srcnodeid="58" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="58" srcpinname="Output" dstnodeid="132" dstpinname="Y Input Value">
+   <LINK dstnodeid="129" dstpinname="Y Input Value" srcnodeid="61" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="129" dstpinname="Y Input Value">
-   </LINK>
-   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="139">
-   <BOUNDS type="Node" left="7530" top="3510" width="100" height="100">
+   <NODE componentmode="Hidden" id="139" nodename="Map (Value)" systemname="Map (Value)">
+   <BOUNDS height="100" left="7530" top="3510" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -634,8 +610,10 @@
    <PIN pinname="Destination Maximum" slicecount="1" values="2">
    </PIN>
    </NODE>
-   <LINK srcnodeid="64" srcpinname="Output" dstnodeid="139" dstpinname="Input">
+   <LINK dstnodeid="139" dstpinname="Input" srcnodeid="64" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="139" srcpinname="Output" dstnodeid="130" dstpinname="Y Input Value">
+   <LINK dstnodeid="130" dstpinname="Y Input Value" srcnodeid="139" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="135" srcpinname="Output" dstnodeid="8" dstpinname="Input Node">
    </LINK>
    </PATCH>

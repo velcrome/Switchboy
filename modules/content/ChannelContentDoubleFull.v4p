@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\modules\content\ChannelContentDoubleFull.v4p" filename="C:\dev\vvvv\switchboy3\engine\ChannelContentDoubleFull.v4p" locked="0" systemname="ChannelContentDoubleFull">
-   <BOUNDS height="11715" left="11580" top="1485" type="Window" width="12600">
+   <BOUNDS height="11715" left="4560" top="750" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="Hidden" id="3" managers="boygroup" nodename="Group (EX9 Priority)" systemname="Group (EX9 Priority)">
    <BOUNDS height="270" left="3855" top="11430" type="Node" width="13065">
@@ -451,7 +451,7 @@
    </PIN>
    <PIN pinname="Left Button" visible="1">
    </PIN>
-   <PIN pinname="Mouse Wheel" slicecount="1" visible="1" values="32">
+   <PIN pinname="Mouse Wheel" visible="1">
    </PIN>
    <PIN pinname="Color" visible="1">
    </PIN>
@@ -1747,5 +1747,7 @@
    <LINK dstnodeid="235" dstpinname="Data" srcnodeid="236" srcpinname="Input Value">
    </LINK>
    <LINK dstnodeid="185" dstpinname="Y Input Value" srcnodeid="235" srcpinname="IsClient">
+   </LINK>
+   <LINK dstnodeid="141" dstpinname="Mouse Wheel" srcnodeid="220" srcpinname="Scroll">
    </LINK>
    </PATCH>

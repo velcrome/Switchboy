@@ -186,26 +186,6 @@
    </LINK>
    <LINK dstnodeid="22" dstpinname="Background Color" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="32" srcpinname="Color Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\Integer.dll" hiddenwhenlocked="0" id="1" nodename="Integer (Value)" systemname="Integer (Value Legacy)">
-   <BOUNDS height="0" left="1335" top="4470" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="0" left="1335" top="4470" type="Box" width="0">
-   </BOUNDS>
-   <BOUNDS height="0" left="7110" top="12000" type="Window" width="0">
-   </BOUNDS>
-   <PIN pinname="Value Input" visible="1">
-   </PIN>
-   <PIN pinname="Value Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="1" dstpinname="Value Input" hiddenwhenlocked="0" linkstyle="Bezier" srcnodeid="2" srcpinname="Y Output Value">
-   <LINKPOINT x="945" y="4095">
-   </LINKPOINT>
-   <LINKPOINT x="1335" y="4095">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="0" dstpinname="Input 1" hiddenwhenlocked="0" srcnodeid="1" srcpinname="Value Output">
-   </LINK>
    <LINK dstnodeid="22" dstpinname="View" linkstyle="PolyLine" srcnodeid="31" srcpinname="Output Node">
    </LINK>
    <LINK dstnodeid="45" dstpinname="Input Node" srcnodeid="36" srcpinname="Texture Out">
@@ -241,5 +221,7 @@
    <LINK dstnodeid="71" dstpinname="Input" srcnodeid="31" srcpinname="Output Node">
    </LINK>
    <LINK dstnodeid="0" dstpinname="Input 2" srcnodeid="71" srcpinname="Count">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Input 1">
    </LINK>
    </PATCH>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="c:\Switchboy3\environment\BoygroupSetup.v4p" filename="C:\dev\vvvv\switchboy3\environment\BoygroupSetup.v4p" systemname="BoygroupSetup">
-   <BOUNDS height="15090" left="12600" top="0" type="Window" width="12600">
+   <BOUNDS height="15090" left="-195" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="InABox" id="4" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="9735" top="12660" type="Node" width="100">
