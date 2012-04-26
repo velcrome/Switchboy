@@ -74,21 +74,25 @@ namespace VVVV.Nodes
 			Changed = this;
 			
 			int offset = 0;
+			
 			for (int i=0;i<FID.SliceCount;i++) {
 				int count = FName[i].SliceCount;
-				string id = FID[i];
+				string id = FID[i]; 
+				
+
 				if (DictionaryName.ContainsKey(id)) {
-					DictionaryName[id] = (ISpread<string>)FName[i].Clone<string>();
-					DictionaryBinSize[id] = (ISpread<int>)FBinSize.GetRange<int>(offset, count).Clone<int>();
-					DictionaryType[id] = (ISpread<TypeEnum>)FType.GetRange<TypeEnum>(offset, count).Clone<TypeEnum>();
+					FLogger.Log(LogType.Debug, id  + " already present, has been updated.");
+					DictionaryName[id] = (ISpread<string>)FName[i].Clone();
+					DictionaryBinSize[id] = (ISpread<int>)FBinSize.GetRange<int>(offset, count).Clone();
+					DictionaryType[id] = (ISpread<TypeEnum>)FType.GetRange<TypeEnum>(offset, count).Clone();
 				}
 				else {
-					DictionaryName.Add(id, (ISpread<string>)FName[i].Clone<string>());
-					DictionaryBinSize.Add(id, (ISpread<int>)FBinSize.GetRange<int>(offset, count).Clone<int>());
-					DictionaryType.Add(id, (ISpread<TypeEnum>)FType.GetRange<TypeEnum>(offset, count).Clone<TypeEnum>());
+					FLogger.Log(LogType.Debug, id  + " added.");
+					DictionaryName.Add(id, (ISpread<string>)FName[i].Clone());
+					DictionaryBinSize.Add(id, (ISpread<int>)FBinSize.GetRange<int>(offset, count).Clone());
+					DictionaryType.Add(id, (ISpread<TypeEnum>)FType.GetRange<TypeEnum>(offset, count).Clone());
 				}
 			
-				FLogger.Log(LogType.Debug, id+ " registered. Offset: " + offset.ToString() + " Count: "+count.ToString()+". ");
 				offset += count;
 			}
 			
@@ -96,6 +100,8 @@ namespace VVVV.Nodes
 		}
 
 		public void Reset() {
+			FLogger.Log(LogType.Debug, "Reset");
+
 			DictionaryName.Clear();
 			DictionaryBinSize.Clear();
 			DictionaryType.Clear();
@@ -105,7 +111,7 @@ namespace VVVV.Nodes
 		{
 			if (FReset[0]) Reset();
 			
-			if (FName.IsChanged || FAdd[0]) {
+			if (FBinSize.IsChanged || FAdd[0]) {
 				Changed = Add();
 			} else if (MessageNode.Changed == this) MessageNode.Changed = null;
 			
@@ -152,8 +158,8 @@ namespace VVVV.Nodes
 			FCType = configType;
 			
 			FCName.Changed += ChangeHandler;
-//			FCBinSize.Changed += ChangeHandler;
-//			FCType.Changed += ChangeHandler;
+			FCBinSize.Changed += ChangeHandler;
+			FCType.Changed += ChangeHandler;
 		}
 		
 		public void ChangeHandler(IDiffSpread s) {
@@ -166,36 +172,22 @@ namespace VVVV.Nodes
 			ISpread<string> FName = DictionaryName[FID[0]];
 			ISpread<TypeEnum> FType = DictionaryType[FID[0]];
 			
-			FCBinSize.SliceCount = FBinSize.SliceCount;
-			FCType.SliceCount = FType.SliceCount;
+			FCName.SliceCount = FCType.SliceCount = FCBinSize.SliceCount = FBinSize.SliceCount;
 			for (int i=0;i<FBinSize.SliceCount;i++) {
 				FCBinSize[i] = FBinSize[i];
 				FCType[i] = FType[i];
+				FCName[i] = FName[i];
 			}
 			
-			// this is somewhat crude, but needs to be done because
-			// ConfigPins with stringtype fail in the first frame if 
-			// they use more than one slice
-			string buffer = "";
-			for (int i=0;i<FName.SliceCount;i++) buffer += FName[i] + "\n";
-			FCName[0] = buffer;
 		}
 		
 
 		public void Create() { 
 			Dictionary<String, IPluginIn> newPins = new Dictionary<String, IPluginIn>();
 			
-			string[] names = Regex.Split(FCName[0], "\n" );
 			
 			for (int i=0;i<FCBinSize.SliceCount;i++) {
-				string key;
-				try {
-					key = names[i];
-				} catch (Exception e) {
-					key = i.ToString();
-					e.GetType(); // get rid of compiler warning
-				}
-				
+				string key = FCName[i];
 				TypeEnum type = FCType[i];
 				int size = FCBinSize[i];
 
@@ -203,8 +195,6 @@ namespace VVVV.Nodes
 				if (type == TypeEnum.Transform) size *= 16;
 				
 //				FLogger.Log(LogType.Debug, key + " -> Type: " + type.ToString() + " -> " + size.ToString() + " doubles");
-				
-
 				bool doNew = false;
 				
 				if (pins.ContainsKey(key)) {
@@ -275,6 +265,7 @@ namespace VVVV.Nodes
 
 			if (FSave[0] || MessageNode.Changed != null) {
 				Save();
+				Create();
 			}
 			
 			freshInit = false;
@@ -384,37 +375,20 @@ namespace VVVV.Nodes
 			ISpread<string> FName = DictionaryName[FID[0]];
 			ISpread<TypeEnum> FType = DictionaryType[FID[0]];
 			
-			FCType.SliceCount = FCBinSize.SliceCount = FBinSize.SliceCount;
+			FCName.SliceCount = FCType.SliceCount = FCBinSize.SliceCount = FBinSize.SliceCount;
 			for (int i=0;i<FBinSize.SliceCount;i++) {
 				FCBinSize[i] = FBinSize[i];
 				FCType[i] = FType[i];
+				FCName[i] = FName[i];
 			}
-
-			
-			// this is somewhat crude, but needs to be done because
-			// ConfigPins with stringtype fail in the first frame if 
-			// they use more than one slice
-			string buffer = "";
-			for (int i = 0; i < FName.SliceCount; i++)
-				buffer += FName[i] + "\n";
-
-			FCName[0] = buffer;
 		}
 
 		public void Create() { 
 			Dictionary<String, IPluginOut> newPins = new Dictionary<String, IPluginOut>();
 			
-			string[] names = Regex.Split(FCName[0], "\n" );
 			
 			for (int i=0;i<FCBinSize.SliceCount;i++) {
-				string key;
-				try {
-					key = names[i];
-				} catch (Exception e) {
-					key = i.ToString();
-					e.GetType(); // get rid of compiler warning
-				}
-				
+				string key = FCName[i];
 				TypeEnum type = FCType[i];
 				int size = FCBinSize[i];
 
@@ -494,6 +468,7 @@ namespace VVVV.Nodes
 			
 			if (MessageNode.Changed != null || FSave[0]) {
 				Save();
+				Create();
 			}
 
 			FInitialized.SliceCount = 1;
@@ -512,7 +487,7 @@ namespace VVVV.Nodes
 						pins[key].SliceCount = count;
 
 					for (int i=0;i<count;i++) {
-							((IValueOut)pins[key]).SetValue(i+totalCount, FData[i+totalCount]);
+							((IValueOut)pins[key]).SetValue(i, FData[i+totalCount]);
 						}
 						break;
 					
