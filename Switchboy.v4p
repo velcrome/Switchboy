@@ -38,7 +38,7 @@
    <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="20" nodename="Renderer (EX9)" stayontop="1" systemname="RENDERER (EX9)">
+   <NODE componentmode="Hidden" id="20" nodename="Renderer (EX9)" stayontop="0" systemname="RENDERER (EX9)">
    <BOUNDS height="0" left="16875" top="35790" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="1800" left="16875" top="35790" type="Box" width="2400">
@@ -395,9 +395,9 @@
    </PIN>
    <PIN pinname="Presentation Interval" slicecount="1" values="default">
    </PIN>
-   <PIN pinname="Fullscreen" slicecount="1" visible="1" values="1">
+   <PIN pinname="Fullscreen" slicecount="1" visible="1" values="0">
    </PIN>
-   <PIN pinname="Fullscreen Refresh Rate" slicecount="1" values="120">
+   <PIN pinname="Fullscreen Refresh Rate" slicecount="1" values="60">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="214" managers="" nodename="Switch (Node Input)" systemname="Switch (Node Input)">
