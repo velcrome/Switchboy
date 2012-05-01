@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\root_Switchboy.v4p" componentmode="Hidden" filename="C:\dev\vvvv\switchboy3\root_Switchboy.v4p" systemname="root_Switchboy">
+   <PATCH nodename="c:\Switchboy3\root_Switchboy.v4p" componentmode="Hidden" filename="root_Switchboy.v4p" systemname="root_Switchboy">
    <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="InAWindow" filename="environment\BoygroupSetup.v4p" id="58" nodename="environment\BoygroupSetup.v4p" systemname="BoygroupSetup">
@@ -283,7 +283,7 @@
    </BOUNDS>
    <BOUNDS height="480" left="3435" top="2745" type="Box" width="480">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>

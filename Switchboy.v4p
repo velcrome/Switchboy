@@ -190,7 +190,7 @@
    <PIN pinname="Clip Device" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\engine\TestBeamerProjection.v4p" id="182" managers="boygroup" nodename="engine\tools\TestBeamerProjection.v4p" systemname="TestBeamerProjection">
+   <NODE componentmode="Hidden" filename="modules\engine\TestBeamerProjection.v4p" id="182" managers="boygroup" nodename="modules\engine\TestBeamerProjection.v4p" systemname="TestBeamerProjection">
    <BOUNDS height="100" left="13227" top="27933" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="13227" top="27933" type="Box" width="4800">
@@ -244,7 +244,7 @@
    <LINKPOINT x="14310" y="27795">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="C:\apps\code\vvvv_45beta27.1\lib\nodes\modules\EX9\AxisAndGrid (DX9).v4p" hiddenwhenlocked="0" id="186" nodename="AxisAndGrid (DX9)" systemname="AxisAndGrid (DX9)">
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\EX9\AxisAndGrid (DX9).v4p" hiddenwhenlocked="0" id="186" nodename="AxisAndGrid (DX9)" systemname="AxisAndGrid (DX9)">
    <BOUNDS height="100" left="16605" top="31770" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
@@ -264,7 +264,7 @@
    <PIN pinname="Count" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" debug="0" filename="c:\Switchboy3\modules\content\ChannelContentDoubleFull.v4p" id="139" nodename="engine\ChannelContentDoubleFull.v4p" systemname="ChannelContentDoubleFull">
+   <NODE componentmode="Hidden" debug="0" filename="modules\content\ChannelContentDoubleFull.v4p" id="139" nodename="modules\content\ChannelContentDoubleFull.v4p" systemname="ChannelContentDoubleFull">
    <BOUNDS height="270" left="13785" top="17835" type="Node" width="2115">
    </BOUNDS>
    <BOUNDS height="3600" left="13785" top="17835" type="Box" width="4800">
@@ -434,7 +434,7 @@
    <PIN pinname="Layer 8" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" debug="0" filename="c:\Switchboy3\modules\gui\AutomateGUI.v4p" id="235" nodename="gui\AutomateGUI.v4p" systemname="AutomateGUI">
+   <NODE componentmode="Hidden" debug="0" filename="modules\gui\AutomateGUI.v4p" id="235" nodename="modules\gui\AutomateGUI.v4p" systemname="AutomateGUI">
    <BOUNDS height="270" left="24105" top="22305" type="Node" width="4980">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
@@ -526,7 +526,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\input\DataBinder.v4p" id="227" managers="boygroup" nodename="DataBinder.v4p" systemname="DataBinder">
+   <NODE componentmode="Hidden" filename="modules\input\DataBinder.v4p" id="227" managers="boygroup" nodename="DataBinder.v4p" systemname="DataBinder">
    <BOUNDS height="270" left="25080" top="26370" type="Node" width="6000">
    </BOUNDS>
    <BOUNDS height="3600" left="25080" top="26370" type="Box" width="4800">
@@ -580,7 +580,7 @@
    <LINKPOINT x="25890" y="21210">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="224" nodename="Cons (Spreads)" systemname="Cons (Spreads)">
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="224" nodename="Cons (Spreads)" systemname="Cons (Spreads)">
    <BOUNDS height="270" left="24465" top="20775" type="Node" width="1470">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
@@ -596,7 +596,7 @@
    </NODE>
    <LINK dstnodeid="237" dstpinname="Layer 5" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="235" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\gui\EmulateMultitouch.v4p" id="223" nodename="gui\EmulateMultitouch.v4p" systemname="EmulateMultitouch">
+   <NODE componentmode="Hidden" filename="modules\gui\EmulateMultitouch.v4p" id="223" nodename="modules\gui\EmulateMultitouch.v4p" systemname="EmulateMultitouch">
    <BOUNDS height="100" left="30150" top="7755" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="30150" top="7755" type="Box" width="4800">
@@ -692,7 +692,7 @@
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\gui\MainPreview.v4p" id="259" nodename="gui\MainPreview.v4p" systemname="MainPreview">
+   <NODE componentmode="Hidden" filename="\modules\gui\MainPreview.v4p" id="259" nodename="modules\gui\MainPreview.v4p" systemname="MainPreview">
    <BOUNDS height="100" left="26550" top="30645" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
@@ -948,7 +948,7 @@
    </LINK>
    <LINK dstnodeid="53" dstpinname="Layer 2" linkstyle="PolyLine" srcnodeid="186" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\calibration\WallVignette.v4p" id="316" managers="boygroup" nodename="engine\tools\WallVignette.v4p" systemname="WallVignette">
+   <NODE componentmode="Hidden" filename="modules\calibration\WallVignette.v4p" id="316" managers="boygroup" nodename="modules\calibration\WallVignette.v4p" systemname="WallVignette">
    <BOUNDS height="270" left="3450" top="29220" type="Node" width="2235">
    </BOUNDS>
    <BOUNDS height="3600" left="3450" top="29220" type="Box" width="4800">
@@ -1014,7 +1014,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\input\DMXInput.v4p" id="325" managers="" nodename="engine\DMXInput.v4p" systemname="DMXInput">
+   <NODE componentmode="Hidden" filename="modules\input\DMXInput.v4p" id="325" managers="" nodename="modules\input\DMXInput.v4p" systemname="DMXInput">
    <BOUNDS height="270" left="33915" top="8790" type="Node" width="3765">
    </BOUNDS>
    <BOUNDS height="3600" left="33915" top="8790" type="Box" width="4800">
@@ -1112,7 +1112,7 @@
    </LINK>
    <LINK dstnodeid="237" dstpinname="Layer 3" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="139" srcpinname="LayerGUI">
    </LINK>
-   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\gui\GlobalGUI2.v4p" id="342" nodename="gui\GlobalGUI2.v4p" systemname="GlobalGUI2">
+   <NODE componentmode="Hidden" filename="modules\gui\GlobalGUI2.v4p" id="342" nodename="modules\gui\GlobalGUI2.v4p" systemname="GlobalGUI2">
    <BOUNDS height="270" left="31065" top="22305" type="Node" width="7140">
    </BOUNDS>
    <BOUNDS height="15930" left="-4110" top="1485" type="Window" width="15645">
@@ -1292,7 +1292,7 @@
    <LINKPOINT x="11595" y="35453">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\calibration\Mask.v4p" id="388" managers="boygroup" nodename="engine\tools\Mask.v4p" systemname="Mask">
+   <NODE componentmode="Hidden" filename="modules\calibration\Mask.v4p" id="388" managers="boygroup" nodename="modules\calibration\Mask.v4p" systemname="Mask">
    <BOUNDS height="100" left="6315" top="29220" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="9255" left="3000" top="2355" type="Window" width="10980">
@@ -1568,7 +1568,7 @@
    <LINKPOINT x="5235" y="17145">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="InAWindow" filename="c:\Switchboy3\modules\engine\MappedEnvironment.v4p" id="195" managers="boygroup" nodename="engine\MappedEnvironment.v4p" systemname="MappedEnvironment">
+   <NODE componentmode="InAWindow" filename="modules\engine\MappedEnvironment.v4p" id="195" managers="boygroup" nodename="modules\engine\MappedEnvironment.v4p" systemname="MappedEnvironment">
    <PIN pinname="CalcMesh" visible="1">
    </PIN>
    <PIN pinname="CalibrationMode" visible="1">
@@ -1692,7 +1692,7 @@
    <LINKPOINT x="23055" y="8580">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" debug="0" filename="c:\Switchboy3\modules\calibration\EditWallMesh.v4p" id="425" nodename="engine\projection\EditWallMesh.v4p" stayontop="0" systemname="EditWallMesh">
+   <NODE componentmode="Hidden" debug="0" filename="modules\calibration\EditWallMesh.v4p" id="425" nodename="modules\calibration\EditWallMesh.v4p" stayontop="0" systemname="EditWallMesh">
    <BOUNDS height="270" left="3870" top="11970" type="Node" width="4860">
    </BOUNDS>
    <PIN pinname="Transform Mesh" visible="1">
@@ -1878,7 +1878,7 @@
    <LINKPOINT x="31080" y="24458">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\content\PostFXContent.v4p" id="253" nodename="engine\PostFXContent.v4p" systemname="PostFXContent">
+   <NODE componentmode="Hidden" filename="modules\content\PostFXContent.v4p" id="253" nodename="modules\content\PostFXContent.v4p" systemname="PostFXContent">
    <BOUNDS height="270" left="14325" top="21120" type="Node" width="1425">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
@@ -1934,7 +1934,7 @@
    </LINK>
    <LINK dstnodeid="254" dstpinname="Texture" linkstyle="PolyLine" srcnodeid="253" srcpinname="Texture">
    </LINK>
-   <NODE componentmode="Hidden" filename="C:\apps\code\vvvv_45beta27.1\lib\nodes\modules\EX9\MultiViewport (EX9).v4p" id="189" managers="boygroup" nodename="MultiViewport (EX9)" systemname="MultiViewport (EX9)">
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\EX9\MultiViewport (EX9).v4p" id="189" managers="boygroup" nodename="MultiViewport (EX9)" systemname="MultiViewport (EX9)">
    <PIN pinname="Screen Count X" visible="1">
    </PIN>
    <BOUNDS height="100" left="13770" top="35145" type="Node" width="100">
@@ -1984,7 +1984,7 @@
    <LINKPOINT x="20392" y="15120">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="C:\apps\code\vvvv_45beta27.1\lib\nodes\modules\Debug\PerfMeter (Debug).v4p" id="289" managers="boygroup" nodename="PerfMeter (Debug)" systemname="PerfMeter (Debug)">
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\Debug\PerfMeter (Debug).v4p" id="289" managers="boygroup" nodename="PerfMeter (Debug)" systemname="PerfMeter (Debug)">
    <BOUNDS height="100" left="15270" top="31770" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
@@ -2042,7 +2042,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\mapping\SmartMapping.v4p" id="184" managers="boygroup" nodename="modules\mapping\SmartMapping.v4p" systemname="SmartMapping">
+   <NODE componentmode="Hidden" filename="modules\mapping\SmartMapping.v4p" id="184" managers="boygroup" nodename="modules\mapping\SmartMapping.v4p" systemname="SmartMapping">
    <BOUNDS height="270" left="15840" top="19770" type="Node" width="2340">
    </BOUNDS>
    <BOUNDS height="3600" left="15840" top="19770" type="Box" width="4800">
@@ -2110,7 +2110,7 @@
    </LINK>
    <LINK dstnodeid="184" dstpinname="AttemptAngulationFix" linkstyle="PolyLine" srcnodeid="449" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="c:\Switchboy3\modules\engine\RenderMap.v4p" id="252" managers="boygroup" nodename="modules\engine\RenderMap.v4p" systemname="RenderMap">
+   <NODE componentmode="Hidden" filename="modules\engine\RenderMap.v4p" id="252" managers="boygroup" nodename="modules\engine\RenderMap.v4p" systemname="RenderMap">
    <BOUNDS height="270" left="14325" top="20295" type="Node" width="3855">
    </BOUNDS>
    <PIN pinname="ContentLayer" visible="1">
