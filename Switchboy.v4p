@@ -2425,7 +2425,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="7" values="Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|TouchID&lf;isNew&lf;X&lf;Y&lf;Scroll&lf;EditMode&lf;MouseXYZ&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="7" values="TouchID,isNew,X,Y,Scroll,EditMode,MouseXYZ">
    </PIN>
    <PIN encoded="0" pinname="MessageID" slicecount="1" values="Multitouch">
    </PIN>
@@ -2531,7 +2531,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="7" values="Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|TouchID&lf;isNew&lf;X&lf;Y&lf;Scroll&lf;EditMode&lf;MouseXYZ&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="7" values="TouchID,isNew,X,Y,Scroll,EditMode,MouseXYZ">
    </PIN>
    <PIN pinname="ID" visible="1">
    </PIN>
@@ -2583,7 +2583,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="7" values="Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|TouchID&lf;isNew&lf;X&lf;Y&lf;Scroll&lf;EditMode&lf;MouseXYZ&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="7" values="TouchID,isNew,X,Y,Scroll,EditMode,MouseXYZ">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -2657,7 +2657,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="9" values="Value,Value,Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|Gain&lf;Finetune&lf;Bang Manual&lf;Bang One&lf;Latency&lf;Energy Decay&lf;Filtertime&lf;AutoMode&lf;Reset&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Gain,Finetune,Bang Manual,Bang One,Latency,Energy Decay,Filtertime,AutoMode,Reset">
    </PIN>
    <PIN pinname="Filtertime" slicecount="1" visible="1" values="0">
    </PIN>
@@ -2747,7 +2747,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="9" values="Value,Value,Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|Gain&lf;Finetune&lf;Bang Manual&lf;Bang One&lf;Latency&lf;Energy Decay&lf;Filtertime&lf;AutoMode&lf;Reset&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Gain,Finetune,Bang Manual,Bang One,Latency,Energy Decay,Filtertime,AutoMode,Reset">
    </PIN>
    <PIN pinname="Gain" visible="1">
    </PIN>
@@ -2807,7 +2807,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="9" values="Value,Value,Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|Reset&lf;Overview&lf;Calibrate&lf;TestProjection&lf;ShowPerfmeter&lf;Show 3D Scene&lf;Immersion&lf;Fullscreen&lf;UseMask&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Reset,Overview,Calibrate,TestProjection,ShowPerfmeter,Show 3D Scene,Immersion,Fullscreen,UseMask">
    </PIN>
    <PIN pinname="Overview" slicecount="1" visible="1" values="0">
    </PIN>
@@ -2985,7 +2985,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="8" values="Transform,Transform,Transform,Transform,Value,Color,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|BeamerView&lf;BeamerProjection&lf;UsedBeamerView&lf;UsedBeamerProjection&lf;UseBeamer&lf;BeamerColor&lf;BeamerResolution&lf;ShowBeamer&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Reset,Overview,Calibrate,TestProjection,ShowPerfmeter,Show 3D Scene,Immersion,Fullscreen,UseMask">
    </PIN>
    <PIN pinname="Resolution Beamer" visible="1">
    </PIN>
@@ -3053,7 +3053,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="8" values="Transform,Transform,Transform,Transform,Value,Color,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|BeamerView&lf;BeamerProjection&lf;UsedBeamerView&lf;UsedBeamerProjection&lf;UseBeamer&lf;BeamerColor&lf;BeamerResolution&lf;ShowBeamer&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Reset,Overview,Calibrate,TestProjection,ShowPerfmeter,Show 3D Scene,Immersion,Fullscreen,UseMask">
    </PIN>
    <PIN pinname="UsedBeamerView" visible="1">
    </PIN>
@@ -3237,7 +3237,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="9" values="Value,Value,Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|Reset&lf;Overview&lf;Calibrate&lf;TestProjection&lf;ShowPerfmeter&lf;Show 3D Scene&lf;Immersion&lf;Fullscreen&lf;UseMask&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Reset,Overview,Calibrate,TestProjection,ShowPerfmeter,Show 3D Scene,Immersion,Fullscreen,UseMask">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -3271,7 +3271,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="5" values="Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|ImmersivePoint&lf;Internal Server Resolution&lf;Internal Client Resolution&lf;IsClient&lf;ClientID&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="5" values="ImmersivePoint,Internal Server Resolution,Internal Client Resolution,IsClient,ClientID">
    </PIN>
    <PIN pinname="ImmersivePoint" visible="1">
    </PIN>
@@ -3339,7 +3339,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="5" values="Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|ImmersivePoint&lf;Internal Server Resolution&lf;Internal Client Resolution&lf;IsClient&lf;ClientID&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="5" values="ImmersivePoint,Internal Server Resolution,Internal Client Resolution,IsClient,ClientID">
    </PIN>
    <PIN pinname="IsClient" visible="1">
    </PIN>
@@ -3371,7 +3371,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="9" values="Value,Value,Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|Reset&lf;Overview&lf;Calibrate&lf;TestProjection&lf;ShowPerfmeter&lf;Show 3D Scene&lf;Immersion&lf;Fullscreen&lf;UseMask&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Reset,Overview,Calibrate,TestProjection,ShowPerfmeter,Show 3D Scene,Immersion,Fullscreen,UseMask">
    </PIN>
    <PIN pinname="Fullscreen" visible="1">
    </PIN>
@@ -3397,7 +3397,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="5" values="Value,Value,Transform,Transform,Transform">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|PreviewXY&lf;SwitchboyResolution&lf;Gui Transform&lf;Preview View Transform&lf;Preview Projection Transform&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="5" values="PreviewXY,SwitchboyResolution,Gui Transform,Preview View Transform,Preview Projection Transform">
    </PIN>
    <PIN pinname="PreviewXY" slicecount="4" visible="1" values="-0.00420277006924152,-0.185540929436684,0,-0.00208457396365702">
    </PIN>
@@ -3437,7 +3437,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="5" values="Value,Value,Transform,Transform,Transform">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|PreviewXY&lf;SwitchboyResolution&lf;Gui Transform&lf;Preview View Transform&lf;Preview Projection Transform&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="5" values="PreviewXY,SwitchboyResolution,Gui Transform,Preview View Transform,Preview Projection Transform">
    </PIN>
    <PIN pinname="Gui Transform" visible="1">
    </PIN>
@@ -3543,7 +3543,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="5" values="Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|ImmersivePoint&lf;Internal Server Resolution&lf;Internal Client Resolution&lf;IsClient&lf;ClientID&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="5" values="ImmersivePoint,Internal Server Resolution,Internal Client Resolution,IsClient,ClientID">
    </PIN>
    <PIN pinname="Internal Server Resolution" visible="1">
    </PIN>
@@ -3603,7 +3603,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="9" values="Value,Value,Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|Reset&lf;Overview&lf;Calibrate&lf;TestProjection&lf;ShowPerfmeter&lf;Show 3D Scene&lf;Immersion&lf;Fullscreen&lf;UseMask&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Reset,Overview,Calibrate,TestProjection,ShowPerfmeter,Show 3D Scene,Immersion,Fullscreen,UseMask">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -3701,7 +3701,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="7" values="Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|TouchID&lf;isNew&lf;X&lf;Y&lf;Scroll&lf;EditMode&lf;MouseXYZ&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="7" values="TouchID,isNew,X,Y,Scroll,EditMode,MouseXYZ">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -3839,7 +3839,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="9" values="Value,Value,Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|Reset&lf;Overview&lf;Calibrate&lf;TestProjection&lf;ShowPerfmeter&lf;Show 3D Scene&lf;Immersion&lf;Fullscreen&lf;UseMask&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Reset,Overview,Calibrate,TestProjection,ShowPerfmeter,Show 3D Scene,Immersion,Fullscreen,UseMask">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -3957,7 +3957,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="9" values="Value,Value,Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|Reset&lf;Overview&lf;Calibrate&lf;TestProjection&lf;ShowPerfmeter&lf;Show 3D Scene&lf;Immersion&lf;Fullscreen&lf;UseMask&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Reset,Overview,Calibrate,TestProjection,ShowPerfmeter,Show 3D Scene,Immersion,Fullscreen,UseMask">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -4015,7 +4015,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="9" values="Value,Value,Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|Reset&lf;Overview&lf;Calibrate&lf;TestProjection&lf;ShowPerfmeter&lf;Show 3D Scene&lf;Immersion&lf;Fullscreen&lf;UseMask&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Reset,Overview,Calibrate,TestProjection,ShowPerfmeter,Show 3D Scene,Immersion,Fullscreen,UseMask">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -4065,7 +4065,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="9" values="Value,Value,Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|Reset&lf;Overview&lf;Calibrate&lf;TestProjection&lf;ShowPerfmeter&lf;Show 3D Scene&lf;Immersion&lf;Fullscreen&lf;UseMask&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Reset,Overview,Calibrate,TestProjection,ShowPerfmeter,Show 3D Scene,Immersion,Fullscreen,UseMask">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -4109,7 +4109,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="9" values="Value,Value,Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|Reset&lf;Overview&lf;Calibrate&lf;TestProjection&lf;ShowPerfmeter&lf;Show 3D Scene&lf;Immersion&lf;Fullscreen&lf;UseMask&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Reset,Overview,Calibrate,TestProjection,ShowPerfmeter,Show 3D Scene,Immersion,Fullscreen,UseMask">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -4163,7 +4163,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="9" values="Value,Value,Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|Reset&lf;Overview&lf;Calibrate&lf;TestProjection&lf;ShowPerfmeter&lf;Show 3D Scene&lf;Immersion&lf;Fullscreen&lf;UseMask&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Reset,Overview,Calibrate,TestProjection,ShowPerfmeter,Show 3D Scene,Immersion,Fullscreen,UseMask">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -4231,7 +4231,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="4" values="Transform,Transform,Value,Color">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|WallTransform&lf;CorrectedWallTransform&lf;WallBelongsTo&lf;WallColor&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="4" values="WallTransform,CorrectedWallTransform,WallBelongsTo,WallColor">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -4295,7 +4295,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="8" values="Transform,Transform,Transform,Transform,Value,Color,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|BeamerView&lf;BeamerProjection&lf;UsedBeamerView&lf;UsedBeamerProjection&lf;UseBeamer&lf;BeamerColor&lf;BeamerResolution&lf;ShowBeamer&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="8" values="BeamerView,BeamerProjection,UsedBeamerView,UsedBeamerProjection,UseBeamer,BeamerColor,BeamerResolution,ShowBeamer">
    </PIN>
    <PIN pinname="UsedBeamerProjection" visible="1">
    </PIN>
@@ -4333,7 +4333,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="8" values="Transform,Transform,Transform,Transform,Value,Color,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|BeamerView&lf;BeamerProjection&lf;UsedBeamerView&lf;UsedBeamerProjection&lf;UseBeamer&lf;BeamerColor&lf;BeamerResolution&lf;ShowBeamer&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="8" values="BeamerView,BeamerProjection,UsedBeamerView,UsedBeamerProjection,UseBeamer,BeamerColor,BeamerResolution,ShowBeamer">
    </PIN>
    <PIN pinname="UsedBeamerProjection" visible="1">
    </PIN>
@@ -4387,7 +4387,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="4" values="Transform,Transform,Value,Color">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|WallTransform&lf;CorrectedWallTransform&lf;WallBelongsTo&lf;WallColor&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="4" values="WallTransform,CorrectedWallTransform,WallBelongsTo,WallColor">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -4517,7 +4517,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="3" values="Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|MouseOver&lf;XY&lf;EditMode&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="3" values="MouseOver,XY,EditMode">
    </PIN>
    <PIN pinname="Save" slicecount="1" values="0">
    </PIN>
@@ -4581,7 +4581,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="3" values="Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|MouseOver&lf;XY&lf;EditMode&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="MouseOver,XY,EditMode">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -4729,7 +4729,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="7" values="Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|TouchID&lf;isNew&lf;X&lf;Y&lf;Scroll&lf;EditMode&lf;MouseXYZ&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="7" values="TouchID,isNew,X,Y,Scroll,EditMode,MouseXYZ">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -5051,7 +5051,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="4" values="Transform,Transform,Value,Color">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|WallTransform&lf;CorrectedWallTransform&lf;WallBelongsTo&lf;WallColor&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="4" values="WallTransform,CorrectedWallTransform,WallBelongsTo,WallColor">
    </PIN>
    <PIN pinname="WallBelongsTo" visible="1">
    </PIN>
@@ -5215,7 +5215,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="4" values="Transform,Transform,Value,Color">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|WallTransform&lf;CorrectedWallTransform&lf;WallBelongsTo&lf;WallColor&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="4" values="WallTransform,CorrectedWallTransform,WallBelongsTo,WallColor">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -5371,7 +5371,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="8" values="Transform,Transform,Transform,Transform,Value,Color,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|BeamerView&lf;BeamerProjection&lf;UsedBeamerView&lf;UsedBeamerProjection&lf;UseBeamer&lf;BeamerColor&lf;BeamerResolution&lf;ShowBeamer&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="8" values="BeamerView,BeamerProjection,UsedBeamerView,UsedBeamerProjection,UseBeamer,BeamerColor,BeamerResolution,ShowBeamer">
    </PIN>
    <PIN pinname="UsedBeamerProjection" visible="1">
    </PIN>

@@ -361,6 +361,8 @@ namespace VVVV.Nodes
 			FCName.Changed += ChangeHandler;
 			FCBinSize.Changed += ChangeHandler;
 			FCType.Changed += ChangeHandler;
+			
+//			Create();
 		}
 
 		public void ChangeHandler(IDiffSpread s)
