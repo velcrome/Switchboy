@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.2.dtd" >
    <PATCH nodename="c:\Switchboy3\plugins\Message\Message.v4p" bgcolor="15329769" filename="C:\switchboy3\plugins\Event\EventTest.v4p" systemname="EventTest">
    <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
    </BOUNDS>
@@ -9,7 +9,7 @@
    <NODE componentmode="InABox" id="4" managers="boygroup" nodename="Renderer (TTY)" stayontop="1" systemname="Renderer (TTY)">
    <BOUNDS height="100" left="570" top="8865" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="2580" left="570" top="8865" type="Box" width="8295">
+   <BOUNDS height="3975" left="570" top="8865" type="Box" width="8700">
    </BOUNDS>
    <BOUNDS height="4860" left="17850" top="5325" type="Window" width="6120">
    </BOUNDS>
@@ -175,7 +175,7 @@
    </PIN>
    <PIN pinname="Output Enum" visible="1">
    </PIN>
-   <PIN pinname="Input Enum" slicecount="3" values="Transform,Color,Value">
+   <PIN pinname="Input Enum" slicecount="3" values="Color,Color,Value">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="47" managers="boygroup" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -233,7 +233,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="5">
    </PIN>
-   <PIN pinname="Input String" visible="1">
+   <PIN pinname="Input String" visible="1" slicecount="1" encoded="0" values="Event">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="60" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -250,22 +250,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="61" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="555" top="5355" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="480" left="555" top="5355" type="Box" width="480">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="88" managers="boygroup" nodename="Decompose (Transform Vector)" systemname="Decompose (Transform Vector)">
@@ -307,7 +291,7 @@
    </BOUNDS>
    <BOUNDS height="975" left="1425" top="1290" type="Box" width="825">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" values="0.29,0.22,0.4">
+   <PIN pinname="Y Input Value" slicecount="3" values="-0.14,0.22,0.49">
    </PIN>
    <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -334,22 +318,6 @@
    </LINK>
    <LINK dstnodeid="90" dstpinname="APon" srcnodeid="18" srcpinname="Output">
    </LINK>
-   <NODE componentmode="InABox" id="102" managers="boygroup" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="540" top="3360" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="480" left="540" top="3360" type="Box" width="480">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="-3" nodename="Boygroup (VVVV Server)" systemname="Boygroup (VVVV Server)">
    <BOUNDS height="100" left="7095" top="7350" type="Node" width="100">
    </BOUNDS>
@@ -421,7 +389,7 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="Color Input" slicecount="2" values="|0.24781,0.90848,0.53601,1.00000|,|0.00000,0.10285,0.80740,1.00000|">
+   <PIN pinname="Color Input" slicecount="2" values="|0.36828,0.19789,0.72547,1.00000|,|0.00000,0.10285,0.80740,1.00000|">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="109" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -456,22 +424,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="111" managers="boygroup" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="0" left="1185" top="4830" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="240" left="1185" top="4830" type="Box" width="795">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" values="Event">
-   </PIN>
-   <PIN encoded="0" pinname="Default" slicecount="1" values="Bundle">
-   </PIN>
-   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="112" managers="boygroup" nodename="Count (String)" systemname="Count (String)">
    <BOUNDS height="100" left="6075" top="2280" type="Node" width="100">
    </BOUNDS>
@@ -481,42 +433,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="112" dstpinname="Input" srcnodeid="5" srcpinname="Output String">
-   </LINK>
-   <NODE componentmode="Hidden" filename="ValueMessageConfig\ValueMessageConfig.csproj" id="113" managers="boygroup" nodename="MessageConfig (Value)" systemname="MessageConfig (Value)">
-   <BOUNDS height="100" left="5505" top="2910" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="ConfigBinSize">
-   </PIN>
-   <PIN encoded="0" pinname="ConfigName">
-   </PIN>
-   <PIN pinname="Name" visible="1">
-   </PIN>
-   <PIN pinname="BinSize" visible="1">
-   </PIN>
-   <PIN pinname="Save" visible="1">
-   </PIN>
-   <PIN pinname="Event" visible="1">
-   </PIN>
-   <PIN encoded="0" pinname="MessageID" visible="1">
-   </PIN>
-   <PIN pinname="Add" visible="1">
-   </PIN>
-   <PIN pinname="RegisteredEvents" visible="1">
-   </PIN>
-   <PIN pinname="Type" visible="1">
-   </PIN>
-   <PIN encoded="0" pinname="Identifier" visible="1">
-   </PIN>
-   <PIN pinname="Identifier Bin Size" visible="1">
-   </PIN>
-   <PIN pinname="Reset">
-   </PIN>
-   <PIN pinname="Vector Size" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="113" dstpinname="Add" srcnodeid="29" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="59" dstpinname="Input String" srcnodeid="113" srcpinname="RegisteredEvents">
    </LINK>
    <NODE componentmode="InABox" id="119" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="8040" top="2835" type="Node" width="0">
@@ -538,20 +454,8 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Reset">
    </PIN>
    </NODE>
-   <LINK dstnodeid="113" dstpinname="Reset" srcnodeid="119" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="113" dstpinname="Identifier" srcnodeid="5" srcpinname="Output String">
-   </LINK>
-   <LINK dstnodeid="113" dstpinname="Identifier Bin Size" srcnodeid="112" srcpinname="Count">
-   </LINK>
-   <LINK dstnodeid="113" dstpinname="Vector Size" srcnodeid="6" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="113" dstpinname="Type" srcnodeid="45" srcpinname="Output Enum">
-   </LINK>
-   <LINK dstnodeid="113" dstpinname="MessageID" srcnodeid="47" srcpinname="Output String">
-   </LINK>
    <NODE systemname="MessageReceiver (Value)" filename="ValueMessageConfig\ValueMessageConfig.csproj" nodename="MessageReceiver (Value)" componentmode="Hidden" id="120" managers="boygroup">
-   <BOUNDS type="Node" left="2760" top="5055" width="100" height="100">
+   <BOUNDS type="Node" left="2940" top="5205" width="100" height="100">
    </BOUNDS>
    <PIN pinname="ConfigName" slicecount="3" encoded="0" values="Pin,Pon,Pun">
    </PIN>
@@ -573,7 +477,7 @@
    </PIN>
    </NODE>
    <NODE systemname="MessageSender (Value)" filename="ValueMessageConfig\ValueMessageConfig.csproj" nodename="MessageSender (Value)" componentmode="Hidden" id="121" managers="boygroup">
-   <BOUNDS type="Node" left="2985" top="3735" width="100" height="100">
+   <BOUNDS type="Node" left="2430" top="3420" width="100" height="100">
    </BOUNDS>
    <PIN pinname="ConfigName" slicecount="3" encoded="0" values="Pin,Pon,Pun">
    </PIN>
@@ -581,11 +485,11 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="3" values="Transform,Color,Value">
    </PIN>
-   <PIN pinname="MessageID" visible="1" slicecount="1" encoded="0" values="Event">
+   <PIN pinname="MessageID" visible="1" encoded="0">
    </PIN>
    <PIN pinname="Save">
    </PIN>
-   <PIN pinname="Pon" visible="1" slicecount="1" values="|0.00000,1.00000,0.00000,1.00000|">
+   <PIN pinname="Pon" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -719,5 +623,7 @@
    <LINK srcnodeid="124" srcpinname="Pun" dstnodeid="126" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="121" srcpinname="Data" dstnodeid="124" dstpinname="Data">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Output String" dstnodeid="121" dstpinname="MessageID">
    </LINK>
    </PATCH>

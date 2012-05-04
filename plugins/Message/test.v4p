@@ -1,0 +1,103 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
+   <PATCH nodename="C:\switchboy3\plugins\Message\test.v4p" filename="C:\switchboy3\modules\content\test.v4p" locked="0" systemname="test">
+   <BOUNDS height="11715" left="4095" top="4035" type="Window" width="12600">
+   </BOUNDS>
+   <LINK dstnodeid="141" dstpinname="WallTransform" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="107" srcpinname="Output Node">
+   <LINKPOINT x="365" y="7328">
+   </LINKPOINT>
+   <LINKPOINT x="4780" y="8933">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="142" dstpinname="WallTransform" hiddenwhenlocked="1" linkstyle="VHV" srcnodeid="107" srcpinname="Output Node">
+   <LINKPOINT x="365" y="7328">
+   </LINKPOINT>
+   <LINKPOINT x="7990" y="8933">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="191" dstpinname="Input 1" srcnodeid="112" srcpinname="OSCString">
+   </LINK>
+   <LINK dstnodeid="193" dstpinname="Input 1" srcnodeid="112" srcpinname="OSCAdresses">
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="Globals" linkstyle="VHV" srcnodeid="200" srcpinname="Y Output Value">
+   <LINKPOINT x="2290" y="8870">
+   </LINKPOINT>
+   <LINKPOINT x="6440" y="9070">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="112" dstpinname="GlobalStrings" linkstyle="VHV" srcnodeid="201" srcpinname="Output String">
+   <LINKPOINT x="90" y="9270">
+   </LINKPOINT>
+   <LINKPOINT x="5880" y="9270">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="isNew" srcnodeid="220" srcpinname="isNew">
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="isNew" srcnodeid="220" srcpinname="isNew">
+   </LINK>
+   <LINK dstnodeid="177" dstpinname="X" srcnodeid="220" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="177" dstpinname="Y" srcnodeid="220" srcpinname="Y">
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="EditMode" srcnodeid="220" srcpinname="EditMode">
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="EditMode" srcnodeid="220" srcpinname="EditMode">
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="Scroll" srcnodeid="220" srcpinname="Scroll">
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="Scroll" srcnodeid="220" srcpinname="Scroll">
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="ID" srcnodeid="220" srcpinname="TouchID">
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="ID" srcnodeid="220" srcpinname="TouchID">
+   </LINK>
+   <LINK dstnodeid="119" dstpinname="TouchID" srcnodeid="220" srcpinname="TouchID">
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="TouchID" srcnodeid="220" srcpinname="TouchID">
+   </LINK>
+   <LINK dstnodeid="163" dstpinname="Input Node" srcnodeid="225" srcpinname="Preview View Transform">
+   </LINK>
+   <LINK dstnodeid="164" dstpinname="Input Node" srcnodeid="225" srcpinname="Preview Projection Transform">
+   </LINK>
+   <LINK dstnodeid="227" dstpinname="Input" srcnodeid="225" srcpinname="SwitchboyResolution">
+   </LINK>
+   <LINK dstnodeid="209" dstpinname="Y Input Value" srcnodeid="231" srcpinname="Reset">
+   </LINK>
+   <LINK dstnodeid="185" dstpinname="Y Input Value" srcnodeid="235" srcpinname="IsClient">
+   </LINK>
+   <LINK dstnodeid="141" dstpinname="Mouse Wheel" srcnodeid="220" srcpinname="Scroll">
+   </LINK>
+   <NODE id="152" componentmode="InABox" nodename="IOBox (Value Advanced)" systemname="IOBox (Node)">
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Node" height="100" left="4275" top="14970" width="100">
+   </BOUNDS>
+   <BOUNDS type="Box" height="240" left="4275" top="14970" width="795">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" encoded="0" slicecount="1" values="LayerGUI">
+   </PIN>
+   </NODE>
+   <NODE id="170" componentmode="InABox" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <PIN pinname="Y Input Value" visible="1" slicecount="144" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <BOUNDS type="Node" height="100" left="5070" top="15555" width="100">
+   </BOUNDS>
+   <BOUNDS type="Box" height="240" left="5070" top="15555" width="795">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" encoded="0" slicecount="1" values="BindIt!">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="96" srcpinname="Enable" dstnodeid="126" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Priority 2" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="93" srcpinname="Enable" dstnodeid="118" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Priority 1" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="test2" filename="test2.v4p" nodename="test2.v4p" componentmode="InAWindow" id="238">
+   <BOUNDS type="Node" left="5475" top="3180" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7860" top="1200" width="12600" height="15150">
+   </BOUNDS>
+   </NODE>
+   </PATCH>

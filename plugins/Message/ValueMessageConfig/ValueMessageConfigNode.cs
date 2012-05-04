@@ -397,7 +397,7 @@ namespace VVVV.Nodes
 				if (type == TypeEnum.Color) size *= 4;
 				if (type == TypeEnum.Transform) size *= 16;
 				
-//				FLogger.Log(LogType.Debug, key + " -> Type: " + type.ToString() + " -> " + size.ToString() + " doubles");
+				FLogger.Log(LogType.Debug, i.ToString() + ". " + key + " -> Type: " + type.ToString() + " -> " + size.ToString() + " doubles");
 				
 
 				bool doNew = false;
@@ -415,11 +415,10 @@ namespace VVVV.Nodes
 							newPins.Add(key, pin);
 							cBinSize[key] = size;
 //							cType[key] = type; // already correct
-							newPins[key].Order = i;
+							newPins[key].Order = i+1;
 						} else {
 							newPins.Add(key, pins[key]);
-							newPins[key].Order = i;
-							
+							newPins[key].Order = i+1;
 						}
 					}					
 					pins.Remove(key);
@@ -448,7 +447,7 @@ namespace VVVV.Nodes
 					newPins.Add(key, pin);
 					cBinSize.Add(key, size);
 					cType.Add(key, type);
-					pin.Order = i;
+					pin.Order = i+1;
 				}
 			}
 			

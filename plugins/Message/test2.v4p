@@ -1,0 +1,61 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
+   <PATCH nodename="C:\switchboy3\plugins\Message\test2.v4p" systemname="test2" filename="C:\switchboy3\plugins\Message\test2.v4p">
+   <BOUNDS type="Window" left="4920" top="840" width="12600" height="15150">
+   </BOUNDS>
+   <NODE systemname="Template (Value ConfigPins)" filename="..\ConfigPinsValueTemplate\ConfigPinsValueTemplate.csproj" nodename="Template (Value ConfigPins)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1125" top="1290" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Config Pin 1" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Config Pin 2" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InABox" id="1">
+   <BOUNDS type="Node" left="435" top="3150" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="435" top="3150" width="8145" height="2295">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13050" top="9225" width="6240" height="5010">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Template (Value ConfigPins)" filename="..\ConfigPinsValueTemplate\ConfigPinsValueTemplate.csproj" nodename="Template (Value ConfigPins)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="2370" top="1410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Config Pin 1" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Config Pin 2" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <NODE systemname="Template (Value ConfigPins)" filename="..\ConfigPinsValueTemplate\ConfigPinsValueTemplate.csproj" nodename="Template (Value ConfigPins)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="3615" top="1530" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Config Pin 1" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Config Pin 2" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <NODE systemname="Template (Value ConfigPins)" filename="..\ConfigPinsValueTemplate\ConfigPinsValueTemplate.csproj" nodename="Template (Value ConfigPins)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="4860" top="1650" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Config Pin 1" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Config Pin 2" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <NODE systemname="Template (Value ConfigPins)" filename="..\ConfigPinsValueTemplate\ConfigPinsValueTemplate.csproj" nodename="Template (Value ConfigPins)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="6105" top="1770" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Config Pin 1" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Config Pin 2" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <NODE systemname="Template (Value ConfigPins)" filename="..\ConfigPinsValueTemplate\ConfigPinsValueTemplate.csproj" nodename="Template (Value ConfigPins)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="7350" top="1890" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Config Pin 1" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Config Pin 2" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   </PATCH>

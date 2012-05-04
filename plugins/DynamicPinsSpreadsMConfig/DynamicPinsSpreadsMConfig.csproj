@@ -5,7 +5,7 @@
     <Platform>x86</Platform>
     <OutputType>Library</OutputType>
     <RootNamespace>VVVV.Nodes</RootNamespace>
-    <AssemblyName>ValueMessageConfig</AssemblyName>
+    <AssemblyName>DynamicPinsSpreadsMConfig</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <OutputPath>bin\Debug\</OutputPath>
     <DebugSymbols>True</DebugSymbols>
@@ -14,8 +14,8 @@
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <ReferencePath>..\..\..\..\apps\code\vvvv_45alpha27.2\lib\core\</ReferencePath>
-    <ReferencePath>..\..\..\..\apps\code\vvvv_45beta27.1\bin\managed\</ReferencePath>
+    <ReferencePath>..\..\..\dev\vvvv-sdk\vvvv45\lib\core\</ReferencePath>
+    <ReferencePath>..\..\..\..\bin\managed\</ReferencePath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="SlimDX" />
@@ -29,8 +29,8 @@
     <Reference Include="VVVV.Utils3rdParty" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DynamicPinsSpreadsMConfigNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValueMessageConfigNode.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>
