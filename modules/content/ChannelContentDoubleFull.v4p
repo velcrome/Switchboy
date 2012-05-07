@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
    <PATCH nodename="c:\Switchboy3\modules\content\ChannelContentDoubleFull.v4p" filename="C:\dev\vvvv\switchboy3\engine\ChannelContentDoubleFull.v4p" locked="0" systemname="ChannelContentDoubleFull">
-   <BOUNDS height="11715" left="4560" top="750" type="Window" width="12600">
+   <BOUNDS height="11715" left="11175" top="1305" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="Hidden" id="3" managers="boygroup" nodename="Group (EX9 Priority)" systemname="Group (EX9 Priority)">
    <BOUNDS height="270" left="3855" top="11430" type="Node" width="13065">
@@ -71,7 +71,7 @@
    </BOUNDS>
    <PIN pinname="RenderState" visible="1">
    </PIN>
-   <PIN pinname="GroupPriority" visible="1">
+   <PIN pinname="GroupPriority" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="ChannelID" visible="1">
    </PIN>
@@ -105,7 +105,7 @@
    </BOUNDS>
    <PIN pinname="RenderState" visible="1">
    </PIN>
-   <PIN pinname="GroupPriority" visible="1">
+   <PIN pinname="GroupPriority" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="ChannelID" visible="1">
    </PIN>
@@ -451,7 +451,7 @@
    </PIN>
    <PIN pinname="Left Button" visible="1">
    </PIN>
-   <PIN pinname="Mouse Wheel" visible="1">
+   <PIN pinname="Mouse Wheel" visible="1" slicecount="1" values="32">
    </PIN>
    <PIN pinname="Color" visible="1">
    </PIN>
@@ -557,7 +557,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="1635" top="9540" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Input Node" visible="1">
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="CameraViewTransform">
    </PIN>
@@ -569,7 +569,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="2520" top="9540" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Input Node" visible="1">
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="CameraProjectionTransform">
    </PIN>
@@ -947,7 +947,7 @@
    </PIN>
    <PIN pinname="Interval" visible="1">
    </PIN>
-   <BOUNDS height="15930" left="6735" top="240" type="Window" width="15645">
+   <BOUNDS height="15930" left="8160" top="975" type="Window" width="15645">
    </BOUNDS>
    <PIN pinname="BindControl" visible="1">
    </PIN>
@@ -1032,7 +1032,7 @@
    </LINK>
    <LINK dstnodeid="168" dstpinname="Render State" srcnodeid="187" srcpinname="Render State Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\gui\ChannelGUI2.v4p" id="124" nodename="..\gui\ChannelGUI2.v4p" systemname="ChannelGUI2">
+   <NODE componentmode="InAWindow" filename="..\gui\ChannelGUI2.v4p" id="124" nodename="..\gui\ChannelGUI2.v4p" systemname="ChannelGUI2">
    <PIN pinname="isBinded" visible="1">
    </PIN>
    <PIN pinname="Value" visible="1">
@@ -1101,7 +1101,7 @@
    </PIN>
    <PIN pinname="Path" visible="1">
    </PIN>
-   <BOUNDS height="15930" left="195" top="3090" type="Window" width="15645">
+   <BOUNDS height="15930" left="6990" top="3450" type="Window" width="15645">
    </BOUNDS>
    <PIN pinname="TouchID" slicecount="1" visible="1" values="-1">
    </PIN>
@@ -1285,7 +1285,7 @@
    </BOUNDS>
    <BOUNDS height="480" left="9900" top="1650" type="Box" width="480">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
@@ -1521,7 +1521,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="7" values="Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|TouchID&lf;isNew&lf;X&lf;Y&lf;Scroll&lf;EditMode&lf;MouseXYZ&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="7" values="TouchID,isNew,X,Y,Scroll,EditMode,MouseXYZ">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -1589,7 +1589,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" id="225" nodename="MessageReceiver (Value)" systemname="MessageReceiver (Value)">
-   <BOUNDS height="100" left="945" top="6420" type="Node" width="100">
+   <BOUNDS height="100" left="930" top="6420" type="Node" width="100">
    </BOUNDS>
    <PIN encoded="0" pinname="MessageID" slicecount="1" values="Preview">
    </PIN>
@@ -1601,7 +1601,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="5" values="Value,Value,Transform,Transform,Transform">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|PreviewXY&lf;SwitchboyResolution&lf;Gui Transform&lf;Preview View Transform&lf;Preview Projection Transform&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="5" values="PreviewXY,SwitchboyResolution,|Gui Transform|,|Preview View Transform|,|Preview Projection Transform|">
    </PIN>
    <PIN pinname="Gui Transform" visible="1">
    </PIN>
@@ -1621,7 +1621,7 @@
    <NODE componentmode="Hidden" id="227" nodename="Divide (Value)" systemname="Divide (Value)">
    <BOUNDS height="100" left="1110" top="7560" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Input 2" slicecount="1" values="4">
    </PIN>
@@ -1677,7 +1677,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="plugins\Message\ValueMessageConfig\ValueMessageConfig.csproj" id="231" managers="boygroup" nodename="MessageReceiver (Value)" systemname="MessageReceiver (Value)">
-   <BOUNDS height="100" left="11385" top="570" type="Node" width="100">
+   <BOUNDS height="100" left="11370" top="570" type="Node" width="100">
    </BOUNDS>
    <PIN encoded="0" pinname="MessageID" slicecount="1" values="Modus">
    </PIN>
@@ -1687,7 +1687,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="9" values="Value,Value,Value,Value,Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|Reset&lf;Overview&lf;Calibrate&lf;TestProjection&lf;ShowPerfmeter&lf;Show 3D Scene&lf;Immersion&lf;Fullscreen&lf;UseMask&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="9" values="Reset,Overview,Calibrate,TestProjection,ShowPerfmeter,|Show 3D Scene|,Immersion,Fullscreen,UseMask">
    </PIN>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -1731,7 +1731,7 @@
    </PIN>
    <PIN pinname="ConfigType" slicecount="5" values="Value,Value,Value,Value,Value">
    </PIN>
-   <PIN encoded="0" pinname="ConfigName" slicecount="1" values="|ImmersivePoint&lf;Internal Server Resolution&lf;Internal Client Resolution&lf;IsClient&lf;ClientID&lf;|">
+   <PIN encoded="0" pinname="ConfigName" slicecount="5" values="ImmersivePoint,|Internal Server Resolution|,|Internal Client Resolution|,IsClient,ClientID">
    </PIN>
    <PIN pinname="Internal Server Resolution" visible="1">
    </PIN>

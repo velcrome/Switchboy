@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\switchboy3\audio\OSCSender.v4p" filename="C:\switchboy3\audio\OSCSender.v4p" systemname="OSCSender">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
+   <PATCH nodename="c:\switchboy3\modules\audio\OSCSender.v4p" filename="C:\switchboy3\audio\OSCSender.v4p" systemname="OSCSender">
    <BOUNDS height="6000" left="6000" top="975" type="Window" width="9000">
    </BOUNDS>
    <NODE componentmode="Hidden" id="17" nodename="OSCEncoder (Network)" systemname="OSCEncoder (Network)">
@@ -66,6 +66,8 @@
    <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="2">
    </PIN>
    </NODE>
    <LINK dstnodeid="17" dstpinname="Arguments" srcnodeid="13" srcpinname="Output">
@@ -313,7 +315,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>

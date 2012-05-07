@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\gui\DMXList (2D GUI).v4p" filename="C:\dev\vvvv\switchboy3\gui\DMXList (2D GUI).v4p" systemname="DMXList (2D GUI)">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
+   <PATCH nodename="C:\switchboy3\modules\gui\DMXList (2D GUI).v4p" filename="C:\dev\vvvv\switchboy3\gui\DMXList (2D GUI).v4p" systemname="DMXList (2D GUI)">
    <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="Hidden" id="89" nodename="Quad (DX9)" systemname="Quad (DX9)">
@@ -1372,22 +1372,6 @@
    <PIN pinname="Transform" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\VectorSized.dll" id="197" nodename="Select (Value Advanced)" systemname="Select (Value Advanced)">
-   <BOUNDS height="100" left="6600" top="16560" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Vector Size" slicecount="1" values="16">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Select" visible="1">
-   </PIN>
-   <BOUNDS left="6600" top="16560" type="Box">
-   </BOUNDS>
-   </NODE>
-   <LINK dstnodeid="197" dstpinname="Input" srcnodeid="196" srcpinname="Matrix Out">
-   </LINK>
    <NODE componentmode="Hidden" id="198" nodename="SetMatrix (Transform)" systemname="SetMatrix (Transform)">
    <BOUNDS height="100" left="6600" top="16995" type="Node" width="100">
    </BOUNDS>
@@ -1396,10 +1380,6 @@
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="198" dstpinname="Matrix In" srcnodeid="197" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="197" dstpinname="Select" srcnodeid="191" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="86" dstpinname="Transform" srcnodeid="198" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="88" dstpinname="Transform In" linkstyle="Bezier" srcnodeid="198" srcpinname="Transform Out">
@@ -1859,5 +1839,25 @@
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="216" dstpinname="Y Input Value" srcnodeid="143" srcpinname="Value Output">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" id="197" nodename="Select (Value Advanced)" systemname="Select (Value Advanced)">
+   <BOUNDS height="100" left="6600" top="16560" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Vector Size" slicecount="1" values="16">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <BOUNDS left="6600" top="16560" type="Box">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="197" dstpinname="Input" srcnodeid="196" srcpinname="Matrix Out">
+   </LINK>
+   <LINK dstnodeid="198" dstpinname="Matrix In" srcnodeid="197" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="197" dstpinname="Select" srcnodeid="191" srcpinname="Output">
    </LINK>
    </PATCH>

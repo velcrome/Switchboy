@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\dev\vvvv\switchboy_git\switchboy\audio\AudioAnalysis2 (DShow9).v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\audio\AudioAnalysis2 (DShow9).v4p" systemname="AudioAnalysis2 (DShow9)">
-   <BOUNDS height="15090" left="0" top="2055" type="Window" width="12600">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
+   <PATCH nodename="c:\switchboy3\modules\audio\AudioAnalysis2 (DShow9).v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\audio\AudioAnalysis2 (DShow9).v4p" systemname="AudioAnalysis2 (DShow9)">
+   <BOUNDS height="6255" left="3540" top="2955" type="Window" width="19230">
    </BOUNDS>
    <NODE componentmode="InABox" id="2" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="3180" top="8670" type="Node" width="100">
@@ -520,7 +520,7 @@
    <PIN pinname="Index" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="IOI.v4p" id="11" nodename="IOI.v4p" systemname="IOI" path="C:\dev\vvvv\switchboy_git\switchboy\audio\">
+   <NODE componentmode="Hidden" filename="IOI.v4p" id="11" nodename="IOI.v4p" systemname="IOI">
    <BOUNDS height="270" left="13560" top="5340" type="Node" width="2370">
    </BOUNDS>
    <BOUNDS height="3600" left="13560" top="5340" type="Box" width="4800">
@@ -548,6 +548,8 @@
    <PIN pinname="Time" visible="1">
    </PIN>
    <PIN pinname="BufferSize" slicecount="1" values="120">
+   </PIN>
+   <PIN pinname="Confidence" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="57" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -826,7 +828,7 @@
    </NODE>
    <LINK dstnodeid="78" dstpinname="Y Input Value" srcnodeid="72" srcpinname="Whole Part">
    </LINK>
-   <NODE componentmode="Hidden" filename="SimpleBeat.v4p" id="79" nodename="SimpleBeat.v4p" systemname="SimpleBeat" path="C:\dev\vvvv\switchboy_git\switchboy\audio\">
+   <NODE componentmode="Hidden" filename="SimpleBeat.v4p" id="79" nodename="SimpleBeat.v4p" systemname="SimpleBeat">
    <BOUNDS height="100" left="11520" top="6075" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="11520" top="6075" type="Box" width="4800">
@@ -874,7 +876,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="FilterTime">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="SyncLFO.v4p" id="6" nodename="SyncLFO.v4p" systemname="SyncLFO" path="C:\dev\vvvv\switchboy_git\switchboy\audio\">
+   <NODE componentmode="Hidden" filename="SyncLFO.v4p" id="6" nodename="SyncLFO.v4p" systemname="SyncLFO">
    <PIN pinname="Reset" visible="1">
    </PIN>
    <PIN pinname="NormalizedBeat" visible="1">
@@ -1101,5 +1103,35 @@
    <LINK dstnodeid="87" dstpinname="Bit Depth" srcnodeid="92" srcpinname="Output Enum">
    </LINK>
    <LINK dstnodeid="82" dstpinname="Audio" srcnodeid="85" srcpinname="Audio">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="93" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="20565" top="12420" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="20565" top="12420" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Confidence" encoded="0">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\Spreads\AvoidNIL (Spreads).v4p" id="94" nodename="AvoidNIL (Spreads)" systemname="AvoidNIL (Spreads)">
+   <BOUNDS height="100" left="21768" top="12156" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Confidence" dstnodeid="94" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="94" srcpinname="Output" dstnodeid="93" dstpinname="Y Input Value" linkstyle="Bezier">
+   <LINKPOINT x="21765" y="12405">
+   </LINKPOINT>
+   <LINKPOINT x="20625" y="12405">
+   </LINKPOINT>
    </LINK>
    </PATCH>

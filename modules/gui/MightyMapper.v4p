@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="c:\Switchboy3\gui\MightyMapper.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\IntervalPicker.v4p" systemname="IntervalPicker">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
+   <PATCH nodename="C:\switchboy3\modules\gui\MightyMapper.v4p" filename="D:\dev\dropbox\Dropbox\vvvv\switchboy2\gui\IntervalPicker.v4p" systemname="IntervalPicker">
    <BOUNDS height="15090" left="0" top="0" type="Window" width="12600">
    </BOUNDS>
    <NODE componentmode="InABox" id="10" nodename="IOBox (Node)" systemname="IOBox (Node)">
@@ -870,24 +870,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\VectorSized.dll" id="145" nodename="Select (Value Advanced)" systemname="Select (Value Advanced)">
-   <BOUNDS height="100" left="9405" top="16005" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Select" slicecount="1" values="4">
-   </PIN>
-   <BOUNDS left="9405" top="16005" type="Box">
-   </BOUNDS>
-   </NODE>
-   <LINK dstnodeid="145" dstpinname="Input" srcnodeid="144" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="143" dstpinname="Input" srcnodeid="145" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="146" nodename="Shift (Spreads)" systemname="Shift (Spreads)">
    <BOUNDS height="100" left="9405" top="16830" type="Node" width="100">
    </BOUNDS>
@@ -1519,5 +1501,23 @@
    <LINK dstnodeid="115" dstpinname="Transform In" srcnodeid="130" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="162" dstpinname="Input 1" srcnodeid="115" srcpinname="Hit">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" id="145" nodename="Select (Value Advanced)" systemname="Select (Value Advanced)">
+   <BOUNDS height="100" left="9405" top="16005" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Select" slicecount="1" values="4">
+   </PIN>
+   <BOUNDS left="9405" top="16005" type="Box">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="145" dstpinname="Input" srcnodeid="144" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="143" dstpinname="Input" srcnodeid="145" srcpinname="Output">
    </LINK>
    </PATCH>

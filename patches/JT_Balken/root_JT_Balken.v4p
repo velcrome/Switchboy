@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
    <PATCH nodename="c:\Switchboy3\Patches\JT_Balken\root_JT_Balken.v4p" filename="C:\Dokumente und Einstellungen\Johannes\Desktop\switchboy3\patches\Balken\root_Balken.v4p" systemname="root_Balken">
-   <BOUNDS height="12420" left="6750" top="1500" type="Window" width="16800">
+   <BOUNDS height="15090" left="2145" top="1050" type="Window" width="22035">
    </BOUNDS>
    <NODE componentmode="InABox" id="7" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="5730" top="300" type="Node" width="100">
@@ -226,6 +226,8 @@
    <PIN pinname="Input 2" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="2">
    </PIN>
    </NODE>
    <LINK dstnodeid="54" dstpinname="Input String" srcnodeid="306" srcpinname="Output">
@@ -1852,20 +1854,6 @@
    </LINK>
    <LINK dstnodeid="477" dstpinname="Input" srcnodeid="478" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\..\engine\tools\SplitCynetArt.v4p" id="479" nodename="SplitCynetArt" systemname="SplitCynetArt" path="c:\Switchboy3\engine\tools\">
-   <BOUNDS height="100" left="15975" top="1515" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Audio Analysis" visible="1">
-   </PIN>
-   <PIN pinname="FFT" visible="1">
-   </PIN>
-   <BOUNDS height="8865" left="1875" top="1950" type="Window" width="17235">
-   </BOUNDS>
-   <PIN pinname="Subjectives" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="479" dstpinname="Audio Analysis" srcnodeid="11" srcpinname="Y Output Value">
-   </LINK>
    <LINK dstnodeid="477" dstpinname="Set" srcnodeid="336" srcpinname="MasterBeat">
    </LINK>
    <NODE componentmode="Hidden" id="487" nodename="Multiply (Value)" systemname="Multiply (Value)">
@@ -1945,7 +1933,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>

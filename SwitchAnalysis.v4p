@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
    <PATCH nodename="c:\switchboy3\SwitchAnalysis.v4p" filename="C:\switchboy3\SwitchAnalysis.v4p" locked="0" systemname="SwitchAnalysis">
    <BOUNDS height="11040" left="1080" top="1695" type="Window" width="11130">
    </BOUNDS>
@@ -487,7 +487,7 @@
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Input 2" visible="1" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Input 3" visible="1">
    </PIN>
@@ -1319,7 +1319,7 @@
    </PIN>
    <PIN pinname="BeatSyncedSeed" visible="1">
    </PIN>
-   <BOUNDS height="5625" left="3540" top="2955" type="Window" width="10560">
+   <BOUNDS height="6255" left="3540" top="2955" type="Window" width="19230">
    </BOUNDS>
    <PIN pinname="MasterBeatLog" visible="1">
    </PIN>
@@ -1577,5 +1577,19 @@
    <LINK dstnodeid="34" dstpinname="Y Input Value" srcnodeid="122" srcpinname="Output 8">
    <LINKPOINT x="11550" y="5820">
    </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="366" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="10290" top="10935" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10290" top="10935" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Confidence" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Confidence" dstnodeid="366" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

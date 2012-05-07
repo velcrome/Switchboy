@@ -88,12 +88,12 @@ namespace VVVV.Nodes
 				return m * Count;
 			}
 			
-			public void Spread2Stream(IDiffSpread spread, ref ISpread<double> stream) {
+			public void Spread2Stream(ISpread spread, ref ISpread<double> stream) {
 				
 				switch (Type) {
 					case TypeEnum.Color:
 						for (int i =0;i<Count;i++) {
-							RGBAColor c = ((IDiffSpread<RGBAColor>) spread)[i];
+							RGBAColor c = ((ISpread<RGBAColor>) spread)[i];
 							stream.Add(c.A);
 							stream.Add(c.R);
 							stream.Add(c.G);
@@ -102,24 +102,20 @@ namespace VVVV.Nodes
 					break;
 					case TypeEnum.Transform:
 						for (int i =0;i<Count;i++) {
-							Matrix4x4 m = ((IDiffSpread<Matrix4x4>) spread)[i];
-//							unsafe 
-							{
-								for (System.Int32 j=0;j<16;j++) {
-									stream.Add(m[i]);
-								}
-								
-							}
+							Matrix4x4 m = ((ISpread<Matrix4x4>) spread)[i];
+							stream.Add(m.m11);stream.Add(m.m12);stream.Add(m.m13);stream.Add(m.m14);
+							stream.Add(m.m21);stream.Add(m.m22);stream.Add(m.m23);stream.Add(m.m24);
+							stream.Add(m.m31);stream.Add(m.m32);stream.Add(m.m33);stream.Add(m.m34);
+							stream.Add(m.m41);stream.Add(m.m42);stream.Add(m.m43);stream.Add(m.m44);
 						}
 					break;	
 					case TypeEnum.Value:
 						for (int i =0;i<Count;i++) {
-							double v = ((IDiffSpread<double>) spread)[i];
+							double v = ((ISpread<double>)spread)[i];
 							stream.Add(v);
 							
 						}
 					break;
-
 				}
 			}
 			
@@ -140,12 +136,10 @@ namespace VVVV.Nodes
 					case TypeEnum.Transform:
 						for (int i=offset;i<offset+count;i+=16) {
 							Matrix4x4 m = new Matrix4x4();
-							unsafe {
-								for (int j=0;j<16;j++) {
-									m[i] = stream[i+j];
-								}
-								
-							}
+							m.m11 = stream[i+ 0];m.m12 = stream[i+ 1];m.m13 = stream[i+ 2];m.m14 = stream[i+ 3];
+							m.m21 = stream[i+ 4];m.m22 = stream[i+ 5];m.m23 = stream[i+ 6];m.m24 = stream[i+ 7];
+							m.m31 = stream[i+ 8];m.m32 = stream[i+ 9];m.m33 = stream[i+10];m.m34 = stream[i+11];
+							m.m41 = stream[i+12];m.m42 = stream[i+13];m.m43 = stream[i+14];m.m44 = stream[i+15];
 							((ISpread<Matrix4x4>)spread).Add(m);
 						}
 					break;	
@@ -404,7 +398,7 @@ namespace VVVV.Nodes
 						break;
 						default:
 							if (Input) ioType = typeof(IDiffSpread<double>);
-								ioType = typeof(ISpread<double>);
+								else ioType = typeof(ISpread<double>);
 						break;
 					}
 					
@@ -568,7 +562,7 @@ namespace VVVV.Nodes
 	}
 
 	#region PluginInfo
-	[PluginInfo(Name = "MSend", Category = "Spreads", Version = "DynamicPins", Help = "Basic template with a dynamic amount of in- and outputs", Tags = "")]
+	[PluginInfo(Name = "MSend", Category = "Spreads", Version = "DynamicPins", Help = "Basic template with a dynamic amount of in- and outputs", Tags = "", AutoEvaluate=true)]
 	#endregion PluginInfo
 	public class DynamicPinsSpreadsMSendNode : DynamicPinsSpreadsMNode {
 		[Output("Data")]
@@ -582,7 +576,7 @@ namespace VVVV.Nodes
 		{
 			bool changed = ReConfigurate();
 
-/*			foreach (IIOContainer pin in FIO.Values) {
+			foreach (IIOContainer pin in FIO.Values) {
 				try {
 					if (((IDiffSpread)(pin.RawIOObject)).IsChanged) changed = true;
 					
@@ -590,7 +584,7 @@ namespace VVVV.Nodes
 					FLogger.Log(LogType.Debug, e.ToString());	
 				}
 			}
-*/
+
 			changed = true;
 			
 			if (changed) {
@@ -606,19 +600,17 @@ namespace VVVV.Nodes
 					for (int i=0;i<count;i++) {
 //						FLogger.Log(LogType.Debug, i.ToString() + " " +pins[i].Name + " " +pins[i].valueSize());
 						if (FIO.ContainsKey(pins[i].Name))
-							pins[i].Spread2Stream((IDiffSpread)(FIO[pins[i].Name].RawIOObject), ref FData);
+							pins[i].Spread2Stream((ISpread)(FIO[pins[i].Name].RawIOObject), ref FData);
 					}
 				} catch (Exception e) {
 					FLogger.Log(LogType.Debug, "Input Pin not ready. "+e.ToString());
 				}
 			}
 		}
-			
-		
 	}
 
 	#region PluginInfo
-	[PluginInfo(Name = "MReceive", Category = "Spreads", Version = "DynamicPins", Help = "Basic template with a dynamic amount of in- and outputs", Tags = "")]
+	[PluginInfo(Name = "MReceive", Category = "Spreads", Version = "DynamicPins", Help = "Basic template with a dynamic amount of in- and outputs", Tags = "", AutoEvaluate=true)]
 	#endregion PluginInfo
 	public class DynamicPinsSpreadsMReceiveNode : DynamicPinsSpreadsMNode {
 		[Input("Data")]
