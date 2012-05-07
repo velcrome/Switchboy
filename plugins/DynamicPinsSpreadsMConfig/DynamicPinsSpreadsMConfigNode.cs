@@ -9,6 +9,7 @@ using VVVV.Utils.Streams;
 using VVVV.Utils.VColor;
 using VVVV.Utils.VMath;
 
+
 using VVVV.Core.Logging;
 #endregion usings
 
@@ -54,6 +55,7 @@ namespace VVVV.Nodes
 			{
 				return !(a == b);
 			}
+			
 			public Object Clone() {
 				PinInfo p = new PinInfo();
 				
@@ -72,6 +74,89 @@ namespace VVVV.Nodes
     			}
     			throw new ArgumentException("Object is not a PinInfo");
   			}
+			
+			public int valueSize() {
+				int m = 0;
+				switch (Type) {
+					case TypeEnum.Value: m = 1;
+					break;
+					case TypeEnum.Color: m = 4;
+					break;
+					case TypeEnum.Transform: m = 16;
+					break;
+				}
+				return m * Count;
+			}
+			
+			public void Spread2Stream(IDiffSpread spread, ref ISpread<double> stream) {
+				
+				switch (Type) {
+					case TypeEnum.Color:
+						for (int i =0;i<Count;i++) {
+							RGBAColor c = ((IDiffSpread<RGBAColor>) spread)[i];
+							stream.Add(c.A);
+							stream.Add(c.R);
+							stream.Add(c.G);
+							stream.Add(c.B);
+						}
+					break;
+					case TypeEnum.Transform:
+						for (int i =0;i<Count;i++) {
+							Matrix4x4 m = ((IDiffSpread<Matrix4x4>) spread)[i];
+//							unsafe 
+							{
+								for (System.Int32 j=0;j<16;j++) {
+									stream.Add(m[i]);
+								}
+								
+							}
+						}
+					break;	
+					case TypeEnum.Value:
+						for (int i =0;i<Count;i++) {
+							double v = ((IDiffSpread<double>) spread)[i];
+							stream.Add(v);
+							
+						}
+					break;
+
+				}
+			}
+			
+			public void Stream2Spread(IDiffSpread<double> stream, int offset, ref ISpread spread) {
+				int count = valueSize();
+				spread.SliceCount = 0;
+				switch (Type) {
+					case TypeEnum.Color:
+						for (int i=offset;i<offset+count;i+=4) {
+							RGBAColor c = new RGBAColor();
+							c.A = stream[i];
+							c.R = stream[i+1];
+							c.G = stream[i+2];
+							c.B = stream[i+3];
+							((ISpread<RGBAColor>)spread).Add(c);
+						}
+					break;
+					case TypeEnum.Transform:
+						for (int i=offset;i<offset+count;i+=16) {
+							Matrix4x4 m = new Matrix4x4();
+							unsafe {
+								for (int j=0;j<16;j++) {
+									m[i] = stream[i+j];
+								}
+								
+							}
+							((ISpread<Matrix4x4>)spread).Add(m);
+						}
+					break;	
+					case TypeEnum.Value:
+						for (int i=offset;i<offset+count;i++) {
+							((ISpread<double>)spread).Add(stream[i]);
+						}					
+					break;
+				}
+				
+			}
 		}
 		
 		public static Dictionary<string, Dictionary<string, PinInfo>> PinDictionary = new Dictionary<string, Dictionary<string,PinInfo>>();
@@ -193,10 +278,7 @@ namespace VVVV.Nodes
 		}
 	}
 	
-	#region PluginInfo
-	[PluginInfo(Name = "MSend", Category = "Spreads", Version = "DynamicPins", Help = "Basic template with a dynamic amount of in- and outputs", Tags = "")]
-	#endregion PluginInfo
-	public class DynamicPinsSpreadsMSendNode : MessageNode, IPluginEvaluate, IPartImportsSatisfiedNotification
+	public class DynamicPinsSpreadsMNode : MessageNode, IPluginEvaluate, IPartImportsSatisfiedNotification
 	{
 		#region fields & pins
 		[Input("MessageID", DefaultString = "Bundle", IsSingle=true)]
@@ -223,23 +305,21 @@ namespace VVVV.Nodes
 		[Output("Initialized", Visibility = PinVisibility.Hidden, Order=1337)]
 		ISpread<bool> FInitialized;
 		
-		[Output("Data")]
-		ISpread<double> FData;
+
+		protected bool Input;
 		
-		Dictionary<string, IIOContainer> FIO = new Dictionary<string, IIOContainer>();
-		Dictionary<IDiffSpread, bool> FValidIO = new Dictionary<IDiffSpread, bool>();
-		
+		protected Dictionary<string, IIOContainer> FIO = new Dictionary<string, IIOContainer>();
+		protected Dictionary<IDiffSpread, bool> FValidIO = new Dictionary<IDiffSpread, bool>();
+		protected Dictionary<IDiffSpread, int> FValidIOCount = new Dictionary<IDiffSpread, int>();
 		
 		#endregion fields & pins
 		public void OnImportsSatisfied()
 		{
 			FIOFactory.Created += HandlePluginCreated;
-			// Add all our config pins to this dictionary
-			FValidIO[FCName] = false;
-			FValidIO[FCBinSize] = false;
-			FValidIO[FCType] = false;
+			// Add all our config pins to dictionaries
+			FValidIO[FCName] = FValidIO[FCBinSize] = FValidIO[FCType] = false;
+			FValidIOCount[FCName] = FValidIOCount[FCBinSize] = FValidIOCount[FCType] = 0;
 		}
-		
 		
 		private void HandlePluginCreated(object sender, EventArgs args)
 		{
@@ -254,7 +334,10 @@ namespace VVVV.Nodes
 		
 		private void HandleStartConfig(IDiffSpread sender)
 		{
-			FValidIO[sender] = true;
+//			each slice of each config pin will call back here. must wait till all have arrived
+			FValidIOCount[sender]++;
+			if (FValidIOCount[sender] == sender.SliceCount)
+				FValidIO[sender] = true;
 			
 			bool allConfigPinsReady = true;
 			foreach (var key in FValidIO.Keys) {
@@ -293,27 +376,35 @@ namespace VVVV.Nodes
 					case StateEnum.New:
 					
 					if (FIO.ContainsKey(name)) {
+						FLogger.Log(LogType.Debug, name+" removed. "+CurrentPinInfo[name].Type.ToString());
 						FIO[name].Dispose();
 						FIO.Remove(name);
 					}
 					CurrentPinInfo[name].State = StateEnum.Clean;
 					
-					IOAttribute ioAttribute = new InputAttribute(name);
+					IOAttribute ioAttribute;
+					if (Input) {
+						ioAttribute = new InputAttribute(name);
+					} else ioAttribute = new OutputAttribute(name);
+
 					ioAttribute.Visibility = PinVisibility.True;
 					ioAttribute.Order = CurrentPinInfo[name].Order;
 					
-//					FLogger.Log(LogType.Debug, "create " + ioAttribute.Order.ToString() + " " + name);
+					FLogger.Log(LogType.Debug, "create " + (Input?"input ":"output ")+ ioAttribute.Order.ToString() + " " + name);
 					
 					Type ioType;
 					switch (CurrentPinInfo[name].Type) {
 						case TypeEnum.Color:
-						ioType = typeof(IDiffSpread<RGBAColor>);
+							if (Input) ioType = typeof(IDiffSpread<RGBAColor>);
+								else ioType = typeof(ISpread<RGBAColor>);
 						break;
 						case TypeEnum.Transform:
-						ioType = typeof(IDiffSpread<Matrix4x4>);
+							if (Input) ioType = typeof(IDiffSpread<Matrix4x4>);
+								else ioType = typeof(ISpread<Matrix4x4>);
 						break;
 						default:
-						ioType = typeof(IDiffSpread<double>);
+							if (Input) ioType = typeof(IDiffSpread<double>);
+								ioType = typeof(ISpread<double>);
 						break;
 					}
 					
@@ -337,7 +428,7 @@ namespace VVVV.Nodes
 		}
 		
 		public void SaveToConfig() {
-			FLogger.Log(LogType.Debug, "SAVE");
+//			FLogger.Log(LogType.Debug, "SAVE");
 			
 			FCBinSize.Changed -= HandleChangeConfig;
 			FCName.Changed -= HandleChangeConfig;
@@ -357,8 +448,7 @@ namespace VVVV.Nodes
 					FCName[order] = CurrentPinInfo[name].Name;
 					FCType[order] = CurrentPinInfo[name].Type;
 				
-//					FLogger.Log(LogType.Debug, "save to config " + order.ToString() + " " + name);
-					
+//					FLogger.Log(LogType.Debug, "save to config " + CurrentPinInfo[name].Count + " " + name);
 				}
 			}
 			
@@ -369,7 +459,7 @@ namespace VVVV.Nodes
 		}
 		
 		public void SaveFromConfig() {
-			FLogger.Log(LogType.Debug, "Load from Config");
+//			FLogger.Log(LogType.Debug, "Load from Config");
 			
 			// all pins are suspect
 			foreach(string name in CurrentPinInfo.Keys) {
@@ -401,10 +491,9 @@ namespace VVVV.Nodes
 			}
 		}
 		
-		
 		public void SaveFromStatic()
 		{
-			FLogger.Log(LogType.Debug, "Load from Static");
+//			FLogger.Log(LogType.Debug, "Getting Data from Static about "+FID[0]);
 			Dictionary<string, PinInfo> pinDict = PinDictionary[FID[0]];
 			
 			foreach(string name in CurrentPinInfo.Keys) {
@@ -415,10 +504,12 @@ namespace VVVV.Nodes
 				if (CurrentPinInfo.ContainsKey(name)) {
 					// pin with this name is already present
 					if ( pinDict[name] != CurrentPinInfo[name]) {
-						// pin with this name is already present
+						// pin with this name is not up to date, so flag it dirty
+						CurrentPinInfo[name] = (PinInfo)pinDict[name].Clone();
 						CurrentPinInfo[name].State = StateEnum.Dirty;
 					} else 	{
-						// or kept.
+						// pin did not change type or name, so just update BinSize on the fly
+						CurrentPinInfo[name].Count = ((PinInfo)pinDict[name]).Count;
 						CurrentPinInfo[name].State = StateEnum.Clean;
 					}
 				} else {
@@ -429,9 +520,10 @@ namespace VVVV.Nodes
 			}
 		}
 		
-		
-		public void Evaluate(int SpreadMax)
-		{
+
+		public bool ReConfigurate() {
+			bool changed = false;
+			
 			if (FReset[0]) {
 				CurrentPinInfo.Clear();
 				SaveToConfig();
@@ -439,39 +531,133 @@ namespace VVVV.Nodes
 				foreach (string pin in FIO.Keys) {
 					FIO[pin].Dispose();
 				}
-				FIO.Clear();				
-//				Create();
-				
+				FIO.Clear();
+				changed = true;
 			}
 			
-			
 			if (FSave[0]) {
+				FLogger.Log(LogType.Debug, "Applying MConfig Scheme with the name "+FID[0]+".");
 				if (PinDictionary.ContainsKey(FID[0])) {
 					SaveFromStatic();
 					SaveToConfig();
 					Create();
+					changed = true;
 				}
 				else {
 					FLogger.Log(LogType.Debug, "No MConfig Scheme with the name "+FID[0]+" detected.");
 					Create();
+					changed = true;
 				}
 			}
 			
 			if (MessageNode.Updated != null) {
 				if (PinDictionary.ContainsKey(FID[0])) {
+				FLogger.Log(LogType.Debug, "Quickfixing MConfig Scheme with the name "+FID[0]+".");
 					SaveFromStatic();
 					SaveToConfig();
+					changed = true;
 				}
-			}
-			
-			
-			for (int i=0;i<CurrentPinInfo.Count;i++) {
-//				PinInfo[] pins = Array.Sort(CurrentPinInfo.Values);
-				
-				
-			}
-			
+			}	
+			return changed;
 		}
 		
+		public virtual void Evaluate(int SpreadMax)
+		{
+
+		}
+	}
+
+	#region PluginInfo
+	[PluginInfo(Name = "MSend", Category = "Spreads", Version = "DynamicPins", Help = "Basic template with a dynamic amount of in- and outputs", Tags = "")]
+	#endregion PluginInfo
+	public class DynamicPinsSpreadsMSendNode : DynamicPinsSpreadsMNode {
+		[Output("Data")]
+		ISpread<double> FData;
+
+		public DynamicPinsSpreadsMSendNode():base() {
+			Input = true;
+		}
+
+		public override void Evaluate(int SpreadMax)
+		{
+			bool changed = ReConfigurate();
+
+/*			foreach (IIOContainer pin in FIO.Values) {
+				try {
+					if (((IDiffSpread)(pin.RawIOObject)).IsChanged) changed = true;
+					
+				} catch (Exception e) {
+					FLogger.Log(LogType.Debug, e.ToString());	
+				}
+			}
+*/
+			changed = true;
+			
+			if (changed) {
+				FData.SliceCount = 0;
+
+				int count = CurrentPinInfo.Count;
+				PinInfo[] pins = new PinInfo[count];
+				
+				CurrentPinInfo.Values.CopyTo(pins, 0);
+				Array.Sort(pins);
+
+				try {
+					for (int i=0;i<count;i++) {
+//						FLogger.Log(LogType.Debug, i.ToString() + " " +pins[i].Name + " " +pins[i].valueSize());
+						if (FIO.ContainsKey(pins[i].Name))
+							pins[i].Spread2Stream((IDiffSpread)(FIO[pins[i].Name].RawIOObject), ref FData);
+					}
+				} catch (Exception e) {
+					FLogger.Log(LogType.Debug, "Input Pin not ready. "+e.ToString());
+				}
+			}
+		}
+			
+		
+	}
+
+	#region PluginInfo
+	[PluginInfo(Name = "MReceive", Category = "Spreads", Version = "DynamicPins", Help = "Basic template with a dynamic amount of in- and outputs", Tags = "")]
+	#endregion PluginInfo
+	public class DynamicPinsSpreadsMReceiveNode : DynamicPinsSpreadsMNode {
+		[Input("Data")]
+		IDiffSpread<double> FData;
+		
+		public DynamicPinsSpreadsMReceiveNode():base() {
+			Input = false;
+		}
+		
+		public override void Evaluate(int SpreadMax)
+		{
+			bool changed = ReConfigurate();
+			
+			if (changed || FData.IsChanged) {
+				
+				int count = CurrentPinInfo.Count;
+				PinInfo[] pins = new PinInfo[count];
+				
+				CurrentPinInfo.Values.CopyTo(pins, 0);
+				Array.Sort(pins);
+
+				int offset = 0;
+				for (int i=0;i<count;i++) {
+					string name = pins[i].Name;
+
+					try {
+						if (FIO.ContainsKey(name)) {
+							ISpread spread = (ISpread) (FIO[name].RawIOObject);
+							pins[i].Stream2Spread(FData, offset, ref spread );
+						}
+				
+						
+					}	catch (Exception e) {
+						FLogger.Log(LogType.Debug, "Output Pin not ready. "+e.ToString());
+					}
+					offset += pins[i].valueSize();
+					
+				}
+			}
+		}
 	}
 }
