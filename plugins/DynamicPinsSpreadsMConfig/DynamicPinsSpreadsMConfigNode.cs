@@ -171,7 +171,7 @@ namespace VVVV.Nodes
 	}
 	
 	#region PluginInfo
-	[PluginInfo(Name = "MConfig", Category = "Spreads", Version = "DynamicPins", Help = "Fully spreadable Configurator for all M-Nodes", Tags = "", AutoEvaluate = true)]
+	[PluginInfo(Name = "Config", Category = "Spreads", Version = "DynamicPins", Help = "Fully spreadable Configurator for all M-Nodes", Tags = "", AutoEvaluate = true)]
 	#endregion PluginInfo
 	public class DynamicPinsSpreadsMConfigNode : MessageNode, IPluginEvaluate
 	{
@@ -281,7 +281,7 @@ namespace VVVV.Nodes
 		Spread<IIOContainer> FPins = new Spread<IIOContainer>();
 		
 		[Input("Save", DefaultValue = 0.0, Visibility = PinVisibility.True, IsBang = true)]
-		ISpread<bool> FSave;
+		IDiffSpread<bool> FSave;
 		
 		[Input("Reset", DefaultValue = 0.0, Visibility = PinVisibility.Hidden, IsBang = true)]
 		ISpread<bool> FReset;
@@ -299,12 +299,13 @@ namespace VVVV.Nodes
 		[Output("Initialized", Visibility = PinVisibility.Hidden, Order=1337)]
 		ISpread<bool> FInitialized;
 		
-
 		protected bool Input;
 		
 		protected Dictionary<string, IIOContainer> FIO = new Dictionary<string, IIOContainer>();
 		protected Dictionary<IDiffSpread, bool> FValidIO = new Dictionary<IDiffSpread, bool>();
 		protected Dictionary<IDiffSpread, int> FValidIOCount = new Dictionary<IDiffSpread, int>();
+		
+		protected bool MarkRed=false;
 		
 		#endregion fields & pins
 		public void OnImportsSatisfied()
@@ -353,9 +354,35 @@ namespace VVVV.Nodes
 			SaveFromConfig();
 		}
 		
+		public bool CheckForConnectedPins() {
+
+			bool safe = true;
+			
+			foreach (string name in CurrentPinInfo.Keys) {
+				switch (CurrentPinInfo[name].State) {
+					case StateEnum.Kill:
+					case StateEnum.Dirty:
+					if (FIO.ContainsKey(name)) {
+			
+						IPluginIO pin = (IPluginIO) (FIO[name].GetPluginIO());
+
+						if (pin.IsConnected) {
+							safe = false;
+						}
+					}
+					break;
+				}
+			}
+			
+			return safe;			
+		}
+		
 		public void Create() {
 			int i = 0;
 			foreach (string name in CurrentPinInfo.Keys) {
+
+				FLogger.Log(LogType.Debug, name + " " + CurrentPinInfo[name].State.ToString());
+				
 				switch (CurrentPinInfo[name].State) {
 					case StateEnum.Kill:
 					if (FIO.ContainsKey(name)) {
@@ -363,7 +390,6 @@ namespace VVVV.Nodes
 						FIO.Remove(name);
 					}
 					break;
-					
 					case StateEnum.Dirty:
 					goto case StateEnum.New;
 					
@@ -419,6 +445,7 @@ namespace VVVV.Nodes
 					else CurrentPinInfo[name].State = StateEnum.Clean;
 
 			}
+
 		}
 		
 		public void SaveToConfig() {
@@ -457,7 +484,7 @@ namespace VVVV.Nodes
 			
 			// all pins are suspect
 			foreach(string name in CurrentPinInfo.Keys) {
-				CurrentPinInfo[name].State = StateEnum.Kill;
+					CurrentPinInfo[name].State = StateEnum.Kill;
 			}
 			
 			for (int i=0;i<FCName.SliceCount;i++) {
@@ -474,7 +501,7 @@ namespace VVVV.Nodes
 						// either needs to be updated...
 						CurrentPinInfo[name].State = StateEnum.Dirty;
 					} else {
-						// or kept.
+						// or kept
 						CurrentPinInfo[name].State = StateEnum.Clean;
 					}
 				} else {
@@ -528,25 +555,34 @@ namespace VVVV.Nodes
 				FIO.Clear();
 				changed = true;
 			}
-			
-			if (FSave[0]) {
-				FLogger.Log(LogType.Debug, "Applying MConfig Scheme with the name "+FID[0]+".");
+
+			if ((FSave[0] && FSave.IsChanged) || (FSave[0] && ((MessageNode.Changed!=null) || MarkRed))) {
 				if (PinDictionary.ContainsKey(FID[0])) {
 					SaveFromStatic();
-					SaveToConfig();
-					Create();
+
+					if (CheckForConnectedPins()) {
+						MarkRed = false;
+						FLogger.Log(LogType.Debug, "Applying Config Scheme with the name "+FID[0]+".");
+						SaveToConfig();
+						Create();
+					} else {
+						MarkRed = true;
+						FLogger.Log(LogType.Debug, "Cannot update "+FID[0]+", because some links need to be deleted manually first.");
+					}
+
 					changed = true;
 				}
 				else {
-					FLogger.Log(LogType.Debug, "No MConfig Scheme with the name "+FID[0]+" detected.");
+					FLogger.Log(LogType.Debug, "No Config Scheme with the name "+FID[0]+" detected. Using Configpin-Data to create dynamic pins.");
+					SaveFromConfig();
 					Create();
 					changed = true;
 				}
 			}
 			
-			if (MessageNode.Updated != null) {
+			if (!MarkRed && MessageNode.Updated != null) {
 				if (PinDictionary.ContainsKey(FID[0])) {
-				FLogger.Log(LogType.Debug, "Quickfixing MConfig Scheme with the name "+FID[0]+".");
+				FLogger.Log(LogType.Debug, "Quickfixing Config Scheme with the name "+FID[0]+".");
 					SaveFromStatic();
 					SaveToConfig();
 					changed = true;
@@ -562,7 +598,7 @@ namespace VVVV.Nodes
 	}
 
 	#region PluginInfo
-	[PluginInfo(Name = "MSend", Category = "Spreads", Version = "DynamicPins", Help = "Basic template with a dynamic amount of in- and outputs", Tags = "", AutoEvaluate=true)]
+	[PluginInfo(Name = "Join", Category = "Spreads", Version = "DynamicPins", Help = "Basic template with a dynamic amount of in- and outputs", Tags = "", AutoEvaluate=true)]
 	#endregion PluginInfo
 	public class DynamicPinsSpreadsMSendNode : DynamicPinsSpreadsMNode {
 		[Output("Data")]
@@ -575,6 +611,7 @@ namespace VVVV.Nodes
 		public override void Evaluate(int SpreadMax)
 		{
 			bool changed = ReConfigurate();
+//			if (MarkRed) throw new Exception("RedMark");
 
 			foreach (IIOContainer pin in FIO.Values) {
 				try {
@@ -585,8 +622,8 @@ namespace VVVV.Nodes
 				}
 			}
 
-			changed = true;
 			
+			changed = true;
 			if (changed) {
 				FData.SliceCount = 0;
 
@@ -598,19 +635,20 @@ namespace VVVV.Nodes
 
 				try {
 					for (int i=0;i<count;i++) {
-//						FLogger.Log(LogType.Debug, i.ToString() + " " +pins[i].Name + " " +pins[i].valueSize());
 						if (FIO.ContainsKey(pins[i].Name))
 							pins[i].Spread2Stream((ISpread)(FIO[pins[i].Name].RawIOObject), ref FData);
 					}
 				} catch (Exception e) {
-					FLogger.Log(LogType.Debug, "Input Pin not ready. "+e.ToString());
+//					FLogger.Log(LogType.Debug, "Input Pin not ready. "+e.ToString());
 				}
+
+				if(FData.SliceCount <= 0) FData.SliceCount = 1;
 			}
 		}
 	}
 
 	#region PluginInfo
-	[PluginInfo(Name = "MReceive", Category = "Spreads", Version = "DynamicPins", Help = "Basic template with a dynamic amount of in- and outputs", Tags = "", AutoEvaluate=true)]
+	[PluginInfo(Name = "Split", Category = "Spreads", Version = "DynamicPins", Help = "Basic template with a dynamic amount of in- and outputs", Tags = "", AutoEvaluate=true)]
 	#endregion PluginInfo
 	public class DynamicPinsSpreadsMReceiveNode : DynamicPinsSpreadsMNode {
 		[Input("Data")]
@@ -623,6 +661,7 @@ namespace VVVV.Nodes
 		public override void Evaluate(int SpreadMax)
 		{
 			bool changed = ReConfigurate();
+			if (MarkRed) throw new Exception("RedMark");
 			
 			if (changed || FData.IsChanged) {
 				
@@ -644,11 +683,12 @@ namespace VVVV.Nodes
 				
 						
 					}	catch (Exception e) {
-						FLogger.Log(LogType.Debug, "Output Pin not ready. "+e.ToString());
+//						FLogger.Log(LogType.Debug, "Output Pin not ready. "+e.ToString());
 					}
 					offset += pins[i].valueSize();
 					
 				}
+				
 			}
 		}
 	}

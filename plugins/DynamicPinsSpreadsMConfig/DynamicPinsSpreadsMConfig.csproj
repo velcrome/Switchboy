@@ -14,7 +14,7 @@
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <ReferencePath>..\..\..\dev\vvvv-sdk\vvvv45\lib\core\</ReferencePath>
+    <ReferencePath>..\..\..\apps\code\vvvv_45alpha28\lib\core\</ReferencePath>
     <ReferencePath>..\..\..\..\bin\managed\</ReferencePath>
   </PropertyGroup>
   <ItemGroup>
