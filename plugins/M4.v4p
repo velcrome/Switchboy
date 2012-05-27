@@ -1,0 +1,207 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
+   <PATCH nodename="C:\switchboy3\plugins\M4.v4p" systemname="M4" filename="C:\switchboy3\plugins\M4.v4p">
+   <BOUNDS type="Window" left="0" top="0" width="16080" height="15150">
+   </BOUNDS>
+   <NODE id="3" systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InABox">
+   <BOUNDS type="Node" left="1305" top="13860" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1305" top="13860" width="12540" height="3480">
+   </BOUNDS>
+   <BOUNDS type="Window" left="3720" top="9405" width="6240" height="5010">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="WritePage (TTY)" nodename="WritePage (TTY)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="840" top="13410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="DoWrite" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Layer" dstnodeid="3" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Pon" dstnodeid="56" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Pin" dstnodeid="50" dstpinname="Color Input">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Pan" dstnodeid="62" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Puhhn" dstnodeid="67" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Pon" dstnodeid="56" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Pin" dstnodeid="50" dstpinname="Color Input">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Pan" dstnodeid="62" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Puhhn" dstnodeid="67" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Transform Out" dstnodeid="25" dstpinname="Pon">
+   </LINK>
+   <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Puhhn">
+   <LINKPOINT x="7980" y="8175">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="75" srcpinname="Output Node" dstnodeid="25" dstpinname="test">
+   </LINK>
+   <LINK srcnodeid="64" srcpinname="Transform Out" dstnodeid="25" dstpinname="te">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Color Output" dstnodeid="25" dstpinname="Pin">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Pin" dstnodeid="82" dstpinname="Color Input">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="P" dstnodeid="82" dstpinname="Color Input">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Color Output" dstnodeid="25" dstpinname="P">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Transform Out" dstnodeid="25" dstpinname="test">
+   </LINK>
+   <LINK srcnodeid="64" srcpinname="Transform Out" dstnodeid="25" dstpinname="Pan">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="test" dstnodeid="85" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Value_test" dstnodeid="85" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Color Output" dstnodeid="25" dstpinname="Color_P">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Transform_Pan" dstnodeid="78" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Transform Out" dstnodeid="25" dstpinname="Transform_Pan">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Color_P" dstnodeid="88" dstpinname="Color Input">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Color Output" dstnodeid="25" dstpinname="CPu">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="CPu" dstnodeid="88" dstpinname="Color Input">
+   </LINK>
+   <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="25" dstpinname="VPuhhn">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="VPuhhn" dstnodeid="75" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="TPan" dstnodeid="78" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Vtest">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Vtest" dstnodeid="90" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="VTesttest" dstnodeid="90" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Transform Out" dstnodeid="25" dstpinname="TPan">
+   </LINK>
+   <LINK srcnodeid="93" srcpinname="Y Output Value" dstnodeid="91" dstpinname="Vtest">
+   </LINK>
+   <NODE id="35" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS type="Node" left="1290" top="12585" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1290" top="12585" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="34" dstpinname="DoWrite">
+   </LINK>
+   <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="101">
+   <BOUNDS type="Node" left="6450" top="7620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" slicecount="3" values="1,2,3">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="103" systemname="IOBox (Color)">
+   <BOUNDS type="Node" left="3645" top="7575" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3645" top="7575" width="2250" height="480">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="5" values="|0.94472,0.00000,0.47036,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.06144,0.76737,0.06648,1.00000|,|0.00000,0.65872,0.00472,1.00000|">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="104" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="6975" top="8160" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6975" top="8160" width="795" height="960">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.93,1.99,3,4">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" encoded="0" values="|0, 0, 0, 1|">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Join (Spreads DynamicPins)" filename="DynamicPinsSpreadsMConfig\DynamicPinsSpreadsMConfig.csproj" nodename="Join (Spreads DynamicPins)" componentmode="Hidden" id="111">
+   <BOUNDS type="Node" left="3060" top="9765" width="2700" height="270">
+   </BOUNDS>
+   <PIN pinname="Pin Name" slicecount="4" encoded="0" values="Supermaik,Pu,Pan,Puhhn">
+   </PIN>
+   <PIN pinname="VectorSize" slicecount="4" values="1,5,3,4">
+   </PIN>
+   <PIN pinname="Type" slicecount="4" values="Color,Color,Transform,Value">
+   </PIN>
+   <PIN pinname="MessageID" visible="1" slicecount="1" encoded="0" values="Event">
+   </PIN>
+   <PIN pinname="Data" visible="1">
+   </PIN>
+   <PIN pinname="CSupermaik" visible="1" slicecount="1" values="|0.00000,1.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="CPu" visible="1" slicecount="1" values="|0.00000,1.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="TPan" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="VPuhhn" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="103" srcpinname="Color Output" dstnodeid="111" dstpinname="CSupermaik">
+   </LINK>
+   <LINK srcnodeid="103" srcpinname="Color Output" dstnodeid="111" dstpinname="CPu">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Transform Out" dstnodeid="111" dstpinname="TPan">
+   </LINK>
+   <LINK srcnodeid="104" srcpinname="Y Output Value" dstnodeid="111" dstpinname="VPuhhn">
+   </LINK>
+   <LINK srcnodeid="112" srcpinname="CSupermaik" dstnodeid="106" dstpinname="Color Input">
+   </LINK>
+   <LINK srcnodeid="112" srcpinname="CPu" dstnodeid="105" dstpinname="Color Input">
+   </LINK>
+   <LINK srcnodeid="112" srcpinname="TPan" dstnodeid="107" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="112" srcpinname="VPuhhn" dstnodeid="110" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Join (Spreads DynamicPins)" filename="DynamicPinsSpreadsMConfig\DynamicPinsSpreadsMConfig.csproj" nodename="Join (Spreads DynamicPins)" componentmode="Hidden" id="112">
+   <BOUNDS type="Node" left="8055" top="11190" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Pin Name" slicecount="1" values="Pin" encoded="0">
+   </PIN>
+   <PIN pinname="VectorSize" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Type" slicecount="1" values="Value">
+   </PIN>
+   </NODE>
+   </PATCH>
